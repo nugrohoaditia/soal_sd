@@ -31,18 +31,6 @@
       <p class="app-subtitle">Petualangan Matematika Seru Tambah & Kurang!</p>
     </header>
 
-    <!-- Progress Tracker Bar -->
-    <section class="progress-section">
-      <div class="progress-info">
-        <span id="progress-text" class="progress-text">Soal 1 dari 20</span>
-        <span id="progress-percent" class="progress-percent">0%</span>
-      </div>
-      <div class="progress-bar-track">
-        <div id="progress-bar-fill" class="progress-bar-fill" style="width: 0%;"></div>
-        <div class="progress-trophy" id="trophy-icon">🏆</div>
-      </div>
-    </section>
-
     <!-- Worksheet Card Grid -->
     <main class="worksheet-wrapper">
       <div id="worksheet-grid" class="worksheet-grid">
@@ -51,12 +39,21 @@
     </main>
   </div>
 
-  <!-- Custom On-Screen Jelly Virtual Keyboard -->
+  <!-- Custom On-Screen Jelly Virtual Keyboard with Floating Progress Bar -->
   <div id="virtual-keyboard" class="virtual-keyboard-container">
     <div class="keyboard-inner">
-      <div class="keyboard-header">
-        <span class="keyboard-label">⌨️ Keyboard Angka Jelly</span>
-      </div>
+      <!-- Floating Progress Tracker Bar -->
+      <section class="progress-section">
+        <div class="progress-info">
+          <span id="progress-text" class="progress-text">Soal 1 dari 20</span>
+          <span id="progress-percent" class="progress-percent">0%</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="progress-bar-fill" class="progress-bar-fill" style="width: 0%;"></div>
+          <div class="progress-trophy" id="trophy-icon">🏆</div>
+        </div>
+      </section>
+
       <div class="keyboard-keys">
         <button type="button" class="jelly-btn key-num" data-key="1">1</button>
         <button type="button" class="jelly-btn key-num" data-key="2">2</button>

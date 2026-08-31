@@ -61,7 +61,7 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
-  padding-bottom: 310px; /* Space for sticky 3-column virtual keyboard */
+  padding-bottom: 370px; /* Space for sticky 3-column virtual keyboard + floating progress bar */
 }
 
 /* Decorative Background Elements */
@@ -150,42 +150,42 @@ body {
   font-weight: 600;
 }
 
-/* Progress Tracker Bar */
+/* Floating Progress Tracker Bar (Attached above keyboard) */
 .progress-section {
   background: #FFFFFF;
-  border-radius: var(--radius-lg);
-  padding: 1rem 1.25rem;
-  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 0.85rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border: 2px solid #E0F7FA;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.65rem;
 }
 
 .progress-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.35rem;
   font-weight: 700;
 }
 
 .progress-text {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: #37474F;
 }
 
 .progress-percent {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: var(--primary-blue-dark);
 }
 
 .progress-bar-track {
-  height: 22px;
+  height: 16px;
   background: #ECEFF1;
   border-radius: var(--radius-pill);
   position: relative;
   overflow: visible;
-  padding: 3px;
-  border: 2px solid #CFD8DC;
+  padding: 2px;
+  border: 1.5px solid #CFD8DC;
 }
 
 .progress-bar-fill {
@@ -198,10 +198,10 @@ body {
 
 .progress-trophy {
   position: absolute;
-  right: -10px;
+  right: -8px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
   z-index: 2;
 }
@@ -705,7 +705,7 @@ body {
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 600px) {
   body {
-    padding-bottom: 310px;
+    padding-bottom: 370px;
   }
   
   .app-title {
