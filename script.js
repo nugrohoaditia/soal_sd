@@ -13,6 +13,20 @@
   let questions = [];
   let activeIndex = 0;
   let totalAttempts = 0;
+  let isMuted = localStorage.getItem('kid_math_muted') === 'true';
+
+  function updateAudioBtnUI() {
+    const btnAudio = document.getElementById('btn-audio');
+    if (btnAudio) {
+      if (isMuted) {
+        btnAudio.innerHTML = '<span>🔇 Suara: OFF</span>';
+        btnAudio.classList.add('muted');
+      } else {
+        btnAudio.innerHTML = '<span>🔊 Suara: ON</span>';
+        btnAudio.classList.remove('muted');
+      }
+    }
+  }
 
   // --- Web Audio API Synth Sound System ---
   let audioCtx = null;
@@ -30,6 +44,7 @@
   }
 
   function playSound(type) {
+    if (isMuted) return; // Mute check
     initAudio();
     if (!audioCtx) return;
 
@@ -152,6 +167,16 @@
         answer = num1 + num2;
       }
 
+      let difficulty = 'satuan';
+      let difficultyLabel = '🌱 Satuan';
+      if (num1 >= 100 || num2 >= 100) {
+        difficulty = 'ratusan';
+        difficultyLabel = '🌳 Ratusan';
+      } else if (num1 >= 20 || num2 >= 20) {
+        difficulty = 'puluhan';
+        difficultyLabel = '🌿 Puluhan';
+      }
+
       questions.push({
         id: i,
         num1: num1,
@@ -160,7 +185,10 @@
         answer: answer,
         userAnswer: '',
         isSolved: false,
-        attempts: 0
+        attempts: 0,
+        difficulty: difficulty,
+        difficultyLabel: difficultyLabel,
+        showHint: false
       });
     }
   }
@@ -188,8 +216,21 @@
       card.id = `card-${idx}`;
       card.setAttribute('data-index', idx);
 
+      // Construct hint breakdown string
+      let hintText = '';
+      if (q.operator === '+') {
+        hintText = `💡 Tips: Hitung ${q.num1} + ${q.num2} = ${q.answer}`;
+      } else {
+        hintText = `💡 Tips: Hitung ${q.num1} - ${q.num2} = ${q.answer}`;
+      }
+
+      const showHintBtn = (!q.isSolved && q.attempts >= 2 && !q.showHint);
+
       card.innerHTML = `
-        <div class="card-header-badge">Soal #${q.id}</div>
+        <div class="card-header-badge-group">
+          <div class="card-header-badge">${q.isSolved ? '✅ Selesai' : `Soal #${q.id}`}</div>
+          <div class="badge-difficulty ${q.difficulty}">${q.difficultyLabel}</div>
+        </div>
         
         <div class="math-column">
           <div class="math-num-top">${q.num1}</div>
@@ -205,10 +246,13 @@
                    value="${q.userAnswer}" 
                    readonly 
                    inputmode="none" 
-                   placeholder="?" 
+                   placeholder="${idx === activeIndex ? '|' : '?'}" 
                    aria-label="Jawaban soal ${q.id}">
           </div>
         </div>
+
+        ${showHintBtn ? `<button type="button" class="btn-hint-trigger" data-idx="${idx}">💡 Lihat Bantuan</button>` : ''}
+        ${q.showHint ? `<div class="hint-bubble-box">${hintText}</div>` : ''}
 
         <div id="feedback-${idx}" class="feedback-overlay">
           <div class="mascot-container">
@@ -431,6 +475,20 @@
     const totalAttemptsCount = questions.reduce((sum, q) => sum + q.attempts, 0);
 
     finalScoreVal.textContent = `100% (Sempurna!)`;
+
+    // Dynamic Title based on performance
+    const titleEl = document.querySelector('.celebration-title');
+    if (titleEl) {
+      if (firstTryCount === 20) {
+        titleEl.textContent = '🏆 Master Matematika Super! 🎉';
+      } else if (firstTryCount >= 17) {
+        titleEl.textContent = '🌟 Bintang Matematika Hebat! 🎉';
+      } else if (firstTryCount >= 12) {
+        titleEl.textContent = '💪 Jagoan Matematika Keren! 🎉';
+      } else {
+        titleEl.textContent = '👏 Pahlawan Pantang Menyerah! 🎉';
+      }
+    }
     
     const firstTryEl = document.getElementById('first-try-val');
     const failedEl = document.getElementById('failed-attempts-val');
@@ -485,6 +543,30 @@
    * Event Listeners Setup
    */
   function setupEventListeners() {
+    // Audio Toggle Listener
+    const btnAudio = document.getElementById('btn-audio');
+    if (btnAudio) {
+      btnAudio.addEventListener('click', () => {
+        isMuted = !isMuted;
+        localStorage.setItem('kid_math_muted', isMuted);
+        updateAudioBtnUI();
+        if (!isMuted) playSound('click');
+      });
+    }
+
+    // Hint Button Delegate Click
+    worksheetGrid.addEventListener('click', (e) => {
+      const hintBtn = e.target.closest('.btn-hint-trigger');
+      if (hintBtn) {
+        const idx = parseInt(hintBtn.getAttribute('data-idx'), 10);
+        if (!isNaN(idx) && questions[idx]) {
+          questions[idx].showHint = true;
+          renderWorksheet();
+          playSound('click');
+        }
+      }
+    });
+
     // Virtual Keyboard Click Handling
     const keysContainer = document.getElementById('virtual-keyboard');
     keysContainer.addEventListener('click', (e) => {
@@ -521,6 +603,16 @@
       }
     });
 
+    // Review Answers Button Listener
+    const btnReview = document.getElementById('btn-review');
+    if (btnReview) {
+      btnReview.addEventListener('click', () => {
+        playSound('click');
+        endScreenOverlay.classList.add('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
     // Restart Button Event Listener
     btnRestart.addEventListener('click', () => {
       playSound('click');
@@ -533,6 +625,7 @@
    * Initialize Game Session
    */
   function initGame() {
+    updateAudioBtnUI();
     generateQuestions();
     renderWorksheet();
   }
