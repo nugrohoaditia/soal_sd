@@ -348,39 +348,21 @@ body {
     overflow: visible;
 }
 
-/* Problem Card Header Badges */
-.card-header-badge-group {
+/* Problem Card Header Badge */
+.card-header-badge {
     position: absolute;
     top: -14px;
-    left: 12px;
-    display: flex;
-    gap: 0.35rem;
-    z-index: 3;
-}
-
-.card-header-badge {
+    left: 16px;
     background: #E1F5FE;
     color: #0288D1;
     font-weight: 700;
     font-size: 0.8rem;
-    padding: 0.2rem 0.65rem;
+    padding: 0.2rem 0.75rem;
     border-radius: var(--radius-pill);
     border: 2px solid #B3E5FC;
     white-space: nowrap;
+    z-index: 3;
 }
-
-.badge-difficulty {
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 0.2rem 0.55rem;
-    border-radius: var(--radius-pill);
-    border: 2px solid transparent;
-}
-
-.badge-difficulty.satuan { background: #E8F5E9; color: #2E7D32; border-color: #A5D6A7; }
-.badge-difficulty.puluhan { background: #FFF9C4; color: #F57F17; border-color: #FFF59D; }
-.badge-difficulty.ratusan { background: #F3E5F5; color: #7B1FA2; border-color: #E1BEE7; }
-.badge-difficulty.ribuan { background: #E0F2FE; color: #0277BD; border-color: #81D4FA; }
 
 /* Voice Speaker Button */
 .btn-speech {
