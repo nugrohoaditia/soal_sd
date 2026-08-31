@@ -1,137 +1,137 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Super Kid Math: Addition & Subtraction Adventure</title>
-  <!-- Google Fonts: Fredoka for cheerful rounded headers, Quicksand for clean UI -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Kid Math: Addition & Subtraction Adventure</title>
+    <!-- Google Fonts: Fredoka for cheerful rounded headers, Quicksand for clean UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Background decorative floating shapes -->
-  <div class="bg-decorations" aria-hidden="true">
-    <div class="cloud cloud-1">☁️</div>
-    <div class="cloud cloud-2">☁️</div>
-    <div class="star star-1">✨</div>
-    <div class="star star-2">⭐</div>
-    <div class="balloon balloon-1">🎈</div>
-  </div>
-
-  <div class="app-container">
-    <!-- Top Header Banner -->
-    <header class="app-header">
-      <div class="header-top-bar">
-        <button type="button" id="btn-audio" class="btn-audio-toggle" title="Matikan/Nyalakan Suara">
-          <span>🔊 Suara: ON</span>
-        </button>
-      </div>
-      <div class="logo-wrapper">
-        <span class="logo-icon">✏️</span>
-        <h1 class="app-title">Super Kid Math <span>Adventure</span></h1>
-      </div>
-      <p class="app-subtitle">Petualangan Matematika Seru Tambah & Kurang!</p>
-    </header>
-
-    <!-- Top Progress Tracker Bar (Visible when scrolled to top) -->
-    <section id="top-progress" class="progress-section top-progress">
-      <div class="progress-info">
-        <span class="progress-text">Soal 1 dari 20</span>
-        <span class="progress-percent">0%</span>
-      </div>
-      <div class="progress-bar-track">
-        <div class="progress-bar-fill" style="width: 0%;"></div>
-        <div class="progress-trophy">🏆</div>
-      </div>
-    </section>
-
-    <!-- Worksheet Card Grid -->
-    <main class="worksheet-wrapper">
-      <div id="worksheet-grid" class="worksheet-grid">
-        <!-- Cards generated dynamically via script.js -->
-      </div>
-    </main>
-  </div>
-
-  <!-- Custom On-Screen Jelly Virtual Keyboard with Conditional Floating Progress Bar -->
-  <div id="virtual-keyboard" class="virtual-keyboard-container">
-    <div class="keyboard-inner">
-      <!-- Floating Progress Tracker Bar (Visible ONLY when scrolling down) -->
-      <section id="floating-progress" class="progress-section floating-progress hidden">
-        <div class="progress-info">
-          <span class="progress-text">Soal 1 dari 20</span>
-          <span class="progress-percent">0%</span>
-        </div>
-        <div class="progress-bar-track">
-          <div class="progress-bar-fill" style="width: 0%;"></div>
-          <div class="progress-trophy">🏆</div>
-        </div>
-      </section>
-
-      <div class="keyboard-keys">
-        <button type="button" class="jelly-btn key-num" data-key="1">1</button>
-        <button type="button" class="jelly-btn key-num" data-key="2">2</button>
-        <button type="button" class="jelly-btn key-num" data-key="3">3</button>
-        <button type="button" class="jelly-btn key-num" data-key="4">4</button>
-        <button type="button" class="jelly-btn key-num" data-key="5">5</button>
-        <button type="button" class="jelly-btn key-num" data-key="6">6</button>
-        <button type="button" class="jelly-btn key-num" data-key="7">7</button>
-        <button type="button" class="jelly-btn key-num" data-key="8">8</button>
-        <button type="button" class="jelly-btn key-num" data-key="9">9</button>
-        <button type="button" class="jelly-btn key-action key-backspace" data-key="Backspace" title="Hapus">⌫</button>
-        <button type="button" class="jelly-btn key-num" data-key="0">0</button>
-        <button type="button" class="jelly-btn key-action key-submit" data-key="Enter" title="Jawab">✓</button>
-      </div>
+    <!-- Background decorative floating shapes -->
+    <div class="bg-decorations" aria-hidden="true">
+        <div class="cloud cloud-1">☁️</div>
+        <div class="cloud cloud-2">☁️</div>
+        <div class="star star-1">✨</div>
+        <div class="star star-2">⭐</div>
+        <div class="balloon balloon-1">🎈</div>
     </div>
-  </div>
 
-  <!-- Celebration End Screen Overlay -->
-  <div id="end-screen" class="end-screen-overlay hidden">
-    <div id="confetti-container" class="confetti-container"></div>
-    <div class="celebration-card">
-      <div class="celebration-badge">🏆</div>
-      <h2 class="celebration-title">Horeee! Kamu Hebat! 🎉</h2>
-      <p class="celebration-subtitle">Kamu berhasil menyelesaikan semua 20 soal matematika!</p>
-      
-      <div class="stars-display">
-        <span class="star-item star-gold">⭐</span>
-        <span class="star-item star-gold">⭐</span>
-        <span class="star-item star-gold">⭐</span>
-      </div>
+    <div class="app-container">
+        <!-- Top Header Banner -->
+        <header class="app-header">
+            <div class="header-top-bar">
+                <button type="button" id="btn-audio" class="btn-audio-toggle" title="Matikan/Nyalakan Suara">
+                    <span>🔊 Suara: ON</span>
+                </button>
+            </div>
+            <div class="logo-wrapper">
+                <span class="logo-icon">✏️</span>
+                <h1 class="app-title">Super Kid Math <span>Adventure</span></h1>
+            </div>
+            <p class="app-subtitle">Petualangan Matematika Seru Tambah & Kurang!</p>
+        </header>
 
-      <div class="score-card-box">
-        <div class="score-row">
-          <span class="score-label">Skor Akhir:</span>
-          <span id="final-score-val" class="score-value">100%</span>
-        </div>
-        <div class="score-row">
-          <span class="score-label">Langsung Benar:</span>
-          <span id="first-try-val" class="score-value score-success-text">20 Soal</span>
-        </div>
-        <div class="score-row">
-          <span class="score-label">Percobaan Gagal:</span>
-          <span id="failed-attempts-val" class="score-value score-error-text">0 Kali</span>
-        </div>
-        <div class="score-row">
-          <span class="score-label">Total Percobaan:</span>
-          <span id="final-attempts-val" class="score-value">20 Kali</span>
-        </div>
-      </div>
+        <!-- Top Progress Tracker Bar (Visible when scrolled to top) -->
+        <section id="top-progress" class="progress-section top-progress">
+            <div class="progress-info">
+                <span class="progress-text">Soal 1 dari 20</span>
+                <span class="progress-percent">0%</span>
+            </div>
+            <div class="progress-bar-track">
+                <div class="progress-bar-fill" style="width: 0%;"></div>
+                <div class="progress-trophy">🏆</div>
+            </div>
+        </section>
 
-      <div class="celebration-actions">
-        <button id="btn-review" class="btn-review">
-          <span>🔍 Review Jawaban</span>
-        </button>
-        <button id="btn-restart" class="btn-restart">
-          <span>🎮 Mulai Lagi</span>
-        </button>
-      </div>
+        <!-- Worksheet Card Grid -->
+        <main class="worksheet-wrapper">
+            <div id="worksheet-grid" class="worksheet-grid">
+                <!-- Cards generated dynamically via script.js -->
+            </div>
+        </main>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <!-- Custom On-Screen Jelly Virtual Keyboard with Conditional Floating Progress Bar -->
+    <div id="virtual-keyboard" class="virtual-keyboard-container">
+        <div class="keyboard-inner">
+            <!-- Floating Progress Tracker Bar (Visible ONLY when scrolling down) -->
+            <section id="floating-progress" class="progress-section floating-progress hidden">
+                <div class="progress-info">
+                    <span class="progress-text">Soal 1 dari 20</span>
+                    <span class="progress-percent">0%</span>
+                </div>
+                <div class="progress-bar-track">
+                    <div class="progress-bar-fill" style="width: 0%;"></div>
+                    <div class="progress-trophy">🏆</div>
+                </div>
+            </section>
+
+            <div class="keyboard-keys">
+                <button type="button" class="jelly-btn key-num" data-key="1">1</button>
+                <button type="button" class="jelly-btn key-num" data-key="2">2</button>
+                <button type="button" class="jelly-btn key-num" data-key="3">3</button>
+                <button type="button" class="jelly-btn key-num" data-key="4">4</button>
+                <button type="button" class="jelly-btn key-num" data-key="5">5</button>
+                <button type="button" class="jelly-btn key-num" data-key="6">6</button>
+                <button type="button" class="jelly-btn key-num" data-key="7">7</button>
+                <button type="button" class="jelly-btn key-num" data-key="8">8</button>
+                <button type="button" class="jelly-btn key-num" data-key="9">9</button>
+                <button type="button" class="jelly-btn key-action key-backspace" data-key="Backspace" title="Hapus">⌫</button>
+                <button type="button" class="jelly-btn key-num" data-key="0">0</button>
+                <button type="button" class="jelly-btn key-action key-submit" data-key="Enter" title="Jawab">✓</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Celebration End Screen Overlay -->
+    <div id="end-screen" class="end-screen-overlay hidden">
+        <div id="confetti-container" class="confetti-container"></div>
+        <div class="celebration-card">
+            <div class="celebration-badge">🏆</div>
+            <h2 class="celebration-title">Horeee! Kamu Hebat! 🎉</h2>
+            <p class="celebration-subtitle">Kamu berhasil menyelesaikan semua 20 soal matematika!</p>
+            
+            <div class="stars-display">
+                <span class="star-item star-gold">⭐</span>
+                <span class="star-item star-gold">⭐</span>
+                <span class="star-item star-gold">⭐</span>
+            </div>
+
+            <div class="score-card-box">
+                <div class="score-row">
+                    <span class="score-label">Skor Akhir:</span>
+                    <span id="final-score-val" class="score-value">100%</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-label">Langsung Benar:</span>
+                    <span id="first-try-val" class="score-value score-success-text">20 Soal</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-label">Percobaan Gagal:</span>
+                    <span id="failed-attempts-val" class="score-value score-error-text">0 Kali</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-label">Total Percobaan:</span>
+                    <span id="final-attempts-val" class="score-value">20 Kali</span>
+                </div>
+            </div>
+
+            <div class="celebration-actions">
+                <button id="btn-review" class="btn-review">
+                    <span>🔍 Review Jawaban</span>
+                </button>
+                <button id="btn-restart" class="btn-restart">
+                    <span>🎮 Mulai Lagi</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
