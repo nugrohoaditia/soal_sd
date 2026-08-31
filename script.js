@@ -8,6 +8,7 @@
     // --- Constants & Config ---
     const TOTAL_QUESTIONS = 30;
     const OPERATORS = ['+', '-'];
+    const STORAGE_KEY = 'super_kid_math_session';
 
     // --- State Variables ---
     let questions = [];
@@ -18,14 +19,56 @@
     let timerSeconds = 0;
     let timerInterval = null;
 
+    // --- State Persistence System (localStorage) ---
+    function saveSession() {
+        if (!questions || questions.length === 0) return;
+        try {
+            const data = {
+                questions: questions,
+                activeIndex: activeIndex,
+                timerSeconds: timerSeconds,
+                totalAttempts: totalAttempts
+            };
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        } catch (e) {
+            console.warn('Could not save session to localStorage:', e);
+        }
+    }
+
+    function loadSession() {
+        try {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            if (!raw) return null;
+            const parsed = JSON.parse(raw);
+            if (parsed && Array.isArray(parsed.questions) && parsed.questions.length === TOTAL_QUESTIONS) {
+                const hasUnsolved = parsed.questions.some(q => !q.isSolved);
+                if (hasUnsolved) {
+                    return parsed;
+                }
+            }
+        } catch (e) {
+            console.warn('Could not load session from localStorage:', e);
+        }
+        return null;
+    }
+
+    function clearSession() {
+        try {
+            localStorage.removeItem(STORAGE_KEY);
+        } catch (e) {
+            console.warn('Could not clear session from localStorage:', e);
+        }
+    }
+
     // --- Live Timer System ---
-    function startTimer() {
+    function startTimer(initialSeconds = 0) {
         stopTimer();
-        timerSeconds = 0;
+        timerSeconds = initialSeconds;
         updateTimerDisplay();
         timerInterval = setInterval(() => {
             timerSeconds++;
             updateTimerDisplay();
+            saveSession();
         }, 1000);
     }
 
@@ -369,6 +412,7 @@
         }
 
         activeIndex = index;
+        saveSession();
         const newActiveCard = document.getElementById(`card-${activeIndex}`);
         if (newActiveCard) {
             newActiveCard.classList.add('active');
@@ -398,18 +442,21 @@
             if (q.userAnswer.length < 5) {
                 q.userAnswer += key;
                 updateInputDisplay(activeIndex);
+                saveSession();
                 playSound('click');
             }
         } else if (key === 'Backspace') {
             if (q.userAnswer.length > 0) {
                 q.userAnswer = q.userAnswer.slice(0, -1);
                 updateInputDisplay(activeIndex);
+                saveSession();
                 playSound('click');
             }
         } else if (key === 'Clear') {
             if (q.userAnswer.length > 0) {
                 q.userAnswer = '';
                 updateInputDisplay(activeIndex);
+                saveSession();
                 playSound('click');
             }
         } else if (key === 'Enter') {
@@ -441,10 +488,12 @@
         const userVal = parseInt(q.userAnswer, 10);
         q.attempts++;
         totalAttempts++;
+        saveSession();
 
         if (userVal === q.answer) {
             // --- CORRECT ANSWER ---
             q.isSolved = true;
+            saveSession();
             playSound('success');
 
             cardEl.classList.remove('active', 'error');
@@ -484,6 +533,7 @@
                 feedbackEl.classList.remove('show');
                 q.userAnswer = '';
                 updateInputDisplay(idx);
+                saveSession();
             }, 1100);
         }
     }
@@ -555,6 +605,7 @@
     function showEndScreen() {
         playSound('win');
         stopTimer();
+        clearSession();
 
         // Calculate detailed metrics
         const firstTryCount = questions.filter(q => q.attempts === 1).length;
@@ -673,6 +724,50 @@
             });
         }
 
+        // Start Game Modal Button ("Mulai!")
+        const btnStartGame = document.getElementById('btn-start-game');
+        if (btnStartGame) {
+            btnStartGame.addEventListener('click', () => {
+                playSound('click');
+                const startModal = document.getElementById('start-modal');
+                if (startModal) startModal.classList.add('hidden');
+                startTimer(0);
+                saveSession();
+            });
+        }
+
+        // Resume Game Modal Button ("Lanjutkan")
+        const btnResumeGame = document.getElementById('btn-resume-game');
+        if (btnResumeGame) {
+            btnResumeGame.addEventListener('click', () => {
+                playSound('click');
+                const resumeModal = document.getElementById('resume-modal');
+                if (resumeModal) resumeModal.classList.add('hidden');
+                const savedSession = loadSession();
+                if (savedSession) {
+                    questions = savedSession.questions;
+                    activeIndex = savedSession.activeIndex || 0;
+                    totalAttempts = savedSession.totalAttempts || 0;
+                    renderWorksheet();
+                    startTimer(savedSession.timerSeconds || 0);
+                } else {
+                    initGame(true);
+                }
+            });
+        }
+
+        // New Game Modal Button ("Mulai Baru")
+        const btnNewGame = document.getElementById('btn-new-game');
+        if (btnNewGame) {
+            btnNewGame.addEventListener('click', () => {
+                playSound('click');
+                const resumeModal = document.getElementById('resume-modal');
+                if (resumeModal) resumeModal.classList.add('hidden');
+                clearSession();
+                initGame(true);
+            });
+        }
+
         // Filter Bar Click Delegate
         const filterBar = document.getElementById('filter-bar');
         if (filterBar) {
@@ -697,6 +792,7 @@
                     if (!isNaN(idx) && questions[idx]) {
                         questions[idx].showHint = true;
                         renderWorksheet();
+                        saveSession();
                         playSound('click');
                     }
                     return;
@@ -766,7 +862,8 @@
             btnRestart.addEventListener('click', () => {
                 playSound('click');
                 if (endScreenOverlay) endScreenOverlay.classList.add('hidden');
-                initGame();
+                clearSession();
+                initGame(true);
             });
         }
     }
@@ -774,18 +871,41 @@
     /**
      * Initialize Game Session
      */
-    function initGame() {
+    function initGame(autoStartTimer = false) {
         updateAudioBtnUI();
         generateQuestions();
         renderWorksheet();
-        startTimer();
+        if (autoStartTimer) {
+            startTimer(0);
+            saveSession();
+        } else {
+            const startModal = document.getElementById('start-modal');
+            if (startModal) startModal.classList.remove('hidden');
+        }
     }
 
     // --- Start Application ---
     document.addEventListener('DOMContentLoaded', () => {
         setupEventListeners();
         setupScrollObserver();
-        initGame();
+        updateAudioBtnUI();
+
+        const savedSession = loadSession();
+        if (savedSession) {
+            questions = savedSession.questions;
+            activeIndex = savedSession.activeIndex || 0;
+            totalAttempts = savedSession.totalAttempts || 0;
+            timerSeconds = savedSession.timerSeconds || 0;
+            renderWorksheet();
+            updateTimerDisplay();
+            const resumeModal = document.getElementById('resume-modal');
+            if (resumeModal) resumeModal.classList.remove('hidden');
+        } else {
+            generateQuestions();
+            renderWorksheet();
+            const startModal = document.getElementById('start-modal');
+            if (startModal) startModal.classList.remove('hidden');
+        }
     });
 
 })();
