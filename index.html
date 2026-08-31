@@ -31,6 +31,18 @@
       <p class="app-subtitle">Petualangan Matematika Seru Tambah & Kurang!</p>
     </header>
 
+    <!-- Top Progress Tracker Bar (Visible when scrolled to top) -->
+    <section id="top-progress" class="progress-section top-progress">
+      <div class="progress-info">
+        <span class="progress-text">Soal 1 dari 20</span>
+        <span class="progress-percent">0%</span>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" style="width: 0%;"></div>
+        <div class="progress-trophy">🏆</div>
+      </div>
+    </section>
+
     <!-- Worksheet Card Grid -->
     <main class="worksheet-wrapper">
       <div id="worksheet-grid" class="worksheet-grid">
@@ -39,18 +51,18 @@
     </main>
   </div>
 
-  <!-- Custom On-Screen Jelly Virtual Keyboard with Floating Progress Bar -->
+  <!-- Custom On-Screen Jelly Virtual Keyboard with Conditional Floating Progress Bar -->
   <div id="virtual-keyboard" class="virtual-keyboard-container">
     <div class="keyboard-inner">
-      <!-- Floating Progress Tracker Bar -->
-      <section class="progress-section">
+      <!-- Floating Progress Tracker Bar (Visible ONLY when scrolling down) -->
+      <section id="floating-progress" class="progress-section floating-progress hidden">
         <div class="progress-info">
-          <span id="progress-text" class="progress-text">Soal 1 dari 20</span>
-          <span id="progress-percent" class="progress-percent">0%</span>
+          <span class="progress-text">Soal 1 dari 20</span>
+          <span class="progress-percent">0%</span>
         </div>
         <div class="progress-bar-track">
-          <div id="progress-bar-fill" class="progress-bar-fill" style="width: 0%;"></div>
-          <div class="progress-trophy" id="trophy-icon">🏆</div>
+          <div class="progress-bar-fill" style="width: 0%;"></div>
+          <div class="progress-trophy">🏆</div>
         </div>
       </section>
 

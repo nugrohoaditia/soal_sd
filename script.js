@@ -367,15 +367,56 @@
   }
 
   /**
-   * Update Top Progress Tracker
+   * Update Progress Trackers (Syncs both top and floating progress bars)
    */
   function updateProgress() {
     const solvedCount = questions.filter(q => q.isSolved).length;
     const percent = Math.round((solvedCount / TOTAL_QUESTIONS) * 100);
 
-    progressBarFill.style.width = `${percent}%`;
-    progressText.textContent = `Soal ${Math.min(solvedCount + 1, TOTAL_QUESTIONS)} dari ${TOTAL_QUESTIONS}`;
-    progressPercent.textContent = `${percent}%`;
+    const fillEls = document.querySelectorAll('.progress-bar-fill');
+    const textEls = document.querySelectorAll('.progress-text');
+    const percentEls = document.querySelectorAll('.progress-percent');
+
+    fillEls.forEach(el => el.style.width = `${percent}%`);
+    textEls.forEach(el => el.textContent = `Soal ${Math.min(solvedCount + 1, TOTAL_QUESTIONS)} dari ${TOTAL_QUESTIONS}`);
+    percentEls.forEach(el => el.textContent = `${percent}%`);
+  }
+
+  /**
+   * Scroll Observer: Shows floating progress above keyboard ONLY when top progress bar scrolls out of view
+   */
+  function setupScrollObserver() {
+    const topProgress = document.getElementById('top-progress');
+    const floatingProgress = document.getElementById('floating-progress');
+
+    if (!topProgress || !floatingProgress) return;
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Top progress is visible -> hide floating progress on keyboard
+            floatingProgress.classList.add('hidden');
+          } else {
+            // Top progress scrolled out -> show floating progress on keyboard
+            floatingProgress.classList.remove('hidden');
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      observer.observe(topProgress);
+    } else {
+      window.addEventListener('scroll', () => {
+        const rect = topProgress.getBoundingClientRect();
+        if (rect.bottom < 0) {
+          floatingProgress.classList.remove('hidden');
+        } else {
+          floatingProgress.classList.add('hidden');
+        }
+      });
+    }
   }
 
   /**
@@ -499,6 +540,7 @@
   // --- Start Application ---
   document.addEventListener('DOMContentLoaded', () => {
     setupEventListeners();
+    setupScrollObserver();
     initGame();
   });
 

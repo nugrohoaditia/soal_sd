@@ -150,14 +150,46 @@ body {
   font-weight: 600;
 }
 
-/* Floating Progress Tracker Bar (Attached above keyboard) */
+/* Progress Tracker Bar */
 .progress-section {
   background: #FFFFFF;
+  box-shadow: var(--shadow-card);
+  border: 2px solid #E0F7FA;
+  transition: opacity 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              max-height 0.35s ease, 
+              margin 0.35s ease,
+              padding 0.35s ease;
+}
+
+/* Top Progress Tracker Bar (Under Header) */
+.progress-section.top-progress {
+  border-radius: var(--radius-lg);
+  padding: 0.9rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Floating Progress Tracker Bar (Attached above keyboard when scrolling down) */
+.progress-section.floating-progress {
   border-radius: var(--radius-md);
   padding: 0.5rem 0.85rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border: 2px solid #E0F7FA;
   margin-bottom: 0.65rem;
+  max-height: 80px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.progress-section.floating-progress.hidden {
+  opacity: 0;
+  transform: translateY(14px);
+  max-height: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  border: none;
+  pointer-events: none;
 }
 
 .progress-info {
