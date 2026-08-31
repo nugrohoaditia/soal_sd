@@ -25,6 +25,7 @@
         <!-- Top Header Banner -->
         <header class="app-header">
             <div class="header-top-bar">
+                <div id="timer-badge" class="timer-badge">⏱️ 00:00</div>
                 <button type="button" id="btn-audio" class="btn-audio-toggle" title="Matikan/Nyalakan Suara">
                     <span>🔊 Suara: ON</span>
                 </button>
@@ -47,6 +48,13 @@
                 <div class="progress-trophy">🏆</div>
             </div>
         </section>
+
+        <!-- Quick Jump & Filter Navigation Bar -->
+        <nav id="filter-bar" class="filter-bar">
+            <button type="button" class="filter-chip active" data-filter="all">Semua (30)</button>
+            <button type="button" class="filter-chip" data-filter="unsolved">Belum Selesai</button>
+            <button type="button" class="filter-chip" data-filter="solved">Sudah Selesai</button>
+        </nav>
 
         <!-- Worksheet Card Grid -->
         <main class="worksheet-wrapper">
@@ -81,9 +89,10 @@
                 <button type="button" class="jelly-btn key-num" data-key="7">7</button>
                 <button type="button" class="jelly-btn key-num" data-key="8">8</button>
                 <button type="button" class="jelly-btn key-num" data-key="9">9</button>
-                <button type="button" class="jelly-btn key-action key-backspace" data-key="Backspace" title="Hapus">⌫</button>
+                <button type="button" class="jelly-btn key-action key-clear" data-key="Clear" title="Hapus Semua">🗑️</button>
                 <button type="button" class="jelly-btn key-num" data-key="0">0</button>
-                <button type="button" class="jelly-btn key-action key-submit" data-key="Enter" title="Jawab">✓</button>
+                <button type="button" class="jelly-btn key-action key-backspace" data-key="Backspace" title="Hapus 1 Digit">⌫</button>
+                <button type="button" class="jelly-btn key-action key-submit span-3-cols" data-key="Enter" title="Jawab Soal">✓ Jawab</button>
             </div>
         </div>
     </div>
@@ -102,10 +111,19 @@
                 <span class="star-item star-gold">⭐</span>
             </div>
 
+            <!-- Collectible Achievement Badges -->
+            <div id="achievements-box" class="achievements-box">
+                <!-- Achievements badges rendered dynamically -->
+            </div>
+
             <div class="score-card-box">
                 <div class="score-row">
                     <span class="score-label">Skor Akhir:</span>
                     <span id="final-score-val" class="score-value">100%</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-label">Waktu Pengerjaan:</span>
+                    <span id="final-time-val" class="score-value">00:00</span>
                 </div>
                 <div class="score-row">
                     <span class="score-label">Langsung Benar:</span>

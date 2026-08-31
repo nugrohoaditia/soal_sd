@@ -14,6 +14,56 @@
     let activeIndex = 0;
     let totalAttempts = 0;
     let isMuted = localStorage.getItem('kid_math_muted') === 'true';
+    let currentFilter = 'all';
+    let timerSeconds = 0;
+    let timerInterval = null;
+
+    // --- Live Timer System ---
+    function startTimer() {
+        stopTimer();
+        timerSeconds = 0;
+        updateTimerDisplay();
+        timerInterval = setInterval(() => {
+            timerSeconds++;
+            updateTimerDisplay();
+        }, 1000);
+    }
+
+    function stopTimer() {
+        if (timerInterval) {
+            clearInterval(timerInterval);
+            timerInterval = null;
+        }
+    }
+
+    function formatTime(totalSec) {
+        const mins = Math.floor(totalSec / 60);
+        const secs = totalSec % 60;
+        return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    }
+
+    function updateTimerDisplay() {
+        const timerBadge = document.getElementById('timer-badge');
+        if (timerBadge) {
+            timerBadge.textContent = `⏱️ ${formatTime(timerSeconds)}`;
+        }
+    }
+
+    // --- Voice Equation Reader (Web Speech API) ---
+    function speakQuestion(idx) {
+        const q = questions[idx];
+        if (!q) return;
+
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel();
+            const opText = q.operator === '+' ? 'ditambah' : 'dikurang';
+            const text = `Berapa ${q.num1} ${opText} ${q.num2}?`;
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'id-ID';
+            utterance.rate = 0.85;
+            window.speechSynthesis.speak(utterance);
+        }
+    }
 
     function updateAudioBtnUI() {
         const btnAudio = document.getElementById('btn-audio');
@@ -121,7 +171,7 @@
 
     /**
      * Phase 2: Dynamic Problem Generation
-     * Generates 20 questions with mix of Units, Tens, and Hundreds.
+     * Generates 30 questions with mix of Units, Tens, Hundreds, and Thousands.
      * Ensures top number >= bottom number for Subtraction.
      */
     function generateQuestions() {
@@ -157,12 +207,10 @@
             // Constraint for Subtraction: Top number MUST be >= bottom number
             if (operator === '-') {
                 if (num1 < num2) {
-                    // Swap if top is smaller
                     const temp = num1;
                     num1 = num2;
                     num2 = temp;
                 }
-                // Avoid 0 result for extra fun if possible
                 if (num1 === num2) {
                     num1 += getRandomInt(1, 5);
                 }
@@ -237,6 +285,8 @@
                     <div class="badge-difficulty ${q.difficulty}">${q.difficultyLabel}</div>
                 </div>
                 
+                <button type="button" class="btn-speech" data-idx="${idx}" title="Dengarkan Soal">🔊 Dengar</button>
+
                 <div class="math-column">
                     <div class="math-num-top">${q.num1}</div>
                     <div class="math-row-bottom">
@@ -279,7 +329,35 @@
         });
 
         updateProgress();
+        applyFilter(currentFilter);
         scrollToActiveCard();
+    }
+
+    /**
+     * Filter Navigation Bar Handler
+     */
+    function applyFilter(filter) {
+        currentFilter = filter;
+        document.querySelectorAll('.filter-chip').forEach(btn => {
+            if (btn.getAttribute('data-filter') === filter) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        questions.forEach((q, idx) => {
+            const card = document.getElementById(`card-${idx}`);
+            if (!card) return;
+
+            if (filter === 'unsolved') {
+                card.style.display = q.isSolved ? 'none' : 'flex';
+            } else if (filter === 'solved') {
+                card.style.display = q.isSolved ? 'flex' : 'none';
+            } else {
+                card.style.display = 'flex';
+            }
+        });
     }
 
     /**
@@ -288,7 +366,6 @@
     function setActiveCard(index) {
         if (index < 0 || index >= TOTAL_QUESTIONS) return;
 
-        // Remove active class from previous
         const currentActiveCard = document.querySelector('.card-problem.active');
         if (currentActiveCard) {
             currentActiveCard.classList.remove('active');
@@ -307,7 +384,7 @@
         if (activeCard) {
             activeCard.scrollIntoView({
                 behavior: 'smooth',
-                block: 'nearest',
+                block: 'center',
                 inline: 'center'
             });
         }
@@ -321,7 +398,6 @@
         if (!q || q.isSolved) return;
 
         if (key >= '0' && key <= '9') {
-            // Limit answer string length to 5 digits max
             if (q.userAnswer.length < 5) {
                 q.userAnswer += key;
                 updateInputDisplay(activeIndex);
@@ -330,6 +406,12 @@
         } else if (key === 'Backspace') {
             if (q.userAnswer.length > 0) {
                 q.userAnswer = q.userAnswer.slice(0, -1);
+                updateInputDisplay(activeIndex);
+                playSound('click');
+            }
+        } else if (key === 'Clear') {
+            if (q.userAnswer.length > 0) {
+                q.userAnswer = '';
                 updateInputDisplay(activeIndex);
                 playSound('click');
             }
@@ -368,11 +450,9 @@
             q.isSolved = true;
             playSound('success');
 
-            // Visual Updates
             cardEl.classList.remove('active', 'error');
             cardEl.classList.add('success');
 
-            // Set Mascot to Sun ☀️
             mascotIcon.textContent = '☀️';
             speechText.textContent = 'Hebat! 🌟';
             speechText.className = 'speech-bubble bubble-success';
@@ -381,12 +461,10 @@
             setTimeout(() => {
                 feedbackEl.classList.remove('show');
 
-                // Check if all questions completed
                 const nextUnsolvedIndex = questions.findIndex(item => !item.isSolved);
                 if (nextUnsolvedIndex !== -1) {
                     setActiveCard(nextUnsolvedIndex);
                 } else {
-                    // Game Completed!
                     showEndScreen();
                 }
             }, 1000);
@@ -399,7 +477,6 @@
 
             cardEl.classList.add('error');
 
-            // Set Mascot to Bunny 🐰
             mascotIcon.textContent = '🐰';
             speechText.textContent = 'Coba lagi ya! 💪';
             speechText.className = 'speech-bubble bubble-error';
@@ -408,7 +485,6 @@
             setTimeout(() => {
                 cardEl.classList.remove('error');
                 feedbackEl.classList.remove('show');
-                // Clear input for retry
                 q.userAnswer = '';
                 updateInputDisplay(idx);
             }, 1100);
@@ -420,6 +496,7 @@
      */
     function updateProgress() {
         const solvedCount = questions.filter(q => q.isSolved).length;
+        const unsolvedCount = TOTAL_QUESTIONS - solvedCount;
         const percent = Math.round((solvedCount / TOTAL_QUESTIONS) * 100);
 
         const fillEls = document.querySelectorAll('.progress-bar-fill');
@@ -429,6 +506,15 @@
         fillEls.forEach(el => el.style.width = `${percent}%`);
         textEls.forEach(el => el.textContent = `Soal ${Math.min(solvedCount + 1, TOTAL_QUESTIONS)} dari ${TOTAL_QUESTIONS}`);
         percentEls.forEach(el => el.textContent = `${percent}%`);
+
+        // Update filter chips text count
+        const chipAll = document.querySelector('.filter-chip[data-filter="all"]');
+        const chipUnsolved = document.querySelector('.filter-chip[data-filter="unsolved"]');
+        const chipSolved = document.querySelector('.filter-chip[data-filter="solved"]');
+
+        if (chipAll) chipAll.textContent = `Semua (${TOTAL_QUESTIONS})`;
+        if (chipUnsolved) chipUnsolved.textContent = `Belum Selesai (${unsolvedCount})`;
+        if (chipSolved) chipSolved.textContent = `Sudah Selesai (${solvedCount})`;
     }
 
     /**
@@ -444,10 +530,8 @@
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // Top progress is visible -> hide floating progress on keyboard
                         floatingProgress.classList.add('hidden');
                     } else {
-                        // Top progress scrolled out -> show floating progress on keyboard
                         floatingProgress.classList.remove('hidden');
                     }
                 });
@@ -473,6 +557,7 @@
      */
     function showEndScreen() {
         playSound('win');
+        stopTimer();
 
         // Calculate detailed metrics
         const firstTryCount = questions.filter(q => q.attempts === 1).length;
@@ -480,6 +565,37 @@
         const totalAttemptsCount = questions.reduce((sum, q) => sum + q.attempts, 0);
 
         if (finalScoreVal) finalScoreVal.textContent = `100% (Sempurna!)`;
+
+        const finalTimeVal = document.getElementById('final-time-val');
+        if (finalTimeVal) finalTimeVal.textContent = formatTime(timerSeconds);
+
+        // Evaluate Achievement Badges
+        const achievementsBox = document.getElementById('achievements-box');
+        if (achievementsBox) {
+            achievementsBox.innerHTML = '';
+            
+            // Check Ribuan questions accuracy
+            const ribuanSolvedFirstTry = questions.filter(q => q.difficulty === 'ribuan' && q.attempts === 1).length;
+            if (ribuanSolvedFirstTry >= 6) {
+                achievementsBox.innerHTML += `<div class="achievement-sticker">🎯 Master Ribuan</div>`;
+            }
+
+            // Fast speed badge (< 4 mins)
+            if (timerSeconds <= 240) {
+                achievementsBox.innerHTML += `<div class="achievement-sticker">⚡ Kilat Super</div>`;
+            }
+
+            // Perfect first 10
+            const first10Correct = questions.slice(0, 10).every(q => q.attempts === 1);
+            if (first10Correct) {
+                achievementsBox.innerHTML += `<div class="achievement-sticker">🌟 Pembalap Angka</div>`;
+            }
+
+            // Perseverance badge
+            if (failedAttemptsCount > 0) {
+                achievementsBox.innerHTML += `<div class="achievement-sticker">🧠 Pantang Menyerah</div>`;
+            }
+        }
 
         // Dynamic Title based on performance
         const titleEl = document.querySelector('.celebration-title');
@@ -560,7 +676,22 @@
             });
         }
 
-        // Hint Button Delegate Click
+        // Filter Bar Click Delegate
+        const filterBar = document.getElementById('filter-bar');
+        if (filterBar) {
+            filterBar.addEventListener('click', (e) => {
+                const chip = e.target.closest('.filter-chip');
+                if (chip) {
+                    const filterVal = chip.getAttribute('data-filter');
+                    if (filterVal) {
+                        applyFilter(filterVal);
+                        playSound('click');
+                    }
+                }
+            });
+        }
+
+        // Worksheet Card Delegate Click (Hints & Voice Speaker)
         if (worksheetGrid) {
             worksheetGrid.addEventListener('click', (e) => {
                 const hintBtn = e.target.closest('.btn-hint-trigger');
@@ -571,6 +702,16 @@
                         renderWorksheet();
                         playSound('click');
                     }
+                    return;
+                }
+
+                const speechBtn = e.target.closest('.btn-speech');
+                if (speechBtn) {
+                    const idx = parseInt(speechBtn.getAttribute('data-idx'), 10);
+                    if (!isNaN(idx) && questions[idx]) {
+                        speakQuestion(idx);
+                    }
+                    return;
                 }
             });
         }
@@ -590,7 +731,6 @@
 
         // Physical Keyboard Listener Mapping
         window.addEventListener('keydown', (e) => {
-            // Don't intercept if modifier keys are pressed
             if (e.ctrlKey || e.altKey || e.metaKey) return;
 
             let keyVal = null;
@@ -598,12 +738,13 @@
                 keyVal = e.key;
             } else if (e.key === 'Backspace') {
                 keyVal = 'Backspace';
+            } else if (e.key === 'Escape' || e.key === 'c' || e.key === 'C') {
+                keyVal = 'Clear';
             } else if (e.key === 'Enter') {
                 keyVal = 'Enter';
             }
 
             if (keyVal) {
-                // Visual button press animation on screen
                 const btn = document.querySelector(`.jelly-btn[data-key="${keyVal}"]`);
                 if (btn) {
                     btn.classList.add('pressed');
@@ -640,6 +781,7 @@
         updateAudioBtnUI();
         generateQuestions();
         renderWorksheet();
+        startTimer();
     }
 
     // --- Start Application ---
