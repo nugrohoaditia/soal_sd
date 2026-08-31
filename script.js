@@ -384,10 +384,42 @@
   function showEndScreen() {
     playSound('win');
     
-    // Calculate final metrics
-    const scorePct = 100; // 100% completion reward!
-    finalScoreVal.textContent = `${scorePct}% (Sempurna!)`;
-    finalAttemptsVal.textContent = `${totalAttempts} kali`;
+    // Calculate detailed metrics
+    const firstTryCount = questions.filter(q => q.attempts === 1).length;
+    const failedAttemptsCount = questions.reduce((sum, q) => sum + Math.max(0, q.attempts - 1), 0);
+    const totalAttemptsCount = questions.reduce((sum, q) => sum + q.attempts, 0);
+
+    finalScoreVal.textContent = `100% (Sempurna!)`;
+    
+    const firstTryEl = document.getElementById('first-try-val');
+    const failedEl = document.getElementById('failed-attempts-val');
+    if (firstTryEl) firstTryEl.textContent = `${firstTryCount} / ${TOTAL_QUESTIONS} Soal`;
+    if (failedEl) failedEl.textContent = `${failedAttemptsCount} Kali`;
+    if (finalAttemptsVal) finalAttemptsVal.textContent = `${totalAttemptsCount} Kali`;
+
+    // Dynamic Star Ratings based on first-try accuracy
+    const starsContainer = document.querySelector('.stars-display');
+    if (starsContainer) {
+      if (firstTryCount >= 17) {
+        starsContainer.innerHTML = `
+          <span class="star-item star-gold">⭐</span>
+          <span class="star-item star-gold">⭐</span>
+          <span class="star-item star-gold">⭐</span>
+        `;
+      } else if (firstTryCount >= 12) {
+        starsContainer.innerHTML = `
+          <span class="star-item star-gold">⭐</span>
+          <span class="star-item star-gold">⭐</span>
+          <span class="star-item star-muted" style="opacity: 0.3">⭐</span>
+        `;
+      } else {
+        starsContainer.innerHTML = `
+          <span class="star-item star-gold">⭐</span>
+          <span class="star-item star-muted" style="opacity: 0.3">⭐</span>
+          <span class="star-item star-muted" style="opacity: 0.3">⭐</span>
+        `;
+      }
+    }
 
     createConfetti();
     endScreenOverlay.classList.remove('hidden');
