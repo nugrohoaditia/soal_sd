@@ -136,14 +136,14 @@
             let answer = 0;
 
             // Tier difficulty distribution across 30 questions:
-            // Questions 1-6: Units (1-9) & Small Tens (10-19) [6 questions]
-            // Questions 7-18: Tens (20-99) [12 questions - Majority!]
-            // Questions 19-24: Hundreds (100-999) [6 questions]
-            // Questions 25-30: Thousands (1000-5000) [6 questions]
+            // Questions 1-6: Units (1-19) [6 questions]
+            // Questions 7-15: Tens (20-99) [9 questions]
+            // Questions 16-24: Hundreds (100-899) [9 questions]
+            // Questions 25-30: Thousands (1200-4999) [6 questions]
             if (i <= 6) {
                 num1 = getRandomInt(3, 19);
                 num2 = getRandomInt(1, 9);
-            } else if (i <= 18) {
+            } else if (i <= 15) {
                 num1 = getRandomInt(20, 99);
                 num2 = getRandomInt(10, 89);
             } else if (i <= 24) {
