@@ -92,6 +92,30 @@
         }
     }
 
+    // --- Modal Overlay Helpers & Lock Scroll ---
+    function showModal(modalEl) {
+        if (!modalEl) return;
+        modalEl.classList.remove('hidden');
+        document.body.classList.add('modal-open');
+    }
+
+    function hideModal(modalEl) {
+        if (!modalEl) return;
+        modalEl.classList.add('hidden');
+
+        const startModal = document.getElementById('start-modal');
+        const resumeModal = document.getElementById('resume-modal');
+        const endScreen = document.getElementById('end-screen');
+
+        const isStartOpen = startModal && !startModal.classList.contains('hidden');
+        const isResumeOpen = resumeModal && !resumeModal.classList.contains('hidden');
+        const isEndOpen = endScreen && !endScreen.classList.contains('hidden');
+
+        if (!isStartOpen && !isResumeOpen && !isEndOpen) {
+            document.body.classList.remove('modal-open');
+        }
+    }
+
     // --- Voice Equation Reader (Web Speech API) ---
     function speakQuestion(idx) {
         const q = questions[idx];
@@ -690,7 +714,7 @@
         }
 
         createConfetti();
-        if (endScreenOverlay) endScreenOverlay.classList.remove('hidden');
+        showModal(endScreenOverlay);
     }
 
     function createConfetti() {
@@ -729,8 +753,7 @@
         if (btnStartGame) {
             btnStartGame.addEventListener('click', () => {
                 playSound('click');
-                const startModal = document.getElementById('start-modal');
-                if (startModal) startModal.classList.add('hidden');
+                hideModal(document.getElementById('start-modal'));
                 startTimer(0);
                 saveSession();
             });
@@ -741,8 +764,7 @@
         if (btnResumeGame) {
             btnResumeGame.addEventListener('click', () => {
                 playSound('click');
-                const resumeModal = document.getElementById('resume-modal');
-                if (resumeModal) resumeModal.classList.add('hidden');
+                hideModal(document.getElementById('resume-modal'));
                 const savedSession = loadSession();
                 if (savedSession) {
                     questions = savedSession.questions;
@@ -761,8 +783,7 @@
         if (btnNewGame) {
             btnNewGame.addEventListener('click', () => {
                 playSound('click');
-                const resumeModal = document.getElementById('resume-modal');
-                if (resumeModal) resumeModal.classList.add('hidden');
+                hideModal(document.getElementById('resume-modal'));
                 clearSession();
                 initGame(true);
             });
@@ -852,7 +873,7 @@
         if (btnReview) {
             btnReview.addEventListener('click', () => {
                 playSound('click');
-                if (endScreenOverlay) endScreenOverlay.classList.add('hidden');
+                hideModal(endScreenOverlay);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         }
@@ -861,7 +882,7 @@
         if (btnRestart) {
             btnRestart.addEventListener('click', () => {
                 playSound('click');
-                if (endScreenOverlay) endScreenOverlay.classList.add('hidden');
+                hideModal(endScreenOverlay);
                 clearSession();
                 initGame(true);
             });
@@ -879,8 +900,7 @@
             startTimer(0);
             saveSession();
         } else {
-            const startModal = document.getElementById('start-modal');
-            if (startModal) startModal.classList.remove('hidden');
+            showModal(document.getElementById('start-modal'));
         }
     }
 
@@ -890,6 +910,15 @@
         setupScrollObserver();
         updateAudioBtnUI();
 
+        // Prevent touch scrolling when overlay is active
+        document.querySelectorAll('.end-screen-overlay').forEach(overlay => {
+            overlay.addEventListener('touchmove', (e) => {
+                if (!overlay.classList.contains('hidden')) {
+                    e.preventDefault();
+                }
+            }, { passive: false });
+        });
+
         const savedSession = loadSession();
         if (savedSession) {
             questions = savedSession.questions;
@@ -898,13 +927,11 @@
             timerSeconds = savedSession.timerSeconds || 0;
             renderWorksheet();
             updateTimerDisplay();
-            const resumeModal = document.getElementById('resume-modal');
-            if (resumeModal) resumeModal.classList.remove('hidden');
+            showModal(document.getElementById('resume-modal'));
         } else {
             generateQuestions();
             renderWorksheet();
-            const startModal = document.getElementById('start-modal');
-            if (startModal) startModal.classList.remove('hidden');
+            showModal(document.getElementById('start-modal'));
         }
     });
 

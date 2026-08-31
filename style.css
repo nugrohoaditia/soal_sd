@@ -67,6 +67,13 @@ body {
     /* Space for sticky 3-column virtual keyboard + floating progress bar */
 }
 
+/* Modal Lock Scroll State */
+body.modal-open {
+    overflow: hidden !important;
+    height: 100vh;
+    touch-action: none;
+}
+
 /* Decorative Background Elements */
 .bg-decorations {
     position: fixed;
