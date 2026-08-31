@@ -332,6 +332,7 @@ body {
 .badge-difficulty.satuan { background: #E8F5E9; color: #2E7D32; border-color: #A5D6A7; }
 .badge-difficulty.puluhan { background: #FFF9C4; color: #F57F17; border-color: #FFF59D; }
 .badge-difficulty.ratusan { background: #F3E5F5; color: #7B1FA2; border-color: #E1BEE7; }
+.badge-difficulty.ribuan { background: #E0F2FE; color: #0277BD; border-color: #81D4FA; }
 
 /* Hint System */
 .btn-hint-trigger {

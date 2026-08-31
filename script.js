@@ -6,7 +6,7 @@
     'use strict';
 
     // --- Constants & Config ---
-    const TOTAL_QUESTIONS = 20;
+    const TOTAL_QUESTIONS = 30;
     const OPERATORS = ['+', '-'];
 
     // --- State Variables ---
@@ -135,19 +135,23 @@
             let num2 = 0;
             let answer = 0;
 
-            // Tier difficulty distribution across 20 questions:
-            // Questions 1-6: Units (1-9) & Small Tens (10-20)
-            // Questions 7-14: Tens (10-99)
-            // Questions 15-20: Mix of Tens & Hundreds (100-500)
+            // Tier difficulty distribution across 30 questions:
+            // Questions 1-6: Units (1-9) & Small Tens (10-19) [6 questions]
+            // Questions 7-18: Tens (20-99) [12 questions - Majority!]
+            // Questions 19-24: Hundreds (100-999) [6 questions]
+            // Questions 25-30: Thousands (1000-5000) [6 questions]
             if (i <= 6) {
                 num1 = getRandomInt(3, 19);
                 num2 = getRandomInt(1, 9);
-            } else if (i <= 14) {
-                num1 = getRandomInt(15, 99);
-                num2 = getRandomInt(5, 89);
+            } else if (i <= 18) {
+                num1 = getRandomInt(20, 99);
+                num2 = getRandomInt(10, 89);
+            } else if (i <= 24) {
+                num1 = getRandomInt(100, 899);
+                num2 = getRandomInt(50, 499);
             } else {
-                num1 = getRandomInt(100, 500);
-                num2 = getRandomInt(10, 300);
+                num1 = getRandomInt(1200, 4999);
+                num2 = getRandomInt(200, 2500);
             }
 
             // Constraint for Subtraction: Top number MUST be >= bottom number
@@ -169,7 +173,10 @@
 
             let difficulty = 'satuan';
             let difficultyLabel = '🌱 Satuan';
-            if (num1 >= 100 || num2 >= 100) {
+            if (num1 >= 1000 || num2 >= 1000) {
+                difficulty = 'ribuan';
+                difficultyLabel = '⛰️ Ribuan';
+            } else if (num1 >= 100 || num2 >= 100) {
                 difficulty = 'ratusan';
                 difficultyLabel = '🌳 Ratusan';
             } else if (num1 >= 20 || num2 >= 20) {
@@ -314,8 +321,8 @@
         if (!q || q.isSolved) return;
 
         if (key >= '0' && key <= '9') {
-            // Limit answer string length to 4 digits max
-            if (q.userAnswer.length < 4) {
+            // Limit answer string length to 5 digits max
+            if (q.userAnswer.length < 5) {
                 q.userAnswer += key;
                 updateInputDisplay(activeIndex);
                 playSound('click');
@@ -477,11 +484,11 @@
         // Dynamic Title based on performance
         const titleEl = document.querySelector('.celebration-title');
         if (titleEl) {
-            if (firstTryCount === 20) {
+            if (firstTryCount === 30) {
                 titleEl.textContent = '🏆 Master Matematika Super! 🎉';
-            } else if (firstTryCount >= 17) {
+            } else if (firstTryCount >= 25) {
                 titleEl.textContent = '🌟 Bintang Matematika Hebat! 🎉';
-            } else if (firstTryCount >= 12) {
+            } else if (firstTryCount >= 18) {
                 titleEl.textContent = '💪 Jagoan Matematika Keren! 🎉';
             } else {
                 titleEl.textContent = '👏 Pahlawan Pantang Menyerah! 🎉';
@@ -497,13 +504,13 @@
         // Dynamic Star Ratings based on first-try accuracy
         const starsContainer = document.querySelector('.stars-display');
         if (starsContainer) {
-            if (firstTryCount >= 17) {
+            if (firstTryCount >= 25) {
                 starsContainer.innerHTML = `
                     <span class="star-item star-gold">⭐</span>
                     <span class="star-item star-gold">⭐</span>
                     <span class="star-item star-gold">⭐</span>
                 `;
-            } else if (firstTryCount >= 12) {
+            } else if (firstTryCount >= 18) {
                 starsContainer.innerHTML = `
                     <span class="star-item star-gold">⭐</span>
                     <span class="star-item star-gold">⭐</span>
