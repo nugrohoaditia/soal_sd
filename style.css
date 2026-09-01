@@ -85,23 +85,6 @@ body.mode-gambar .virtual-keyboard-container {
     display: none !important;
 }
 
-/* Hitung Bergambar 1 Column Layout */
-body.mode-gambar .worksheet-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 720px;
-    margin: 0 auto;
-}
-
-body.mode-gambar .card-problem {
-    flex: 1 1 100% !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    min-width: 100% !important;
-}
-
 /* Decorative Background Elements */
 .bg-decorations {
     position: fixed;
@@ -1527,15 +1510,17 @@ body.mode-gambar .card-problem {
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
-    /* Story Mode 1 Column Mobile Layout */
-    body.mode-cerita .worksheet-grid {
+    /* Story Mode & Gambar Mode 1 Column Mobile Layout */
+    body.mode-cerita .worksheet-grid,
+    body.mode-gambar .worksheet-grid {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
 
-    body.mode-cerita .card-problem {
+    body.mode-cerita .card-problem,
+    body.mode-gambar .card-problem {
         flex: 1 1 100% !important;
         max-width: 100% !important;
         width: 100% !important;
@@ -1745,4 +1730,26 @@ body.mode-gambar .virtual-keyboard-container {
 
 body.mode-gambar .worksheet-wrapper {
     padding-bottom: 2rem !important;
+}
+
+/* Story Mode & Gambar Mode 2 Column Desktop Layout (Layar Besar) */
+@media (min-width: 769px) {
+    body.mode-cerita .worksheet-grid,
+    body.mode-gambar .worksheet-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25rem;
+        width: 100%;
+        max-width: 920px;
+        margin: 0 auto;
+    }
+
+    body.mode-cerita .card-problem,
+    body.mode-gambar .card-problem {
+        flex: 1 1 calc(50% - 0.75rem) !important;
+        max-width: calc(50% - 0.75rem) !important;
+        width: calc(50% - 0.75rem) !important;
+        min-width: 320px !important;
+    }
 }

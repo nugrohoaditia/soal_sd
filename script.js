@@ -8,7 +8,7 @@
     // --- Constants & Config ---
     const TOTAL_QUESTIONS = 10;
     const OPERATORS = ['+', '-'];
-    const STORAGE_KEY = 'super_kid_math_session_v8';
+    const STORAGE_KEY = 'super_kid_math_session_v9';
     const SESSION_TTL_MS = 24 * 60 * 60 * 1000; // 24 Jam Expiration Limit
 
     // --- State Variables ---
@@ -81,6 +81,12 @@
                 } else if (mode === 'susun') {
                     const isValidSusunSession = parsed.questions.every(q => typeof q.num1 === 'number' && typeof q.num2 === 'number' && typeof q.operator === 'string');
                     if (!isValidSusunSession) {
+                        clearSessionForMode(mode);
+                        return null;
+                    }
+                } else if (mode === 'gambar') {
+                    const isValidGambarSession = parsed.questions.every(q => q.story && Array.isArray(q.groups) && q.groups.length > 0 && Array.isArray(q.options) && q.options.length === 3);
+                    if (!isValidGambarSession) {
                         clearSessionForMode(mode);
                         return null;
                     }
@@ -521,9 +527,10 @@
 
                 let promptContentHTML = '';
                 if (gameMode === 'gambar') {
+                    const storyText = q.story || 'Hitunglah jumlah objek di bawah ini:';
                     promptContentHTML = `
                         <div class="interactive-object-box">
-                            <p class="picture-story-text">🎨 ${q.story}</p>
+                            <p class="picture-story-text">🎨 ${storyText}</p>
                             <div class="emoji-groups-container">
                                 ${q.groups ? q.groups.map((grp, gIdx) => `
                                     <div class="emoji-group-card">
@@ -1413,6 +1420,8 @@
         updateAudioBtnUI();
         if (gameMode === 'cerita') {
             generateStoryQuestions();
+        } else if (gameMode === 'gambar') {
+            generatePictureQuestions();
         } else {
             generateQuestions();
         }
@@ -1448,8 +1457,12 @@
 
         if (gameMode === 'cerita') {
             document.body.classList.add('mode-cerita');
-        } else {
+            document.body.classList.remove('mode-gambar');
+        } else if (gameMode === 'gambar') {
+            document.body.classList.add('mode-gambar');
             document.body.classList.remove('mode-cerita');
+        } else {
+            document.body.classList.remove('mode-cerita', 'mode-gambar');
         }
 
         const modeSelect = document.getElementById('game-mode-select');
@@ -1467,6 +1480,8 @@
         } else {
             if (gameMode === 'cerita') {
                 generateStoryQuestions();
+            } else if (gameMode === 'gambar') {
+                generatePictureQuestions();
             } else {
                 generateQuestions();
             }
