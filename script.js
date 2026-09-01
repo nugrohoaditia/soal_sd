@@ -347,9 +347,9 @@
             const showHintBtn = (!q.isSolved && q.attempts >= 2 && !q.showHint);
 
             card.innerHTML = `
-                <div class="card-header-badge">${q.isSolved ? '✅ Selesai' : `Soal #${q.id}`}</div>
+                <div class="card-header-badge">${q.isSolved ? '✅ Selesai' : `No. ${q.id}`}</div>
                 
-                <button type="button" class="btn-speech" data-idx="${idx}" title="Dengarkan Soal">🔊 Dengar</button>
+                <button type="button" class="btn-speech" data-idx="${idx}" title="Dengarkan Soal">🔊</button>
 
                 <div class="math-column">
                     <div class="math-num-top">${q.num1}</div>
