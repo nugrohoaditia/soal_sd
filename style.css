@@ -74,13 +74,32 @@ body.modal-open {
     touch-action: none;
 }
 
-/* Story Mode Layout Adjustments */
-body.mode-cerita {
+/* Story Mode & Gambar Mode Layout Adjustments */
+body.mode-cerita,
+body.mode-gambar {
     padding-bottom: 2.5rem;
 }
 
-body.mode-cerita .virtual-keyboard-container {
+body.mode-cerita .virtual-keyboard-container,
+body.mode-gambar .virtual-keyboard-container {
     display: none !important;
+}
+
+/* Hitung Bergambar 1 Column Layout */
+body.mode-gambar .worksheet-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+body.mode-gambar .card-problem {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
 }
 
 /* Decorative Background Elements */
