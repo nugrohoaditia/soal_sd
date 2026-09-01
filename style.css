@@ -208,6 +208,133 @@ body.mode-cerita .virtual-keyboard-container {
     border-color: #0288D1;
 }
 
+/* Mode Selection Cards inside Start Modal */
+.mode-selection-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.mode-choice-btn {
+    background: #FFFFFF;
+    border: 2.5px solid #E0F2FE;
+    border-radius: var(--radius-md);
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    outline: none;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.mode-choice-btn:hover {
+    border-color: #4FC3F7;
+    background: #E1F5FE;
+    transform: translateY(-2px);
+}
+
+.mode-choice-btn.active {
+    background: #E1F5FE;
+    border-color: #0288D1;
+    box-shadow: 0 4px 14px rgba(2, 136, 209, 0.2);
+}
+
+.mode-icon {
+    font-size: 2.2rem;
+    flex-shrink: 0;
+}
+
+.mode-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.mode-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0288D1;
+}
+
+.mode-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Loading Mode State inside Worksheet Grid */
+.loading-mode-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    background: #FFFFFF;
+    border-radius: var(--radius-lg);
+    border: 3.5px solid #B3E5FC;
+    box-shadow: var(--shadow-card);
+    width: 100%;
+    max-width: 480px;
+    margin: 2rem auto;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.spinner-mascot {
+    font-size: 3.5rem;
+    margin-bottom: 0.75rem;
+    animation: pulseSpin 1s infinite alternate ease-in-out;
+}
+
+@keyframes pulseSpin {
+    0% { transform: scale(1) rotate(-6deg); }
+    100% { transform: scale(1.15) rotate(6deg); }
+}
+
+.loading-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: #0288D1;
+    margin-bottom: 0.35rem;
+}
+
+.loading-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.loading-progress-bar {
+    width: 80%;
+    height: 12px;
+    background: #E0F2FE;
+    border-radius: var(--radius-pill);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #B3E5FC;
+}
+
+.loading-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #4FC3F7, #66BB6A);
+    border-radius: var(--radius-pill);
+    animation: loadFill 1.5s ease-in-out forwards;
+}
+
+@keyframes loadFill {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
 .timer-badge {
     background: #FFFDE7;
     border: 2px solid #FFF59D;

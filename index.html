@@ -45,7 +45,7 @@
                 <div class="header-left-bar">
                     <select id="game-mode-select" class="mode-select" aria-label="Pilih Mode Permainan">
                         <option value="susun">📐 Hitung Susun</option>
-                        <option value="cerita">📖 Hitung Cerita</option>
+                        <option value="cerita">📖 Soal Cerita</option>
                     </select>
                 </div>
                 <div class="header-right-bar">
@@ -118,7 +118,25 @@
         <div class="celebration-card">
             <div class="celebration-badge">🚀</div>
             <h2 class="celebration-title">Siap Bertualang? 🎉</h2>
-            <p class="celebration-subtitle">Asah kemampuan matematikamu dengan 30 soal seru! Kamu siap?</p>
+            <p class="celebration-subtitle">Pilih jenis petualangan matematika yang kamu suka!</p>
+
+            <div class="mode-selection-cards">
+                <button type="button" class="mode-choice-btn active" data-mode="susun">
+                    <span class="mode-icon">📐</span>
+                    <div class="mode-info">
+                        <span class="mode-title">Hitung Susun</span>
+                        <span class="mode-desc">Hitung tambah & kurang susun ke bawah</span>
+                    </div>
+                </button>
+                <button type="button" class="mode-choice-btn" data-mode="cerita">
+                    <span class="mode-icon">📖</span>
+                    <div class="mode-info">
+                        <span class="mode-title">Soal Cerita</span>
+                        <span class="mode-desc">Soal cerita seru pilihan ganda A, B, C</span>
+                    </div>
+                </button>
+            </div>
+
             <div class="celebration-actions">
                 <button id="btn-start-game" class="btn-restart style-full-width">
                     <span>🚀 Mulai!</span>
@@ -139,6 +157,23 @@
                 </button>
                 <button id="btn-new-game" class="btn-review">
                     <span>🔄 Mulai Baru</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Switch Mode Warning Modal Overlay -->
+    <div id="switch-mode-modal" class="end-screen-overlay hidden">
+        <div class="celebration-card">
+            <div class="celebration-badge">⚠️</div>
+            <h2 class="celebration-title">Pindah Mode Permainan?</h2>
+            <p class="celebration-subtitle">Progres permainan di mode saat ini akan diulang dari awal. Apakah kamu yakin mau pindah mode?</p>
+            <div class="celebration-actions">
+                <button id="btn-confirm-switch" class="btn-restart">
+                    <span>✅ Ya, Pindah!</span>
+                </button>
+                <button id="btn-cancel-switch" class="btn-review">
+                    <span>❌ Batal</span>
                 </button>
             </div>
         </div>

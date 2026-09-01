@@ -8,7 +8,7 @@
     // --- Constants & Config ---
     const TOTAL_QUESTIONS = 30;
     const OPERATORS = ['+', '-'];
-    const STORAGE_KEY = 'super_kid_math_session_v4';
+    const STORAGE_KEY = 'super_kid_math_session_v6';
     const SESSION_TTL_MS = 24 * 60 * 60 * 1000; // 24 Jam Expiration Limit
 
     // --- State Variables ---
@@ -71,10 +71,16 @@
                     return null;
                 }
 
-                // Validation check for story mode options integrity
+                // Integrity check for mode-specific question structure
                 if (mode === 'cerita') {
-                    const isValidStorySession = parsed.questions.every(q => Array.isArray(q.options) && q.options.length === 3);
+                    const isValidStorySession = parsed.questions.every(q => q.story && Array.isArray(q.options) && q.options.length === 3);
                     if (!isValidStorySession) {
+                        clearSessionForMode(mode);
+                        return null;
+                    }
+                } else if (mode === 'susun') {
+                    const isValidSusunSession = parsed.questions.every(q => typeof q.num1 === 'number' && typeof q.num2 === 'number' && typeof q.operator === 'string');
+                    if (!isValidSusunSession) {
                         clearSessionForMode(mode);
                         return null;
                     }
@@ -152,13 +158,15 @@
 
         const startModal = document.getElementById('start-modal');
         const resumeModal = document.getElementById('resume-modal');
+        const switchModal = document.getElementById('switch-mode-modal');
         const endScreen = document.getElementById('end-screen');
 
         const isStartOpen = startModal && !startModal.classList.contains('hidden');
         const isResumeOpen = resumeModal && !resumeModal.classList.contains('hidden');
+        const isSwitchOpen = switchModal && !switchModal.classList.contains('hidden');
         const isEndOpen = endScreen && !endScreen.classList.contains('hidden');
 
-        if (!isStartOpen && !isResumeOpen && !isEndOpen) {
+        if (!isStartOpen && !isResumeOpen && !isSwitchOpen && !isEndOpen) {
             document.body.classList.remove('modal-open');
         }
     }
@@ -492,12 +500,10 @@
                 `;
             } else {
                 // --- Column Math Layout (Hitung Susun) ---
-                let hintText = '';
-                if (q.operator === '+') {
-                    hintText = `💡 Tips: Hitung ${q.num1} + ${q.num2} = ${q.answer}`;
-                } else {
-                    hintText = `💡 Tips: Hitung ${q.num1} - ${q.num2} = ${q.answer}`;
-                }
+                const num1 = typeof q.num1 === 'number' ? q.num1 : 0;
+                const num2 = typeof q.num2 === 'number' ? q.num2 : 0;
+                const operator = q.operator || '+';
+                let hintText = `💡 Tips: Hitung ${num1} ${operator} ${num2} = ${q.answer}`;
 
                 card.innerHTML = `
                     <div class="card-header-badge">${q.isSolved ? '✅ Selesai' : `No. ${q.id}`}</div>
@@ -505,10 +511,10 @@
                     <button type="button" class="btn-speech" data-idx="${idx}" title="Dengarkan Soal">🔊</button>
 
                     <div class="math-column">
-                        <div class="math-num-top">${q.num1}</div>
+                        <div class="math-num-top">${num1}</div>
                         <div class="math-row-bottom">
-                            <span class="math-operator">${q.operator}</span>
-                            <span class="math-num-bottom">${q.num2}</span>
+                            <span class="math-operator">${operator}</span>
+                            <span class="math-num-bottom">${num2}</span>
                         </div>
                         <div class="math-line"></div>
                         <div class="math-input-wrapper">
@@ -613,7 +619,9 @@
      * Switch Game Mode Handler ('susun' vs 'cerita')
      */
     function setGameMode(mode) {
+        if (!worksheetGrid) return;
         gameMode = mode;
+
         if (gameMode === 'cerita') {
             document.body.classList.add('mode-cerita');
         } else {
@@ -623,20 +631,35 @@
         const modeSelect = document.getElementById('game-mode-select');
         if (modeSelect) modeSelect.value = gameMode;
 
-        const savedModeSession = loadSessionForMode(gameMode);
-        if (savedModeSession) {
-            questions = savedModeSession.questions;
-            activeIndex = savedModeSession.activeIndex || 0;
-            totalAttempts = savedModeSession.totalAttempts || 0;
-        } else {
+        stopTimer();
+        clearSessionForMode(gameMode);
+
+        // Clear worksheet-grid & show cheerful 1.5s loading transition
+        const modeLabel = gameMode === 'cerita' ? 'Soal Cerita' : 'Hitung Susun';
+        const modeIcon = gameMode === 'cerita' ? '📖' : '📐';
+
+        worksheetGrid.innerHTML = `
+            <div class="loading-mode-container">
+                <div class="spinner-mascot">${modeIcon}</div>
+                <h3 class="loading-title">Memuat ${modeLabel}...</h3>
+                <p class="loading-subtitle">Menyiapkan 30 petualangan matematika baru!</p>
+                <div class="loading-progress-bar">
+                    <div class="loading-progress-fill"></div>
+                </div>
+            </div>
+        `;
+
+        // Wait 1.5s for smooth transition then populate and render fresh questions
+        setTimeout(() => {
             if (gameMode === 'cerita') {
                 generateStoryQuestions();
             } else {
                 generateQuestions();
             }
-        }
-        renderWorksheet();
-        saveSession();
+            renderWorksheet();
+            startTimer(0);
+            saveSession();
+        }, 1500);
     }
 
     /**
@@ -925,14 +948,41 @@
      * Event Listeners Setup
      */
     function setupEventListeners() {
-        // Mode Selector Listener
+        // Mode Selector Listener with Confirmation Warning
         const modeSelect = document.getElementById('game-mode-select');
         if (modeSelect) {
             modeSelect.addEventListener('change', (e) => {
-                const selectedMode = e.target.value;
-                if (selectedMode) {
-                    playSound('click');
-                    setGameMode(selectedMode);
+                const targetMode = e.target.value;
+                if (targetMode && targetMode !== gameMode) {
+                    modeSelect.setAttribute('data-pending-mode', targetMode);
+                    showModal(document.getElementById('switch-mode-modal'));
+                }
+            });
+        }
+
+        // Confirm Mode Switch Button ("✅ Ya, Pindah!")
+        const btnConfirmSwitch = document.getElementById('btn-confirm-switch');
+        if (btnConfirmSwitch) {
+            btnConfirmSwitch.addEventListener('click', () => {
+                playSound('click');
+                hideModal(document.getElementById('switch-mode-modal'));
+                const targetMode = (modeSelect ? modeSelect.getAttribute('data-pending-mode') : null) || (gameMode === 'cerita' ? 'susun' : 'cerita');
+                if (modeSelect) modeSelect.removeAttribute('data-pending-mode');
+                
+                clearSessionForMode(gameMode);
+                setGameMode(targetMode);
+            });
+        }
+
+        // Cancel Mode Switch Button ("❌ Batal")
+        const btnCancelSwitch = document.getElementById('btn-cancel-switch');
+        if (btnCancelSwitch) {
+            btnCancelSwitch.addEventListener('click', () => {
+                playSound('click');
+                hideModal(document.getElementById('switch-mode-modal'));
+                if (modeSelect) {
+                    modeSelect.removeAttribute('data-pending-mode');
+                    modeSelect.value = gameMode;
                 }
             });
         }
@@ -948,14 +998,34 @@
             });
         }
 
+        let selectedStartMode = 'susun';
+
+        // Mode Choice Button Listener inside Start Modal
+        const startModalEl = document.getElementById('start-modal');
+        if (startModalEl) {
+            startModalEl.addEventListener('click', (e) => {
+                const modeBtn = e.target.closest('.mode-choice-btn');
+                if (modeBtn) {
+                    playSound('click');
+                    const mode = modeBtn.getAttribute('data-mode');
+                    if (mode) {
+                        selectedStartMode = mode;
+                        startModalEl.querySelectorAll('.mode-choice-btn').forEach(btn => {
+                            btn.classList.remove('active');
+                        });
+                        modeBtn.classList.add('active');
+                    }
+                }
+            });
+        }
+
         // Start Game Modal Button ("Mulai!")
         const btnStartGame = document.getElementById('btn-start-game');
         if (btnStartGame) {
             btnStartGame.addEventListener('click', () => {
                 playSound('click');
                 hideModal(document.getElementById('start-modal'));
-                startTimer(0);
-                saveSession();
+                setGameMode(selectedStartMode);
             });
         }
 
