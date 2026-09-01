@@ -86,10 +86,14 @@
     }
 
     function updateTimerDisplay() {
+        const timeStr = `⏱️ ${formatTime(timerSeconds)}`;
         const timerBadge = document.getElementById('timer-badge');
         if (timerBadge) {
-            timerBadge.textContent = `⏱️ ${formatTime(timerSeconds)}`;
+            timerBadge.textContent = timeStr;
         }
+        document.querySelectorAll('.progress-timer').forEach(el => {
+            el.textContent = timeStr;
+        });
     }
 
     // --- Modal Overlay Helpers & Lock Scroll ---
