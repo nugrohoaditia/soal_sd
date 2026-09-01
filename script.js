@@ -9,6 +9,7 @@
     const TOTAL_QUESTIONS = 30;
     const OPERATORS = ['+', '-'];
     const STORAGE_KEY = 'super_kid_math_session';
+    const SESSION_TTL_MS = 24 * 60 * 60 * 1000; // 24 Jam Expiration Limit
 
     // --- State Variables ---
     let questions = [];
@@ -27,7 +28,8 @@
                 questions: questions,
                 activeIndex: activeIndex,
                 timerSeconds: timerSeconds,
-                totalAttempts: totalAttempts
+                totalAttempts: totalAttempts,
+                timestamp: Date.now()
             };
             localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
         } catch (e) {
@@ -41,6 +43,12 @@
             if (!raw) return null;
             const parsed = JSON.parse(raw);
             if (parsed && Array.isArray(parsed.questions) && parsed.questions.length === TOTAL_QUESTIONS) {
+                // Cek apakah sesi sudah lebih dari 24 jam
+                const now = Date.now();
+                if (parsed.timestamp && (now - parsed.timestamp > SESSION_TTL_MS)) {
+                    clearSession();
+                    return null;
+                }
                 const hasUnsolved = parsed.questions.some(q => !q.isSolved);
                 if (hasUnsolved) {
                     return parsed;
