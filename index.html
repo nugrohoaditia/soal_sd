@@ -49,6 +49,7 @@
                     <select id="game-mode-select" class="mode-select" aria-label="Pilih Mode Permainan">
                         <option value="susun">📐 Hitung Susun</option>
                         <option value="cerita">📖 Soal Cerita</option>
+                        <option value="gambar">🎨 Hitung Bergambar</option>
                     </select>
                 </div>
                 <div class="header-right-bar">
@@ -69,6 +70,7 @@
         <section id="top-progress" class="progress-section top-progress">
             <div class="progress-info">
                 <span class="progress-text">Soal 1 dari 10</span>
+                <span class="progress-timer">⏱️ 00:00</span>
                 <span class="progress-percent">0%</span>
             </div>
             <div class="progress-bar-track">
@@ -136,6 +138,13 @@
                     <div class="mode-info">
                         <span class="mode-title">Soal Cerita</span>
                         <span class="mode-desc">Soal cerita seru pilihan ganda A, B, C</span>
+                    </div>
+                </button>
+                <button type="button" class="mode-choice-btn" data-mode="gambar">
+                    <span class="mode-icon">🎨</span>
+                    <div class="mode-info">
+                        <span class="mode-title">Hitung Bergambar</span>
+                        <span class="mode-desc">Hitung objek hewan, buah & mainan</span>
                     </div>
                 </button>
             </div>

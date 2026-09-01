@@ -8,11 +8,11 @@
     // --- Constants & Config ---
     const TOTAL_QUESTIONS = 10;
     const OPERATORS = ['+', '-'];
-    const STORAGE_KEY = 'super_kid_math_session_v7';
+    const STORAGE_KEY = 'super_kid_math_session_v8';
     const SESSION_TTL_MS = 24 * 60 * 60 * 1000; // 24 Jam Expiration Limit
 
     // --- State Variables ---
-    let gameMode = 'susun'; // 'susun' | 'cerita'
+    let gameMode = 'susun'; // 'susun' | 'cerita' | 'gambar'
     let questions = [];
     let activeIndex = 0;
     let totalAttempts = 0;
@@ -416,6 +416,270 @@
         activeIndex = 0;
     }
 
+    // --- Bank Soal Hitung Bergambar (20 Soal Interaktif 4 Kategori) ---
+    const PICTURE_QUESTIONS_BANK = [
+        // 1. Hewan Peternakan
+        {
+            category: 'hewan',
+            story: 'Di peternakan Paman Budi ada Ayam 🐓 dan Sapi 🐄. Berapa total hewan di peternakan?',
+            answer: 5,
+            distractors: [4, 6],
+            groups: [
+                { title: '🐓 Ayam', emoji: '🐓', count: 3 },
+                { title: '🐄 Sapi', emoji: '🐄', count: 2 }
+            ],
+            hint: 'Hitung 3 Ayam + 2 Sapi = 5 Hewan'
+        },
+        {
+            category: 'hewan',
+            story: 'Budi melihat Kelinci 🐰 dan Kucing 🐱 bermain bersama. Berapa jumlah semua hewan?',
+            answer: 7,
+            distractors: [6, 8],
+            groups: [
+                { title: '🐰 Kelinci', emoji: '🐰', count: 4 },
+                { title: '🐱 Kucing', emoji: '🐱', count: 3 }
+            ],
+            hint: 'Hitung 4 Kelinci + 3 Kucing = 7 Hewan'
+        },
+        {
+            category: 'hewan',
+            story: 'Ada Bebek 🦆 berenang di kolam dan Anak Ayam 🐣 di rumput. Berapa total mereka?',
+            answer: 8,
+            distractors: [7, 9],
+            groups: [
+                { title: '🦆 Bebek', emoji: '🦆', count: 6 },
+                { title: '🐣 Anak Ayam', emoji: '🐣', count: 2 }
+            ],
+            hint: 'Hitung 6 Bebek + 2 Anak Ayam = 8'
+        },
+        {
+            category: 'hewan',
+            story: 'Di padang rumput ada Kuda 🐴 dan Anjing 🐶 berlari. Berapa total hewan tersebut?',
+            answer: 9,
+            distractors: [8, 10],
+            groups: [
+                { title: '🐴 Kuda', emoji: '🐴', count: 5 },
+                { title: '🐶 Anjing', emoji: '🐶', count: 4 }
+            ],
+            hint: 'Hitung 5 Kuda + 4 Anjing = 9'
+        },
+        {
+            category: 'hewan',
+            story: 'Pak Tani punya Babi 🐷 dan Domba 🐑. Berapa total hewan milik Pak Tani?',
+            answer: 6,
+            distractors: [5, 7],
+            groups: [
+                { title: '🐷 Babi', emoji: '🐷', count: 2 },
+                { title: '🐑 Domba', emoji: '🐑', count: 4 }
+            ],
+            hint: 'Hitung 2 Babi + 4 Domba = 6'
+        },
+
+        // 2. Buah-buahan
+        {
+            category: 'buah',
+            story: 'Siti membawa 6 Apel 🍎 segar. Dimakan oleh adik 2 Apel. Berapa sisa apel Siti?',
+            answer: 4,
+            distractors: [3, 5],
+            groups: [
+                { title: '🍎 Apel Siti', emoji: '🍎', count: 6, reducedCount: 2 }
+            ],
+            hint: 'Hitung 6 Apel dikurangi 2 dimakan = 4 Apel'
+        },
+        {
+            category: 'buah',
+            story: 'Monyet memetik 5 Pisang 🍌 di pohon, lalu menemukan 3 Pisang 🍌 lagi. Berapa total pisang?',
+            answer: 8,
+            distractors: [7, 9],
+            groups: [
+                { title: '🍌 Pohon 1', emoji: '🍌', count: 5 },
+                { title: '🍌 Pohon 2', emoji: '🍌', count: 3 }
+            ],
+            hint: 'Hitung 5 Pisang + 3 Pisang = 8'
+        },
+        {
+            category: 'buah',
+            story: 'Ibu memetik 4 Stroberi 🍓 dan 5 Anggur 🍇 di kebun. Berapa total buah yang dipetik?',
+            answer: 9,
+            distractors: [8, 10],
+            groups: [
+                { title: '🍓 Stroberi', emoji: '🍓', count: 4 },
+                { title: '🍇 Anggur', emoji: '🍇', count: 5 }
+            ],
+            hint: 'Hitung 4 Stroberi + 5 Anggur = 9'
+        },
+        {
+            category: 'buah',
+            story: 'Ada 7 Jeruk 🍊 di keranjang. Dimakan 3 Jeruk. Berapa sisa jeruk di keranjang?',
+            answer: 4,
+            distractors: [3, 5],
+            groups: [
+                { title: '🍊 Jeruk Keranjang', emoji: '🍊', count: 7, reducedCount: 3 }
+            ],
+            hint: 'Hitung 7 Jeruk dikurangi 3 dimakan = 4'
+        },
+        {
+            category: 'buah',
+            story: 'Ayah memanen 3 Semangka 🍉 pagi hari dan 3 Semangka 🍉 sore hari. Berapa total semangka?',
+            answer: 6,
+            distractors: [5, 7],
+            groups: [
+                { title: '🍉 Pagi', emoji: '🍉', count: 3 },
+                { title: '🍉 Sore', emoji: '🍉', count: 3 }
+            ],
+            hint: 'Hitung 3 Semangka + 3 Semangka = 6'
+        },
+
+        // 3. Kendaraan
+        {
+            category: 'kendaraan',
+            story: 'Di garasi ada Mobil 🚗 dan Roket 🚀. Berapa jumlah semua kendaraan?',
+            answer: 6,
+            distractors: [5, 7],
+            groups: [
+                { title: '🚗 Mobil', emoji: '🚗', count: 4 },
+                { title: '🚀 Roket', emoji: '🚀', count: 2 }
+            ],
+            hint: 'Hitung 4 Mobil + 2 Roket = 6'
+        },
+        {
+            category: 'kendaraan',
+            story: 'Di halte ada Bus 🚌 dan Mobil Balap 🏎️. Berapa total kendaraan di sana?',
+            answer: 8,
+            distractors: [7, 9],
+            groups: [
+                { title: '🚌 Bus', emoji: '🚌', count: 3 },
+                { title: '🏎️ Mobil Balap', emoji: '🏎️', count: 5 }
+            ],
+            hint: 'Hitung 3 Bus + 5 Mobil Balap = 8'
+        },
+        {
+            category: 'kendaraan',
+            story: 'Budi melihat 2 Pesawat ✈️ dan 3 Roket 🚀 terbang di langit. Berapa jumlah totalnya?',
+            answer: 5,
+            distractors: [4, 6],
+            groups: [
+                { title: '✈️ Pesawat', emoji: '✈️', count: 2 },
+                { title: '🚀 Roket', emoji: '🚀', count: 3 }
+            ],
+            hint: 'Hitung 2 Pesawat + 3 Roket = 5'
+        },
+        {
+            category: 'kendaraan',
+            story: 'Ada 8 Mobil 🚗 di tempat parkir. Pergi 3 Mobil. Berapa sisa mobil yang parkir?',
+            answer: 5,
+            distractors: [4, 6],
+            groups: [
+                { title: '🚗 Tempat Parkir', emoji: '🚗', count: 8, reducedCount: 3 }
+            ],
+            hint: 'Hitung 8 Mobil dikurangi 3 pergi = 5'
+        },
+        {
+            category: 'kendaraan',
+            story: 'Di jalanan ada Motor 🛵 dan Mobil 🚗 berjalan bersama. Berapa total kendaraan?',
+            answer: 8,
+            distractors: [7, 9],
+            groups: [
+                { title: '🛵 Motor', emoji: '🛵', count: 4 },
+                { title: '🚗 Mobil', emoji: '🚗', count: 4 }
+            ],
+            hint: 'Hitung 4 Motor + 4 Mobil = 8'
+        },
+
+        // 4. Mainan & Hadiah
+        {
+            category: 'mainan',
+            story: 'Ada 5 Balon 🎈 warna-warni. Meletus 2 Balon. Berapa sisa balon yang utuh?',
+            answer: 3,
+            distractors: [2, 4],
+            groups: [
+                { title: '🎈 Balon Pesta', emoji: '🎈', count: 5, reducedCount: 2 }
+            ],
+            hint: 'Hitung 5 Balon dikurangi 2 meletus = 3 Balon'
+        },
+        {
+            category: 'mainan',
+            story: 'Budi dapat 4 Kado 🎁 di meja dan 3 Kado 🎁 di lemari. Berapa total kado Budi?',
+            answer: 7,
+            distractors: [6, 8],
+            groups: [
+                { title: '🎁 Meja', emoji: '🎁', count: 4 },
+                { title: '🎁 Lemari', emoji: '🎁', count: 3 }
+            ],
+            hint: 'Hitung 4 Kado + 3 Kado = 7 Kado'
+        },
+        {
+            category: 'mainan',
+            story: 'Di lapangan ada Bola Sepak ⚽ dan Bola Basket 🏀. Berapa jumlah semua bola?',
+            answer: 6,
+            distractors: [5, 7],
+            groups: [
+                { title: '⚽ Bola Sepak', emoji: '⚽', count: 3 },
+                { title: '🏀 Bola Basket', emoji: '🏀', count: 3 }
+            ],
+            hint: 'Hitung 3 Bola Sepak + 3 Bola Basket = 6'
+        },
+        {
+            category: 'mainan',
+            story: 'Ani punya Boneka 🧸 dan Hadiah 🎁 manis. Berapa total mainan Ani?',
+            answer: 7,
+            distractors: [6, 8],
+            groups: [
+                { title: '🧸 Boneka', emoji: '🧸', count: 5 },
+                { title: '🎁 Hadiah', emoji: '🎁', count: 2 }
+            ],
+            hint: 'Hitung 5 Boneka + 2 Hadiah = 7'
+        },
+        {
+            category: 'mainan',
+            story: 'Siti meniup 6 Balon 🎈 merah dan 4 Balon 🎈 kuning. Berapa total balon Siti?',
+            answer: 10,
+            distractors: [8, 9],
+            groups: [
+                { title: '🎈 Balon Merah', emoji: '🎈', count: 6 },
+                { title: '🎈 Balon Kuning', emoji: '🎈', count: 4 }
+            ],
+            hint: 'Hitung 6 Balon + 4 Balon = 10'
+        }
+    ];
+
+    /**
+     * Generate 10 Picture Math Questions (Hitung Bergambar)
+     */
+    function generatePictureQuestions() {
+        const picked = shuffleArray(PICTURE_QUESTIONS_BANK).slice(0, 10);
+        questions = picked.map((item, idx) => {
+            const distractors = item.distractors || [item.answer + 1, item.answer - 1];
+            const allValues = shuffleArray([item.answer, ...distractors]);
+            const labels = ["A", "B", "C"];
+            const options = allValues.map((val, i) => ({
+                label: labels[i],
+                value: val,
+                text: `${val}`
+            }));
+
+            return {
+                id: idx + 1,
+                difficulty: 'satuan',
+                difficultyLabel: '🎨 Bergambar',
+                story: item.story,
+                answer: item.answer,
+                groups: item.groups,
+                options: options,
+                hint: item.hint,
+                userAnswer: '',
+                isSolved: false,
+                attempts: 0,
+                showHint: false,
+                tappedItems: {},
+                tappedCount: 0
+            };
+        });
+
+        totalAttempts = 0;
+        activeIndex = 0;
+    }
+
     // --- DOM Element References ---
     const worksheetGrid = document.getElementById('worksheet-grid');
     const endScreenOverlay = document.getElementById('end-screen');
@@ -439,7 +703,7 @@
 
             const showHintBtn = (!q.isSolved && q.attempts >= 2 && !q.showHint);
 
-            if (gameMode === 'cerita') {
+            if (gameMode === 'cerita' || gameMode === 'gambar') {
                 // Defensive options fallback in case of legacy cached state
                 const optionsList = (Array.isArray(q.options) && q.options.length > 0) ? q.options : [
                     { label: 'A', value: q.answer, text: `${q.answer}` },
@@ -448,14 +712,50 @@
                 ];
                 const hintText = q.hint || `💡 Tips: Hitung dengan teliti!`;
 
+                let promptContentHTML = '';
+                if (gameMode === 'gambar') {
+                    promptContentHTML = `
+                        <div class="interactive-object-box">
+                            <p class="picture-story-text">🎨 ${q.story}</p>
+                            <div class="emoji-groups-container">
+                                ${q.groups ? q.groups.map((grp, gIdx) => `
+                                    <div class="emoji-group-card">
+                                        ${grp.title ? `<span class="emoji-group-title">${grp.title}</span>` : ''}
+                                        <div class="emoji-items-row">
+                                            ${Array.from({ length: grp.count }).map((_, i) => {
+                                                const itemKey = `${gIdx}-${i}`;
+                                                const tapState = (q.tappedItems && q.tappedItems[itemKey]) || 0;
+                                                const isReduced = grp.reducedCount && i >= (grp.count - grp.reducedCount);
+                                                return `
+                                                    <div class="emoji-item ${tapState > 0 ? 'tapped' : ''} ${isReduced ? 'reduced' : ''}" 
+                                                         data-card-idx="${idx}" 
+                                                         data-item-key="${itemKey}"
+                                                         title="Klik untuk menghitung">
+                                                        <span>${grp.emoji}</span>
+                                                        ${tapState > 0 ? `<span class="tap-badge">${tapState}</span>` : ''}
+                                                    </div>
+                                                `;
+                                            }).join('')}
+                                        </div>
+                                    </div>
+                                `).join('') : ''}
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    promptContentHTML = `
+                        <div class="story-text-box">
+                            📖 ${q.story}
+                        </div>
+                    `;
+                }
+
                 card.innerHTML = `
-                    <div class="card-header-badge">${q.isSolved ? '✅ Selesai' : `Cerita #${q.id}`}</div>
+                    <div class="card-header-badge">${q.isSolved ? '✅ Selesai' : (gameMode === 'gambar' ? `Gambar #${q.id}` : `Cerita #${q.id}`)}</div>
                     
                     <button type="button" class="btn-speech" data-idx="${idx}" title="Dengarkan Soal"><span>🔊</span></button>
 
-                    <div class="story-text-box">
-                        📖 ${q.story}
-                    </div>
+                    ${promptContentHTML}
 
                     <div class="choices-group">
                         ${optionsList.map(opt => {
@@ -676,8 +976,12 @@
 
         if (gameMode === 'cerita') {
             document.body.classList.add('mode-cerita');
-        } else {
+            document.body.classList.remove('mode-gambar');
+        } else if (gameMode === 'gambar') {
+            document.body.classList.add('mode-gambar');
             document.body.classList.remove('mode-cerita');
+        } else {
+            document.body.classList.remove('mode-cerita', 'mode-gambar');
         }
 
         const modeSelect = document.getElementById('game-mode-select');
@@ -687,8 +991,15 @@
         clearSessionForMode(gameMode);
 
         // Clear worksheet-grid & show cheerful 1.5s loading transition
-        const modeLabel = gameMode === 'cerita' ? 'Soal Cerita' : 'Hitung Susun';
-        const modeIcon = gameMode === 'cerita' ? '📖' : '📐';
+        let modeLabel = 'Hitung Susun';
+        let modeIcon = '📐';
+        if (gameMode === 'cerita') {
+            modeLabel = 'Soal Cerita';
+            modeIcon = '📖';
+        } else if (gameMode === 'gambar') {
+            modeLabel = 'Hitung Bergambar';
+            modeIcon = '🎨';
+        }
 
         worksheetGrid.innerHTML = `
             <div class="loading-mode-container">
@@ -705,6 +1016,8 @@
         setTimeout(() => {
             if (gameMode === 'cerita') {
                 generateStoryQuestions();
+            } else if (gameMode === 'gambar') {
+                generatePictureQuestions();
             } else {
                 generateQuestions();
             }
@@ -718,7 +1031,7 @@
      * Virtual Keyboard Handler (Hitung Susun)
      */
     function handleInput(key) {
-        if (gameMode === 'cerita') return;
+        if (gameMode === 'cerita' || gameMode === 'gambar') return;
         const q = questions[activeIndex];
         if (!q || q.isSolved) return;
 
@@ -1137,7 +1450,7 @@
         // Worksheet Card Delegate Click (Multiple Choice, Hints & Voice Reader)
         if (worksheetGrid) {
             worksheetGrid.addEventListener('click', (e) => {
-                // Choice Button Click for Hitung Cerita
+                // Choice Button Click for Hitung Cerita / Hitung Bergambar
                 const choiceBtn = e.target.closest('.choice-btn');
                 if (choiceBtn) {
                     const cardIdx = parseInt(choiceBtn.getAttribute('data-card-idx'), 10);
@@ -1146,6 +1459,31 @@
                         setActiveCard(cardIdx);
                         questions[cardIdx].userAnswer = valStr;
                         validateAnswer(cardIdx);
+                    }
+                    return;
+                }
+
+                // Emoji Tap-to-Count Click for Hitung Bergambar
+                const emojiItem = e.target.closest('.emoji-item');
+                if (emojiItem) {
+                    const cardIdx = parseInt(emojiItem.getAttribute('data-card-idx'), 10);
+                    const itemKey = emojiItem.getAttribute('data-item-key');
+                    if (!isNaN(cardIdx) && questions[cardIdx] && !questions[cardIdx].isSolved) {
+                        setActiveCard(cardIdx);
+                        const q = questions[cardIdx];
+                        if (!q.tappedItems) q.tappedItems = {};
+                        if (!q.tappedCount) q.tappedCount = 0;
+
+                        if (q.tappedItems[itemKey]) {
+                            delete q.tappedItems[itemKey];
+                            q.tappedCount = Math.max(0, q.tappedCount - 1);
+                        } else {
+                            q.tappedCount++;
+                            q.tappedItems[itemKey] = q.tappedCount;
+                            playSound('click');
+                        }
+                        renderWorksheet();
+                        saveSession();
                     }
                     return;
                 }
