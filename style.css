@@ -1173,11 +1173,11 @@ body.mode-cerita .virtual-keyboard-container {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.94);
+    background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(10px);
-    border-top: 4px solid #E0F2FE;
+    border-top: 3px solid #E0F2FE;
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.08);
-    padding: 0.8rem 1rem 1.2rem 1rem;
+    padding: 0.5rem 1rem 0.75rem 1rem;
     z-index: 100;
     display: flex;
     justify-content: center;
@@ -1190,11 +1190,11 @@ body.mode-cerita .virtual-keyboard-container {
 
 .keyboard-header {
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
 }
 
 .keyboard-label {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 700;
     color: var(--text-muted);
     letter-spacing: 0.5px;
@@ -1203,24 +1203,24 @@ body.mode-cerita .virtual-keyboard-container {
 .keyboard-keys {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.65rem;
+    gap: 0.45rem;
 }
 
-/* Jelly Bean Key Buttons */
+/* Jelly Bean Key Buttons - 43px Height & Dark Charcoal (#2f2f2f) Font Color */
 .jelly-btn {
     font-family: var(--font-heading);
-    font-size: 1.75rem;
+    font-size: 1.45rem;
     font-weight: 700;
-    height: 56px;
+    height: 43px !important;
     border: none;
     border-radius: var(--radius-md);
     cursor: pointer;
-    box-shadow: var(--shadow-jelly);
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.15);
     transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.15s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #2C3E50;
+    color: #2f2f2f !important;
     outline: none;
 }
 
@@ -1230,75 +1230,38 @@ body.mode-cerita .virtual-keyboard-container {
 
 .jelly-btn:active,
 .jelly-btn.pressed {
-    transform: translateY(4px);
-    box-shadow: var(--shadow-jelly-press);
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Key Colors - Pastel Variety */
-.jelly-btn[data-key="1"] {
-    background: #FFD54F;
-}
-
-/* Yellow */
-.jelly-btn[data-key="2"] {
-    background: #81C784;
-}
-
-/* Mint Green */
-.jelly-btn[data-key="3"] {
-    background: #4FC3F7;
-}
-
-/* Sky Blue */
-.jelly-btn[data-key="4"] {
-    background: #BA68C8;
-    color: #FFF;
-}
-
-/* Purple */
-.jelly-btn[data-key="5"] {
-    background: #FF8A65;
-    color: #FFF;
-}
-
-/* Coral */
-.jelly-btn[data-key="6"] {
-    background: #4DD0E1;
-}
-
-/* Cyan */
-.jelly-btn[data-key="7"] {
-    background: #F06292;
-    color: #FFF;
-}
-
-/* Pink */
-.jelly-btn[data-key="8"] {
-    background: #AED581;
-}
-
-/* Lime */
-.jelly-btn[data-key="9"] {
-    background: #FFB74D;
-}
-
-/* Orange */
-.jelly-btn[data-key="0"] {
-    background: #FFF176;
-}
-
-/* Light Yellow */
+/* Key Colors - Harmonious Pastel Palette with Dark Charcoal Text */
+.jelly-btn[data-key="1"] { background: #FFE082; color: #2f2f2f !important; }
+.jelly-btn[data-key="2"] { background: #A5D6A7; color: #2f2f2f !important; }
+.jelly-btn[data-key="3"] { background: #81D4FA; color: #2f2f2f !important; }
+.jelly-btn[data-key="4"] { background: #CE93D8; color: #2f2f2f !important; }
+.jelly-btn[data-key="5"] { background: #FFAB91; color: #2f2f2f !important; }
+.jelly-btn[data-key="6"] { background: #80DEEA; color: #2f2f2f !important; }
+.jelly-btn[data-key="7"] { background: #F48FB1; color: #2f2f2f !important; }
+.jelly-btn[data-key="8"] { background: #C5E1A5; color: #2f2f2f !important; }
+.jelly-btn[data-key="9"] { background: #FFCC80; color: #2f2f2f !important; }
+.jelly-btn[data-key="0"] { background: #FFF59D; color: #2f2f2f !important; }
 
 .key-backspace {
-    background: #FF8A80;
-    color: #FFFFFF;
-    font-size: 1.6rem;
+    background: #FFCDD2;
+    color: #2f2f2f !important;
+    font-size: 1.35rem;
 }
 
 .key-clear {
     background: #FFE082;
-    color: #E65100;
-    font-size: 1.4rem;
+    color: #2f2f2f !important;
+    font-size: 1.35rem;
+}
+
+.key-enter {
+    background: #B2DFDB;
+    color: #2f2f2f !important;
+    font-size: 1.35rem;
 }
 
 .span-3-cols {
