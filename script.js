@@ -8,10 +8,11 @@
     // --- Constants & Config ---
     const TOTAL_QUESTIONS = 30;
     const OPERATORS = ['+', '-'];
-    const STORAGE_KEY = 'super_kid_math_session';
+    const STORAGE_KEY = 'super_kid_math_session_v4';
     const SESSION_TTL_MS = 24 * 60 * 60 * 1000; // 24 Jam Expiration Limit
 
     // --- State Variables ---
+    let gameMode = 'susun'; // 'susun' | 'cerita'
     let questions = [];
     let activeIndex = 0;
     let totalAttempts = 0;
@@ -20,35 +21,65 @@
     let timerSeconds = 0;
     let timerInterval = null;
 
+    // --- Utility: Fisher-Yates Array Shuffle ---
+    function shuffleArray(arr) {
+        const copy = [...arr];
+        for (let i = copy.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [copy[i], copy[j]] = [copy[j], copy[i]];
+        }
+        return copy;
+    }
+
     // --- State Persistence System (localStorage) ---
+    function loadRawStorage() {
+        try {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            return raw ? JSON.parse(raw) : null;
+        } catch (e) {
+            return null;
+        }
+    }
+
     function saveSession() {
         if (!questions || questions.length === 0) return;
         try {
-            const data = {
+            const currentData = loadRawStorage() || {};
+            currentData[gameMode] = {
                 questions: questions,
                 activeIndex: activeIndex,
                 timerSeconds: timerSeconds,
                 totalAttempts: totalAttempts,
                 timestamp: Date.now()
             };
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+            currentData.activeMode = gameMode;
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(currentData));
         } catch (e) {
             console.warn('Could not save session to localStorage:', e);
         }
     }
 
-    function loadSession() {
+    function loadSessionForMode(mode) {
         try {
-            const raw = localStorage.getItem(STORAGE_KEY);
-            if (!raw) return null;
-            const parsed = JSON.parse(raw);
+            const currentData = loadRawStorage();
+            if (!currentData || !currentData[mode]) return null;
+            const parsed = currentData[mode];
             if (parsed && Array.isArray(parsed.questions) && parsed.questions.length === TOTAL_QUESTIONS) {
-                // Cek apakah sesi sudah lebih dari 24 jam
                 const now = Date.now();
                 if (parsed.timestamp && (now - parsed.timestamp > SESSION_TTL_MS)) {
-                    clearSession();
+                    clearSessionForMode(mode);
                     return null;
                 }
+
+                // Validation check for story mode options integrity
+                if (mode === 'cerita') {
+                    const isValidStorySession = parsed.questions.every(q => Array.isArray(q.options) && q.options.length === 3);
+                    if (!isValidStorySession) {
+                        clearSessionForMode(mode);
+                        return null;
+                    }
+                }
+
                 const hasUnsolved = parsed.questions.some(q => !q.isSolved);
                 if (hasUnsolved) {
                     return parsed;
@@ -60,9 +91,13 @@
         return null;
     }
 
-    function clearSession() {
+    function clearSessionForMode(mode) {
         try {
-            localStorage.removeItem(STORAGE_KEY);
+            const currentData = loadRawStorage();
+            if (currentData && currentData[mode]) {
+                delete currentData[mode];
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(currentData));
+            }
         } catch (e) {
             console.warn('Could not clear session from localStorage:', e);
         }
@@ -128,15 +163,20 @@
         }
     }
 
-    // --- Voice Equation Reader (Web Speech API) ---
+    // --- Voice Reader (Web Speech API) ---
     function speakQuestion(idx) {
         const q = questions[idx];
         if (!q) return;
 
         if ('speechSynthesis' in window) {
             window.speechSynthesis.cancel();
-            const opText = q.operator === '+' ? 'ditambah' : 'dikurang';
-            const text = `Berapa ${q.num1} ${opText} ${q.num2}?`;
+            let text = '';
+            if (gameMode === 'cerita') {
+                text = q.story;
+            } else {
+                const opText = q.operator === '+' ? 'ditambah' : 'dikurang';
+                text = `Berapa ${q.num1} ${opText} ${q.num2}?`;
+            }
             const utterance = new SpeechSynthesisUtterance(text);
             utterance.lang = 'id-ID';
             utterance.rate = 0.85;
@@ -173,7 +213,7 @@
     }
 
     function playSound(type) {
-        if (isMuted) return; // Mute check
+        if (isMuted) return;
         initAudio();
         if (!audioCtx) return;
 
@@ -194,7 +234,6 @@
                 osc.start(now);
                 osc.stop(now + 0.05);
             } else if (type === 'success') {
-                // Cheerful Arpeggio C5 -> E5 -> G5 -> C6
                 const notes = [523.25, 659.25, 783.99, 1046.50];
                 notes.forEach((freq, idx) => {
                     const noteOsc = audioCtx.createOscillator();
@@ -212,7 +251,6 @@
                     noteOsc.stop(now + idx * 0.08 + 0.25);
                 });
             } else if (type === 'error') {
-                // Soft low descending buzz
                 osc.type = 'sawtooth';
                 osc.frequency.setValueAtTime(220, now);
                 osc.frequency.linearRampToValueAtTime(140, now + 0.25);
@@ -221,7 +259,6 @@
                 osc.start(now);
                 osc.stop(now + 0.25);
             } else if (type === 'win') {
-                // Victory fanfare
                 const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51];
                 notes.forEach((freq, idx) => {
                     const noteOsc = audioCtx.createOscillator();
@@ -249,9 +286,7 @@
     }
 
     /**
-     * Phase 2: Dynamic Problem Generation
-     * Generates 30 questions with mix of Units, Tens, Hundreds, and Thousands.
-     * Ensures top number >= bottom number for Subtraction.
+     * Generate 30 Column Math Questions (Hitung Susun)
      */
     function generateQuestions() {
         questions = [];
@@ -264,11 +299,6 @@
             let num2 = 0;
             let answer = 0;
 
-            // Tier difficulty distribution across 30 questions:
-            // Questions 1-6: Units (1-19) [6 questions]
-            // Questions 7-15: Tens (20-99) [9 questions]
-            // Questions 16-24: Hundreds (100-899) [9 questions]
-            // Questions 25-30: Thousands (1200-4999) [6 questions]
             if (i <= 6) {
                 num1 = getRandomInt(3, 19);
                 num2 = getRandomInt(1, 9);
@@ -283,7 +313,6 @@
                 num2 = getRandomInt(200, 2500);
             }
 
-            // Constraint for Subtraction: Top number MUST be >= bottom number
             if (operator === '-') {
                 if (num1 < num2) {
                     const temp = num1;
@@ -327,6 +356,70 @@
         }
     }
 
+    /**
+     * Helper to retrieve the 300 Story Questions Bank from window.SOAL_CERITA_BANK
+     */
+    function getStoryBank() {
+        if (window.SOAL_CERITA_BANK && Array.isArray(window.SOAL_CERITA_BANK) && window.SOAL_CERITA_BANK.length > 0) {
+            return window.SOAL_CERITA_BANK;
+        }
+        return [];
+    }
+
+    /**
+     * Generate 30 Story Math Questions (Hitung Cerita from 300 Question Bank)
+     * Randomly picks 6 Satuan, 9 Puluhan, 9 Ratusan, 6 Ribuan from window.SOAL_CERITA_BANK.
+     * Shuffles A, B, C options randomly every single session!
+     */
+    function generateStoryQuestions() {
+        const bank = getStoryBank();
+        if (!bank || bank.length === 0) {
+            console.warn('Story bank not found in window.SOAL_CERITA_BANK');
+            questions = [];
+            return;
+        }
+
+        const satuanList = bank.filter(q => q.difficulty === 'satuan');
+        const puluhanList = bank.filter(q => q.difficulty === 'puluhan');
+        const ratusanList = bank.filter(q => q.difficulty === 'ratusan');
+        const ribuanList = bank.filter(q => q.difficulty === 'ribuan');
+
+        const picked = [
+            ...shuffleArray(satuanList).slice(0, 6),
+            ...shuffleArray(puluhanList).slice(0, 9),
+            ...shuffleArray(ratusanList).slice(0, 9),
+            ...shuffleArray(ribuanList).slice(0, 6)
+        ];
+
+        questions = picked.map((item, idx) => {
+            const distractors = Array.isArray(item.distractors) ? item.distractors : [item.answer + 2, item.answer - 1];
+            const allValues = shuffleArray([item.answer, ...distractors]);
+            const labels = ["A", "B", "C"];
+            const options = allValues.map((val, i) => ({
+                label: labels[i],
+                value: val,
+                text: val >= 1000 ? `${val.toLocaleString('id-ID')}` : `${val}`
+            }));
+
+            return {
+                id: idx + 1,
+                difficulty: item.difficulty,
+                difficultyLabel: item.difficultyLabel,
+                story: item.story,
+                answer: item.answer,
+                options: options,
+                hint: item.hint,
+                userAnswer: '',
+                isSolved: false,
+                attempts: 0,
+                showHint: false
+            };
+        });
+
+        totalAttempts = 0;
+        activeIndex = 0;
+    }
+
     // --- DOM Element References ---
     const worksheetGrid = document.getElementById('worksheet-grid');
     const endScreenOverlay = document.getElementById('end-screen');
@@ -336,7 +429,7 @@
     const btnRestart = document.getElementById('btn-restart');
 
     /**
-     * Render Worksheet Cards (Phase 3)
+     * Render Worksheet Cards (Supports both Susun and Cerita modes)
      */
     function renderWorksheet() {
         if (!worksheetGrid) return;
@@ -348,54 +441,103 @@
             card.id = `card-${idx}`;
             card.setAttribute('data-index', idx);
 
-            // Construct hint breakdown string
-            let hintText = '';
-            if (q.operator === '+') {
-                hintText = `💡 Tips: Hitung ${q.num1} + ${q.num2} = ${q.answer}`;
-            } else {
-                hintText = `💡 Tips: Hitung ${q.num1} - ${q.num2} = ${q.answer}`;
-            }
-
             const showHintBtn = (!q.isSolved && q.attempts >= 2 && !q.showHint);
 
-            card.innerHTML = `
-                <div class="card-header-badge">${q.isSolved ? '✅ Selesai' : `No. ${q.id}`}</div>
-                
-                <button type="button" class="btn-speech" data-idx="${idx}" title="Dengarkan Soal">🔊</button>
+            if (gameMode === 'cerita') {
+                // Defensive options fallback in case of legacy cached state
+                const optionsList = (Array.isArray(q.options) && q.options.length > 0) ? q.options : [
+                    { label: 'A', value: q.answer, text: `${q.answer}` },
+                    { label: 'B', value: q.answer + 2, text: `${q.answer + 2}` },
+                    { label: 'C', value: q.answer - 1, text: `${q.answer - 1}` }
+                ];
+                const hintText = q.hint || `💡 Tips: Hitung dengan teliti!`;
 
-                <div class="math-column">
-                    <div class="math-num-top">${q.num1}</div>
-                    <div class="math-row-bottom">
-                        <span class="math-operator">${q.operator}</span>
-                        <span class="math-num-bottom">${q.num2}</span>
-                    </div>
-                    <div class="math-line"></div>
-                    <div class="math-input-wrapper">
-                        <input type="text" 
-                               id="input-${idx}" 
-                               class="math-input" 
-                               value="${q.userAnswer}" 
-                               readonly 
-                               inputmode="none" 
-                               placeholder="${idx === activeIndex ? '|' : '?'}" 
-                               aria-label="Jawaban soal ${q.id}">
-                    </div>
-                </div>
+                card.innerHTML = `
+                    <div class="card-header-badge">${q.isSolved ? '✅ Selesai' : `Cerita #${q.id}`}</div>
+                    
+                    <button type="button" class="btn-speech" data-idx="${idx}" title="Dengarkan Soal"><span>🔊</span></button>
 
-                ${showHintBtn ? `<button type="button" class="btn-hint-trigger" data-idx="${idx}">💡 Lihat Bantuan</button>` : ''}
-                ${q.showHint ? `<div class="hint-bubble-box">${hintText}</div>` : ''}
-
-                <div id="feedback-${idx}" class="feedback-overlay">
-                    <div class="mascot-container">
-                        <div class="mascot-avatar" id="mascot-icon-${idx}">☀️</div>
-                        <div class="speech-bubble" id="speech-text-${idx}">Hebat!</div>
+                    <div class="story-text-box">
+                        📖 ${q.story}
                     </div>
-                </div>
-            `;
+
+                    <div class="choices-group">
+                        ${optionsList.map(opt => {
+                            const isSelected = (q.userAnswer === String(opt.value));
+                            let selectedClass = '';
+                            if (isSelected) {
+                                selectedClass = q.isSolved ? 'selected-success' : 'selected-error';
+                            }
+                            return `
+                                <button type="button" 
+                                        class="choice-btn ${selectedClass}" 
+                                        data-card-idx="${idx}" 
+                                        data-val="${opt.value}">
+                                    <span class="choice-badge">${opt.label}</span>
+                                    <span>${opt.text || opt.value}</span>
+                                </button>
+                            `;
+                        }).join('')}
+                    </div>
+
+                    ${showHintBtn ? `<button type="button" class="btn-hint-trigger" data-idx="${idx}">💡 Lihat Bantuan</button>` : ''}
+                    ${q.showHint ? `<div class="hint-bubble-box">${hintText}</div>` : ''}
+
+                    <div id="feedback-${idx}" class="feedback-overlay">
+                        <div class="mascot-container">
+                            <div class="mascot-avatar" id="mascot-icon-${idx}">☀️</div>
+                            <div class="speech-bubble" id="speech-text-${idx}">Hebat!</div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                // --- Column Math Layout (Hitung Susun) ---
+                let hintText = '';
+                if (q.operator === '+') {
+                    hintText = `💡 Tips: Hitung ${q.num1} + ${q.num2} = ${q.answer}`;
+                } else {
+                    hintText = `💡 Tips: Hitung ${q.num1} - ${q.num2} = ${q.answer}`;
+                }
+
+                card.innerHTML = `
+                    <div class="card-header-badge">${q.isSolved ? '✅ Selesai' : `No. ${q.id}`}</div>
+                    
+                    <button type="button" class="btn-speech" data-idx="${idx}" title="Dengarkan Soal">🔊</button>
+
+                    <div class="math-column">
+                        <div class="math-num-top">${q.num1}</div>
+                        <div class="math-row-bottom">
+                            <span class="math-operator">${q.operator}</span>
+                            <span class="math-num-bottom">${q.num2}</span>
+                        </div>
+                        <div class="math-line"></div>
+                        <div class="math-input-wrapper">
+                            <input type="text" 
+                                   id="input-${idx}" 
+                                   class="math-input" 
+                                   value="${q.userAnswer}" 
+                                   readonly 
+                                   inputmode="none" 
+                                   placeholder="${idx === activeIndex ? '|' : '?'}" 
+                                   aria-label="Jawaban soal ${q.id}">
+                        </div>
+                    </div>
+
+                    ${showHintBtn ? `<button type="button" class="btn-hint-trigger" data-idx="${idx}">💡 Lihat Bantuan</button>` : ''}
+                    ${q.showHint ? `<div class="hint-bubble-box">${hintText}</div>` : ''}
+
+                    <div id="feedback-${idx}" class="feedback-overlay">
+                        <div class="mascot-container">
+                            <div class="mascot-avatar" id="mascot-icon-${idx}">☀️</div>
+                            <div class="speech-bubble" id="speech-text-${idx}">Hebat!</div>
+                        </div>
+                    </div>
+                `;
+            }
 
             // Click card to make it active (if not yet solved)
-            card.addEventListener('click', () => {
-                if (!q.isSolved && activeIndex !== idx) {
+            card.addEventListener('click', (e) => {
+                if (!q.isSolved && activeIndex !== idx && !e.target.closest('.choice-btn') && !e.target.closest('.btn-speech') && !e.target.closest('.btn-hint-trigger')) {
                     setActiveCard(idx);
                     playSound('click');
                 }
@@ -468,9 +610,40 @@
     }
 
     /**
-     * Virtual Keyboard Handler (Phase 1)
+     * Switch Game Mode Handler ('susun' vs 'cerita')
+     */
+    function setGameMode(mode) {
+        gameMode = mode;
+        if (gameMode === 'cerita') {
+            document.body.classList.add('mode-cerita');
+        } else {
+            document.body.classList.remove('mode-cerita');
+        }
+
+        const modeSelect = document.getElementById('game-mode-select');
+        if (modeSelect) modeSelect.value = gameMode;
+
+        const savedModeSession = loadSessionForMode(gameMode);
+        if (savedModeSession) {
+            questions = savedModeSession.questions;
+            activeIndex = savedModeSession.activeIndex || 0;
+            totalAttempts = savedModeSession.totalAttempts || 0;
+        } else {
+            if (gameMode === 'cerita') {
+                generateStoryQuestions();
+            } else {
+                generateQuestions();
+            }
+        }
+        renderWorksheet();
+        saveSession();
+    }
+
+    /**
+     * Virtual Keyboard Handler (Hitung Susun)
      */
     function handleInput(key) {
+        if (gameMode === 'cerita') return;
         const q = questions[activeIndex];
         if (!q || q.isSolved) return;
 
@@ -508,13 +681,13 @@
     }
 
     /**
-     * Phase 4: Feedback System & Validation Logic
+     * Validation Logic (Handles both Susun input and Cerita choice)
      */
     function validateAnswer(idx) {
         const q = questions[idx];
         if (!q || q.isSolved) return;
 
-        if (q.userAnswer === '') return; // Don't validate empty input
+        if (q.userAnswer === '') return;
 
         const cardEl = document.getElementById(`card-${idx}`);
         const feedbackEl = document.getElementById(`feedback-${idx}`);
@@ -540,6 +713,10 @@
             speechText.className = 'speech-bubble bubble-success';
             feedbackEl.classList.add('show');
 
+            if (gameMode === 'cerita') {
+                renderWorksheet();
+            }
+
             setTimeout(() => {
                 feedbackEl.classList.remove('show');
 
@@ -564,18 +741,26 @@
             speechText.className = 'speech-bubble bubble-error';
             feedbackEl.classList.add('show');
 
+            if (gameMode === 'cerita') {
+                renderWorksheet();
+            }
+
             setTimeout(() => {
                 cardEl.classList.remove('error');
                 feedbackEl.classList.remove('show');
                 q.userAnswer = '';
-                updateInputDisplay(idx);
+                if (gameMode === 'cerita') {
+                    renderWorksheet();
+                } else {
+                    updateInputDisplay(idx);
+                }
                 saveSession();
             }, 1100);
         }
     }
 
     /**
-     * Update Progress Trackers (Syncs both top and floating progress bars)
+     * Update Progress Trackers
      */
     function updateProgress() {
         const solvedCount = questions.filter(q => q.isSolved).length;
@@ -590,7 +775,6 @@
         textEls.forEach(el => el.textContent = `Soal ${Math.min(solvedCount + 1, TOTAL_QUESTIONS)} dari ${TOTAL_QUESTIONS}`);
         percentEls.forEach(el => el.textContent = `${percent}%`);
 
-        // Update filter chips text count
         const chipAll = document.querySelector('.filter-chip[data-filter="all"]');
         const chipUnsolved = document.querySelector('.filter-chip[data-filter="unsolved"]');
         const chipSolved = document.querySelector('.filter-chip[data-filter="solved"]');
@@ -601,7 +785,7 @@
     }
 
     /**
-     * Scroll Observer: Shows floating progress above keyboard ONLY when top progress bar scrolls out of view
+     * Scroll Observer for Floating Progress Bar
      */
     function setupScrollObserver() {
         const topProgress = document.getElementById('top-progress');
@@ -636,14 +820,13 @@
     }
 
     /**
-     * Phase 5: Scoring & Celebratory End Screen
+     * Scoring & Celebratory End Screen
      */
     function showEndScreen() {
         playSound('win');
         stopTimer();
-        clearSession();
+        clearSessionForMode(gameMode);
 
-        // Calculate detailed metrics
         const firstTryCount = questions.filter(q => q.attempts === 1).length;
         const failedAttemptsCount = questions.reduce((sum, q) => sum + Math.max(0, q.attempts - 1), 0);
         const totalAttemptsCount = questions.reduce((sum, q) => sum + q.attempts, 0);
@@ -653,35 +836,29 @@
         const finalTimeVal = document.getElementById('final-time-val');
         if (finalTimeVal) finalTimeVal.textContent = formatTime(timerSeconds);
 
-        // Evaluate Achievement Badges
         const achievementsBox = document.getElementById('achievements-box');
         if (achievementsBox) {
             achievementsBox.innerHTML = '';
             
-            // Check Ribuan questions accuracy
             const ribuanSolvedFirstTry = questions.filter(q => q.difficulty === 'ribuan' && q.attempts === 1).length;
             if (ribuanSolvedFirstTry >= 6) {
                 achievementsBox.innerHTML += `<div class="achievement-sticker">🎯 Master Ribuan</div>`;
             }
 
-            // Fast speed badge (< 4 mins)
             if (timerSeconds <= 240) {
                 achievementsBox.innerHTML += `<div class="achievement-sticker">⚡ Kilat Super</div>`;
             }
 
-            // Perfect first 10
             const first10Correct = questions.slice(0, 10).every(q => q.attempts === 1);
             if (first10Correct) {
                 achievementsBox.innerHTML += `<div class="achievement-sticker">🌟 Pembalap Angka</div>`;
             }
 
-            // Perseverance badge
             if (failedAttemptsCount > 0) {
                 achievementsBox.innerHTML += `<div class="achievement-sticker">🧠 Pantang Menyerah</div>`;
             }
         }
 
-        // Dynamic Title based on performance
         const titleEl = document.querySelector('.celebration-title');
         if (titleEl) {
             if (firstTryCount === 30) {
@@ -701,7 +878,6 @@
         if (failedEl) failedEl.textContent = `${failedAttemptsCount} Kali`;
         if (finalAttemptsVal) finalAttemptsVal.textContent = `${totalAttemptsCount} Kali`;
 
-        // Dynamic Star Ratings based on first-try accuracy
         const starsContainer = document.querySelector('.stars-display');
         if (starsContainer) {
             if (firstTryCount >= 25) {
@@ -749,6 +925,18 @@
      * Event Listeners Setup
      */
     function setupEventListeners() {
+        // Mode Selector Listener
+        const modeSelect = document.getElementById('game-mode-select');
+        if (modeSelect) {
+            modeSelect.addEventListener('change', (e) => {
+                const selectedMode = e.target.value;
+                if (selectedMode) {
+                    playSound('click');
+                    setGameMode(selectedMode);
+                }
+            });
+        }
+
         // Audio Toggle Listener
         const btnAudio = document.getElementById('btn-audio');
         if (btnAudio) {
@@ -777,7 +965,7 @@
             btnResumeGame.addEventListener('click', () => {
                 playSound('click');
                 hideModal(document.getElementById('resume-modal'));
-                const savedSession = loadSession();
+                const savedSession = loadSessionForMode(gameMode);
                 if (savedSession) {
                     questions = savedSession.questions;
                     activeIndex = savedSession.activeIndex || 0;
@@ -796,7 +984,7 @@
             btnNewGame.addEventListener('click', () => {
                 playSound('click');
                 hideModal(document.getElementById('resume-modal'));
-                clearSession();
+                clearSessionForMode(gameMode);
                 initGame(true);
             });
         }
@@ -816,9 +1004,23 @@
             });
         }
 
-        // Worksheet Card Delegate Click (Hints & Voice Speaker)
+        // Worksheet Card Delegate Click (Multiple Choice, Hints & Voice Reader)
         if (worksheetGrid) {
             worksheetGrid.addEventListener('click', (e) => {
+                // Choice Button Click for Hitung Cerita
+                const choiceBtn = e.target.closest('.choice-btn');
+                if (choiceBtn) {
+                    const cardIdx = parseInt(choiceBtn.getAttribute('data-card-idx'), 10);
+                    const valStr = choiceBtn.getAttribute('data-val');
+                    if (!isNaN(cardIdx) && questions[cardIdx] && !questions[cardIdx].isSolved) {
+                        setActiveCard(cardIdx);
+                        questions[cardIdx].userAnswer = valStr;
+                        validateAnswer(cardIdx);
+                    }
+                    return;
+                }
+
+                // Hint Button Trigger
                 const hintBtn = e.target.closest('.btn-hint-trigger');
                 if (hintBtn) {
                     const idx = parseInt(hintBtn.getAttribute('data-idx'), 10);
@@ -831,6 +1033,7 @@
                     return;
                 }
 
+                // Voice Speaker Button
                 const speechBtn = e.target.closest('.btn-speech');
                 if (speechBtn) {
                     const idx = parseInt(speechBtn.getAttribute('data-idx'), 10);
@@ -895,7 +1098,7 @@
             btnRestart.addEventListener('click', () => {
                 playSound('click');
                 hideModal(endScreenOverlay);
-                clearSession();
+                clearSessionForMode(gameMode);
                 initGame(true);
             });
         }
@@ -906,7 +1109,11 @@
      */
     function initGame(autoStartTimer = false) {
         updateAudioBtnUI();
-        generateQuestions();
+        if (gameMode === 'cerita') {
+            generateStoryQuestions();
+        } else {
+            generateQuestions();
+        }
         renderWorksheet();
         if (autoStartTimer) {
             startTimer(0);
@@ -931,7 +1138,22 @@
             }, { passive: false });
         });
 
-        const savedSession = loadSession();
+        // Load active mode or saved session
+        const rawStorage = loadRawStorage();
+        if (rawStorage && rawStorage.activeMode) {
+            gameMode = rawStorage.activeMode;
+        }
+
+        if (gameMode === 'cerita') {
+            document.body.classList.add('mode-cerita');
+        } else {
+            document.body.classList.remove('mode-cerita');
+        }
+
+        const modeSelect = document.getElementById('game-mode-select');
+        if (modeSelect) modeSelect.value = gameMode;
+
+        const savedSession = loadSessionForMode(gameMode);
         if (savedSession) {
             questions = savedSession.questions;
             activeIndex = savedSession.activeIndex || 0;
@@ -941,10 +1163,38 @@
             updateTimerDisplay();
             showModal(document.getElementById('resume-modal'));
         } else {
-            generateQuestions();
+            if (gameMode === 'cerita') {
+                generateStoryQuestions();
+            } else {
+                generateQuestions();
+            }
             renderWorksheet();
             showModal(document.getElementById('start-modal'));
         }
+
+        // Print Cute Watermark Banner in Console
+        printWatermark();
     });
+
+    /**
+     * Cute Console Watermark Banner to encourage children
+     */
+    function printWatermark() {
+        const headerStyle = "font-family: 'Fredoka', 'Quicksand', sans-serif; font-size: 16px; font-weight: 800; color: #E91E63; background: #FCE4EC; padding: 8px 16px; border-radius: 12px 12px 0 0; border: 2.5px solid #F8BBD0; border-bottom: none;";
+        const mascotStyle = "font-family: monospace; font-size: 13px; font-weight: bold; color: #0288D1; background: #E1F5FE; padding: 12px 16px; border-left: 2.5px solid #81D4FA; border-right: 2.5px solid #81D4FA; line-height: 1.4;";
+        const quoteStyle = "font-family: 'Fredoka', sans-serif; font-size: 14px; font-weight: 700; color: #2E7D32; background: #E8F5E9; padding: 8px 16px; border-left: 2.5px solid #A5D6A7; border-right: 2.5px solid #A5D6A7;";
+        const creditStyle = "font-family: 'Fredoka', sans-serif; font-size: 13px; font-weight: 700; color: #F57F17; background: #FFFDE7; padding: 8px 16px; border-radius: 0 0 12px 12px; border: 2.5px solid #FFF59D; border-top: none;";
+
+        console.log("%c 🚀 SUPER KID MATH ADVENTURE 🌟 ", headerStyle);
+        console.log(
+            "%c" +
+            "   /\\_/\\   \n" +
+            "  ( o.o )  \"Semangat terus ya belajarnya anak pintar! 🌈\"\n" +
+            "   > ^ <   \"Kamu pasti bisa jadi Master Matematika Hebat! 💪\"",
+            mascotStyle
+        );
+        console.log("%c✨ \"Setiap angka yang kamu hitung adalah langkah menuju cita-citamu!\" 🎯", quoteStyle);
+        console.log("%cMade with ❤️ for kids everywhere - aditianugroho", creditStyle);
+    }
 
 })();
