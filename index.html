@@ -11,6 +11,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@600;700&display=swap"
         rel="stylesheet">
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -28,7 +31,7 @@
     <!-- Independent Top Floating Progress Bar (Appears at top of screen when scrolling down) -->
     <section id="floating-progress" class="progress-section floating-progress hidden">
         <div class="progress-info">
-            <span class="progress-text">Soal 1 dari 30</span>
+            <span class="progress-text">Soal 1 dari 10</span>
             <span class="progress-timer">⏱️ 00:00</span>
             <span class="progress-percent">0%</span>
         </div>
@@ -65,7 +68,7 @@
         <!-- Top Progress Tracker Bar (Visible when scrolled to top) -->
         <section id="top-progress" class="progress-section top-progress">
             <div class="progress-info">
-                <span class="progress-text">Soal 1 dari 30</span>
+                <span class="progress-text">Soal 1 dari 10</span>
                 <span class="progress-percent">0%</span>
             </div>
             <div class="progress-bar-track">
@@ -76,7 +79,7 @@
 
         <!-- Quick Jump & Filter Navigation Bar -->
         <nav id="filter-bar" class="filter-bar">
-            <button type="button" class="filter-chip active" data-filter="all">Semua (30)</button>
+            <button type="button" class="filter-chip active" data-filter="all">Semua (10)</button>
             <button type="button" class="filter-chip" data-filter="unsolved">Belum Selesai</button>
             <button type="button" class="filter-chip" data-filter="solved">Sudah Selesai</button>
         </nav>
@@ -185,7 +188,7 @@
         <div class="celebration-card">
             <div class="celebration-badge">🏆</div>
             <h2 class="celebration-title">Horeee! Kamu Hebat! 🎉</h2>
-            <p class="celebration-subtitle">Kamu berhasil menyelesaikan semua 30 soal matematika!</p>
+            <p class="celebration-subtitle">Kamu berhasil menyelesaikan semua 10 soal matematika!</p>
 
             <div class="stars-display">
                 <span class="star-item star-gold">⭐</span>
@@ -209,7 +212,7 @@
                 </div>
                 <div class="score-row">
                     <span class="score-label">Langsung Benar:</span>
-                    <span id="first-try-val" class="score-value score-success-text">30 Soal</span>
+                    <span id="first-try-val" class="score-value score-success-text">10 Soal</span>
                 </div>
                 <div class="score-row">
                     <span class="score-label">Percobaan Gagal:</span>
@@ -217,7 +220,7 @@
                 </div>
                 <div class="score-row">
                     <span class="score-label">Total Percobaan:</span>
-                    <span id="final-attempts-val" class="score-value">30 Kali</span>
+                    <span id="final-attempts-val" class="score-value">10 Kali</span>
                 </div>
             </div>
 

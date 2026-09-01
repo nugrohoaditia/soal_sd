@@ -6,9 +6,9 @@
     'use strict';
 
     // --- Constants & Config ---
-    const TOTAL_QUESTIONS = 30;
+    const TOTAL_QUESTIONS = 10;
     const OPERATORS = ['+', '-'];
-    const STORAGE_KEY = 'super_kid_math_session_v6';
+    const STORAGE_KEY = 'super_kid_math_session_v7';
     const SESSION_TTL_MS = 24 * 60 * 60 * 1000; // 24 Jam Expiration Limit
 
     // --- State Variables ---
@@ -294,74 +294,63 @@
     }
 
     /**
-     * Generate 30 Column Math Questions (Hitung Susun)
+     * Generate 10 Column Math Questions (Hitung Susun)
+     * Exactly 5 Addition (+) and 5 Subtraction (-) with level progression:
+     * Soal 1-2: Easy (Satuan & Belasan)
+     * Soal 3-5: Puluhan (2 Digits)
+     * Soal 6-8: Ratusan (3 Digits)
+     * Soal 9-10: Ribuan (4 Digits)
      */
     function generateQuestions() {
         questions = [];
         totalAttempts = 0;
         activeIndex = 0;
 
-        for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
-            const operator = OPERATORS[Math.floor(Math.random() * OPERATORS.length)];
-            let num1 = 0;
-            let num2 = 0;
+        // Structured 10 questions pattern: 5 +, 5 -
+        const configs = [
+            { op: '+', min: 4, max: 15, difficulty: 'satuan', label: '🌱 Satuan' },
+            { op: '-', min: 8, max: 18, difficulty: 'satuan', label: '🌱 Satuan' },
+            { op: '+', min: 25, max: 85, difficulty: 'puluhan', label: '🌿 Puluhan' },
+            { op: '-', min: 35, max: 95, difficulty: 'puluhan', label: '🌿 Puluhan' },
+            { op: '+', min: 45, max: 99, difficulty: 'puluhan', label: '🌿 Puluhan' },
+            { op: '-', min: 250, max: 750, difficulty: 'ratusan', label: '🌳 Ratusan' },
+            { op: '+', min: 150, max: 650, difficulty: 'ratusan', label: '🌳 Ratusan' },
+            { op: '-', min: 350, max: 890, difficulty: 'ratusan', label: '🌳 Ratusan' },
+            { op: '+', min: 1200, max: 3500, difficulty: 'ribuan', label: '⛰️ Ribuan' },
+            { op: '-', min: 2500, max: 4800, difficulty: 'ribuan', label: '⛰️ Ribuan' }
+        ];
+
+        configs.forEach((cfg, idx) => {
+            let num1 = getRandomInt(cfg.min, cfg.max);
+            let num2 = getRandomInt(Math.floor(cfg.min / 2) || 3, Math.floor(cfg.max * 0.8) || 12);
             let answer = 0;
 
-            if (i <= 6) {
-                num1 = getRandomInt(3, 19);
-                num2 = getRandomInt(1, 9);
-            } else if (i <= 15) {
-                num1 = getRandomInt(20, 99);
-                num2 = getRandomInt(10, 89);
-            } else if (i <= 24) {
-                num1 = getRandomInt(100, 899);
-                num2 = getRandomInt(50, 499);
-            } else {
-                num1 = getRandomInt(1200, 4999);
-                num2 = getRandomInt(200, 2500);
-            }
-
-            if (operator === '-') {
+            if (cfg.op === '-') {
                 if (num1 < num2) {
-                    const temp = num1;
+                    const tmp = num1;
                     num1 = num2;
-                    num2 = temp;
+                    num2 = tmp;
                 }
-                if (num1 === num2) {
-                    num1 += getRandomInt(1, 5);
-                }
+                if (num1 === num2) num1 += getRandomInt(2, 6);
                 answer = num1 - num2;
             } else {
                 answer = num1 + num2;
             }
 
-            let difficulty = 'satuan';
-            let difficultyLabel = '🌱 Satuan';
-            if (num1 >= 1000 || num2 >= 1000) {
-                difficulty = 'ribuan';
-                difficultyLabel = '⛰️ Ribuan';
-            } else if (num1 >= 100 || num2 >= 100) {
-                difficulty = 'ratusan';
-                difficultyLabel = '🌳 Ratusan';
-            } else if (num1 >= 20 || num2 >= 20) {
-                difficulty = 'puluhan';
-                difficultyLabel = '🌿 Puluhan';
-            }
-
             questions.push({
-                id: i,
+                id: idx + 1,
                 num1: num1,
                 num2: num2,
-                operator: operator,
+                operator: cfg.op,
                 answer: answer,
                 userAnswer: '',
                 isSolved: false,
                 attempts: 0,
-                difficulty: difficulty,
-                difficultyLabel: difficultyLabel,
+                difficulty: cfg.difficulty,
+                difficultyLabel: cfg.label,
                 showHint: false
             });
-        }
+        });
     }
 
     /**
@@ -375,9 +364,8 @@
     }
 
     /**
-     * Generate 30 Story Math Questions (Hitung Cerita from 300 Question Bank)
-     * Randomly picks 6 Satuan, 9 Puluhan, 9 Ratusan, 6 Ribuan from window.SOAL_CERITA_BANK.
-     * Shuffles A, B, C options randomly every single session!
+     * Generate 10 Story Math Questions (Hitung Cerita from 300 Question Bank)
+     * Exactly 5 Addition (+) and 5 Subtraction (-) across levels
      */
     function generateStoryQuestions() {
         const bank = getStoryBank();
@@ -387,19 +375,19 @@
             return;
         }
 
-        const satuanList = bank.filter(q => q.difficulty === 'satuan');
-        const puluhanList = bank.filter(q => q.difficulty === 'puluhan');
-        const ratusanList = bank.filter(q => q.difficulty === 'ratusan');
-        const ribuanList = bank.filter(q => q.difficulty === 'ribuan');
+        const additionBank = bank.filter(q => q.hint && q.hint.includes('+'));
+        const subtractionBank = bank.filter(q => q.hint && q.hint.includes('-'));
 
-        const picked = [
-            ...shuffleArray(satuanList).slice(0, 6),
-            ...shuffleArray(puluhanList).slice(0, 9),
-            ...shuffleArray(ratusanList).slice(0, 9),
-            ...shuffleArray(ribuanList).slice(0, 6)
-        ];
+        const pickedAdd = shuffleArray(additionBank).slice(0, 5);
+        const pickedSub = shuffleArray(subtractionBank).slice(0, 5);
 
-        questions = picked.map((item, idx) => {
+        const combined = [];
+        for (let i = 0; i < 5; i++) {
+            if (pickedAdd[i]) combined.push(pickedAdd[i]);
+            if (pickedSub[i]) combined.push(pickedSub[i]);
+        }
+
+        questions = combined.map((item, idx) => {
             const distractors = Array.isArray(item.distractors) ? item.distractors : [item.answer + 2, item.answer - 1];
             const allValues = shuffleArray([item.answer, ...distractors]);
             const labels = ["A", "B", "C"];
@@ -499,33 +487,84 @@
                     </div>
                 `;
             } else {
-                // --- Column Math Layout (Hitung Susun) ---
-                const num1 = typeof q.num1 === 'number' ? q.num1 : 0;
-                const num2 = typeof q.num2 === 'number' ? q.num2 : 0;
+                // --- Column Math Layout (Hitung Susun Boxed Column Grid matching attached sample image) ---
+                const num1Str = String(typeof q.num1 === 'number' ? q.num1 : 0);
+                const num2Str = String(typeof q.num2 === 'number' ? q.num2 : 0);
+                const answerStr = String(q.answer);
+                const userValStr = String(q.userAnswer || '');
                 const operator = q.operator || '+';
-                let hintText = `💡 Tips: Hitung ${num1} ${operator} ${num2} = ${q.answer}`;
+                const hintText = `💡 Tips: Hitung ${num1Str} ${operator} ${num2Str} = ${q.answer}`;
+
+                // Column calculation
+                const numCols = Math.max(num1Str.length, num2Str.length, answerStr.length);
+                const num1Digits = num1Str.padStart(numCols, ' ').split('');
+                const num2Digits = num2Str.padStart(numCols, ' ').split('');
+                const userDigits = userValStr.padStart(numCols, ' ').split('');
+
+                if (!q.carryNotes) q.carryNotes = Array(numCols).fill('');
+
+                // Determine active focus box index right-to-left
+                const activeBoxIdx = numCols - 1 - userValStr.length;
 
                 card.innerHTML = `
                     <div class="card-header-badge">${q.isSolved ? '✅ Selesai' : `No. ${q.id}`}</div>
-                    
                     <button type="button" class="btn-speech" data-idx="${idx}" title="Dengarkan Soal">🔊</button>
 
-                    <div class="math-column">
-                        <div class="math-num-top">${num1}</div>
-                        <div class="math-row-bottom">
-                            <span class="math-operator">${operator}</span>
-                            <span class="math-num-bottom">${num2}</span>
-                        </div>
-                        <div class="math-line"></div>
-                        <div class="math-input-wrapper">
-                            <input type="text" 
-                                   id="input-${idx}" 
-                                   class="math-input" 
-                                   value="${q.userAnswer}" 
-                                   readonly 
-                                   inputmode="none" 
-                                   placeholder="?" 
-                                   aria-label="Jawaban soal ${q.id}">
+                    <div class="math-grid-container ${numCols >= 4 ? 'is-thousands' : ''}">
+                        <div class="math-grid-table" style="--grid-cols: ${numCols};">
+                            
+                            <!-- Row 1: Carry / Borrow Interactive Circles (Scratchpad Helper) -->
+                            <div class="grid-cell-op-placeholder"></div>
+                            ${Array.from({ length: numCols }).map((_, cIdx) => {
+                                if (cIdx === numCols - 1) {
+                                    return `<div class="grid-cell-op-placeholder"></div>`;
+                                }
+                                return `
+                                    <input type="text" 
+                                           id="carry-${idx}-${cIdx}" 
+                                           name="carry-${idx}-${cIdx}" 
+                                           class="carry-circle-input" 
+                                           maxlength="1" 
+                                           placeholder="◯" 
+                                           value="${q.carryNotes && q.carryNotes[cIdx] ? q.carryNotes[cIdx] : ''}" 
+                                           data-card-idx="${idx}" 
+                                           data-col-idx="${cIdx}" 
+                                           aria-label="Simpanan kolom ${cIdx + 1}" />
+                                `;
+                            }).join('')}
+
+                            <!-- Row 2: Top Number Boxed Digits (1px dashed gray border) -->
+                            <div class="grid-cell-op-placeholder"></div>
+                            ${num1Digits.map(d => `
+                                <div class="digit-box-cell ${d === ' ' ? 'empty-cell' : ''}">
+                                    ${d === ' ' ? '' : d}
+                                </div>
+                            `).join('')}
+
+                            <!-- Row 3: Operator & Bottom Number Boxed Digits -->
+                            <div class="operator-cell">${operator}</div>
+                            ${num2Digits.map(d => `
+                                <div class="digit-box-cell ${d === ' ' ? 'empty-cell' : ''}">
+                                    ${d === ' ' ? '' : d}
+                                </div>
+                            `).join('')}
+
+                            <!-- Row 4: Line Separator -->
+                            <div class="math-grid-line"></div>
+
+                            <!-- Row 5: Answer Boxed Input Cells (Fixed Right-to-Left Column Mapping) -->
+                            <div class="grid-cell-op-placeholder"></div>
+                            ${Array.from({ length: numCols }).map((_, cIdx) => {
+                                const distFromRight = (numCols - 1) - cIdx;
+                                const charVal = userValStr[distFromRight] || '';
+                                const isFocus = (idx === activeIndex && !q.isSolved && cIdx === (numCols - 1 - userValStr.length));
+                                return `
+                                    <div class="answer-box-cell ${charVal !== '' ? 'filled' : ''} ${isFocus ? 'active-box' : ''}">
+                                        ${charVal !== '' ? charVal : (isFocus ? '?' : '')}
+                                    </div>
+                                `;
+                            }).join('')}
+
                         </div>
                     </div>
 
@@ -543,7 +582,7 @@
 
             // Click card to make it active (if not yet solved)
             card.addEventListener('click', (e) => {
-                if (!q.isSolved && activeIndex !== idx && !e.target.closest('.choice-btn') && !e.target.closest('.btn-speech') && !e.target.closest('.btn-hint-trigger')) {
+                if (!q.isSolved && activeIndex !== idx && !e.target.closest('.choice-btn') && !e.target.closest('.btn-speech') && !e.target.closest('.btn-hint-trigger') && !e.target.closest('.carry-circle-input')) {
                     setActiveCard(idx);
                     playSound('click');
                 }
@@ -606,13 +645,26 @@
 
     function scrollToActiveCard() {
         const activeCard = document.getElementById(`card-${activeIndex}`);
-        if (activeCard) {
-            activeCard.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center',
-                inline: 'center'
-            });
+        if (!activeCard) return;
+
+        const floatingProgress = document.getElementById('floating-progress');
+        const header = document.querySelector('.app-header');
+
+        let topOffset = 80;
+        if (floatingProgress && !floatingProgress.classList.contains('hidden')) {
+            topOffset = floatingProgress.offsetHeight + 18;
+        } else if (header) {
+            topOffset = 85;
         }
+
+        const rect = activeCard.getBoundingClientRect();
+        const absoluteTop = window.pageYOffset + rect.top;
+        const targetScrollTop = absoluteTop - topOffset;
+
+        window.scrollTo({
+            top: Math.max(0, targetScrollTop),
+            behavior: 'smooth'
+        });
     }
 
     /**
@@ -642,7 +694,7 @@
             <div class="loading-mode-container">
                 <div class="spinner-mascot">${modeIcon}</div>
                 <h3 class="loading-title">Memuat ${modeLabel}...</h3>
-                <p class="loading-subtitle">Menyiapkan 30 petualangan matematika baru!</p>
+                <p class="loading-subtitle">Menyiapkan 10 petualangan matematika baru!</p>
                 <div class="loading-progress-bar">
                     <div class="loading-progress-fill"></div>
                 </div>
@@ -670,8 +722,10 @@
         const q = questions[activeIndex];
         if (!q || q.isSolved) return;
 
+        const maxAllowedLength = String(q.answer).length;
+
         if (key >= '0' && key <= '9') {
-            if (q.userAnswer.length < 5) {
+            if (q.userAnswer.length < maxAllowedLength) {
                 q.userAnswer += key;
                 updateInputDisplay(activeIndex);
                 saveSession();
@@ -697,10 +751,8 @@
     }
 
     function updateInputDisplay(idx) {
-        const inputEl = document.getElementById(`input-${idx}`);
-        if (inputEl) {
-            inputEl.value = questions[idx].userAnswer;
-        }
+        if (gameMode === 'cerita') return;
+        renderWorksheet();
     }
 
     /**
@@ -717,7 +769,15 @@
         const mascotIcon = document.getElementById(`mascot-icon-${idx}`);
         const speechText = document.getElementById(`speech-text-${idx}`);
 
-        const userVal = parseInt(q.userAnswer, 10);
+        let userVal = 0;
+        if (gameMode === 'cerita') {
+            userVal = parseInt(q.userAnswer, 10);
+        } else {
+            // Hitung Susun: entered right-to-left (ones column first), so reverse digits to get standard number
+            const reversedStr = q.userAnswer.split('').reverse().join('');
+            userVal = parseInt(reversedStr, 10);
+        }
+
         q.attempts++;
         totalAttempts++;
         saveSession();
@@ -1113,6 +1173,30 @@
                     return;
                 }
             });
+
+            // Carry Input Event Listener for Scratchpad Helper
+            worksheetGrid.addEventListener('input', (e) => {
+                const carryInput = e.target.closest('.carry-circle-input');
+                if (carryInput) {
+                    const cardIdx = parseInt(carryInput.getAttribute('data-card-idx'), 10);
+                    const colIdx = parseInt(carryInput.getAttribute('data-col-idx'), 10);
+                    if (!isNaN(cardIdx) && !isNaN(colIdx) && questions[cardIdx]) {
+                        if (!questions[cardIdx].carryNotes) questions[cardIdx].carryNotes = [];
+                        questions[cardIdx].carryNotes[colIdx] = carryInput.value;
+                        saveSession();
+                    }
+                }
+            });
+
+            worksheetGrid.addEventListener('focusin', (e) => {
+                const carryInput = e.target.closest('.carry-circle-input');
+                if (carryInput) {
+                    const cardIdx = parseInt(carryInput.getAttribute('data-card-idx'), 10);
+                    if (!isNaN(cardIdx) && activeIndex !== cardIdx && questions[cardIdx] && !questions[cardIdx].isSolved) {
+                        setActiveCard(cardIdx);
+                    }
+                }
+            });
         }
 
         // Virtual Keyboard Click Handling
@@ -1131,6 +1215,9 @@
         // Physical Keyboard Listener Mapping
         window.addEventListener('keydown', (e) => {
             if (e.ctrlKey || e.altKey || e.metaKey) return;
+            if (document.activeElement && document.activeElement.classList.contains('carry-circle-input')) {
+                return;
+            }
 
             let keyVal = null;
             if (e.key >= '0' && e.key <= '9') {

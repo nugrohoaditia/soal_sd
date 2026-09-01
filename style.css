@@ -640,11 +640,11 @@ body.mode-cerita .virtual-keyboard-container {
     background: #F4FBF7;
     border: 2px dashed #A5D6A7;
     border-radius: var(--radius-md);
-    padding: 0.9rem 1.1rem;
+    padding: 1.1rem 1.25rem;
     margin: 0.75rem 0 1rem 0;
-    font-size: 1.02rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    line-height: 1.55;
+    line-height: 1.6;
     color: #2E7D32;
     text-align: left;
     width: 100%;
@@ -653,30 +653,35 @@ body.mode-cerita .virtual-keyboard-container {
 
 .choices-group {
     display: flex;
-    flex-direction: column;
-    gap: 0.55rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.65rem;
     width: 100%;
-    margin-top: 0.25rem;
+    margin-top: 0.35rem;
 }
 
 .choice-btn {
+    flex: 1 1 0;
+    min-width: 0;
     background: #FFFFFF;
     border: 2.5px solid #E0F2FE;
     border-radius: var(--radius-md);
-    padding: 0.65rem 0.95rem;
+    padding: 0.6rem 0.4rem;
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: #37474F;
     cursor: pointer;
-    text-align: left;
+    text-align: center;
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    justify-content: center;
+    gap: 0.45rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     outline: none;
-    width: 100%;
+    white-space: nowrap;
 }
 
 .choice-btn:hover {
@@ -882,6 +887,166 @@ body.mode-cerita .virtual-keyboard-container {
     background: #37474F;
     border-radius: 2px;
     margin: 0.4rem 0 0.8rem 0;
+}
+
+/* Math Grid Worksheet (Hitung Susun Boxed Column Grid Layout) */
+.math-grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.6rem 0;
+    user-select: none;
+    width: 100%;
+}
+
+.math-grid-table {
+    display: inline-grid;
+    grid-template-columns: 32px repeat(var(--grid-cols, 3), 42px);
+    gap: 4px;
+    align-items: center;
+    justify-items: center;
+}
+
+.grid-cell-op-placeholder {
+    width: 32px;
+    height: 42px;
+}
+
+/* Carry / Borrow Circle Input Row */
+.carry-circle-input {
+    width: 28px;
+    height: 28px;
+    border: 1.5px dashed #A5D6A7;
+    border-radius: 50%;
+    background: #F1F8E9;
+    color: #2E7D32;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: center;
+    outline: none;
+    padding: 0;
+    margin-bottom: 2px;
+    transition: all 0.2s ease;
+}
+
+.carry-circle-input:focus {
+    border-style: solid;
+    border-color: #4CAF50;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
+}
+
+.carry-circle-input::placeholder {
+    color: #A5D6A7;
+    font-weight: 400;
+}
+
+/* Digit Box Cells - 1px dashed subtle gray border */
+.digit-box-cell {
+    width: 42px;
+    height: 42px;
+    border: 1px dashed #CFD8DC;
+    border-radius: 8px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #263238;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.digit-box-cell.empty-cell {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+}
+
+.operator-cell {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #E65100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Line separator */
+.math-grid-line {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 3.5px;
+    background: #37474F;
+    border-radius: 2px;
+    margin: 4px 0 6px 0;
+}
+
+/* Scaled Down Grid for 4+ Digits (Ribuan / Thousands) */
+.math-grid-container.is-thousands .math-grid-table {
+    grid-template-columns: 26px repeat(var(--grid-cols, 4), 34px);
+    gap: 3px;
+}
+
+.math-grid-container.is-thousands .grid-cell-op-placeholder {
+    width: 26px;
+    height: 34px;
+}
+
+.math-grid-container.is-thousands .carry-circle-input {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+}
+
+.math-grid-container.is-thousands .digit-box-cell,
+.math-grid-container.is-thousands .answer-box-cell {
+    width: 34px;
+    height: 34px;
+    font-size: 1.15rem;
+    border-radius: 6px;
+}
+
+.math-grid-container.is-thousands .operator-cell {
+    font-size: 1.3rem;
+}
+
+/* Answer Digit Box Inputs */
+.answer-box-cell {
+    width: 42px;
+    height: 42px;
+    border: 2.5px solid #0288D1;
+    border-radius: 8px;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #0288D1;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+    transition: all 0.2s ease;
+}
+
+.card-problem.success .answer-box-cell {
+    border-color: #4CAF50;
+    background: #E8F5E9;
+    color: #2E7D32;
+}
+
+.answer-box-cell.filled {
+    background: #E1F5FE;
+}
+
+.answer-box-cell.active-box {
+    border-color: #FF9800;
+    box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.3);
+    animation: activeGlow 1.2s infinite alternate ease-in-out;
 }
 
 /* Answer Input Field */
@@ -1379,6 +1544,28 @@ body.mode-cerita .virtual-keyboard-container {
 }
 
 /* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Story Mode 1 Column Mobile Layout */
+    body.mode-cerita .worksheet-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    body.mode-cerita .card-problem {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        min-width: 100% !important;
+    }
+
+    .story-text-box {
+        font-size: 1.3rem !important;
+        padding: 1rem 1.1rem;
+    }
+}
+
 @media (max-width: 600px) {
     body {
         padding-bottom: 370px;
