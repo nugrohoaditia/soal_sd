@@ -524,7 +524,7 @@
                                    value="${q.userAnswer}" 
                                    readonly 
                                    inputmode="none" 
-                                   placeholder="${idx === activeIndex ? '|' : '?'}" 
+                                   placeholder="?" 
                                    aria-label="Jawaban soal ${q.id}">
                         </div>
                     </div>
