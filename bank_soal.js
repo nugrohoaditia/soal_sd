@@ -7,8 +7,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Di atas meja terdapat 8 stiker. Wawan meletakkan 1 stiker lagi. Berapa banyak stiker di atas meja?",
         "answer": 9,
         "distractors": [
-            7,
-            109
+            10,
+            8
         ],
         "hint": "Hitung 8 + 1 = 9"
     },
@@ -19,8 +19,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Rian membawa 8 kelereng merah dan 7 kelereng hijau. Berapa jumlah kelereng Rian seluruhnya?",
         "answer": 15,
         "distractors": [
-            20,
-            115
+            16,
+            14
         ],
         "hint": "Hitung 8 + 7 = 15"
     },
@@ -43,8 +43,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Terdapat 8 stroberi di dalam kantong. Gita mengambil 7 stroberi. Berapa sisa stroberi di kantong?",
         "answer": 1,
         "distractors": [
-            11,
-            101
+            2,
+            3
         ],
         "hint": "Hitung 8 - 7 = 1"
     },
@@ -55,8 +55,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Nayla mempunyai 8 mangga. Ia memberikan 1 mangga kepada adiknya. Berapa sisa mangga Nayla?",
         "answer": 7,
         "distractors": [
-            9,
-            107
+            8,
+            6
         ],
         "hint": "Hitung 8 - 1 = 7"
     },
@@ -68,7 +68,7 @@ window.SOAL_CERITA_BANK = [
         "answer": 5,
         "distractors": [
             4,
-            105
+            6
         ],
         "hint": "Hitung 7 - 2 = 5"
     },
@@ -91,8 +91,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Deni membeli 15 salak. Sebanyak 4 salak diberikan kepada temannya. Berapa sisa salak Deni?",
         "answer": 11,
         "distractors": [
-            10,
-            111
+            12,
+            10
         ],
         "hint": "Hitung 15 - 4 = 11"
     },
@@ -140,7 +140,7 @@ window.SOAL_CERITA_BANK = [
         "answer": 5,
         "distractors": [
             4,
-            105
+            6
         ],
         "hint": "Hitung 15 - 10 = 5"
     },
@@ -151,8 +151,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Di atas meja terdapat 6 melon. Siti meletakkan 6 melon lagi. Berapa banyak melon di atas meja?",
         "answer": 12,
         "distractors": [
-            22,
-            112
+            13,
+            11
         ],
         "hint": "Hitung 6 + 6 = 12"
     },
@@ -199,8 +199,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Budi memetik 5 pensil di kebun. Kakak memetik lagi 5 pensil. Berapa jumlah semua pensil?",
         "answer": 10,
         "distractors": [
-            5,
-            110
+            11,
+            9
         ],
         "hint": "Hitung 5 + 5 = 10"
     },
@@ -211,8 +211,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Terdapat 6 pita warna di dalam kantong. Nayla mengambil 4 pita warna. Berapa sisa pita warna di kantong?",
         "answer": 2,
         "distractors": [
-            7,
-            102
+            1,
+            3
         ],
         "hint": "Hitung 6 - 4 = 2"
     },
@@ -259,8 +259,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Ibu memberi Fani 8 apel. Ayah memberi lagi 5 apel. Berapa total apel Fani sekarang?",
         "answer": 13,
         "distractors": [
-            12,
-            113
+            14,
+            12
         ],
         "hint": "Hitung 8 + 5 = 13"
     },
@@ -331,8 +331,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Oki mempunyai 9 bintang emas. Ia memberikan 5 bintang emas kepada adiknya. Berapa sisa bintang emas Oki?",
         "answer": 4,
         "distractors": [
-            14,
-            104
+            3,
+            5
         ],
         "hint": "Hitung 9 - 5 = 4"
     },
@@ -355,8 +355,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Di atas meja terdapat 8 mangga. Joko meletakkan 2 mangga lagi. Berapa banyak mangga di atas meja?",
         "answer": 10,
         "distractors": [
-            20,
-            110
+            11,
+            9
         ],
         "hint": "Hitung 8 + 2 = 10"
     },
@@ -415,8 +415,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Di atas meja terdapat 5 pita warna. Niko meletakkan 2 pita warna lagi. Berapa banyak pita warna di atas meja?",
         "answer": 7,
         "distractors": [
-            9,
-            107
+            8,
+            6
         ],
         "hint": "Hitung 5 + 2 = 7"
     },
@@ -475,8 +475,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Umar membawa 6 jeruk merah dan 6 jeruk hijau. Berapa jumlah jeruk Umar seluruhnya?",
         "answer": 12,
         "distractors": [
-            14,
-            112
+            13,
+            11
         ],
         "hint": "Hitung 6 + 6 = 12"
     },
@@ -487,8 +487,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Ibu memberi Tono 5 bintang emas. Ayah memberi lagi 2 bintang emas. Berapa total bintang emas Tono sekarang?",
         "answer": 7,
         "distractors": [
-            5,
-            107
+            8,
+            6
         ],
         "hint": "Hitung 5 + 2 = 7"
     },
@@ -524,7 +524,7 @@ window.SOAL_CERITA_BANK = [
         "answer": 4,
         "distractors": [
             3,
-            104
+            5
         ],
         "hint": "Hitung 6 - 2 = 4"
     },
@@ -559,8 +559,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Yuni membawa 6 jeruk merah dan 2 jeruk hijau. Berapa jumlah jeruk Yuni seluruhnya?",
         "answer": 8,
         "distractors": [
-            13,
-            108
+            9,
+            7
         ],
         "hint": "Hitung 6 + 2 = 8"
     },
@@ -631,8 +631,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Fani memetik 8 apel di kebun. Kakak memetik lagi 1 apel. Berapa jumlah semua apel?",
         "answer": 9,
         "distractors": [
-            11,
-            109
+            10,
+            8
         ],
         "hint": "Hitung 8 + 1 = 9"
     },
@@ -656,7 +656,7 @@ window.SOAL_CERITA_BANK = [
         "answer": 7,
         "distractors": [
             8,
-            107
+            6
         ],
         "hint": "Hitung 12 - 5 = 7"
     },
@@ -667,8 +667,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Ibu memberi Hadi 3 kertas origami. Ayah memberi lagi 6 kertas origami. Berapa total kertas origami Hadi sekarang?",
         "answer": 9,
         "distractors": [
-            14,
-            109
+            10,
+            8
         ],
         "hint": "Hitung 3 + 6 = 9"
     },
@@ -703,8 +703,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Di atas meja terdapat 6 bintang emas. Cici meletakkan 5 bintang emas lagi. Berapa banyak bintang emas di atas meja?",
         "answer": 11,
         "distractors": [
-            6,
-            111
+            12,
+            10
         ],
         "hint": "Hitung 6 + 5 = 11"
     },
@@ -811,8 +811,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Toko roti membuat 18 botol air minum rasa cokelat dan 16 botol air minum rasa keju. Berapa jumlah seluruh roti yang dibuat?",
         "answer": 34,
         "distractors": [
-            14,
-            134
+            36,
+            32
         ],
         "hint": "Hitung 18 + 16 = 34"
     },
@@ -823,8 +823,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Ani memiliki 69 stroberi. Ani memberikan 64 stroberi kepada sepupunya. Berapa sisa stroberi Ani?",
         "answer": 5,
         "distractors": [
-            10,
-            105
+            4,
+            6
         ],
         "hint": "Hitung 69 - 64 = 5"
     },
@@ -847,8 +847,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Oki mengumpulkan 36 melon di hari Senin dan 49 melon di hari Selasa. Berapa total melon Oki?",
         "answer": 85,
         "distractors": [
-            84,
-            185
+            87,
+            83
         ],
         "hint": "Hitung 36 + 49 = 85"
     },
@@ -871,8 +871,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Di dalam kelas Rian terdapat 15 siswa laki-laki dan 12 siswa perempuan. Berapa jumlah seluruh siswa di kelas?",
         "answer": 27,
         "distractors": [
-            37,
-            127
+            29,
+            25
         ],
         "hint": "Hitung 15 + 12 = 27"
     },
@@ -943,8 +943,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Di dalam kelas Nayla terdapat 38 siswa laki-laki dan 48 siswa perempuan. Berapa jumlah seluruh siswa di kelas?",
         "answer": 86,
         "distractors": [
-            87,
-            186
+            88,
+            84
         ],
         "hint": "Hitung 38 + 48 = 86"
     },
@@ -991,8 +991,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Sebuah bus membawa 96 penumpang. Di halte pertama turun 52 penumpang. Berapa sisa penumpang di bus?",
         "answer": 44,
         "distractors": [
-            54,
-            144
+            46,
+            42
         ],
         "hint": "Hitung 96 - 52 = 44"
     },
@@ -1027,8 +1027,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Eka memiliki 81 buku cerita. Eka memberikan 15 buku cerita kepada sepupunya. Berapa sisa buku cerita Eka?",
         "answer": 66,
         "distractors": [
-            56,
-            166
+            68,
+            64
         ],
         "hint": "Hitung 81 - 15 = 66"
     },
@@ -1111,8 +1111,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Toko roti membuat 25 salak rasa cokelat dan 42 salak rasa keju. Berapa jumlah seluruh roti yang dibuat?",
         "answer": 67,
         "distractors": [
-            62,
-            167
+            69,
+            65
         ],
         "hint": "Hitung 25 + 42 = 67"
     },
@@ -1147,8 +1147,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Budi mengumpulkan 23 pisang di hari Senin dan 41 pisang di hari Selasa. Berapa total pisang Budi?",
         "answer": 64,
         "distractors": [
-            54,
-            164
+            66,
+            62
         ],
         "hint": "Hitung 23 + 41 = 64"
     },
@@ -1195,8 +1195,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Toko roti membuat 36 seragam rasa cokelat dan 36 seragam rasa keju. Berapa jumlah seluruh roti yang dibuat?",
         "answer": 72,
         "distractors": [
-            92,
-            172
+            74,
+            70
         ],
         "hint": "Hitung 36 + 36 = 72"
     },
@@ -1279,8 +1279,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Paman memanen 67 butir telur dari kebun. Sebanyak 51 butir telur dijual di pasar. Berapa sisa butir telur Paman?",
         "answer": 16,
         "distractors": [
-            18,
-            116
+            17,
+            15
         ],
         "hint": "Hitung 67 - 51 = 16"
     },
@@ -1304,7 +1304,7 @@ window.SOAL_CERITA_BANK = [
         "answer": 48,
         "distractors": [
             50,
-            148
+            46
         ],
         "hint": "Hitung 22 + 26 = 48"
     },
@@ -1327,8 +1327,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Yuni mengumpulkan 26 jambu di hari Senin dan 18 jambu di hari Selasa. Berapa total jambu Yuni?",
         "answer": 44,
         "distractors": [
-            64,
-            144
+            46,
+            42
         ],
         "hint": "Hitung 26 + 18 = 44"
     },
@@ -1351,8 +1351,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Paman memanen 57 bibit jagung dari kebun. Sebanyak 14 bibit jagung dijual di pasar. Berapa sisa bibit jagung Paman?",
         "answer": 43,
         "distractors": [
-            53,
-            143
+            45,
+            41
         ],
         "hint": "Hitung 57 - 14 = 43"
     },
@@ -1387,8 +1387,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Paman memanen 88 dus pensil dari kebun. Sebanyak 55 dus pensil dijual di pasar. Berapa sisa dus pensil Paman?",
         "answer": 33,
         "distractors": [
-            32,
-            133
+            35,
+            31
         ],
         "hint": "Hitung 88 - 55 = 33"
     },
@@ -1592,7 +1592,7 @@ window.SOAL_CERITA_BANK = [
         "answer": 54,
         "distractors": [
             56,
-            154
+            52
         ],
         "hint": "Hitung 69 - 15 = 54"
     },
@@ -1628,7 +1628,7 @@ window.SOAL_CERITA_BANK = [
         "answer": 50,
         "distractors": [
             52,
-            150
+            48
         ],
         "hint": "Hitung 78 - 28 = 50"
     },
@@ -1663,8 +1663,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Sebuah bus membawa 36 penumpang. Di halte pertama turun 20 penumpang. Berapa sisa penumpang di bus?",
         "answer": 16,
         "distractors": [
-            14,
-            116
+            17,
+            15
         ],
         "hint": "Hitung 36 - 20 = 16"
     },
@@ -1700,7 +1700,7 @@ window.SOAL_CERITA_BANK = [
         "answer": 34,
         "distractors": [
             36,
-            134
+            32
         ],
         "hint": "Hitung 85 - 51 = 34"
     },
@@ -1747,8 +1747,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Dimas memiliki 97 salak. Dimas memberikan 90 salak kepada sepupunya. Berapa sisa salak Dimas?",
         "answer": 7,
         "distractors": [
-            2,
-            107
+            8,
+            6
         ],
         "hint": "Hitung 97 - 90 = 7"
     },
@@ -1783,8 +1783,8 @@ window.SOAL_CERITA_BANK = [
         "story": "Perpustakaan sekolah memiliki 31 bibit jagung. Pak Guru menambah 38 bibit jagung baru. Berapa jumlah bibit jagung sekarang?",
         "answer": 69,
         "distractors": [
-            74,
-            169
+            71,
+            67
         ],
         "hint": "Hitung 31 + 38 = 69"
     },
@@ -3629,13 +3629,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 2,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Stroberi 🍓 di kebun. 2 Stroberi dimakan. Berapa sisa Stroberi 🍓 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -3649,8 +3649,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 3,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di bandara terdapat 6 Pesawat ✈️ dan 3 Helikopter 🚁. Berapa total kendaraan di bandara?",
         "answer": 9,
         "distractors": [
@@ -3675,11 +3675,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 4,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Dadu 🎲 di kotak mainan. 3 Dadu meletus/hilang. Berapa sisa Dadu 🎲 yang ada?",
+        "story": "Ada 5 Dadu 🎲 di kotak mainan. 3 Dadu hilang. Berapa sisa Dadu 🎲 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -3693,8 +3693,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 5,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 2 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 7,
         "distractors": [
@@ -3717,13 +3717,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 6,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Apel 🍎 di keranjang. 1 Apel dimakan. Berapa sisa Apel 🍎 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -3761,13 +3761,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 8,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Boneka 🧸 di kamar bermain. 2 Boneka meletus/hilang. Berapa sisa Boneka 🧸 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Boneka 🧸 di kamar bermain. 2 Boneka diberikan ke teman. Berapa sisa Boneka 🧸 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -3781,8 +3781,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 9,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 4 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 9,
         "distractors": [
@@ -3810,8 +3810,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Pir 🍐 di kulkas. 3 Pir dimakan. Berapa sisa Pir 🍐 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -3825,8 +3825,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 11,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di garasi terdapat 5 Mobil 🚗 dan 3 Roket 🚀. Berapa total kendaraan di garasi?",
         "answer": 8,
         "distractors": [
@@ -3849,13 +3849,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 12,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 1 Bola Sepak meletus/hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 1 Bola Sepak hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -3869,8 +3869,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 13,
-        "difficulty": "satuan",
-        "difficultyLabel": "🌱 Satuan",
+        "difficulty": "belasan",
+        "difficultyLabel": "🌿 Belasan",
         "story": "Di kandang terdapat 6 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 11,
         "distractors": [
@@ -3893,13 +3893,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 14,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Nanas 🍍 di pasar. 2 Nanas dimakan. Berapa sisa Nanas 🍍 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -3913,13 +3913,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 15,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di pelabuhan terdapat 2 Perahu ⛵ dan 3 Kapal 🚢. Berapa total kendaraan di pelabuhan?",
         "answer": 5,
         "distractors": [
-            6,
-            4
+            4,
+            6
         ],
         "groups": [
             {
@@ -3939,11 +3939,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 16,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 3 Balon meletus/hilang. Berapa sisa Balon 🎈 yang ada?",
+        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 3 Balon meletus. Berapa sisa Balon 🎈 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -3957,8 +3957,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 17,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 3 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 8,
         "distractors": [
@@ -3981,13 +3981,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 18,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Jeruk 🍊 di meja makan. 1 Jeruk dimakan. Berapa sisa Jeruk 🍊 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -4025,13 +4025,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 20,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Stik Game 🎮 di ruang santai. 2 Stik Game meletus/hilang. Berapa sisa Stik Game 🎮 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Stik Game 🎮 di ruang santai. 2 Stik Game dipinjam teman. Berapa sisa Stik Game 🎮 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -4045,8 +4045,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 21,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 5 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 10,
         "distractors": [
@@ -4074,8 +4074,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Stroberi 🍓 di kebun. 3 Stroberi dimakan. Berapa sisa Stroberi 🍓 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -4089,8 +4089,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 23,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di bandara terdapat 6 Pesawat ✈️ dan 3 Helikopter 🚁. Berapa total kendaraan di bandara?",
         "answer": 9,
         "distractors": [
@@ -4113,13 +4113,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 24,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Dadu 🎲 di kotak mainan. 1 Dadu meletus/hilang. Berapa sisa Dadu 🎲 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Dadu 🎲 di kotak mainan. 1 Dadu hilang. Berapa sisa Dadu 🎲 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -4157,13 +4157,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 26,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Apel 🍎 di keranjang. 2 Apel dimakan. Berapa sisa Apel 🍎 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -4177,8 +4177,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 27,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di halte terdapat 3 Bus 🚌 dan 3 Mobil Balap 🏎️. Berapa total kendaraan di halte?",
         "answer": 6,
         "distractors": [
@@ -4203,11 +4203,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 28,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Boneka 🧸 di kamar bermain. 3 Boneka meletus/hilang. Berapa sisa Boneka 🧸 yang ada?",
+        "story": "Ada 5 Boneka 🧸 di kamar bermain. 3 Boneka diberikan ke teman. Berapa sisa Boneka 🧸 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -4221,8 +4221,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 29,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 4 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 9,
         "distractors": [
@@ -4245,13 +4245,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 30,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Pir 🍐 di kulkas. 1 Pir dimakan. Berapa sisa Pir 🍐 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -4289,13 +4289,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 32,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 2 Bola Sepak meletus/hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 2 Bola Sepak hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -4309,8 +4309,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 33,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "belasan",
+        "difficultyLabel": "🌿 Belasan",
         "story": "Di peternakan terdapat 6 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 11,
         "distractors": [
@@ -4338,8 +4338,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Nanas 🍍 di pasar. 3 Nanas dimakan. Berapa sisa Nanas 🍍 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -4353,13 +4353,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 35,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di pelabuhan terdapat 2 Perahu ⛵ dan 3 Kapal 🚢. Berapa total kendaraan di pelabuhan?",
         "answer": 5,
         "distractors": [
-            6,
-            4
+            4,
+            6
         ],
         "groups": [
             {
@@ -4377,13 +4377,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 36,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 1 Balon meletus/hilang. Berapa sisa Balon 🎈 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 1 Balon meletus. Berapa sisa Balon 🎈 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -4421,13 +4421,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 38,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Jeruk 🍊 di meja makan. 2 Jeruk dimakan. Berapa sisa Jeruk 🍊 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -4441,8 +4441,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 39,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di jalanan terdapat 4 Motor 🛵 dan 3 Sepeda 🚲. Berapa total kendaraan di jalanan?",
         "answer": 7,
         "distractors": [
@@ -4467,11 +4467,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 40,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Stik Game 🎮 di ruang santai. 3 Stik Game meletus/hilang. Berapa sisa Stik Game 🎮 yang ada?",
+        "story": "Ada 5 Stik Game 🎮 di ruang santai. 3 Stik Game dipinjam teman. Berapa sisa Stik Game 🎮 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -4485,8 +4485,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 41,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 5 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 10,
         "distractors": [
@@ -4509,13 +4509,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 42,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Stroberi 🍓 di kebun. 1 Stroberi dimakan. Berapa sisa Stroberi 🍓 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -4553,13 +4553,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 44,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Dadu 🎲 di kotak mainan. 2 Dadu meletus/hilang. Berapa sisa Dadu 🎲 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Dadu 🎲 di kotak mainan. 2 Dadu hilang. Berapa sisa Dadu 🎲 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -4573,8 +4573,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 45,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 2 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 7,
         "distractors": [
@@ -4602,8 +4602,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Apel 🍎 di keranjang. 3 Apel dimakan. Berapa sisa Apel 🍎 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -4617,8 +4617,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 47,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di halte terdapat 3 Bus 🚌 dan 3 Mobil Balap 🏎️. Berapa total kendaraan di halte?",
         "answer": 6,
         "distractors": [
@@ -4641,13 +4641,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 48,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Boneka 🧸 di kamar bermain. 1 Boneka meletus/hilang. Berapa sisa Boneka 🧸 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Boneka 🧸 di kamar bermain. 1 Boneka diberikan ke teman. Berapa sisa Boneka 🧸 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -4685,13 +4685,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 50,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Pir 🍐 di kulkas. 2 Pir dimakan. Berapa sisa Pir 🍐 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -4705,8 +4705,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 51,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di garasi terdapat 5 Mobil 🚗 dan 3 Roket 🚀. Berapa total kendaraan di garasi?",
         "answer": 8,
         "distractors": [
@@ -4731,11 +4731,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 52,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 3 Bola Sepak meletus/hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
+        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 3 Bola Sepak hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -4749,8 +4749,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 53,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "belasan",
+        "difficultyLabel": "🌿 Belasan",
         "story": "Di kandang terdapat 6 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 11,
         "distractors": [
@@ -4773,13 +4773,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 54,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Nanas 🍍 di pasar. 1 Nanas dimakan. Berapa sisa Nanas 🍍 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -4798,8 +4798,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Di pelabuhan terdapat 2 Perahu ⛵ dan 3 Kapal 🚢. Berapa total kendaraan di pelabuhan?",
         "answer": 5,
         "distractors": [
-            6,
-            4
+            4,
+            6
         ],
         "groups": [
             {
@@ -4817,13 +4817,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 56,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 2 Balon meletus/hilang. Berapa sisa Balon 🎈 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 2 Balon meletus. Berapa sisa Balon 🎈 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -4837,8 +4837,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 57,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 3 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 8,
         "distractors": [
@@ -4866,8 +4866,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Jeruk 🍊 di meja makan. 3 Jeruk dimakan. Berapa sisa Jeruk 🍊 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -4881,8 +4881,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 59,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di jalanan terdapat 4 Motor 🛵 dan 3 Sepeda 🚲. Berapa total kendaraan di jalanan?",
         "answer": 7,
         "distractors": [
@@ -4905,13 +4905,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 60,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Stik Game 🎮 di ruang santai. 1 Stik Game meletus/hilang. Berapa sisa Stik Game 🎮 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Stik Game 🎮 di ruang santai. 1 Stik Game dipinjam teman. Berapa sisa Stik Game 🎮 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -4949,13 +4949,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 62,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Stroberi 🍓 di kebun. 2 Stroberi dimakan. Berapa sisa Stroberi 🍓 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -4969,8 +4969,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 63,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di bandara terdapat 6 Pesawat ✈️ dan 3 Helikopter 🚁. Berapa total kendaraan di bandara?",
         "answer": 9,
         "distractors": [
@@ -4995,11 +4995,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 64,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Dadu 🎲 di kotak mainan. 3 Dadu meletus/hilang. Berapa sisa Dadu 🎲 yang ada?",
+        "story": "Ada 5 Dadu 🎲 di kotak mainan. 3 Dadu hilang. Berapa sisa Dadu 🎲 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -5013,8 +5013,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 65,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 2 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 7,
         "distractors": [
@@ -5037,13 +5037,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 66,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Apel 🍎 di keranjang. 1 Apel dimakan. Berapa sisa Apel 🍎 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -5081,13 +5081,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 68,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Boneka 🧸 di kamar bermain. 2 Boneka meletus/hilang. Berapa sisa Boneka 🧸 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Boneka 🧸 di kamar bermain. 2 Boneka diberikan ke teman. Berapa sisa Boneka 🧸 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -5101,8 +5101,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 69,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 4 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 9,
         "distractors": [
@@ -5130,8 +5130,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Pir 🍐 di kulkas. 3 Pir dimakan. Berapa sisa Pir 🍐 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -5145,8 +5145,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 71,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di garasi terdapat 5 Mobil 🚗 dan 3 Roket 🚀. Berapa total kendaraan di garasi?",
         "answer": 8,
         "distractors": [
@@ -5169,13 +5169,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 72,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 1 Bola Sepak meletus/hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 1 Bola Sepak hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -5189,8 +5189,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 73,
-        "difficulty": "satuan",
-        "difficultyLabel": "🌱 Satuan",
+        "difficulty": "belasan",
+        "difficultyLabel": "🌿 Belasan",
         "story": "Di peternakan terdapat 6 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 11,
         "distractors": [
@@ -5213,13 +5213,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 74,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Nanas 🍍 di pasar. 2 Nanas dimakan. Berapa sisa Nanas 🍍 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -5233,13 +5233,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 75,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di pelabuhan terdapat 2 Perahu ⛵ dan 3 Kapal 🚢. Berapa total kendaraan di pelabuhan?",
         "answer": 5,
         "distractors": [
-            6,
-            4
+            4,
+            6
         ],
         "groups": [
             {
@@ -5259,11 +5259,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 76,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 3 Balon meletus/hilang. Berapa sisa Balon 🎈 yang ada?",
+        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 3 Balon meletus. Berapa sisa Balon 🎈 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -5277,8 +5277,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 77,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 3 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 8,
         "distractors": [
@@ -5301,13 +5301,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 78,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Jeruk 🍊 di meja makan. 1 Jeruk dimakan. Berapa sisa Jeruk 🍊 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -5345,13 +5345,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 80,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Stik Game 🎮 di ruang santai. 2 Stik Game meletus/hilang. Berapa sisa Stik Game 🎮 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Stik Game 🎮 di ruang santai. 2 Stik Game dipinjam teman. Berapa sisa Stik Game 🎮 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -5365,8 +5365,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 81,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 5 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 10,
         "distractors": [
@@ -5394,8 +5394,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Stroberi 🍓 di kebun. 3 Stroberi dimakan. Berapa sisa Stroberi 🍓 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -5409,8 +5409,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 83,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di bandara terdapat 6 Pesawat ✈️ dan 3 Helikopter 🚁. Berapa total kendaraan di bandara?",
         "answer": 9,
         "distractors": [
@@ -5433,13 +5433,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 84,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Dadu 🎲 di kotak mainan. 1 Dadu meletus/hilang. Berapa sisa Dadu 🎲 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Dadu 🎲 di kotak mainan. 1 Dadu hilang. Berapa sisa Dadu 🎲 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -5477,13 +5477,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 86,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Apel 🍎 di keranjang. 2 Apel dimakan. Berapa sisa Apel 🍎 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -5497,8 +5497,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 87,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di halte terdapat 3 Bus 🚌 dan 3 Mobil Balap 🏎️. Berapa total kendaraan di halte?",
         "answer": 6,
         "distractors": [
@@ -5523,11 +5523,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 88,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Boneka 🧸 di kamar bermain. 3 Boneka meletus/hilang. Berapa sisa Boneka 🧸 yang ada?",
+        "story": "Ada 5 Boneka 🧸 di kamar bermain. 3 Boneka diberikan ke teman. Berapa sisa Boneka 🧸 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -5541,8 +5541,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 89,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 4 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 9,
         "distractors": [
@@ -5565,13 +5565,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 90,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Pir 🍐 di kulkas. 1 Pir dimakan. Berapa sisa Pir 🍐 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -5609,13 +5609,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 92,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 2 Bola Sepak meletus/hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 2 Bola Sepak hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -5629,8 +5629,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 93,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "belasan",
+        "difficultyLabel": "🌿 Belasan",
         "story": "Di kandang terdapat 6 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 11,
         "distractors": [
@@ -5658,8 +5658,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Nanas 🍍 di pasar. 3 Nanas dimakan. Berapa sisa Nanas 🍍 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -5673,13 +5673,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 95,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di pelabuhan terdapat 2 Perahu ⛵ dan 3 Kapal 🚢. Berapa total kendaraan di pelabuhan?",
         "answer": 5,
         "distractors": [
-            6,
-            4
+            4,
+            6
         ],
         "groups": [
             {
@@ -5697,13 +5697,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 96,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 1 Balon meletus/hilang. Berapa sisa Balon 🎈 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 1 Balon meletus. Berapa sisa Balon 🎈 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -5741,13 +5741,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 98,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Jeruk 🍊 di meja makan. 2 Jeruk dimakan. Berapa sisa Jeruk 🍊 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -5761,8 +5761,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 99,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di jalanan terdapat 4 Motor 🛵 dan 3 Sepeda 🚲. Berapa total kendaraan di jalanan?",
         "answer": 7,
         "distractors": [
@@ -5787,11 +5787,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 100,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Stik Game 🎮 di ruang santai. 3 Stik Game meletus/hilang. Berapa sisa Stik Game 🎮 yang ada?",
+        "story": "Ada 5 Stik Game 🎮 di ruang santai. 3 Stik Game dipinjam teman. Berapa sisa Stik Game 🎮 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -5805,8 +5805,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 101,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 5 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 10,
         "distractors": [
@@ -5829,13 +5829,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 102,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Stroberi 🍓 di kebun. 1 Stroberi dimakan. Berapa sisa Stroberi 🍓 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -5873,13 +5873,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 104,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Dadu 🎲 di kotak mainan. 2 Dadu meletus/hilang. Berapa sisa Dadu 🎲 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Dadu 🎲 di kotak mainan. 2 Dadu hilang. Berapa sisa Dadu 🎲 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -5893,8 +5893,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 105,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 2 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 7,
         "distractors": [
@@ -5922,8 +5922,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Apel 🍎 di keranjang. 3 Apel dimakan. Berapa sisa Apel 🍎 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -5937,8 +5937,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 107,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di halte terdapat 3 Bus 🚌 dan 3 Mobil Balap 🏎️. Berapa total kendaraan di halte?",
         "answer": 6,
         "distractors": [
@@ -5961,13 +5961,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 108,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Boneka 🧸 di kamar bermain. 1 Boneka meletus/hilang. Berapa sisa Boneka 🧸 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Boneka 🧸 di kamar bermain. 1 Boneka diberikan ke teman. Berapa sisa Boneka 🧸 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -6005,13 +6005,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 110,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Pir 🍐 di kulkas. 2 Pir dimakan. Berapa sisa Pir 🍐 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -6025,8 +6025,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 111,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di garasi terdapat 5 Mobil 🚗 dan 3 Roket 🚀. Berapa total kendaraan di garasi?",
         "answer": 8,
         "distractors": [
@@ -6051,11 +6051,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 112,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 3 Bola Sepak meletus/hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
+        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 3 Bola Sepak hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -6069,8 +6069,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 113,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "belasan",
+        "difficultyLabel": "🌿 Belasan",
         "story": "Di peternakan terdapat 6 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 11,
         "distractors": [
@@ -6093,13 +6093,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 114,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Nanas 🍍 di pasar. 1 Nanas dimakan. Berapa sisa Nanas 🍍 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -6118,8 +6118,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Di pelabuhan terdapat 2 Perahu ⛵ dan 3 Kapal 🚢. Berapa total kendaraan di pelabuhan?",
         "answer": 5,
         "distractors": [
-            6,
-            4
+            4,
+            6
         ],
         "groups": [
             {
@@ -6137,13 +6137,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 116,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 2 Balon meletus/hilang. Berapa sisa Balon 🎈 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 2 Balon meletus. Berapa sisa Balon 🎈 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -6157,8 +6157,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 117,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 3 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 8,
         "distractors": [
@@ -6186,8 +6186,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Jeruk 🍊 di meja makan. 3 Jeruk dimakan. Berapa sisa Jeruk 🍊 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -6201,8 +6201,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 119,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di jalanan terdapat 4 Motor 🛵 dan 3 Sepeda 🚲. Berapa total kendaraan di jalanan?",
         "answer": 7,
         "distractors": [
@@ -6225,13 +6225,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 120,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Stik Game 🎮 di ruang santai. 1 Stik Game meletus/hilang. Berapa sisa Stik Game 🎮 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Stik Game 🎮 di ruang santai. 1 Stik Game dipinjam teman. Berapa sisa Stik Game 🎮 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -6269,13 +6269,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 122,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Stroberi 🍓 di kebun. 2 Stroberi dimakan. Berapa sisa Stroberi 🍓 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -6289,8 +6289,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 123,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di bandara terdapat 6 Pesawat ✈️ dan 3 Helikopter 🚁. Berapa total kendaraan di bandara?",
         "answer": 9,
         "distractors": [
@@ -6315,11 +6315,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 124,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Dadu 🎲 di kotak mainan. 3 Dadu meletus/hilang. Berapa sisa Dadu 🎲 yang ada?",
+        "story": "Ada 5 Dadu 🎲 di kotak mainan. 3 Dadu hilang. Berapa sisa Dadu 🎲 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -6333,8 +6333,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 125,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 2 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 7,
         "distractors": [
@@ -6357,13 +6357,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 126,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Apel 🍎 di keranjang. 1 Apel dimakan. Berapa sisa Apel 🍎 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -6401,13 +6401,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 128,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Boneka 🧸 di kamar bermain. 2 Boneka meletus/hilang. Berapa sisa Boneka 🧸 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Boneka 🧸 di kamar bermain. 2 Boneka diberikan ke teman. Berapa sisa Boneka 🧸 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -6421,8 +6421,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 129,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 4 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 9,
         "distractors": [
@@ -6450,8 +6450,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Pir 🍐 di kulkas. 3 Pir dimakan. Berapa sisa Pir 🍐 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -6465,8 +6465,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 131,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di garasi terdapat 5 Mobil 🚗 dan 3 Roket 🚀. Berapa total kendaraan di garasi?",
         "answer": 8,
         "distractors": [
@@ -6489,13 +6489,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 132,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 1 Bola Sepak meletus/hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 1 Bola Sepak hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -6509,8 +6509,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 133,
-        "difficulty": "satuan",
-        "difficultyLabel": "🌱 Satuan",
+        "difficulty": "belasan",
+        "difficultyLabel": "🌿 Belasan",
         "story": "Di kandang terdapat 6 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 11,
         "distractors": [
@@ -6533,13 +6533,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 134,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Nanas 🍍 di pasar. 2 Nanas dimakan. Berapa sisa Nanas 🍍 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -6553,13 +6553,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 135,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di pelabuhan terdapat 2 Perahu ⛵ dan 3 Kapal 🚢. Berapa total kendaraan di pelabuhan?",
         "answer": 5,
         "distractors": [
-            6,
-            4
+            4,
+            6
         ],
         "groups": [
             {
@@ -6579,11 +6579,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 136,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 3 Balon meletus/hilang. Berapa sisa Balon 🎈 yang ada?",
+        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 3 Balon meletus. Berapa sisa Balon 🎈 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -6597,8 +6597,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 137,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 3 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 8,
         "distractors": [
@@ -6621,13 +6621,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 138,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Jeruk 🍊 di meja makan. 1 Jeruk dimakan. Berapa sisa Jeruk 🍊 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -6665,13 +6665,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 140,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Stik Game 🎮 di ruang santai. 2 Stik Game meletus/hilang. Berapa sisa Stik Game 🎮 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Stik Game 🎮 di ruang santai. 2 Stik Game dipinjam teman. Berapa sisa Stik Game 🎮 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -6685,8 +6685,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 141,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 5 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 10,
         "distractors": [
@@ -6714,8 +6714,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Stroberi 🍓 di kebun. 3 Stroberi dimakan. Berapa sisa Stroberi 🍓 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -6729,8 +6729,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 143,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di bandara terdapat 6 Pesawat ✈️ dan 3 Helikopter 🚁. Berapa total kendaraan di bandara?",
         "answer": 9,
         "distractors": [
@@ -6753,13 +6753,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 144,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Dadu 🎲 di kotak mainan. 1 Dadu meletus/hilang. Berapa sisa Dadu 🎲 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Dadu 🎲 di kotak mainan. 1 Dadu hilang. Berapa sisa Dadu 🎲 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -6797,13 +6797,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 146,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Apel 🍎 di keranjang. 2 Apel dimakan. Berapa sisa Apel 🍎 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -6817,8 +6817,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 147,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di halte terdapat 3 Bus 🚌 dan 3 Mobil Balap 🏎️. Berapa total kendaraan di halte?",
         "answer": 6,
         "distractors": [
@@ -6843,11 +6843,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 148,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Boneka 🧸 di kamar bermain. 3 Boneka meletus/hilang. Berapa sisa Boneka 🧸 yang ada?",
+        "story": "Ada 5 Boneka 🧸 di kamar bermain. 3 Boneka diberikan ke teman. Berapa sisa Boneka 🧸 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -6861,8 +6861,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 149,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 4 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 9,
         "distractors": [
@@ -6885,13 +6885,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 150,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Pir 🍐 di kulkas. 1 Pir dimakan. Berapa sisa Pir 🍐 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -6929,13 +6929,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 152,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 2 Bola Sepak meletus/hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 2 Bola Sepak hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -6949,8 +6949,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 153,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "belasan",
+        "difficultyLabel": "🌿 Belasan",
         "story": "Di peternakan terdapat 6 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 11,
         "distractors": [
@@ -6978,8 +6978,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Nanas 🍍 di pasar. 3 Nanas dimakan. Berapa sisa Nanas 🍍 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -6993,13 +6993,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 155,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di pelabuhan terdapat 2 Perahu ⛵ dan 3 Kapal 🚢. Berapa total kendaraan di pelabuhan?",
         "answer": 5,
         "distractors": [
-            6,
-            4
+            4,
+            6
         ],
         "groups": [
             {
@@ -7017,13 +7017,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 156,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 1 Balon meletus/hilang. Berapa sisa Balon 🎈 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 1 Balon meletus. Berapa sisa Balon 🎈 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -7061,13 +7061,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 158,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Jeruk 🍊 di meja makan. 2 Jeruk dimakan. Berapa sisa Jeruk 🍊 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -7081,8 +7081,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 159,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di jalanan terdapat 4 Motor 🛵 dan 3 Sepeda 🚲. Berapa total kendaraan di jalanan?",
         "answer": 7,
         "distractors": [
@@ -7107,11 +7107,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 160,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Stik Game 🎮 di ruang santai. 3 Stik Game meletus/hilang. Berapa sisa Stik Game 🎮 yang ada?",
+        "story": "Ada 5 Stik Game 🎮 di ruang santai. 3 Stik Game dipinjam teman. Berapa sisa Stik Game 🎮 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -7125,8 +7125,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 161,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 5 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 10,
         "distractors": [
@@ -7149,13 +7149,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 162,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Stroberi 🍓 di kebun. 1 Stroberi dimakan. Berapa sisa Stroberi 🍓 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -7193,13 +7193,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 164,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Dadu 🎲 di kotak mainan. 2 Dadu meletus/hilang. Berapa sisa Dadu 🎲 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Dadu 🎲 di kotak mainan. 2 Dadu hilang. Berapa sisa Dadu 🎲 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -7213,8 +7213,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 165,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 2 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 7,
         "distractors": [
@@ -7242,8 +7242,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Apel 🍎 di keranjang. 3 Apel dimakan. Berapa sisa Apel 🍎 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -7257,8 +7257,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 167,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di halte terdapat 3 Bus 🚌 dan 3 Mobil Balap 🏎️. Berapa total kendaraan di halte?",
         "answer": 6,
         "distractors": [
@@ -7281,13 +7281,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 168,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Boneka 🧸 di kamar bermain. 1 Boneka meletus/hilang. Berapa sisa Boneka 🧸 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Boneka 🧸 di kamar bermain. 1 Boneka diberikan ke teman. Berapa sisa Boneka 🧸 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -7325,13 +7325,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 170,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Pir 🍐 di kulkas. 2 Pir dimakan. Berapa sisa Pir 🍐 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -7345,8 +7345,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 171,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di garasi terdapat 5 Mobil 🚗 dan 3 Roket 🚀. Berapa total kendaraan di garasi?",
         "answer": 8,
         "distractors": [
@@ -7371,11 +7371,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 172,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 3 Bola Sepak meletus/hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
+        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 3 Bola Sepak hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -7389,8 +7389,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 173,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "belasan",
+        "difficultyLabel": "🌿 Belasan",
         "story": "Di kandang terdapat 6 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 11,
         "distractors": [
@@ -7413,13 +7413,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 174,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Nanas 🍍 di pasar. 1 Nanas dimakan. Berapa sisa Nanas 🍍 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -7438,8 +7438,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Di pelabuhan terdapat 2 Perahu ⛵ dan 3 Kapal 🚢. Berapa total kendaraan di pelabuhan?",
         "answer": 5,
         "distractors": [
-            6,
-            4
+            4,
+            6
         ],
         "groups": [
             {
@@ -7457,13 +7457,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 176,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 2 Balon meletus/hilang. Berapa sisa Balon 🎈 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 2 Balon meletus. Berapa sisa Balon 🎈 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -7477,8 +7477,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 177,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 3 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 8,
         "distractors": [
@@ -7506,8 +7506,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Jeruk 🍊 di meja makan. 3 Jeruk dimakan. Berapa sisa Jeruk 🍊 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -7521,8 +7521,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 179,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di jalanan terdapat 4 Motor 🛵 dan 3 Sepeda 🚲. Berapa total kendaraan di jalanan?",
         "answer": 7,
         "distractors": [
@@ -7545,13 +7545,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 180,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Stik Game 🎮 di ruang santai. 1 Stik Game meletus/hilang. Berapa sisa Stik Game 🎮 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Stik Game 🎮 di ruang santai. 1 Stik Game dipinjam teman. Berapa sisa Stik Game 🎮 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -7589,13 +7589,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 182,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Stroberi 🍓 di kebun. 2 Stroberi dimakan. Berapa sisa Stroberi 🍓 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -7609,8 +7609,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 183,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di bandara terdapat 6 Pesawat ✈️ dan 3 Helikopter 🚁. Berapa total kendaraan di bandara?",
         "answer": 9,
         "distractors": [
@@ -7635,11 +7635,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 184,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Dadu 🎲 di kotak mainan. 3 Dadu meletus/hilang. Berapa sisa Dadu 🎲 yang ada?",
+        "story": "Ada 5 Dadu 🎲 di kotak mainan. 3 Dadu hilang. Berapa sisa Dadu 🎲 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -7653,8 +7653,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 185,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 2 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 7,
         "distractors": [
@@ -7677,13 +7677,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 186,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Apel 🍎 di keranjang. 1 Apel dimakan. Berapa sisa Apel 🍎 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -7721,13 +7721,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 188,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Boneka 🧸 di kamar bermain. 2 Boneka meletus/hilang. Berapa sisa Boneka 🧸 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Boneka 🧸 di kamar bermain. 2 Boneka diberikan ke teman. Berapa sisa Boneka 🧸 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -7741,8 +7741,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 189,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 4 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 9,
         "distractors": [
@@ -7770,8 +7770,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Pir 🍐 di kulkas. 3 Pir dimakan. Berapa sisa Pir 🍐 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -7785,8 +7785,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 191,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di garasi terdapat 5 Mobil 🚗 dan 3 Roket 🚀. Berapa total kendaraan di garasi?",
         "answer": 8,
         "distractors": [
@@ -7809,13 +7809,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 192,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 1 Bola Sepak meletus/hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 1 Bola Sepak hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -7829,8 +7829,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 193,
-        "difficulty": "satuan",
-        "difficultyLabel": "🌱 Satuan",
+        "difficulty": "belasan",
+        "difficultyLabel": "🌿 Belasan",
         "story": "Di peternakan terdapat 6 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 11,
         "distractors": [
@@ -7853,13 +7853,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 194,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Nanas 🍍 di pasar. 2 Nanas dimakan. Berapa sisa Nanas 🍍 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -7873,13 +7873,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 195,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di pelabuhan terdapat 2 Perahu ⛵ dan 3 Kapal 🚢. Berapa total kendaraan di pelabuhan?",
         "answer": 5,
         "distractors": [
-            6,
-            4
+            4,
+            6
         ],
         "groups": [
             {
@@ -7899,11 +7899,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 196,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 3 Balon meletus/hilang. Berapa sisa Balon 🎈 yang ada?",
+        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 3 Balon meletus. Berapa sisa Balon 🎈 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -7917,8 +7917,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 197,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 3 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 8,
         "distractors": [
@@ -7941,13 +7941,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 198,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Jeruk 🍊 di meja makan. 1 Jeruk dimakan. Berapa sisa Jeruk 🍊 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -7985,13 +7985,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 200,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Stik Game 🎮 di ruang santai. 2 Stik Game meletus/hilang. Berapa sisa Stik Game 🎮 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Stik Game 🎮 di ruang santai. 2 Stik Game dipinjam teman. Berapa sisa Stik Game 🎮 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -8005,8 +8005,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 201,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 5 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 10,
         "distractors": [
@@ -8034,8 +8034,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Stroberi 🍓 di kebun. 3 Stroberi dimakan. Berapa sisa Stroberi 🍓 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -8049,8 +8049,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 203,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di bandara terdapat 6 Pesawat ✈️ dan 3 Helikopter 🚁. Berapa total kendaraan di bandara?",
         "answer": 9,
         "distractors": [
@@ -8073,13 +8073,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 204,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Dadu 🎲 di kotak mainan. 1 Dadu meletus/hilang. Berapa sisa Dadu 🎲 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Dadu 🎲 di kotak mainan. 1 Dadu hilang. Berapa sisa Dadu 🎲 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -8117,13 +8117,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 206,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Apel 🍎 di keranjang. 2 Apel dimakan. Berapa sisa Apel 🍎 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -8137,8 +8137,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 207,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di halte terdapat 3 Bus 🚌 dan 3 Mobil Balap 🏎️. Berapa total kendaraan di halte?",
         "answer": 6,
         "distractors": [
@@ -8163,11 +8163,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 208,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Boneka 🧸 di kamar bermain. 3 Boneka meletus/hilang. Berapa sisa Boneka 🧸 yang ada?",
+        "story": "Ada 5 Boneka 🧸 di kamar bermain. 3 Boneka diberikan ke teman. Berapa sisa Boneka 🧸 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -8181,8 +8181,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 209,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 4 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 9,
         "distractors": [
@@ -8205,13 +8205,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 210,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Pir 🍐 di kulkas. 1 Pir dimakan. Berapa sisa Pir 🍐 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -8249,13 +8249,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 212,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 2 Bola Sepak meletus/hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 2 Bola Sepak hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -8269,8 +8269,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 213,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "belasan",
+        "difficultyLabel": "🌿 Belasan",
         "story": "Di kandang terdapat 6 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 11,
         "distractors": [
@@ -8298,8 +8298,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Nanas 🍍 di pasar. 3 Nanas dimakan. Berapa sisa Nanas 🍍 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -8313,13 +8313,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 215,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di pelabuhan terdapat 2 Perahu ⛵ dan 3 Kapal 🚢. Berapa total kendaraan di pelabuhan?",
         "answer": 5,
         "distractors": [
-            6,
-            4
+            4,
+            6
         ],
         "groups": [
             {
@@ -8337,13 +8337,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 216,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 1 Balon meletus/hilang. Berapa sisa Balon 🎈 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 1 Balon meletus. Berapa sisa Balon 🎈 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -8381,13 +8381,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 218,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Jeruk 🍊 di meja makan. 2 Jeruk dimakan. Berapa sisa Jeruk 🍊 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -8401,8 +8401,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 219,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di jalanan terdapat 4 Motor 🛵 dan 3 Sepeda 🚲. Berapa total kendaraan di jalanan?",
         "answer": 7,
         "distractors": [
@@ -8427,11 +8427,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 220,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Stik Game 🎮 di ruang santai. 3 Stik Game meletus/hilang. Berapa sisa Stik Game 🎮 yang ada?",
+        "story": "Ada 5 Stik Game 🎮 di ruang santai. 3 Stik Game dipinjam teman. Berapa sisa Stik Game 🎮 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -8445,8 +8445,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 221,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 5 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 10,
         "distractors": [
@@ -8469,13 +8469,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 222,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Stroberi 🍓 di kebun. 1 Stroberi dimakan. Berapa sisa Stroberi 🍓 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -8513,13 +8513,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 224,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Dadu 🎲 di kotak mainan. 2 Dadu meletus/hilang. Berapa sisa Dadu 🎲 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Dadu 🎲 di kotak mainan. 2 Dadu hilang. Berapa sisa Dadu 🎲 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -8533,8 +8533,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 225,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 2 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 7,
         "distractors": [
@@ -8562,8 +8562,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Apel 🍎 di keranjang. 3 Apel dimakan. Berapa sisa Apel 🍎 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -8577,8 +8577,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 227,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di halte terdapat 3 Bus 🚌 dan 3 Mobil Balap 🏎️. Berapa total kendaraan di halte?",
         "answer": 6,
         "distractors": [
@@ -8601,13 +8601,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 228,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Boneka 🧸 di kamar bermain. 1 Boneka meletus/hilang. Berapa sisa Boneka 🧸 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Boneka 🧸 di kamar bermain. 1 Boneka diberikan ke teman. Berapa sisa Boneka 🧸 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -8645,13 +8645,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 230,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Pir 🍐 di kulkas. 2 Pir dimakan. Berapa sisa Pir 🍐 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -8665,8 +8665,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 231,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di garasi terdapat 5 Mobil 🚗 dan 3 Roket 🚀. Berapa total kendaraan di garasi?",
         "answer": 8,
         "distractors": [
@@ -8691,11 +8691,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 232,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 3 Bola Sepak meletus/hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
+        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 3 Bola Sepak hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -8709,8 +8709,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 233,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "belasan",
+        "difficultyLabel": "🌿 Belasan",
         "story": "Di peternakan terdapat 6 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 11,
         "distractors": [
@@ -8733,13 +8733,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 234,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Nanas 🍍 di pasar. 1 Nanas dimakan. Berapa sisa Nanas 🍍 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -8758,8 +8758,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Di pelabuhan terdapat 2 Perahu ⛵ dan 3 Kapal 🚢. Berapa total kendaraan di pelabuhan?",
         "answer": 5,
         "distractors": [
-            6,
-            4
+            4,
+            6
         ],
         "groups": [
             {
@@ -8777,13 +8777,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 236,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 2 Balon meletus/hilang. Berapa sisa Balon 🎈 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 2 Balon meletus. Berapa sisa Balon 🎈 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -8797,8 +8797,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 237,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 3 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 8,
         "distractors": [
@@ -8826,8 +8826,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Jeruk 🍊 di meja makan. 3 Jeruk dimakan. Berapa sisa Jeruk 🍊 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -8841,8 +8841,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 239,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di jalanan terdapat 4 Motor 🛵 dan 3 Sepeda 🚲. Berapa total kendaraan di jalanan?",
         "answer": 7,
         "distractors": [
@@ -8865,13 +8865,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 240,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Stik Game 🎮 di ruang santai. 1 Stik Game meletus/hilang. Berapa sisa Stik Game 🎮 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Stik Game 🎮 di ruang santai. 1 Stik Game dipinjam teman. Berapa sisa Stik Game 🎮 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -8909,13 +8909,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 242,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Stroberi 🍓 di kebun. 2 Stroberi dimakan. Berapa sisa Stroberi 🍓 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -8929,8 +8929,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 243,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di bandara terdapat 6 Pesawat ✈️ dan 3 Helikopter 🚁. Berapa total kendaraan di bandara?",
         "answer": 9,
         "distractors": [
@@ -8955,11 +8955,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 244,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Dadu 🎲 di kotak mainan. 3 Dadu meletus/hilang. Berapa sisa Dadu 🎲 yang ada?",
+        "story": "Ada 5 Dadu 🎲 di kotak mainan. 3 Dadu hilang. Berapa sisa Dadu 🎲 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -8973,8 +8973,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 245,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 2 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 7,
         "distractors": [
@@ -8997,13 +8997,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 246,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Apel 🍎 di keranjang. 1 Apel dimakan. Berapa sisa Apel 🍎 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -9041,13 +9041,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 248,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Boneka 🧸 di kamar bermain. 2 Boneka meletus/hilang. Berapa sisa Boneka 🧸 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Boneka 🧸 di kamar bermain. 2 Boneka diberikan ke teman. Berapa sisa Boneka 🧸 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -9061,8 +9061,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 249,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 4 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 9,
         "distractors": [
@@ -9090,8 +9090,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Pir 🍐 di kulkas. 3 Pir dimakan. Berapa sisa Pir 🍐 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -9105,8 +9105,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 251,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di garasi terdapat 5 Mobil 🚗 dan 3 Roket 🚀. Berapa total kendaraan di garasi?",
         "answer": 8,
         "distractors": [
@@ -9129,13 +9129,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 252,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 1 Bola Sepak meletus/hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 1 Bola Sepak hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -9149,8 +9149,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 253,
-        "difficulty": "satuan",
-        "difficultyLabel": "🌱 Satuan",
+        "difficulty": "belasan",
+        "difficultyLabel": "🌿 Belasan",
         "story": "Di kandang terdapat 6 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 11,
         "distractors": [
@@ -9173,13 +9173,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 254,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Nanas 🍍 di pasar. 2 Nanas dimakan. Berapa sisa Nanas 🍍 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -9193,13 +9193,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 255,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di pelabuhan terdapat 2 Perahu ⛵ dan 3 Kapal 🚢. Berapa total kendaraan di pelabuhan?",
         "answer": 5,
         "distractors": [
-            6,
-            4
+            4,
+            6
         ],
         "groups": [
             {
@@ -9219,11 +9219,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 256,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 3 Balon meletus/hilang. Berapa sisa Balon 🎈 yang ada?",
+        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 3 Balon meletus. Berapa sisa Balon 🎈 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -9237,8 +9237,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 257,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 3 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 8,
         "distractors": [
@@ -9261,13 +9261,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 258,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Jeruk 🍊 di meja makan. 1 Jeruk dimakan. Berapa sisa Jeruk 🍊 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -9305,13 +9305,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 260,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Stik Game 🎮 di ruang santai. 2 Stik Game meletus/hilang. Berapa sisa Stik Game 🎮 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Stik Game 🎮 di ruang santai. 2 Stik Game dipinjam teman. Berapa sisa Stik Game 🎮 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -9325,8 +9325,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 261,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 5 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 10,
         "distractors": [
@@ -9354,8 +9354,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Stroberi 🍓 di kebun. 3 Stroberi dimakan. Berapa sisa Stroberi 🍓 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -9369,8 +9369,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 263,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di bandara terdapat 6 Pesawat ✈️ dan 3 Helikopter 🚁. Berapa total kendaraan di bandara?",
         "answer": 9,
         "distractors": [
@@ -9393,13 +9393,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 264,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Dadu 🎲 di kotak mainan. 1 Dadu meletus/hilang. Berapa sisa Dadu 🎲 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Dadu 🎲 di kotak mainan. 1 Dadu hilang. Berapa sisa Dadu 🎲 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -9437,13 +9437,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 266,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Apel 🍎 di keranjang. 2 Apel dimakan. Berapa sisa Apel 🍎 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -9457,8 +9457,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 267,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di halte terdapat 3 Bus 🚌 dan 3 Mobil Balap 🏎️. Berapa total kendaraan di halte?",
         "answer": 6,
         "distractors": [
@@ -9483,11 +9483,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 268,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Boneka 🧸 di kamar bermain. 3 Boneka meletus/hilang. Berapa sisa Boneka 🧸 yang ada?",
+        "story": "Ada 5 Boneka 🧸 di kamar bermain. 3 Boneka diberikan ke teman. Berapa sisa Boneka 🧸 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -9501,8 +9501,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 269,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 4 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 9,
         "distractors": [
@@ -9525,13 +9525,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 270,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Pir 🍐 di kulkas. 1 Pir dimakan. Berapa sisa Pir 🍐 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -9569,13 +9569,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 272,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 2 Bola Sepak meletus/hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 2 Bola Sepak hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -9589,8 +9589,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 273,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "belasan",
+        "difficultyLabel": "🌿 Belasan",
         "story": "Di peternakan terdapat 6 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 11,
         "distractors": [
@@ -9618,8 +9618,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Nanas 🍍 di pasar. 3 Nanas dimakan. Berapa sisa Nanas 🍍 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -9633,13 +9633,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 275,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di pelabuhan terdapat 2 Perahu ⛵ dan 3 Kapal 🚢. Berapa total kendaraan di pelabuhan?",
         "answer": 5,
         "distractors": [
-            6,
-            4
+            4,
+            6
         ],
         "groups": [
             {
@@ -9657,13 +9657,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 276,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 1 Balon meletus/hilang. Berapa sisa Balon 🎈 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 1 Balon meletus. Berapa sisa Balon 🎈 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -9701,13 +9701,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 278,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Jeruk 🍊 di meja makan. 2 Jeruk dimakan. Berapa sisa Jeruk 🍊 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -9721,8 +9721,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 279,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di jalanan terdapat 4 Motor 🛵 dan 3 Sepeda 🚲. Berapa total kendaraan di jalanan?",
         "answer": 7,
         "distractors": [
@@ -9747,11 +9747,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 280,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Stik Game 🎮 di ruang santai. 3 Stik Game meletus/hilang. Berapa sisa Stik Game 🎮 yang ada?",
+        "story": "Ada 5 Stik Game 🎮 di ruang santai. 3 Stik Game dipinjam teman. Berapa sisa Stik Game 🎮 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -9765,8 +9765,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 281,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 5 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 10,
         "distractors": [
@@ -9789,13 +9789,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 282,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Stroberi 🍓 di kebun. 1 Stroberi dimakan. Berapa sisa Stroberi 🍓 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -9833,13 +9833,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 284,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Dadu 🎲 di kotak mainan. 2 Dadu meletus/hilang. Berapa sisa Dadu 🎲 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Dadu 🎲 di kotak mainan. 2 Dadu hilang. Berapa sisa Dadu 🎲 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -9853,8 +9853,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 285,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di kandang terdapat 2 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 7,
         "distractors": [
@@ -9882,8 +9882,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Apel 🍎 di keranjang. 3 Apel dimakan. Berapa sisa Apel 🍎 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -9897,8 +9897,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 287,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di halte terdapat 3 Bus 🚌 dan 3 Mobil Balap 🏎️. Berapa total kendaraan di halte?",
         "answer": 6,
         "distractors": [
@@ -9921,13 +9921,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 288,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Boneka 🧸 di kamar bermain. 1 Boneka meletus/hilang. Berapa sisa Boneka 🧸 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Boneka 🧸 di kamar bermain. 1 Boneka diberikan ke teman. Berapa sisa Boneka 🧸 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -9965,13 +9965,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 290,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Pir 🍐 di kulkas. 2 Pir dimakan. Berapa sisa Pir 🍐 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -9985,8 +9985,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 291,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di garasi terdapat 5 Mobil 🚗 dan 3 Roket 🚀. Berapa total kendaraan di garasi?",
         "answer": 8,
         "distractors": [
@@ -10011,11 +10011,11 @@ window.SOAL_GAMBAR_BANK = [
         "id": 292,
         "difficulty": "satuan",
         "difficultyLabel": "🌱 Satuan",
-        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 3 Bola Sepak meletus/hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
+        "story": "Ada 5 Bola Sepak ⚽ di lapangan. 3 Bola Sepak hilang. Berapa sisa Bola Sepak ⚽ yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -10029,8 +10029,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 293,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "belasan",
+        "difficultyLabel": "🌿 Belasan",
         "story": "Di kandang terdapat 6 Babi 🐷 dan 5 Domba 🐑. Berapa total hewan di kandang?",
         "answer": 11,
         "distractors": [
@@ -10053,13 +10053,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 294,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Ada 5 Nanas 🍍 di pasar. 1 Nanas dimakan. Berapa sisa Nanas 🍍 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -10078,8 +10078,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Di pelabuhan terdapat 2 Perahu ⛵ dan 3 Kapal 🚢. Berapa total kendaraan di pelabuhan?",
         "answer": 5,
         "distractors": [
-            6,
-            4
+            4,
+            6
         ],
         "groups": [
             {
@@ -10097,13 +10097,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 296,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
-        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 2 Balon meletus/hilang. Berapa sisa Balon 🎈 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Balon 🎈 di pesta ulang tahun. 2 Balon meletus. Berapa sisa Balon 🎈 yang ada?",
         "answer": 3,
         "distractors": [
-            4,
-            2
+            2,
+            4
         ],
         "groups": [
             {
@@ -10117,8 +10117,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 297,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di peternakan terdapat 3 Ayam 🐓 dan 5 Sapi 🐄. Berapa total hewan di peternakan?",
         "answer": 8,
         "distractors": [
@@ -10146,8 +10146,8 @@ window.SOAL_GAMBAR_BANK = [
         "story": "Ada 5 Jeruk 🍊 di meja makan. 3 Jeruk dimakan. Berapa sisa Jeruk 🍊 yang ada?",
         "answer": 2,
         "distractors": [
-            3,
-            1
+            1,
+            3
         ],
         "groups": [
             {
@@ -10161,8 +10161,8 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 299,
-        "difficulty": "puluhan",
-        "difficultyLabel": "🌿 Puluhan",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
         "story": "Di jalanan terdapat 4 Motor 🛵 dan 3 Sepeda 🚲. Berapa total kendaraan di jalanan?",
         "answer": 7,
         "distractors": [
@@ -10185,13 +10185,13 @@ window.SOAL_GAMBAR_BANK = [
     },
     {
         "id": 300,
-        "difficulty": "ratusan",
-        "difficultyLabel": "🌳 Ratusan",
-        "story": "Ada 5 Stik Game 🎮 di ruang santai. 1 Stik Game meletus/hilang. Berapa sisa Stik Game 🎮 yang ada?",
+        "difficulty": "satuan",
+        "difficultyLabel": "🌱 Satuan",
+        "story": "Ada 5 Stik Game 🎮 di ruang santai. 1 Stik Game dipinjam teman. Berapa sisa Stik Game 🎮 yang ada?",
         "answer": 4,
         "distractors": [
-            5,
-            3
+            3,
+            5
         ],
         "groups": [
             {
@@ -10202,5 +10202,5729 @@ window.SOAL_GAMBAR_BANK = [
             }
         ],
         "hint": "Hitung 5 Stik Game dikurangi 1 = 4"
+    }
+];
+
+/* 500+ Vocabulary & Reading Comprehension Question Bank for Grade 1-3 SD */
+window.SOAL_KOSAKATA_BANK = [
+    {
+        "id": 1,
+        "category": "Tempat",
+        "sentence": "Ibu memasak nasi dan lauk di ...",
+        "answer": "dapur",
+        "distractors": [
+            "kamar",
+            "teras"
+        ],
+        "hint": "Tempat untuk memasak makanan di rumah."
+    },
+    {
+        "id": 2,
+        "category": "Tempat",
+        "sentence": "Adik tidur malam dengan nyenyak di ...",
+        "answer": "kamar",
+        "distractors": [
+            "dapur",
+            "garasi"
+        ],
+        "hint": "Ruangan untuk istirahat dan tidur."
+    },
+    {
+        "id": 3,
+        "category": "Tempat",
+        "sentence": "Murid-murid belajar bersama guru di ...",
+        "answer": "sekolah",
+        "distractors": [
+            "pasar",
+            "bioskop"
+        ],
+        "hint": "Tempat menuntut ilmu dan belajar."
+    },
+    {
+        "id": 4,
+        "category": "Tempat",
+        "sentence": "Petani menanam padi yang subur di ...",
+        "answer": "sawah",
+        "distractors": [
+            "kolam",
+            "jalan"
+        ],
+        "hint": "Lahan tanah tempat bertani padi."
+    },
+    {
+        "id": 5,
+        "category": "Tempat",
+        "sentence": "Dokter mengobati orang yang sakit di ...",
+        "answer": "rumah sakit",
+        "distractors": [
+            "terminal",
+            "stasiun"
+        ],
+        "hint": "Tempat pelayanan kesehatan bagi yang sakit."
+    },
+    {
+        "id": 6,
+        "category": "Tempat",
+        "sentence": "Ibu membeli sayur mayur segar di ...",
+        "answer": "pasar",
+        "distractors": [
+            "bengkel",
+            "kantor"
+        ],
+        "hint": "Tempat bertemunya penjual dan pembeli."
+    },
+    {
+        "id": 7,
+        "category": "Tempat",
+        "sentence": "Kereta api berhenti menjemput penumpang di ...",
+        "answer": "stasiun",
+        "distractors": [
+            "bandara",
+            "pelabuhan"
+        ],
+        "hint": "Tempat pemberhentian armada kereta api."
+    },
+    {
+        "id": 8,
+        "category": "Tempat",
+        "sentence": "Pesawat terbang lepas landas dari ...",
+        "answer": "bandara",
+        "distractors": [
+            "terminal",
+            "stasiun"
+        ],
+        "hint": "Tempat pendaratan dan penerbangan pesawat."
+    },
+    {
+        "id": 9,
+        "category": "Tempat",
+        "sentence": "Kapal laut yang besar bersandar di ...",
+        "answer": "pelabuhan",
+        "distractors": [
+            "halte",
+            "stasiun"
+        ],
+        "hint": "Dermaga tempat berlabuhnya kapal di laut."
+    },
+    {
+        "id": 10,
+        "category": "Tempat",
+        "sentence": "Ayah memarkir mobil keluarga di dalam ...",
+        "answer": "garasi",
+        "distractors": [
+            "dapur",
+            "ruang makan"
+        ],
+        "hint": "Ruangan tempat menyimpan kendaraan bermotor."
+    },
+    {
+        "id": 11,
+        "category": "Tempat",
+        "sentence": "Keluarga berkumpul menonton televisi di ...",
+        "answer": "ruang tamu",
+        "distractors": [
+            "kamar mandi",
+            "gudang"
+        ],
+        "hint": "Ruangan di rumah untuk santai bersama."
+    },
+    {
+        "id": 12,
+        "category": "Tempat",
+        "sentence": "Kita membasuh dan mencuci tangan di ...",
+        "answer": "wastafel",
+        "distractors": [
+            "kasur",
+            "lemari"
+        ],
+        "hint": "Tempat mencuci tangan dengan keran air."
+    },
+    {
+        "id": 13,
+        "category": "Tempat",
+        "sentence": "Adik mandi membersihkan tubuh di ...",
+        "answer": "kamar mandi",
+        "distractors": [
+            "dapur",
+            "teras"
+        ],
+        "hint": "Ruangan untuk mandi dan membersihkan diri."
+    },
+    {
+        "id": 14,
+        "category": "Tempat",
+        "sentence": "Bibi membeli obat resep dokter di ...",
+        "answer": "apotek",
+        "distractors": [
+            "bengkel",
+            "toko baju"
+        ],
+        "hint": "Toko tempat menjual aneka macam obat."
+    },
+    {
+        "id": 15,
+        "category": "Tempat",
+        "sentence": "Paman memperbaiki ban motor yang bocor di ...",
+        "answer": "bengkel",
+        "distractors": [
+            "apotek",
+            "sekolah"
+        ],
+        "hint": "Tempat servis dan perbaikan kendaraan."
+    },
+    {
+        "id": 16,
+        "category": "Tempat",
+        "sentence": "Nelayan berlayar mencari ikan di tengah ...",
+        "answer": "laut",
+        "distractors": [
+            "hutan",
+            "gunung"
+        ],
+        "hint": "Perairan asin yang sangat luas."
+    },
+    {
+        "id": 17,
+        "category": "Tempat",
+        "sentence": "Kita meminjam buku cerita dan ensiklopedia di ...",
+        "answer": "perpustakaan",
+        "distractors": [
+            "kantin",
+            "pos satpam"
+        ],
+        "hint": "Ruangan tempat koleksi buku bacaan."
+    },
+    {
+        "id": 18,
+        "category": "Tempat",
+        "sentence": "Saat jam istirahat murid membeli makanan di ...",
+        "answer": "kantin",
+        "distractors": [
+            "toilet",
+            "ruang guru"
+        ],
+        "hint": "Tempat jajan makanan sehat di sekolah."
+    },
+    {
+        "id": 19,
+        "category": "Tempat",
+        "sentence": "Hewan langka dilindungi hidup bebas di kawasan ...",
+        "answer": "suaka",
+        "distractors": [
+            "pasar",
+            "pabrik"
+        ],
+        "hint": "Tempat perlindungan satwa dan alam."
+    },
+    {
+        "id": 20,
+        "category": "Tempat",
+        "sentence": "Wisatawan melihat aneka binatang dari dekat di ...",
+        "answer": "kebun binatang",
+        "distractors": [
+            "stadion",
+            "pelabuhan"
+        ],
+        "hint": "Taman tempat memelihara aneka satwa."
+    },
+    {
+        "id": 21,
+        "category": "Tempat",
+        "sentence": "Pemain sepak bola bertanding seru di dalam ...",
+        "answer": "stadion",
+        "distractors": [
+            "garasi",
+            "kamar"
+        ],
+        "hint": "Gelanggang lapangan olahraga yang luas."
+    },
+    {
+        "id": 22,
+        "category": "Tempat",
+        "sentence": "Ibu menyimpan baju yang rapi di dalam ...",
+        "answer": "lemari",
+        "distractors": [
+            "ember",
+            "wajan"
+        ],
+        "hint": "Perabot rumah tempat menaruh pakaian."
+    },
+    {
+        "id": 23,
+        "category": "Tempat",
+        "sentence": "Kakak menaruh piring dan gelas bersih di ...",
+        "answer": "rak piring",
+        "distractors": [
+            "rak sepatu",
+            "kotak pensil"
+        ],
+        "hint": "Tempat menyusun peralatan makan."
+    },
+    {
+        "id": 24,
+        "category": "Tempat",
+        "sentence": "Ayah menaruh sepatu dan sandal di ...",
+        "answer": "rak sepatu",
+        "distractors": [
+            "meja makan",
+            "kulkas"
+        ],
+        "hint": "Tempat meletakkan alas kaki agar rapi."
+    },
+    {
+        "id": 25,
+        "category": "Tempat",
+        "sentence": "Ibu menyimpan sayuran segar dan es batu di dalam ...",
+        "answer": "kulkas",
+        "distractors": [
+            "kompor",
+            "oven"
+        ],
+        "hint": "Lemari pendingin untuk menyimpan makanan."
+    },
+    {
+        "id": 26,
+        "category": "Rasa & Indra",
+        "sentence": "Rasa madu lebah alami terasa sangat ...",
+        "answer": "manis",
+        "distractors": [
+            "asin",
+            "pahit"
+        ],
+        "hint": "Rasa seperti gula tebu yang lezat."
+    },
+    {
+        "id": 27,
+        "category": "Rasa & Indra",
+        "sentence": "Rasa garam dapur yang ditabur terasa ...",
+        "answer": "asin",
+        "distractors": [
+            "manis",
+            "asam"
+        ],
+        "hint": "Rasa khas air laut dan bumbu dapur."
+    },
+    {
+        "id": 28,
+        "category": "Rasa & Indra",
+        "sentence": "Rasa buah jeruk nipis yang masih muda adalah ...",
+        "answer": "asam",
+        "distractors": [
+            "asin",
+            "pedas"
+        ],
+        "hint": "Rasa kecut menyegarkan lidah."
+    },
+    {
+        "id": 29,
+        "category": "Rasa & Indra",
+        "sentence": "Rasa cabai rawit merah saat digigit terasa ...",
+        "answer": "pedas",
+        "distractors": [
+            "manis",
+            "tawar"
+        ],
+        "hint": "Sensasi panas menggigit di lidah."
+    },
+    {
+        "id": 30,
+        "category": "Rasa & Indra",
+        "sentence": "Rasa obat sirup dan jamu tradisional terasa ...",
+        "answer": "pahit",
+        "distractors": [
+            "asin",
+            "manis"
+        ],
+        "hint": "Rasa pekat seperti daun brotowali."
+    },
+    {
+        "id": 31,
+        "category": "Rasa & Indra",
+        "sentence": "Rasa air putih yang murni dan matang adalah ...",
+        "answer": "tawar",
+        "distractors": [
+            "pedas",
+            "asam"
+        ],
+        "hint": "Bebas rasa dan sangat menyegarkan."
+    },
+    {
+        "id": 32,
+        "category": "Rasa & Indra",
+        "sentence": "Es krim cokelat saat dimakan di mulut terasa ...",
+        "answer": "dingin",
+        "distractors": [
+            "panas",
+            "hangat"
+        ],
+        "hint": "Suhu rendah beku yang menyegarkan."
+    },
+    {
+        "id": 33,
+        "category": "Rasa & Indra",
+        "sentence": "Sup ayam yang baru diangkat dari kompor terasa ...",
+        "answer": "panas",
+        "distractors": [
+            "dingin",
+            "sejuk"
+        ],
+        "hint": "Suhu tinggi yang mengepulkan uap."
+    },
+    {
+        "id": 34,
+        "category": "Rasa & Indra",
+        "sentence": "Aroma bunga mawar merah yang mekar sangat ...",
+        "answer": "wangi",
+        "distractors": [
+            "asam",
+            "pahit"
+        ],
+        "hint": "Bau harum semerbak menyenangkan hidung."
+    },
+    {
+        "id": 35,
+        "category": "Rasa & Indra",
+        "sentence": "Tumpukan sampah basah yang membusuk baunya ...",
+        "answer": "busuk",
+        "distractors": [
+            "harum",
+            "wangi"
+        ],
+        "hint": "Aroma tidak sedap yang mengganggu hidung."
+    },
+    {
+        "id": 36,
+        "category": "Rasa & Indra",
+        "sentence": "Kita melihat lukisan yang indah menggunakan ...",
+        "answer": "mata",
+        "distractors": [
+            "telinga",
+            "hidung"
+        ],
+        "hint": "Indra penglihatan manusia."
+    },
+    {
+        "id": 37,
+        "category": "Rasa & Indra",
+        "sentence": "Kita mendengarkan alunan musik merdu menggunakan ...",
+        "answer": "telinga",
+        "distractors": [
+            "mata",
+            "mulut"
+        ],
+        "hint": "Indra pendengaran manusia."
+    },
+    {
+        "id": 38,
+        "category": "Rasa & Indra",
+        "sentence": "Kita menghirup udara segar dan wewangian dengan ...",
+        "answer": "hidung",
+        "distractors": [
+            "lidah",
+            "kaki"
+        ],
+        "hint": "Indra penciuman dan alat pernapasan."
+    },
+    {
+        "id": 39,
+        "category": "Rasa & Indra",
+        "sentence": "Kita mencicipi manisnya kue bolu menggunakan ...",
+        "answer": "lidah",
+        "distractors": [
+            "telinga",
+            "mata"
+        ],
+        "hint": "Indra pengecap rasa pada mulut."
+    },
+    {
+        "id": 40,
+        "category": "Rasa & Indra",
+        "sentence": "Kita meraba permukaan kain yang halus menggunakan ...",
+        "answer": "kulit",
+        "distractors": [
+            "gigi",
+            "alis"
+        ],
+        "hint": "Indra peraba seluruh tubuh."
+    },
+    {
+        "id": 41,
+        "category": "Rasa & Indra",
+        "sentence": "Kita melangkah dan berlari di lapangan dengan ...",
+        "answer": "kaki",
+        "distractors": [
+            "tangan",
+            "hidung"
+        ],
+        "hint": "Anggota tubuh bawah untuk berjalan."
+    },
+    {
+        "id": 42,
+        "category": "Rasa & Indra",
+        "sentence": "Kita menulis kalimat di buku menggunakan ...",
+        "answer": "tangan",
+        "distractors": [
+            "dagu",
+            "siku"
+        ],
+        "hint": "Anggota tubuh untuk memegang benda."
+    },
+    {
+        "id": 43,
+        "category": "Rasa & Indra",
+        "sentence": "Kita mengunyah nasi dan buah menggunakan ...",
+        "answer": "gigi",
+        "distractors": [
+            "rambut",
+            "pipi"
+        ],
+        "hint": "Bagian keras di dalam mulut untuk melumat makanan."
+    },
+    {
+        "id": 44,
+        "category": "Warna",
+        "sentence": "Warna daun pohon yang masih segar adalah ...",
+        "answer": "hijau",
+        "distractors": [
+            "ungu",
+            "merah"
+        ],
+        "hint": "Warna klorofil pada tumbuhan alami."
+    },
+    {
+        "id": 45,
+        "category": "Warna",
+        "sentence": "Warna buah tomat yang sudah masak ranum adalah ...",
+        "answer": "merah",
+        "distractors": [
+            "biru",
+            "hitam"
+        ],
+        "hint": "Warna cerah seperti bendera Indonesia atas."
+    },
+    {
+        "id": 46,
+        "category": "Warna",
+        "sentence": "Warna susu murni yang bersih dan sehat adalah ...",
+        "answer": "putih",
+        "distractors": [
+            "hijau",
+            "cokelat"
+        ],
+        "hint": "Warna terang tanpa noda seperti awan."
+    },
+    {
+        "id": 47,
+        "category": "Warna",
+        "sentence": "Warna langit yang cerah di siang hari adalah ...",
+        "answer": "biru",
+        "distractors": [
+            "kuning",
+            "hitam"
+        ],
+        "hint": "Warna samudra dan angkasa luas."
+    },
+    {
+        "id": 48,
+        "category": "Warna",
+        "sentence": "Warna buah pisang yang sudah matang adalah ...",
+        "answer": "kuning",
+        "distractors": [
+            "biru",
+            "abu-abu"
+        ],
+        "hint": "Warna cerah seperti sinar matahari."
+    },
+    {
+        "id": 49,
+        "category": "Warna",
+        "sentence": "Warna awan mendung sebelum hujan lebat adalah ...",
+        "answer": "kelabu",
+        "distractors": [
+            "kuning",
+            "merah muda"
+        ],
+        "hint": "Warna abu-abu gelap pertanda hujan."
+    },
+    {
+        "id": 50,
+        "category": "Warna",
+        "sentence": "Warna arang kayu yang terbakar padam adalah ...",
+        "answer": "hitam",
+        "distractors": [
+            "putih",
+            "kuning"
+        ],
+        "hint": "Warna paling gelap pekat."
+    },
+    {
+        "id": 51,
+        "category": "Warna",
+        "sentence": "Warna sayuran wortel yang kaya vitamin adalah ...",
+        "answer": "oranye",
+        "distractors": [
+            "ungu",
+            "hijau tua"
+        ],
+        "hint": "Warna jingga perpaduan merah dan kuning."
+    },
+    {
+        "id": 52,
+        "category": "Warna",
+        "sentence": "Warna buah terong sayur yang khas adalah ...",
+        "answer": "ungu",
+        "distractors": [
+            "merah",
+            "kuning"
+        ],
+        "hint": "Warna perpaduan biru dan merah."
+    },
+    {
+        "id": 53,
+        "category": "Warna",
+        "sentence": "Warna cokelat batang yang manis legit adalah ...",
+        "answer": "cokelat",
+        "distractors": [
+            "putih",
+            "hijau"
+        ],
+        "hint": "Warna tanah dan biji kakao matang."
+    },
+    {
+        "id": 54,
+        "category": "Warna",
+        "sentence": "Warna bunga melati putih lambang kesucian adalah ...",
+        "answer": "putih",
+        "distractors": [
+            "hitam",
+            "biru"
+        ],
+        "hint": "Warna bersih tanpa noda."
+    },
+    {
+        "id": 55,
+        "category": "Warna",
+        "sentence": "Warna bulu burung gagak di pohon adalah ...",
+        "answer": "hitam",
+        "distractors": [
+            "merah",
+            "kuning"
+        ],
+        "hint": "Warna gelap pekat malam hari."
+    },
+    {
+        "id": 56,
+        "category": "Makanan & Buah",
+        "sentence": "Bibi membuat sayur bening dari daun ...",
+        "answer": "bayam",
+        "distractors": [
+            "ayam",
+            "malam"
+        ],
+        "hint": "Sayuran hijau berdaun lembut kaya zat besi."
+    },
+    {
+        "id": 57,
+        "category": "Makanan & Buah",
+        "sentence": "Kelinci sangat suka mengunyah sayur ...",
+        "answer": "wortel",
+        "distractors": [
+            "teko",
+            "piring"
+        ],
+        "hint": "Sayuran berwarna jingga kaya vitamin A."
+    },
+    {
+        "id": 58,
+        "category": "Makanan & Buah",
+        "sentence": "Buah yang kulitnya berduri tajam dan harum adalah ...",
+        "answer": "durian",
+        "distractors": [
+            "semangka",
+            "pepaya"
+        ],
+        "hint": "Raja buah berduri dengan aroma khas."
+    },
+    {
+        "id": 59,
+        "category": "Makanan & Buah",
+        "sentence": "Daging buah semangka yang manis berwarna ...",
+        "answer": "merah",
+        "distractors": [
+            "abu-abu",
+            "hitam"
+        ],
+        "hint": "Warna buah segar kaya kandungan air."
+    },
+    {
+        "id": 60,
+        "category": "Makanan & Buah",
+        "sentence": "Makanan pokok yang dimakan setiap hari adalah ...",
+        "answer": "nasi",
+        "distractors": [
+            "batu",
+            "pasir"
+        ],
+        "hint": "Bulir beras yang sudah dimasak empuk."
+    },
+    {
+        "id": 61,
+        "category": "Makanan & Buah",
+        "sentence": "Adik minum minuman bergizi putih yaitu ...",
+        "answer": "susu",
+        "distractors": [
+            "minyak",
+            "cuka"
+        ],
+        "hint": "Cairan bernutrisi tinggi kalsium."
+    },
+    {
+        "id": 62,
+        "category": "Makanan & Buah",
+        "sentence": "Lauk gurih yang terbuat dari olahan kedelai adalah ...",
+        "answer": "tahu",
+        "distractors": [
+            "karet",
+            "kaca"
+        ],
+        "hint": "Makanan putih lembut kaya protein nabati."
+    },
+    {
+        "id": 63,
+        "category": "Makanan & Buah",
+        "sentence": "Padi yang telah dipanen dan ditumbuk menjadi ...",
+        "answer": "beras",
+        "distractors": [
+            "batu",
+            "kayu"
+        ],
+        "hint": "Butiran biji padi siap ditanak."
+    },
+    {
+        "id": 64,
+        "category": "Makanan & Buah",
+        "sentence": "Buah mangga yang masih muda biasanya berasa ...",
+        "answer": "asam",
+        "distractors": [
+            "manis",
+            "asin"
+        ],
+        "hint": "Rasa kecut segar untuk rujak."
+    },
+    {
+        "id": 65,
+        "category": "Makanan & Buah",
+        "sentence": "Kue ulang tahun terasa manis karena memakai ...",
+        "answer": "gula",
+        "distractors": [
+            "garam",
+            "merica"
+        ],
+        "hint": "Pemanis alami dari sari tebu."
+    },
+    {
+        "id": 66,
+        "category": "Makanan & Buah",
+        "sentence": "Ibu menggoreng telur dadar memakai minyak ...",
+        "answer": "goreng",
+        "distractors": [
+            "wangi",
+            "tanah"
+        ],
+        "hint": "Minyak nabati kelapa sawit untuk memasak."
+    },
+    {
+        "id": 67,
+        "category": "Makanan & Buah",
+        "sentence": "Buah apel merah saat digigit bertekstur ...",
+        "answer": "renyah",
+        "distractors": [
+            "lembek",
+            "cair"
+        ],
+        "hint": "Tekstur garing padat berair segar."
+    },
+    {
+        "id": 68,
+        "category": "Makanan & Buah",
+        "sentence": "Air kelapa muda sangat nikmat diminum saat cuaca ...",
+        "answer": "panas",
+        "distractors": [
+            "hujan",
+            "dingin"
+        ],
+        "hint": "Suhu udara terik di siang hari."
+    },
+    {
+        "id": 69,
+        "category": "Makanan & Buah",
+        "sentence": "Buah pepaya masak dagingnya berwarna ...",
+        "answer": "oranye",
+        "distractors": [
+            "ungu",
+            "biru"
+        ],
+        "hint": "Warna jingga cerah lembut berserat."
+    },
+    {
+        "id": 70,
+        "category": "Makanan & Buah",
+        "sentence": "Adik sarapan roti bakar yang diolesi selai ...",
+        "answer": "stroberi",
+        "distractors": [
+            "garam",
+            "sabun"
+        ],
+        "hint": "Buah merah berbintik pembuat selai lezat."
+    },
+    {
+        "id": 71,
+        "category": "Hewan",
+        "sentence": "Hewan peliharaan yang suka makan ikan dan mengeong adalah ...",
+        "answer": "kucing",
+        "distractors": [
+            "kambing",
+            "katak"
+        ],
+        "hint": "Satwa berkaki empat berbulu halus yang lucu."
+    },
+    {
+        "id": 72,
+        "category": "Hewan",
+        "sentence": "Unggas yang berkokok membangunkan pagi adalah ...",
+        "answer": "ayam",
+        "distractors": [
+            "bebek",
+            "angsa"
+        ],
+        "hint": "Burung piaraan yang bertelur dan berkokok."
+    },
+    {
+        "id": 73,
+        "category": "Hewan",
+        "sentence": "Hewan yang menghasilkan susu segar dan melenguh adalah ...",
+        "answer": "sapi",
+        "distractors": [
+            "kucing",
+            "singa"
+        ],
+        "hint": "Hewan ternak bertubuh besar pemakan rumput."
+    },
+    {
+        "id": 74,
+        "category": "Hewan",
+        "sentence": "Hewan yang pandai berenang dan bernapas dengan insang adalah ...",
+        "answer": "ikan",
+        "distractors": [
+            "burung",
+            "kera"
+        ],
+        "hint": "Satwa air bersisik yang berenang bebas."
+    },
+    {
+        "id": 75,
+        "category": "Hewan",
+        "sentence": "Hewan berbadan raksasa dan berbelalai panjang adalah ...",
+        "answer": "gajah",
+        "distractors": [
+            "semut",
+            "tikus"
+        ],
+        "hint": "Mamalia darat terbesar dengan gading putih."
+    },
+    {
+        "id": 76,
+        "category": "Hewan",
+        "sentence": "Hewan yang memiliki leher sangat tinggi menjulang adalah ...",
+        "answer": "jerapah",
+        "distractors": [
+            "kancil",
+            "kelinci"
+        ],
+        "hint": "Satwa tutul yang memakan pucuk daun pohon tinggi."
+    },
+    {
+        "id": 77,
+        "category": "Hewan",
+        "sentence": "Burung terbang melayang di angkasa menggunakan ...",
+        "answer": "sayap",
+        "distractors": [
+            "tanduk",
+            "taring"
+        ],
+        "hint": "Organ tubuh berbulu untuk mengepak terbang."
+    },
+    {
+        "id": 78,
+        "category": "Hewan",
+        "sentence": "Hewan yang pandai melompat dan menyimpan anak di kantong adalah ...",
+        "answer": "kanguru",
+        "distractors": [
+            "kambing",
+            "kuda"
+        ],
+        "hint": "Satwa berkantong khas benua Australia."
+    },
+    {
+        "id": 79,
+        "category": "Hewan",
+        "sentence": "Kuda berlari kencang menggunakan empat ...",
+        "answer": "kaki",
+        "distractors": [
+            "tangan",
+            "sayap"
+        ],
+        "hint": "Alat gerak kaki kuda yang berkuku kokoh."
+    },
+    {
+        "id": 80,
+        "category": "Hewan",
+        "sentence": "Bebek berenang di kolam menggunakan selaput pada ...",
+        "answer": "kaki",
+        "distractors": [
+            "paruh",
+            "ekor"
+        ],
+        "hint": "Selaput renang di sela-sela jari kaki bebek."
+    },
+    {
+        "id": 81,
+        "category": "Hewan",
+        "sentence": "Lebah menghasilkan cairan manis berkhasiat bernama ...",
+        "answer": "madu",
+        "distractors": [
+            "minyak",
+            "cuka"
+        ],
+        "hint": "Cairan nektar bunga yang disimpan di sarang."
+    },
+    {
+        "id": 82,
+        "category": "Hewan",
+        "sentence": "Ular berjalan merayap di tanah menggunakan otot ...",
+        "answer": "perut",
+        "distractors": [
+            "sayap",
+            "kaki"
+        ],
+        "hint": "Otot tubuh bawah reptil tanpa kaki."
+    },
+    {
+        "id": 83,
+        "category": "Hewan",
+        "sentence": "Katak hidup di dua alam yaitu di darat dan di ...",
+        "answer": "air",
+        "distractors": [
+            "udara",
+            "pohon"
+        ],
+        "hint": "Habitat amfibi yang basah dan lembap."
+    },
+    {
+        "id": 84,
+        "category": "Profesi",
+        "sentence": "Orang yang mendidik dan mengajar murid di kelas adalah ...",
+        "answer": "guru",
+        "distractors": [
+            "pilot",
+            "koki"
+        ],
+        "hint": "Pahlawan tanpa tanda jasa di bidang pendidikan."
+    },
+    {
+        "id": 85,
+        "category": "Profesi",
+        "sentence": "Orang yang memeriksa dan memberi resep obat bagi pasien adalah ...",
+        "answer": "dokter",
+        "distractors": [
+            "sopir",
+            "montir"
+        ],
+        "hint": "Tenaga ahli medis penyembuh penyakit."
+    },
+    {
+        "id": 86,
+        "category": "Profesi",
+        "sentence": "Orang yang mengemudikan pesawat terbang di angkasa adalah ...",
+        "answer": "pilot",
+        "distractors": [
+            "masinis",
+            "nahkoda"
+        ],
+        "hint": "Pengemudi profesional burung besi di udara."
+    },
+    {
+        "id": 87,
+        "category": "Profesi",
+        "sentence": "Orang yang mengemudikan rangkaian kereta api di rel adalah ...",
+        "answer": "masinis",
+        "distractors": [
+            "sopir",
+            "pilot"
+        ],
+        "hint": "Juru kemudi armada kereta api."
+    },
+    {
+        "id": 88,
+        "category": "Profesi",
+        "sentence": "Orang yang mengemudikan kapal laut menyeberangi samudera adalah ...",
+        "answer": "nahkoda",
+        "distractors": [
+            "masinis",
+            "pilot"
+        ],
+        "hint": "Kapten pemimpin pelayaran kapal laut."
+    },
+    {
+        "id": 89,
+        "category": "Profesi",
+        "sentence": "Petugas yang bertugas menjaga ketertiban lalu lintas adalah ...",
+        "answer": "polisi",
+        "distractors": [
+            "koki",
+            "petani"
+        ],
+        "hint": "Aparat penegak hukum dan penjaga keamanan."
+    },
+    {
+        "id": 90,
+        "category": "Profesi",
+        "sentence": "Orang yang bertugas memadamkan kobaran api kebakaran adalah ...",
+        "answer": "pemadam",
+        "distractors": [
+            "nelayan",
+            "guru"
+        ],
+        "hint": "Petugas tangguh penjinak si jago merah."
+    },
+    {
+        "id": 91,
+        "category": "Profesi",
+        "sentence": "Orang yang meracik masakan lezat di restoran adalah ...",
+        "answer": "koki",
+        "distractors": [
+            "dokter",
+            "montir"
+        ],
+        "hint": "Juru masak ahli hidangan makanan enak."
+    },
+    {
+        "id": 92,
+        "category": "Profesi",
+        "sentence": "Orang yang menanam padi dan palawija di ladang adalah ...",
+        "answer": "petani",
+        "distractors": [
+            "nelayan",
+            "pilot"
+        ],
+        "hint": "Pahlawan pangan yang mencangkul sawah."
+    },
+    {
+        "id": 93,
+        "category": "Profesi",
+        "sentence": "Orang yang mencari ikan di laut luas adalah ...",
+        "answer": "nelayan",
+        "distractors": [
+            "petani",
+            "penjahit"
+        ],
+        "hint": "Penangkap ikan memakai jala dan perahu."
+    },
+    {
+        "id": 94,
+        "category": "Profesi",
+        "sentence": "Orang yang merancang dan menjahit pakaian indah adalah ...",
+        "answer": "penjahit",
+        "distractors": [
+            "montir",
+            "koki"
+        ],
+        "hint": "Ahli membuat baju dengan jarum dan benang."
+    },
+    {
+        "id": 95,
+        "category": "Profesi",
+        "sentence": "Petugas yang mengantarkan surat dan paket ke rumah adalah ...",
+        "answer": "kurir",
+        "distractors": [
+            "dokter",
+            "masinis"
+        ],
+        "hint": "Pengantar kiriman barang dan pos."
+    },
+    {
+        "id": 96,
+        "category": "Benda & Alat",
+        "sentence": "Kita menulis catatan di buku tulis menggunakan ...",
+        "answer": "pensil",
+        "distractors": [
+            "sendok",
+            "sapu"
+        ],
+        "hint": "Alat tulis berinti grafit karbon."
+    },
+    {
+        "id": 97,
+        "category": "Benda & Alat",
+        "sentence": "Kita menghapus goresan pensil yang salah menggunakan ...",
+        "answer": "penghapus",
+        "distractors": [
+            "gunting",
+            "paku"
+        ],
+        "hint": "Karet pembersih coretan pensil."
+    },
+    {
+        "id": 98,
+        "category": "Benda & Alat",
+        "sentence": "Kita membuat garis lurus yang rapi menggunakan ...",
+        "answer": "penggaris",
+        "distractors": [
+            "piring",
+            "sisir"
+        ],
+        "hint": "Mistar pengukur berskala sentimeter."
+    },
+    {
+        "id": 99,
+        "category": "Benda & Alat",
+        "sentence": "Kita membawa buku pelajaran ke sekolah di dalam ...",
+        "answer": "tas",
+        "distractors": [
+            "ember",
+            "wajan"
+        ],
+        "hint": "Wadah bertali gendong untuk buku."
+    },
+    {
+        "id": 100,
+        "category": "Benda & Alat",
+        "sentence": "Kita merapikan rambut yang acak-acakan memakai ...",
+        "answer": "sisir",
+        "distractors": [
+            "sikat gigi",
+            "garpu"
+        ],
+        "hint": "Alat bergigi rapat untuk menata rambut."
+    },
+    {
+        "id": 101,
+        "category": "Benda & Alat",
+        "sentence": "Kita membersihkan debu dan kotoran di lantai dengan ...",
+        "answer": "sapu",
+        "distractors": [
+            "pensil",
+            "bantal"
+        ],
+        "hint": "Alat pembersih lantai dari ijuk atau lidi."
+    },
+    {
+        "id": 102,
+        "category": "Benda & Alat",
+        "sentence": "Kita memotong lembaran kertas menggunakan ...",
+        "answer": "gunting",
+        "distractors": [
+            "sendok",
+            "piring"
+        ],
+        "hint": "Alat tajam berbilah dua untuk memotong."
+    },
+    {
+        "id": 103,
+        "category": "Benda & Alat",
+        "sentence": "Kita menyantap sup dan nasi di piring menggunakan ...",
+        "answer": "sendok",
+        "distractors": [
+            "penggaris",
+            "sisir"
+        ],
+        "hint": "Peralatan makan cekung bertangkai."
+    },
+    {
+        "id": 104,
+        "category": "Benda & Alat",
+        "sentence": "Kita tidur beralaskan kepala yang empuk di atas ...",
+        "answer": "bantal",
+        "distractors": [
+            "meja",
+            "ember"
+        ],
+        "hint": "Alas kepala tidur berisi kapas empuk."
+    },
+    {
+        "id": 105,
+        "category": "Benda & Alat",
+        "sentence": "Kita menyelimuti badan saat udara dingin menggunakan ...",
+        "answer": "selimut",
+        "distractors": [
+            "kardus",
+            "piring"
+        ],
+        "hint": "Kain tebal penghangat tubuh saat tidur."
+    },
+    {
+        "id": 106,
+        "category": "Benda & Alat",
+        "sentence": "Kita menggosok gigi dengan pasta gigi memakai ...",
+        "answer": "sikat gigi",
+        "distractors": [
+            "sisir",
+            "sapu"
+        ],
+        "hint": "Sikat kecil pembersih gigi dan gusi."
+    },
+    {
+        "id": 107,
+        "category": "Benda & Alat",
+        "sentence": "Kita mencuci baju kotor agar bersih memakai ...",
+        "answer": "sabun",
+        "distractors": [
+            "minyak",
+            "pasir"
+        ],
+        "hint": "Bahan pembersih berbusa wangi."
+    },
+    {
+        "id": 108,
+        "category": "Waktu & Cuaca",
+        "sentence": "Matahari terbit menyinari bumi pada waktu ...",
+        "answer": "pagi",
+        "distractors": [
+            "malam",
+            "tengah malam"
+        ],
+        "hint": "Awal dimulainya hari saat fajar merekah."
+    },
+    {
+        "id": 109,
+        "category": "Waktu & Cuaca",
+        "sentence": "Matahari terbenam di ufuk barat pada waktu ...",
+        "answer": "sore",
+        "distractors": [
+            "pagi",
+            "siang"
+        ],
+        "hint": "Waktu peralihan sebelum matahari tenggelam."
+    },
+    {
+        "id": 110,
+        "category": "Waktu & Cuaca",
+        "sentence": "Bulan dan bintang berkelap-kelip indah di waktu ...",
+        "answer": "malam",
+        "distractors": [
+            "siang",
+            "pagi"
+        ],
+        "hint": "Waktu gelap ketika matahari terbenam."
+    },
+    {
+        "id": 111,
+        "category": "Waktu & Cuaca",
+        "sentence": "Saat hujan lebat turun dari langit, kita memakai ...",
+        "answer": "payung",
+        "distractors": [
+            "kacamata hitam",
+            "topi pantai"
+        ],
+        "hint": "Alat pelindung diri dari air hujan."
+    },
+    {
+        "id": 112,
+        "category": "Waktu & Cuaca",
+        "sentence": "Udara di puncak pegunungan yang tinggi terasa ...",
+        "answer": "dingin",
+        "distractors": [
+            "gerah",
+            "panas"
+        ],
+        "hint": "Suhu sejuk segar khas pegunungan."
+    },
+    {
+        "id": 113,
+        "category": "Waktu & Cuaca",
+        "sentence": "Lampu listrik dinyalakan saat ruangan terasa ...",
+        "answer": "gelap",
+        "distractors": [
+            "terang",
+            "silau"
+        ],
+        "hint": "Kondisi redup tanpa adanya cahaya."
+    },
+    {
+        "id": 114,
+        "category": "Waktu & Cuaca",
+        "sentence": "Kilatan cahaya terang di langit saat badai disebut ...",
+        "answer": "petir",
+        "distractors": [
+            "pelangi",
+            "embun"
+        ],
+        "hint": "Loncatan listrik alami berenergi besar di langit."
+    },
+    {
+        "id": 115,
+        "category": "Waktu & Cuaca",
+        "sentence": "Lengkungan warna-warni indah setelah hujan reda disebut ...",
+        "answer": "pelangi",
+        "distractors": [
+            "kabut",
+            "angin"
+        ],
+        "hint": "Fenomena spektrum warna di langit."
+    },
+    {
+        "id": 116,
+        "category": "Waktu & Cuaca",
+        "sentence": "Tiupan angin sepoi-sepoi membuat udara terasa ...",
+        "answer": "sejuk",
+        "distractors": [
+            "panas",
+            "membakar"
+        ],
+        "hint": "Kondisi udara yang nyaman di tubuh."
+    },
+    {
+        "id": 117,
+        "category": "Waktu & Cuaca",
+        "sentence": "Tetesan air di dedaunan pada pagi hari disebut ...",
+        "answer": "embun",
+        "distractors": [
+            "asap",
+            "debu"
+        ],
+        "hint": "Uap air yang mengembun saat dingin malam."
+    },
+    {
+        "id": 118,
+        "category": "Sifat & Sikap",
+        "sentence": "Anak yang rajin belajar setiap hari akan menjadi ...",
+        "answer": "pandai",
+        "distractors": [
+            "malas",
+            "ceroboh"
+        ],
+        "hint": "Memiliki banyak ilmu dan cerdas."
+    },
+    {
+        "id": 119,
+        "category": "Sifat & Sikap",
+        "sentence": "Sebelum makan kita wajib mencuci kedua ...",
+        "answer": "tangan",
+        "distractors": [
+            "sepatu",
+            "baju"
+        ],
+        "hint": "Menjaga kebersihan dari kuman penyakit."
+    },
+    {
+        "id": 120,
+        "category": "Sifat & Sikap",
+        "sentence": "Setelah bangun tidur kita harus merapikan ...",
+        "answer": "tempat tidur",
+        "distractors": [
+            "halaman",
+            "jalan raya"
+        ],
+        "hint": "Merapikan sprei dan bantal kamar tidur."
+    },
+    {
+        "id": 121,
+        "category": "Sifat & Sikap",
+        "sentence": "Jika berbuat salah kepada teman, kita harus meminta ...",
+        "answer": "maaf",
+        "distractors": [
+            "uang",
+            "hadiah"
+        ],
+        "hint": "Ungkapan penyesalan atas kekhilafan."
+    },
+    {
+        "id": 122,
+        "category": "Sifat & Sikap",
+        "sentence": "Jika diberi bantuan oleh orang lain, kita mengucapkan terima ...",
+        "answer": "kasih",
+        "distractors": [
+            "minta",
+            "salam"
+        ],
+        "hint": "Ungkapan rasa syukur dan menghargai orang lain."
+    },
+    {
+        "id": 123,
+        "category": "Sifat & Sikap",
+        "sentence": "Anak yang selalu mematuhi nasehat orang tua disebut anak yang ...",
+        "answer": "berbakti",
+        "distractors": [
+            "sombong",
+            "nakal"
+        ],
+        "hint": "Sikap mulia menghormati ayah dan ibu."
+    },
+    {
+        "id": 124,
+        "category": "Sifat & Sikap",
+        "sentence": "Lantai yang disapu dan dipel setiap hari menjadi ...",
+        "answer": "bersih",
+        "distractors": [
+            "kotor",
+            "berdebu"
+        ],
+        "hint": "Bebas dari kotoran dan sampah."
+    },
+    {
+        "id": 125,
+        "category": "Sifat & Sikap",
+        "sentence": "Buku-buku yang disusun di rak terlihat sangat ...",
+        "answer": "rapi",
+        "distractors": [
+            "berantakan",
+            "tercecer"
+        ],
+        "hint": "Tertata teratur sedap dipandang mata."
+    },
+    {
+        "id": 126,
+        "category": "Sifat & Sikap",
+        "sentence": "Kita tidak boleh berbohong dan harus selalu berkata ...",
+        "answer": "jujur",
+        "distractors": [
+            "bohong",
+            "palsu"
+        ],
+        "hint": "Menyatakan kebenaran sesuai kenyataan."
+    },
+    {
+        "id": 127,
+        "category": "Sifat & Sikap",
+        "sentence": "Anak yang suka berbagi mainan kepada teman adalah anak yang ...",
+        "answer": "dermawan",
+        "distractors": [
+            "pelit",
+            "kikir"
+        ],
+        "hint": "Suka menolong dan tidak serakah."
+    },
+    {
+        "id": 128,
+        "category": "Lawan Kata",
+        "sentence": "Lawan kata dari benda yang besar adalah ...",
+        "answer": "kecil",
+        "distractors": [
+            "tinggi",
+            "lebar"
+        ],
+        "hint": "Ukuran dimensi yang mini atau mungil."
+    },
+    {
+        "id": 129,
+        "category": "Lawan Kata",
+        "sentence": "Lawan kata dari jalan yang panjang adalah ...",
+        "answer": "pendek",
+        "distractors": [
+            "lurus",
+            "bulat"
+        ],
+        "hint": "Ukuran rentang yang tidak panjang."
+    },
+    {
+        "id": 130,
+        "category": "Lawan Kata",
+        "sentence": "Lawan kata dari pohon yang tinggi adalah ...",
+        "answer": "rendah",
+        "distractors": [
+            "luas",
+            "tebal"
+        ],
+        "hint": "Posisi ketinggian yang dekat ke tanah."
+    },
+    {
+        "id": 131,
+        "category": "Lawan Kata",
+        "sentence": "Lawan kata dari baju yang bersih adalah ...",
+        "answer": "kotor",
+        "distractors": [
+            "wangi",
+            "rapi"
+        ],
+        "hint": "Penuh noda dan debu yang menempel."
+    },
+    {
+        "id": 132,
+        "category": "Lawan Kata",
+        "sentence": "Lawan kata dari ruangan yang terang adalah ...",
+        "answer": "gelap",
+        "distractors": [
+            "silau",
+            "terik"
+        ],
+        "hint": "Keadaan tanpa ada pancaran sinar lampu."
+    },
+    {
+        "id": 133,
+        "category": "Lawan Kata",
+        "sentence": "Lawan kata dari mobil yang melaju cepat adalah ...",
+        "answer": "lambat",
+        "distractors": [
+            "kencang",
+            "kuat"
+        ],
+        "hint": "Kecepatan rendah dan pelan."
+    },
+    {
+        "id": 134,
+        "category": "Lawan Kata",
+        "sentence": "Lawan kata dari batu yang berat adalah ...",
+        "answer": "ringan",
+        "distractors": [
+            "keras",
+            "empuk"
+        ],
+        "hint": "Memiliki bobot massa yang sangat kecil."
+    },
+    {
+        "id": 135,
+        "category": "Lawan Kata",
+        "sentence": "Lawan kata dari kasur yang empuk adalah ...",
+        "answer": "keras",
+        "distractors": [
+            "lembut",
+            "halus"
+        ],
+        "hint": "Permukaan padat tidak mudah kempes."
+    },
+    {
+        "id": 136,
+        "category": "Lawan Kata",
+        "sentence": "Lawan kata dari barang yang mahal adalah ...",
+        "answer": "murah",
+        "distractors": [
+            "langka",
+            "mewah"
+        ],
+        "hint": "Harga yang terjangkau dan hemat."
+    },
+    {
+        "id": 137,
+        "category": "Lawan Kata",
+        "sentence": "Lawan kata dari orang yang kaya adalah ...",
+        "answer": "miskin",
+        "distractors": [
+            "dermawan",
+            "sehat"
+        ],
+        "hint": "Keadaan kekurangan harta benda."
+    },
+    {
+        "id": 138,
+        "category": "Lawan Kata",
+        "sentence": "Lawan kata dari melangkah maju adalah ...",
+        "answer": "mundur",
+        "distractors": [
+            "diam",
+            "berputar"
+        ],
+        "hint": "Gerak berbalik ke arah belakang."
+    },
+    {
+        "id": 139,
+        "category": "Lawan Kata",
+        "sentence": "Lawan kata dari membuka pintu adalah ...",
+        "answer": "menutup",
+        "distractors": [
+            "mengunci",
+            "mendorong"
+        ],
+        "hint": "Merapatkan kembali daun pintu."
+    },
+    {
+        "id": 140,
+        "category": "Tempat",
+        "sentence": "Budi membaca buku cerita bergambar di ...",
+        "answer": "perpustakaan",
+        "distractors": [
+            "lapangan",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Ruang baca buku yang tenang dan tertib."
+    },
+    {
+        "id": 141,
+        "category": "Tempat",
+        "sentence": "Ayah mengajak Siti salat berjemaah di ...",
+        "answer": "masjid",
+        "distractors": [
+            "kantor",
+            "pasar"
+        ],
+        "hint": "💡 Tips: Tempat ibadah umat Islam."
+    },
+    {
+        "id": 142,
+        "category": "Tempat",
+        "sentence": "Rian berenang dengan pelampung di ...",
+        "answer": "kolam renang",
+        "distractors": [
+            "jalan raya",
+            "halaman"
+        ],
+        "hint": "💡 Tips: Tempat berenang dan bermain air."
+    },
+    {
+        "id": 143,
+        "category": "Tempat",
+        "sentence": "Paman Gita menyiram tanaman bunga di ...",
+        "answer": "taman",
+        "distractors": [
+            "garasi",
+            "kamar mandi"
+        ],
+        "hint": "💡 Tips: Halaman tempat tumbuhnya aneka bunga."
+    },
+    {
+        "id": 144,
+        "category": "Tempat",
+        "sentence": "Kiki mencuci piring kotor di ...",
+        "answer": "wastafel",
+        "distractors": [
+            "kasur",
+            "lemari"
+        ],
+        "hint": "💡 Tips: Tempat mencuci piring dengan air mengalir."
+    },
+    {
+        "id": 145,
+        "category": "Tempat",
+        "sentence": "Ibu Lani membeli roti tawar di ...",
+        "answer": "toko roti",
+        "distractors": [
+            "bengkel",
+            "apotek"
+        ],
+        "hint": "💡 Tips: Tempat menjual kue dan aneka roti."
+    },
+    {
+        "id": 146,
+        "category": "Tempat",
+        "sentence": "Edo menunggu bus antarkota di ...",
+        "answer": "terminal",
+        "distractors": [
+            "bandara",
+            "pelabuhan"
+        ],
+        "hint": "💡 Tips: Pangkalan tempat bus berkumpul."
+    },
+    {
+        "id": 147,
+        "category": "Tempat",
+        "sentence": "Ayah Dayu mengisi bensin motor di ...",
+        "answer": "pom bensin",
+        "distractors": [
+            "halte",
+            "sekolah"
+        ],
+        "hint": "💡 Tips: Stasiun pengisian bahan bakar minyak."
+    },
+    {
+        "id": 148,
+        "category": "Tempat",
+        "sentence": "Beni melihat koleksi benda kuno bersejarah di ...",
+        "answer": "museum",
+        "distractors": [
+            "pasar",
+            "bioskop"
+        ],
+        "hint": "💡 Tips: Gedung tempat pameran benda sejarah."
+    },
+    {
+        "id": 149,
+        "category": "Tempat",
+        "sentence": "Udin dan teman-teman berolahraga lari di ...",
+        "answer": "lapangan",
+        "distractors": [
+            "kamar",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Tanah lapang luas untuk olahraga."
+    },
+    {
+        "id": 150,
+        "category": "Rasa & Indra",
+        "sentence": "Sari minum teh manis yang diberi ...",
+        "answer": "gula",
+        "distractors": [
+            "garam",
+            "cabai"
+        ],
+        "hint": "💡 Tips: Bumbu pemanis dari tebu."
+    },
+    {
+        "id": 151,
+        "category": "Rasa & Indra",
+        "sentence": "Rani mencicipi buah mangga manis yang sudah ...",
+        "answer": "masak",
+        "distractors": [
+            "mentah",
+            "busuk"
+        ],
+        "hint": "💡 Tips: Kondisi buah yang matang sempurna."
+    },
+    {
+        "id": 152,
+        "category": "Rasa & Indra",
+        "sentence": "Keringat menetes saat Bayu merasa ...",
+        "answer": "gerah",
+        "distractors": [
+            "kedinginan",
+            "beku"
+        ],
+        "hint": "💡 Tips: Kondisi suhu tubuh terasa panas."
+    },
+    {
+        "id": 153,
+        "category": "Rasa & Indra",
+        "sentence": "Dimas memakai selimut tebal saat malam terasa ...",
+        "answer": "dingin",
+        "distractors": [
+            "terik",
+            "panas"
+        ],
+        "hint": "💡 Tips: Suhu sejuk rendah di malam hari."
+    },
+    {
+        "id": 154,
+        "category": "Rasa & Indra",
+        "sentence": "Parfum yang disemprotkan Ayu beraroma sangat ...",
+        "answer": "harum",
+        "distractors": [
+            "pahit",
+            "asam"
+        ],
+        "hint": "💡 Tips: Bau wangi semerbak menyenangkan."
+    },
+    {
+        "id": 155,
+        "category": "Rasa & Indra",
+        "sentence": "Obat penurun demam yang diminum Dewi terasa ...",
+        "answer": "pahit",
+        "distractors": [
+            "manis",
+            "asin"
+        ],
+        "hint": "💡 Tips: Rasa khas obat agar cepat sembuh."
+    },
+    {
+        "id": 156,
+        "category": "Rasa & Indra",
+        "sentence": "Budi menyantap keripik kentang yang gurih dan ...",
+        "answer": "asin",
+        "distractors": [
+            "asam",
+            "pahit"
+        ],
+        "hint": "💡 Tips: Rasa bumbu gurih bergaram."
+    },
+    {
+        "id": 157,
+        "category": "Rasa & Indra",
+        "sentence": "Siti memakai kacamata untuk membantu penglihatan ...",
+        "answer": "mata",
+        "distractors": [
+            "telinga",
+            "hidung"
+        ],
+        "hint": "💡 Tips: Organ penglihat."
+    },
+    {
+        "id": 158,
+        "category": "Rasa & Indra",
+        "sentence": "Rian mendengarkan nasehat ibu dengan kedua ...",
+        "answer": "telinga",
+        "distractors": [
+            "mata",
+            "tangan"
+        ],
+        "hint": "💡 Tips: Organ pendengar."
+    },
+    {
+        "id": 159,
+        "category": "Rasa & Indra",
+        "sentence": "Gita bernapas menghirup oksigen melalui ...",
+        "answer": "hidung",
+        "distractors": [
+            "telinga",
+            "dagu"
+        ],
+        "hint": "💡 Tips: Organ pernapasan utama."
+    },
+    {
+        "id": 160,
+        "category": "Makanan & Buah",
+        "sentence": "Ibu membelikan Kiki buah pisang berwarna ...",
+        "answer": "kuning",
+        "distractors": [
+            "biru",
+            "hitam"
+        ],
+        "hint": "💡 Tips: Warna pisang matang."
+    },
+    {
+        "id": 161,
+        "category": "Makanan & Buah",
+        "sentence": "Lani suka makan buah apel merah yang manis dan ...",
+        "answer": "segar",
+        "distractors": [
+            "layu",
+            "busuk"
+        ],
+        "hint": "💡 Tips: Kondisi buah baru dipetik."
+    },
+    {
+        "id": 162,
+        "category": "Makanan & Buah",
+        "sentence": "Sayur kangkung dan bayam memiliki daun berwarna ...",
+        "answer": "hijau",
+        "distractors": [
+            "ungu",
+            "merah"
+        ],
+        "hint": "💡 Tips: Warna dedaunan segar."
+    },
+    {
+        "id": 163,
+        "category": "Makanan & Buah",
+        "sentence": "Dayu membantu ayah memetik buah mangga dari ...",
+        "answer": "pohon",
+        "distractors": [
+            "tanah",
+            "atap"
+        ],
+        "hint": "💡 Tips: Tumbuhan berkayu tempat mangga berbuah."
+    },
+    {
+        "id": 164,
+        "category": "Makanan & Buah",
+        "sentence": "Biji jagung yang dibakar terasa manis dan ...",
+        "answer": "gurih",
+        "distractors": [
+            "pahit",
+            "asam"
+        ],
+        "hint": "💡 Tips: Rasa lezat jagung bakar."
+    },
+    {
+        "id": 165,
+        "category": "Makanan & Buah",
+        "sentence": "Udin minum jus jeruk yang banyak mengandung vitamin ...",
+        "answer": "C",
+        "distractors": [
+            "K",
+            "besi"
+        ],
+        "hint": "💡 Tips: Vitamin penting untuk kekebalan tubuh."
+    },
+    {
+        "id": 166,
+        "category": "Makanan & Buah",
+        "sentence": "Nasi putih dibuat dari bulir beras yang ...",
+        "answer": "dimasak",
+        "distractors": [
+            "dibuang",
+            "ditanam"
+        ],
+        "hint": "💡 Tips: Proses mengolah beras menjadi nasi."
+    },
+    {
+        "id": 167,
+        "category": "Makanan & Buah",
+        "sentence": "Rani memotong buah semangka menggunakan ...",
+        "answer": "pisau",
+        "distractors": [
+            "sendok",
+            "garpu"
+        ],
+        "hint": "💡 Tips: Alat dapur tajam pemotong buah."
+    },
+    {
+        "id": 168,
+        "category": "Makanan & Buah",
+        "sentence": "Bunga mawar memiliki batang yang berduri ...",
+        "answer": "tajam",
+        "distractors": [
+            "tumpul",
+            "halus"
+        ],
+        "hint": "💡 Tips: Ciri fisik duri pelindung mawar."
+    },
+    {
+        "id": 169,
+        "category": "Makanan & Buah",
+        "sentence": "Dimas menyiram tanaman setiap pagi agar tidak ...",
+        "answer": "layu",
+        "distractors": [
+            "tumbuh",
+            "mekar"
+        ],
+        "hint": "💡 Tips: Kondisi tanaman kekurangan air."
+    },
+    {
+        "id": 170,
+        "category": "Hewan",
+        "sentence": "Kucing peliharaan Ayu memiliki bulu yang sangat ...",
+        "answer": "halus",
+        "distractors": [
+            "tajam",
+            "keras"
+        ],
+        "hint": "💡 Tips: Tekstur lembut bulu kucing sehat."
+    },
+    {
+        "id": 171,
+        "category": "Hewan",
+        "sentence": "Anjing peliharaan menjaga rumah dengan cara ...",
+        "answer": "menggonggong",
+        "distractors": [
+            "mengeong",
+            "berkokok"
+        ],
+        "hint": "💡 Tips: Suara khas anjing siaga."
+    },
+    {
+        "id": 172,
+        "category": "Hewan",
+        "sentence": "Burung merpati hinggap di atas dahan ...",
+        "answer": "pohon",
+        "distractors": [
+            "kolam",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Tempat bertengger unggas di alam."
+    },
+    {
+        "id": 173,
+        "category": "Hewan",
+        "sentence": "Ikan mas berenang kencang menggerakkan ...",
+        "answer": "sirip",
+        "distractors": [
+            "kaki",
+            "tangan"
+        ],
+        "hint": "💡 Tips: Alat kemudi renang pada tubuh ikan."
+    },
+    {
+        "id": 174,
+        "category": "Hewan",
+        "sentence": "Kambing memakan rumput hijau di ...",
+        "answer": "padang rumput",
+        "distractors": [
+            "atap rumah",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Hamparan tanah berumput luas."
+    },
+    {
+        "id": 175,
+        "category": "Hewan",
+        "sentence": "Kelinci bergerak lincah dengan cara ...",
+        "answer": "melompat",
+        "distractors": [
+            "merayap",
+            "terbang"
+        ],
+        "hint": "💡 Tips: Gerak khas kaki panjang kelinci."
+    },
+    {
+        "id": 176,
+        "category": "Hewan",
+        "sentence": "Ayam betina mengerami telurnya di dalam ...",
+        "answer": "sarang",
+        "distractors": [
+            "kolam",
+            "lemari"
+        ],
+        "hint": "💡 Tips: Tempat aman ayam bertelur."
+    },
+    {
+        "id": 177,
+        "category": "Hewan",
+        "sentence": "Bebek berjalan beriringan menuju ke ...",
+        "answer": "sungai",
+        "distractors": [
+            "puncak",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Tempat air bebek mencari makan."
+    },
+    {
+        "id": 178,
+        "category": "Hewan",
+        "sentence": "Kupu-kupu hinggap menghisap nektar manis pada ...",
+        "answer": "bunga",
+        "distractors": [
+            "batu",
+            "genteng"
+        ],
+        "hint": "💡 Tips: Bagian tanaman penghasil madu."
+    },
+    {
+        "id": 179,
+        "category": "Hewan",
+        "sentence": "Semut bekerja sama mengangkut remah makanan ke ...",
+        "answer": "sarang",
+        "distractors": [
+            "kolam",
+            "laut"
+        ],
+        "hint": "💡 Tips: Tempat tinggal koloni semut."
+    },
+    {
+        "id": 180,
+        "category": "Benda & Alat",
+        "sentence": "Beni meraut pensil yang tumpul menggunakan ...",
+        "answer": "rautan",
+        "distractors": [
+            "penghapus",
+            "penggaris"
+        ],
+        "hint": "💡 Tips: Alat penajam ujung pensil."
+    },
+    {
+        "id": 181,
+        "category": "Benda & Alat",
+        "sentence": "Udin mengikat tali sepatu agar tidak ...",
+        "answer": "lepas",
+        "distractors": [
+            "bersih",
+            "kencang"
+        ],
+        "hint": "💡 Tips: Kondisi tali sepatu longgar."
+    },
+    {
+        "id": 182,
+        "category": "Benda & Alat",
+        "sentence": "Sari mengenakan seragam sekolah yang sudah ...",
+        "answer": "disetrika",
+        "distractors": [
+            "dibuang",
+            "dirobek"
+        ],
+        "hint": "💡 Tips: Pakaian rapi tanpa kusut."
+    },
+    {
+        "id": 183,
+        "category": "Benda & Alat",
+        "sentence": "Rani memakai jam tangan di pergelangan ...",
+        "answer": "tangan",
+        "distractors": [
+            "kaki",
+            "leher"
+        ],
+        "hint": "💡 Tips: Tempat memakai arloji penunjuk waktu."
+    },
+    {
+        "id": 184,
+        "category": "Benda & Alat",
+        "sentence": "Lampu belajar dinyalakan agar meja terasa ...",
+        "answer": "terang",
+        "distractors": [
+            "gelap",
+            "redup"
+        ],
+        "hint": "💡 Tips: Kondisi pencahayaan cukup untuk membaca."
+    },
+    {
+        "id": 185,
+        "category": "Benda & Alat",
+        "sentence": "Dimas mengeringkan badan basah sehabis mandi memakai ...",
+        "answer": "handuk",
+        "distractors": [
+            "selimut",
+            "kertas"
+        ],
+        "hint": "💡 Tips: Kain katun penyerap air."
+    },
+    {
+        "id": 186,
+        "category": "Benda & Alat",
+        "sentence": "Ayu memakai sabun wangi untuk membersihkan ...",
+        "answer": "badan",
+        "distractors": [
+            "sepatu",
+            "tas"
+        ],
+        "hint": "💡 Tips: Menjaga kebersihan tubuh saat mandi."
+    },
+    {
+        "id": 187,
+        "category": "Benda & Alat",
+        "sentence": "Dewi menyisir rambut di depan ...",
+        "answer": "cermin",
+        "distractors": [
+            "pintu",
+            "jendela"
+        ],
+        "hint": "💡 Tips: Kaca pantul bayangan wajah."
+    },
+    {
+        "id": 188,
+        "category": "Benda & Alat",
+        "sentence": "Budi membuka jendela kamar agar udara segar bisa ...",
+        "answer": "masuk",
+        "distractors": [
+            "hilang",
+            "habis"
+        ],
+        "hint": "💡 Tips: Sirkulasi udara ruangan."
+    },
+    {
+        "id": 189,
+        "category": "Benda & Alat",
+        "sentence": "Siti mengunci pintu rumah menggunakan ...",
+        "answer": "kunci",
+        "distractors": [
+            "pensil",
+            "sendok"
+        ],
+        "hint": "💡 Tips: Alat pengaman rumah."
+    },
+    {
+        "id": 190,
+        "category": "Profesi",
+        "sentence": "Guru mengajari Rian membaca dan ...",
+        "answer": "menulis",
+        "distractors": [
+            "berkelahi",
+            "berteriak"
+        ],
+        "hint": "💡 Tips: Keterampilan dasar literasi anak."
+    },
+    {
+        "id": 191,
+        "category": "Profesi",
+        "sentence": "Dokter gigi memeriksa kesehatan gigi Gita yang ...",
+        "answer": "bersih",
+        "distractors": [
+            "patah",
+            "kotor"
+        ],
+        "hint": "💡 Tips: Kondisi gigi sehat terawat."
+    },
+    {
+        "id": 192,
+        "category": "Profesi",
+        "sentence": "Tukang pos mengantarkan surat penting ke ...",
+        "answer": "alamat",
+        "distractors": [
+            "hutan",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Tujuan lokasi pengiriman."
+    },
+    {
+        "id": 193,
+        "category": "Profesi",
+        "sentence": "Petugas kebersihan menyapu jalanan agar selalu ...",
+        "answer": "bersih",
+        "distractors": [
+            "kotor",
+            "kumal"
+        ],
+        "hint": "💡 Tips: Bebas dari tumpukan sampah."
+    },
+    {
+        "id": 194,
+        "category": "Profesi",
+        "sentence": "Polisi lalu lintas membantu Edo menyeberang di ...",
+        "answer": "zebra cross",
+        "distractors": [
+            "tengah jalan",
+            "selokan"
+        ],
+        "hint": "💡 Tips: Garis penyeberangan pejalan kaki."
+    },
+    {
+        "id": 195,
+        "category": "Sifat & Sikap",
+        "sentence": "Dayu selalu menyapa tetangga dengan senyum yang ...",
+        "answer": "ramah",
+        "distractors": [
+            "cemberut",
+            "marah"
+        ],
+        "hint": "💡 Tips: Sikap hangat bersahabat."
+    },
+    {
+        "id": 196,
+        "category": "Sifat & Sikap",
+        "sentence": "Anak yang jujur tidak pernah berkata ...",
+        "answer": "dusta",
+        "distractors": [
+            "benar",
+            "baik"
+        ],
+        "hint": "💡 Tips: Lawan dari kata jujur."
+    },
+    {
+        "id": 197,
+        "category": "Sifat & Sikap",
+        "sentence": "Udin membantu adik membereskan mainan yang ...",
+        "answer": "berantakan",
+        "distractors": [
+            "rapi",
+            "bersih"
+        ],
+        "hint": "💡 Tips: Kondisi mainan tercecer di lantai."
+    },
+    {
+        "id": 198,
+        "category": "Sifat & Sikap",
+        "sentence": "Menjaga kesehatan tubuh membuat kita terhindar dari ...",
+        "answer": "penyakit",
+        "distractors": [
+            "kebahagiaan",
+            "kepandaian"
+        ],
+        "hint": "💡 Tips: Gangguan kesehatan fisik."
+    },
+    {
+        "id": 199,
+        "category": "Sifat & Sikap",
+        "sentence": "Rani datang ke sekolah tepat waktu dan tidak pernah ...",
+        "answer": "terlambat",
+        "distractors": [
+            "rajin",
+            "awal"
+        ],
+        "hint": "💡 Tips: Disiplin mematuhi jam masuk."
+    },
+    {
+        "id": 200,
+        "category": "Sifat & Sikap",
+        "sentence": "Membaca buku setiap hari membuat wawasan menjadi ...",
+        "answer": "luas",
+        "distractors": [
+            "sempit",
+            "sedikit"
+        ],
+        "hint": "💡 Tips: Memiliki banyak pengetahuan."
+    },
+    {
+        "id": 201,
+        "category": "Sifat & Sikap",
+        "sentence": "Makanan yang tertutup tudung saji aman dari hinggapan ...",
+        "answer": "lalat",
+        "distractors": [
+            "kucing",
+            "burung"
+        ],
+        "hint": "💡 Tips: Serangga pembawa kuman pada makanan."
+    },
+    {
+        "id": 202,
+        "category": "Sifat & Sikap",
+        "sentence": "Ayu membuang bungkus snack di tempat ...",
+        "answer": "sampah",
+        "distractors": [
+            "tidur",
+            "makan"
+        ],
+        "hint": "💡 Tips: Wadah penampung kotoran."
+    },
+    {
+        "id": 203,
+        "category": "Sifat & Sikap",
+        "sentence": "Air sungai yang jernih belum tercemar oleh ...",
+        "answer": "limbah",
+        "distractors": [
+            "ikan",
+            "batu"
+        ],
+        "hint": "💡 Tips: Zat pengotor pencemar alam."
+    },
+    {
+        "id": 204,
+        "category": "Sifat & Sikap",
+        "sentence": "Budi menghormati bapak dan ibu guru di ...",
+        "answer": "sekolah",
+        "distractors": [
+            "pasar",
+            "bengkel"
+        ],
+        "hint": "💡 Tips: Lembaga pendidikan formal."
+    },
+    {
+        "id": 205,
+        "category": "Tempat",
+        "sentence": "Siti membaca buku cerita bergambar di ...",
+        "answer": "perpustakaan",
+        "distractors": [
+            "lapangan",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Ruang baca buku yang tenang dan tertib."
+    },
+    {
+        "id": 206,
+        "category": "Tempat",
+        "sentence": "Ayah mengajak Rian salat berjemaah di ...",
+        "answer": "masjid",
+        "distractors": [
+            "kantor",
+            "pasar"
+        ],
+        "hint": "💡 Tips: Tempat ibadah umat Islam."
+    },
+    {
+        "id": 207,
+        "category": "Tempat",
+        "sentence": "Gita berenang dengan pelampung di ...",
+        "answer": "kolam renang",
+        "distractors": [
+            "jalan raya",
+            "halaman"
+        ],
+        "hint": "💡 Tips: Tempat berenang dan bermain air."
+    },
+    {
+        "id": 208,
+        "category": "Tempat",
+        "sentence": "Paman Kiki menyiram tanaman bunga di ...",
+        "answer": "taman",
+        "distractors": [
+            "garasi",
+            "kamar mandi"
+        ],
+        "hint": "💡 Tips: Halaman tempat tumbuhnya aneka bunga."
+    },
+    {
+        "id": 209,
+        "category": "Tempat",
+        "sentence": "Lani mencuci piring kotor di ...",
+        "answer": "wastafel",
+        "distractors": [
+            "kasur",
+            "lemari"
+        ],
+        "hint": "💡 Tips: Tempat mencuci piring dengan air mengalir."
+    },
+    {
+        "id": 210,
+        "category": "Tempat",
+        "sentence": "Ibu Edo membeli roti tawar di ...",
+        "answer": "toko roti",
+        "distractors": [
+            "bengkel",
+            "apotek"
+        ],
+        "hint": "💡 Tips: Tempat menjual kue dan aneka roti."
+    },
+    {
+        "id": 211,
+        "category": "Tempat",
+        "sentence": "Dayu menunggu bus antarkota di ...",
+        "answer": "terminal",
+        "distractors": [
+            "bandara",
+            "pelabuhan"
+        ],
+        "hint": "💡 Tips: Pangkalan tempat bus berkumpul."
+    },
+    {
+        "id": 212,
+        "category": "Tempat",
+        "sentence": "Ayah Beni mengisi bensin motor di ...",
+        "answer": "pom bensin",
+        "distractors": [
+            "halte",
+            "sekolah"
+        ],
+        "hint": "💡 Tips: Stasiun pengisian bahan bakar minyak."
+    },
+    {
+        "id": 213,
+        "category": "Tempat",
+        "sentence": "Udin melihat koleksi benda kuno bersejarah di ...",
+        "answer": "museum",
+        "distractors": [
+            "pasar",
+            "bioskop"
+        ],
+        "hint": "💡 Tips: Gedung tempat pameran benda sejarah."
+    },
+    {
+        "id": 214,
+        "category": "Tempat",
+        "sentence": "Sari dan teman-teman berolahraga lari di ...",
+        "answer": "lapangan",
+        "distractors": [
+            "kamar",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Tanah lapang luas untuk olahraga."
+    },
+    {
+        "id": 215,
+        "category": "Rasa & Indra",
+        "sentence": "Rani minum teh manis yang diberi ...",
+        "answer": "gula",
+        "distractors": [
+            "garam",
+            "cabai"
+        ],
+        "hint": "💡 Tips: Bumbu pemanis dari tebu."
+    },
+    {
+        "id": 216,
+        "category": "Rasa & Indra",
+        "sentence": "Bayu mencicipi buah mangga manis yang sudah ...",
+        "answer": "masak",
+        "distractors": [
+            "mentah",
+            "busuk"
+        ],
+        "hint": "💡 Tips: Kondisi buah yang matang sempurna."
+    },
+    {
+        "id": 217,
+        "category": "Rasa & Indra",
+        "sentence": "Keringat menetes saat Dimas merasa ...",
+        "answer": "gerah",
+        "distractors": [
+            "kedinginan",
+            "beku"
+        ],
+        "hint": "💡 Tips: Kondisi suhu tubuh terasa panas."
+    },
+    {
+        "id": 218,
+        "category": "Rasa & Indra",
+        "sentence": "Ayu memakai selimut tebal saat malam terasa ...",
+        "answer": "dingin",
+        "distractors": [
+            "terik",
+            "panas"
+        ],
+        "hint": "💡 Tips: Suhu sejuk rendah di malam hari."
+    },
+    {
+        "id": 219,
+        "category": "Rasa & Indra",
+        "sentence": "Parfum yang disemprotkan Dewi beraroma sangat ...",
+        "answer": "harum",
+        "distractors": [
+            "pahit",
+            "asam"
+        ],
+        "hint": "💡 Tips: Bau wangi semerbak menyenangkan."
+    },
+    {
+        "id": 220,
+        "category": "Rasa & Indra",
+        "sentence": "Obat penurun demam yang diminum Budi terasa ...",
+        "answer": "pahit",
+        "distractors": [
+            "manis",
+            "asin"
+        ],
+        "hint": "💡 Tips: Rasa khas obat agar cepat sembuh."
+    },
+    {
+        "id": 221,
+        "category": "Rasa & Indra",
+        "sentence": "Siti menyantap keripik kentang yang gurih dan ...",
+        "answer": "asin",
+        "distractors": [
+            "asam",
+            "pahit"
+        ],
+        "hint": "💡 Tips: Rasa bumbu gurih bergaram."
+    },
+    {
+        "id": 222,
+        "category": "Rasa & Indra",
+        "sentence": "Rian memakai kacamata untuk membantu penglihatan ...",
+        "answer": "mata",
+        "distractors": [
+            "telinga",
+            "hidung"
+        ],
+        "hint": "💡 Tips: Organ penglihat."
+    },
+    {
+        "id": 223,
+        "category": "Rasa & Indra",
+        "sentence": "Gita mendengarkan nasehat ibu dengan kedua ...",
+        "answer": "telinga",
+        "distractors": [
+            "mata",
+            "tangan"
+        ],
+        "hint": "💡 Tips: Organ pendengar."
+    },
+    {
+        "id": 224,
+        "category": "Rasa & Indra",
+        "sentence": "Kiki bernapas menghirup oksigen melalui ...",
+        "answer": "hidung",
+        "distractors": [
+            "telinga",
+            "dagu"
+        ],
+        "hint": "💡 Tips: Organ pernapasan utama."
+    },
+    {
+        "id": 225,
+        "category": "Makanan & Buah",
+        "sentence": "Ibu membelikan Lani buah pisang berwarna ...",
+        "answer": "kuning",
+        "distractors": [
+            "biru",
+            "hitam"
+        ],
+        "hint": "💡 Tips: Warna pisang matang."
+    },
+    {
+        "id": 226,
+        "category": "Makanan & Buah",
+        "sentence": "Edo suka makan buah apel merah yang manis dan ...",
+        "answer": "segar",
+        "distractors": [
+            "layu",
+            "busuk"
+        ],
+        "hint": "💡 Tips: Kondisi buah baru dipetik."
+    },
+    {
+        "id": 227,
+        "category": "Makanan & Buah",
+        "sentence": "Sayur kangkung dan bayam memiliki daun berwarna ...",
+        "answer": "hijau",
+        "distractors": [
+            "ungu",
+            "merah"
+        ],
+        "hint": "💡 Tips: Warna dedaunan segar."
+    },
+    {
+        "id": 228,
+        "category": "Makanan & Buah",
+        "sentence": "Beni membantu ayah memetik buah mangga dari ...",
+        "answer": "pohon",
+        "distractors": [
+            "tanah",
+            "atap"
+        ],
+        "hint": "💡 Tips: Tumbuhan berkayu tempat mangga berbuah."
+    },
+    {
+        "id": 229,
+        "category": "Makanan & Buah",
+        "sentence": "Biji jagung yang dibakar terasa manis dan ...",
+        "answer": "gurih",
+        "distractors": [
+            "pahit",
+            "asam"
+        ],
+        "hint": "💡 Tips: Rasa lezat jagung bakar."
+    },
+    {
+        "id": 230,
+        "category": "Makanan & Buah",
+        "sentence": "Sari minum jus jeruk yang banyak mengandung vitamin ...",
+        "answer": "C",
+        "distractors": [
+            "K",
+            "besi"
+        ],
+        "hint": "💡 Tips: Vitamin penting untuk kekebalan tubuh."
+    },
+    {
+        "id": 231,
+        "category": "Makanan & Buah",
+        "sentence": "Nasi putih dibuat dari bulir beras yang ...",
+        "answer": "dimasak",
+        "distractors": [
+            "dibuang",
+            "ditanam"
+        ],
+        "hint": "💡 Tips: Proses mengolah beras menjadi nasi."
+    },
+    {
+        "id": 232,
+        "category": "Makanan & Buah",
+        "sentence": "Bayu memotong buah semangka menggunakan ...",
+        "answer": "pisau",
+        "distractors": [
+            "sendok",
+            "garpu"
+        ],
+        "hint": "💡 Tips: Alat dapur tajam pemotong buah."
+    },
+    {
+        "id": 233,
+        "category": "Makanan & Buah",
+        "sentence": "Bunga mawar memiliki batang yang berduri ...",
+        "answer": "tajam",
+        "distractors": [
+            "tumpul",
+            "halus"
+        ],
+        "hint": "💡 Tips: Ciri fisik duri pelindung mawar."
+    },
+    {
+        "id": 234,
+        "category": "Makanan & Buah",
+        "sentence": "Ayu menyiram tanaman setiap pagi agar tidak ...",
+        "answer": "layu",
+        "distractors": [
+            "tumbuh",
+            "mekar"
+        ],
+        "hint": "💡 Tips: Kondisi tanaman kekurangan air."
+    },
+    {
+        "id": 235,
+        "category": "Hewan",
+        "sentence": "Kucing peliharaan Dewi memiliki bulu yang sangat ...",
+        "answer": "halus",
+        "distractors": [
+            "tajam",
+            "keras"
+        ],
+        "hint": "💡 Tips: Tekstur lembut bulu kucing sehat."
+    },
+    {
+        "id": 236,
+        "category": "Hewan",
+        "sentence": "Anjing peliharaan menjaga rumah dengan cara ...",
+        "answer": "menggonggong",
+        "distractors": [
+            "mengeong",
+            "berkokok"
+        ],
+        "hint": "💡 Tips: Suara khas anjing siaga."
+    },
+    {
+        "id": 237,
+        "category": "Hewan",
+        "sentence": "Burung merpati hinggap di atas dahan ...",
+        "answer": "pohon",
+        "distractors": [
+            "kolam",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Tempat bertengger unggas di alam."
+    },
+    {
+        "id": 238,
+        "category": "Hewan",
+        "sentence": "Ikan mas berenang kencang menggerakkan ...",
+        "answer": "sirip",
+        "distractors": [
+            "kaki",
+            "tangan"
+        ],
+        "hint": "💡 Tips: Alat kemudi renang pada tubuh ikan."
+    },
+    {
+        "id": 239,
+        "category": "Hewan",
+        "sentence": "Kambing memakan rumput hijau di ...",
+        "answer": "padang rumput",
+        "distractors": [
+            "atap rumah",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Hamparan tanah berumput luas."
+    },
+    {
+        "id": 240,
+        "category": "Hewan",
+        "sentence": "Kelinci bergerak lincah dengan cara ...",
+        "answer": "melompat",
+        "distractors": [
+            "merayap",
+            "terbang"
+        ],
+        "hint": "💡 Tips: Gerak khas kaki panjang kelinci."
+    },
+    {
+        "id": 241,
+        "category": "Hewan",
+        "sentence": "Ayam betina mengerami telurnya di dalam ...",
+        "answer": "sarang",
+        "distractors": [
+            "kolam",
+            "lemari"
+        ],
+        "hint": "💡 Tips: Tempat aman ayam bertelur."
+    },
+    {
+        "id": 242,
+        "category": "Hewan",
+        "sentence": "Bebek berjalan beriringan menuju ke ...",
+        "answer": "sungai",
+        "distractors": [
+            "puncak",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Tempat air bebek mencari makan."
+    },
+    {
+        "id": 243,
+        "category": "Hewan",
+        "sentence": "Kupu-kupu hinggap menghisap nektar manis pada ...",
+        "answer": "bunga",
+        "distractors": [
+            "batu",
+            "genteng"
+        ],
+        "hint": "💡 Tips: Bagian tanaman penghasil madu."
+    },
+    {
+        "id": 244,
+        "category": "Hewan",
+        "sentence": "Semut bekerja sama mengangkut remah makanan ke ...",
+        "answer": "sarang",
+        "distractors": [
+            "kolam",
+            "laut"
+        ],
+        "hint": "💡 Tips: Tempat tinggal koloni semut."
+    },
+    {
+        "id": 245,
+        "category": "Benda & Alat",
+        "sentence": "Udin meraut pensil yang tumpul menggunakan ...",
+        "answer": "rautan",
+        "distractors": [
+            "penghapus",
+            "penggaris"
+        ],
+        "hint": "💡 Tips: Alat penajam ujung pensil."
+    },
+    {
+        "id": 246,
+        "category": "Benda & Alat",
+        "sentence": "Sari mengikat tali sepatu agar tidak ...",
+        "answer": "lepas",
+        "distractors": [
+            "bersih",
+            "kencang"
+        ],
+        "hint": "💡 Tips: Kondisi tali sepatu longgar."
+    },
+    {
+        "id": 247,
+        "category": "Benda & Alat",
+        "sentence": "Rani mengenakan seragam sekolah yang sudah ...",
+        "answer": "disetrika",
+        "distractors": [
+            "dibuang",
+            "dirobek"
+        ],
+        "hint": "💡 Tips: Pakaian rapi tanpa kusut."
+    },
+    {
+        "id": 248,
+        "category": "Benda & Alat",
+        "sentence": "Bayu memakai jam tangan di pergelangan ...",
+        "answer": "tangan",
+        "distractors": [
+            "kaki",
+            "leher"
+        ],
+        "hint": "💡 Tips: Tempat memakai arloji penunjuk waktu."
+    },
+    {
+        "id": 249,
+        "category": "Benda & Alat",
+        "sentence": "Lampu belajar dinyalakan agar meja terasa ...",
+        "answer": "terang",
+        "distractors": [
+            "gelap",
+            "redup"
+        ],
+        "hint": "💡 Tips: Kondisi pencahayaan cukup untuk membaca."
+    },
+    {
+        "id": 250,
+        "category": "Benda & Alat",
+        "sentence": "Ayu mengeringkan badan basah sehabis mandi memakai ...",
+        "answer": "handuk",
+        "distractors": [
+            "selimut",
+            "kertas"
+        ],
+        "hint": "💡 Tips: Kain katun penyerap air."
+    },
+    {
+        "id": 251,
+        "category": "Benda & Alat",
+        "sentence": "Dewi memakai sabun wangi untuk membersihkan ...",
+        "answer": "badan",
+        "distractors": [
+            "sepatu",
+            "tas"
+        ],
+        "hint": "💡 Tips: Menjaga kebersihan tubuh saat mandi."
+    },
+    {
+        "id": 252,
+        "category": "Benda & Alat",
+        "sentence": "Budi menyisir rambut di depan ...",
+        "answer": "cermin",
+        "distractors": [
+            "pintu",
+            "jendela"
+        ],
+        "hint": "💡 Tips: Kaca pantul bayangan wajah."
+    },
+    {
+        "id": 253,
+        "category": "Benda & Alat",
+        "sentence": "Siti membuka jendela kamar agar udara segar bisa ...",
+        "answer": "masuk",
+        "distractors": [
+            "hilang",
+            "habis"
+        ],
+        "hint": "💡 Tips: Sirkulasi udara ruangan."
+    },
+    {
+        "id": 254,
+        "category": "Benda & Alat",
+        "sentence": "Rian mengunci pintu rumah menggunakan ...",
+        "answer": "kunci",
+        "distractors": [
+            "pensil",
+            "sendok"
+        ],
+        "hint": "💡 Tips: Alat pengaman rumah."
+    },
+    {
+        "id": 255,
+        "category": "Profesi",
+        "sentence": "Guru mengajari Gita membaca dan ...",
+        "answer": "menulis",
+        "distractors": [
+            "berkelahi",
+            "berteriak"
+        ],
+        "hint": "💡 Tips: Keterampilan dasar literasi anak."
+    },
+    {
+        "id": 256,
+        "category": "Profesi",
+        "sentence": "Dokter gigi memeriksa kesehatan gigi Kiki yang ...",
+        "answer": "bersih",
+        "distractors": [
+            "patah",
+            "kotor"
+        ],
+        "hint": "💡 Tips: Kondisi gigi sehat terawat."
+    },
+    {
+        "id": 257,
+        "category": "Profesi",
+        "sentence": "Tukang pos mengantarkan surat penting ke ...",
+        "answer": "alamat",
+        "distractors": [
+            "hutan",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Tujuan lokasi pengiriman."
+    },
+    {
+        "id": 258,
+        "category": "Profesi",
+        "sentence": "Petugas kebersihan menyapu jalanan agar selalu ...",
+        "answer": "bersih",
+        "distractors": [
+            "kotor",
+            "kumal"
+        ],
+        "hint": "💡 Tips: Bebas dari tumpukan sampah."
+    },
+    {
+        "id": 259,
+        "category": "Profesi",
+        "sentence": "Polisi lalu lintas membantu Dayu menyeberang di ...",
+        "answer": "zebra cross",
+        "distractors": [
+            "tengah jalan",
+            "selokan"
+        ],
+        "hint": "💡 Tips: Garis penyeberangan pejalan kaki."
+    },
+    {
+        "id": 260,
+        "category": "Sifat & Sikap",
+        "sentence": "Beni selalu menyapa tetangga dengan senyum yang ...",
+        "answer": "ramah",
+        "distractors": [
+            "cemberut",
+            "marah"
+        ],
+        "hint": "💡 Tips: Sikap hangat bersahabat."
+    },
+    {
+        "id": 261,
+        "category": "Sifat & Sikap",
+        "sentence": "Anak yang jujur tidak pernah berkata ...",
+        "answer": "dusta",
+        "distractors": [
+            "benar",
+            "baik"
+        ],
+        "hint": "💡 Tips: Lawan dari kata jujur."
+    },
+    {
+        "id": 262,
+        "category": "Sifat & Sikap",
+        "sentence": "Sari membantu adik membereskan mainan yang ...",
+        "answer": "berantakan",
+        "distractors": [
+            "rapi",
+            "bersih"
+        ],
+        "hint": "💡 Tips: Kondisi mainan tercecer di lantai."
+    },
+    {
+        "id": 263,
+        "category": "Sifat & Sikap",
+        "sentence": "Menjaga kesehatan tubuh membuat kita terhindar dari ...",
+        "answer": "penyakit",
+        "distractors": [
+            "kebahagiaan",
+            "kepandaian"
+        ],
+        "hint": "💡 Tips: Gangguan kesehatan fisik."
+    },
+    {
+        "id": 264,
+        "category": "Sifat & Sikap",
+        "sentence": "Bayu datang ke sekolah tepat waktu dan tidak pernah ...",
+        "answer": "terlambat",
+        "distractors": [
+            "rajin",
+            "awal"
+        ],
+        "hint": "💡 Tips: Disiplin mematuhi jam masuk."
+    },
+    {
+        "id": 265,
+        "category": "Sifat & Sikap",
+        "sentence": "Membaca buku setiap hari membuat wawasan menjadi ...",
+        "answer": "luas",
+        "distractors": [
+            "sempit",
+            "sedikit"
+        ],
+        "hint": "💡 Tips: Memiliki banyak pengetahuan."
+    },
+    {
+        "id": 266,
+        "category": "Sifat & Sikap",
+        "sentence": "Makanan yang tertutup tudung saji aman dari hinggapan ...",
+        "answer": "lalat",
+        "distractors": [
+            "kucing",
+            "burung"
+        ],
+        "hint": "💡 Tips: Serangga pembawa kuman pada makanan."
+    },
+    {
+        "id": 267,
+        "category": "Sifat & Sikap",
+        "sentence": "Dewi membuang bungkus snack di tempat ...",
+        "answer": "sampah",
+        "distractors": [
+            "tidur",
+            "makan"
+        ],
+        "hint": "💡 Tips: Wadah penampung kotoran."
+    },
+    {
+        "id": 268,
+        "category": "Sifat & Sikap",
+        "sentence": "Air sungai yang jernih belum tercemar oleh ...",
+        "answer": "limbah",
+        "distractors": [
+            "ikan",
+            "batu"
+        ],
+        "hint": "💡 Tips: Zat pengotor pencemar alam."
+    },
+    {
+        "id": 269,
+        "category": "Sifat & Sikap",
+        "sentence": "Siti menghormati bapak dan ibu guru di ...",
+        "answer": "sekolah",
+        "distractors": [
+            "pasar",
+            "bengkel"
+        ],
+        "hint": "💡 Tips: Lembaga pendidikan formal."
+    },
+    {
+        "id": 270,
+        "category": "Tempat",
+        "sentence": "Rian membaca buku cerita bergambar di ...",
+        "answer": "perpustakaan",
+        "distractors": [
+            "lapangan",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Ruang baca buku yang tenang dan tertib."
+    },
+    {
+        "id": 271,
+        "category": "Tempat",
+        "sentence": "Ayah mengajak Gita salat berjemaah di ...",
+        "answer": "masjid",
+        "distractors": [
+            "kantor",
+            "pasar"
+        ],
+        "hint": "💡 Tips: Tempat ibadah umat Islam."
+    },
+    {
+        "id": 272,
+        "category": "Tempat",
+        "sentence": "Kiki berenang dengan pelampung di ...",
+        "answer": "kolam renang",
+        "distractors": [
+            "jalan raya",
+            "halaman"
+        ],
+        "hint": "💡 Tips: Tempat berenang dan bermain air."
+    },
+    {
+        "id": 273,
+        "category": "Tempat",
+        "sentence": "Paman Lani menyiram tanaman bunga di ...",
+        "answer": "taman",
+        "distractors": [
+            "garasi",
+            "kamar mandi"
+        ],
+        "hint": "💡 Tips: Halaman tempat tumbuhnya aneka bunga."
+    },
+    {
+        "id": 274,
+        "category": "Tempat",
+        "sentence": "Edo mencuci piring kotor di ...",
+        "answer": "wastafel",
+        "distractors": [
+            "kasur",
+            "lemari"
+        ],
+        "hint": "💡 Tips: Tempat mencuci piring dengan air mengalir."
+    },
+    {
+        "id": 275,
+        "category": "Tempat",
+        "sentence": "Ibu Dayu membeli roti tawar di ...",
+        "answer": "toko roti",
+        "distractors": [
+            "bengkel",
+            "apotek"
+        ],
+        "hint": "💡 Tips: Tempat menjual kue dan aneka roti."
+    },
+    {
+        "id": 276,
+        "category": "Tempat",
+        "sentence": "Beni menunggu bus antarkota di ...",
+        "answer": "terminal",
+        "distractors": [
+            "bandara",
+            "pelabuhan"
+        ],
+        "hint": "💡 Tips: Pangkalan tempat bus berkumpul."
+    },
+    {
+        "id": 277,
+        "category": "Tempat",
+        "sentence": "Ayah Udin mengisi bensin motor di ...",
+        "answer": "pom bensin",
+        "distractors": [
+            "halte",
+            "sekolah"
+        ],
+        "hint": "💡 Tips: Stasiun pengisian bahan bakar minyak."
+    },
+    {
+        "id": 278,
+        "category": "Tempat",
+        "sentence": "Sari melihat koleksi benda kuno bersejarah di ...",
+        "answer": "museum",
+        "distractors": [
+            "pasar",
+            "bioskop"
+        ],
+        "hint": "💡 Tips: Gedung tempat pameran benda sejarah."
+    },
+    {
+        "id": 279,
+        "category": "Tempat",
+        "sentence": "Rani dan teman-teman berolahraga lari di ...",
+        "answer": "lapangan",
+        "distractors": [
+            "kamar",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Tanah lapang luas untuk olahraga."
+    },
+    {
+        "id": 280,
+        "category": "Rasa & Indra",
+        "sentence": "Bayu minum teh manis yang diberi ...",
+        "answer": "gula",
+        "distractors": [
+            "garam",
+            "cabai"
+        ],
+        "hint": "💡 Tips: Bumbu pemanis dari tebu."
+    },
+    {
+        "id": 281,
+        "category": "Rasa & Indra",
+        "sentence": "Dimas mencicipi buah mangga manis yang sudah ...",
+        "answer": "masak",
+        "distractors": [
+            "mentah",
+            "busuk"
+        ],
+        "hint": "💡 Tips: Kondisi buah yang matang sempurna."
+    },
+    {
+        "id": 282,
+        "category": "Rasa & Indra",
+        "sentence": "Keringat menetes saat Ayu merasa ...",
+        "answer": "gerah",
+        "distractors": [
+            "kedinginan",
+            "beku"
+        ],
+        "hint": "💡 Tips: Kondisi suhu tubuh terasa panas."
+    },
+    {
+        "id": 283,
+        "category": "Rasa & Indra",
+        "sentence": "Dewi memakai selimut tebal saat malam terasa ...",
+        "answer": "dingin",
+        "distractors": [
+            "terik",
+            "panas"
+        ],
+        "hint": "💡 Tips: Suhu sejuk rendah di malam hari."
+    },
+    {
+        "id": 284,
+        "category": "Rasa & Indra",
+        "sentence": "Parfum yang disemprotkan Budi beraroma sangat ...",
+        "answer": "harum",
+        "distractors": [
+            "pahit",
+            "asam"
+        ],
+        "hint": "💡 Tips: Bau wangi semerbak menyenangkan."
+    },
+    {
+        "id": 285,
+        "category": "Rasa & Indra",
+        "sentence": "Obat penurun demam yang diminum Siti terasa ...",
+        "answer": "pahit",
+        "distractors": [
+            "manis",
+            "asin"
+        ],
+        "hint": "💡 Tips: Rasa khas obat agar cepat sembuh."
+    },
+    {
+        "id": 286,
+        "category": "Rasa & Indra",
+        "sentence": "Rian menyantap keripik kentang yang gurih dan ...",
+        "answer": "asin",
+        "distractors": [
+            "asam",
+            "pahit"
+        ],
+        "hint": "💡 Tips: Rasa bumbu gurih bergaram."
+    },
+    {
+        "id": 287,
+        "category": "Rasa & Indra",
+        "sentence": "Gita memakai kacamata untuk membantu penglihatan ...",
+        "answer": "mata",
+        "distractors": [
+            "telinga",
+            "hidung"
+        ],
+        "hint": "💡 Tips: Organ penglihat."
+    },
+    {
+        "id": 288,
+        "category": "Rasa & Indra",
+        "sentence": "Kiki mendengarkan nasehat ibu dengan kedua ...",
+        "answer": "telinga",
+        "distractors": [
+            "mata",
+            "tangan"
+        ],
+        "hint": "💡 Tips: Organ pendengar."
+    },
+    {
+        "id": 289,
+        "category": "Rasa & Indra",
+        "sentence": "Lani bernapas menghirup oksigen melalui ...",
+        "answer": "hidung",
+        "distractors": [
+            "telinga",
+            "dagu"
+        ],
+        "hint": "💡 Tips: Organ pernapasan utama."
+    },
+    {
+        "id": 290,
+        "category": "Makanan & Buah",
+        "sentence": "Ibu membelikan Edo buah pisang berwarna ...",
+        "answer": "kuning",
+        "distractors": [
+            "biru",
+            "hitam"
+        ],
+        "hint": "💡 Tips: Warna pisang matang."
+    },
+    {
+        "id": 291,
+        "category": "Makanan & Buah",
+        "sentence": "Dayu suka makan buah apel merah yang manis dan ...",
+        "answer": "segar",
+        "distractors": [
+            "layu",
+            "busuk"
+        ],
+        "hint": "💡 Tips: Kondisi buah baru dipetik."
+    },
+    {
+        "id": 292,
+        "category": "Makanan & Buah",
+        "sentence": "Sayur kangkung dan bayam memiliki daun berwarna ...",
+        "answer": "hijau",
+        "distractors": [
+            "ungu",
+            "merah"
+        ],
+        "hint": "💡 Tips: Warna dedaunan segar."
+    },
+    {
+        "id": 293,
+        "category": "Makanan & Buah",
+        "sentence": "Udin membantu ayah memetik buah mangga dari ...",
+        "answer": "pohon",
+        "distractors": [
+            "tanah",
+            "atap"
+        ],
+        "hint": "💡 Tips: Tumbuhan berkayu tempat mangga berbuah."
+    },
+    {
+        "id": 294,
+        "category": "Makanan & Buah",
+        "sentence": "Biji jagung yang dibakar terasa manis dan ...",
+        "answer": "gurih",
+        "distractors": [
+            "pahit",
+            "asam"
+        ],
+        "hint": "💡 Tips: Rasa lezat jagung bakar."
+    },
+    {
+        "id": 295,
+        "category": "Makanan & Buah",
+        "sentence": "Rani minum jus jeruk yang banyak mengandung vitamin ...",
+        "answer": "C",
+        "distractors": [
+            "K",
+            "besi"
+        ],
+        "hint": "💡 Tips: Vitamin penting untuk kekebalan tubuh."
+    },
+    {
+        "id": 296,
+        "category": "Makanan & Buah",
+        "sentence": "Nasi putih dibuat dari bulir beras yang ...",
+        "answer": "dimasak",
+        "distractors": [
+            "dibuang",
+            "ditanam"
+        ],
+        "hint": "💡 Tips: Proses mengolah beras menjadi nasi."
+    },
+    {
+        "id": 297,
+        "category": "Makanan & Buah",
+        "sentence": "Dimas memotong buah semangka menggunakan ...",
+        "answer": "pisau",
+        "distractors": [
+            "sendok",
+            "garpu"
+        ],
+        "hint": "💡 Tips: Alat dapur tajam pemotong buah."
+    },
+    {
+        "id": 298,
+        "category": "Makanan & Buah",
+        "sentence": "Bunga mawar memiliki batang yang berduri ...",
+        "answer": "tajam",
+        "distractors": [
+            "tumpul",
+            "halus"
+        ],
+        "hint": "💡 Tips: Ciri fisik duri pelindung mawar."
+    },
+    {
+        "id": 299,
+        "category": "Makanan & Buah",
+        "sentence": "Dewi menyiram tanaman setiap pagi agar tidak ...",
+        "answer": "layu",
+        "distractors": [
+            "tumbuh",
+            "mekar"
+        ],
+        "hint": "💡 Tips: Kondisi tanaman kekurangan air."
+    },
+    {
+        "id": 300,
+        "category": "Hewan",
+        "sentence": "Kucing peliharaan Budi memiliki bulu yang sangat ...",
+        "answer": "halus",
+        "distractors": [
+            "tajam",
+            "keras"
+        ],
+        "hint": "💡 Tips: Tekstur lembut bulu kucing sehat."
+    },
+    {
+        "id": 301,
+        "category": "Hewan",
+        "sentence": "Anjing peliharaan menjaga rumah dengan cara ...",
+        "answer": "menggonggong",
+        "distractors": [
+            "mengeong",
+            "berkokok"
+        ],
+        "hint": "💡 Tips: Suara khas anjing siaga."
+    },
+    {
+        "id": 302,
+        "category": "Hewan",
+        "sentence": "Burung merpati hinggap di atas dahan ...",
+        "answer": "pohon",
+        "distractors": [
+            "kolam",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Tempat bertengger unggas di alam."
+    },
+    {
+        "id": 303,
+        "category": "Hewan",
+        "sentence": "Ikan mas berenang kencang menggerakkan ...",
+        "answer": "sirip",
+        "distractors": [
+            "kaki",
+            "tangan"
+        ],
+        "hint": "💡 Tips: Alat kemudi renang pada tubuh ikan."
+    },
+    {
+        "id": 304,
+        "category": "Hewan",
+        "sentence": "Kambing memakan rumput hijau di ...",
+        "answer": "padang rumput",
+        "distractors": [
+            "atap rumah",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Hamparan tanah berumput luas."
+    },
+    {
+        "id": 305,
+        "category": "Hewan",
+        "sentence": "Kelinci bergerak lincah dengan cara ...",
+        "answer": "melompat",
+        "distractors": [
+            "merayap",
+            "terbang"
+        ],
+        "hint": "💡 Tips: Gerak khas kaki panjang kelinci."
+    },
+    {
+        "id": 306,
+        "category": "Hewan",
+        "sentence": "Ayam betina mengerami telurnya di dalam ...",
+        "answer": "sarang",
+        "distractors": [
+            "kolam",
+            "lemari"
+        ],
+        "hint": "💡 Tips: Tempat aman ayam bertelur."
+    },
+    {
+        "id": 307,
+        "category": "Hewan",
+        "sentence": "Bebek berjalan beriringan menuju ke ...",
+        "answer": "sungai",
+        "distractors": [
+            "puncak",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Tempat air bebek mencari makan."
+    },
+    {
+        "id": 308,
+        "category": "Hewan",
+        "sentence": "Kupu-kupu hinggap menghisap nektar manis pada ...",
+        "answer": "bunga",
+        "distractors": [
+            "batu",
+            "genteng"
+        ],
+        "hint": "💡 Tips: Bagian tanaman penghasil madu."
+    },
+    {
+        "id": 309,
+        "category": "Hewan",
+        "sentence": "Semut bekerja sama mengangkut remah makanan ke ...",
+        "answer": "sarang",
+        "distractors": [
+            "kolam",
+            "laut"
+        ],
+        "hint": "💡 Tips: Tempat tinggal koloni semut."
+    },
+    {
+        "id": 310,
+        "category": "Benda & Alat",
+        "sentence": "Sari meraut pensil yang tumpul menggunakan ...",
+        "answer": "rautan",
+        "distractors": [
+            "penghapus",
+            "penggaris"
+        ],
+        "hint": "💡 Tips: Alat penajam ujung pensil."
+    },
+    {
+        "id": 311,
+        "category": "Benda & Alat",
+        "sentence": "Rani mengikat tali sepatu agar tidak ...",
+        "answer": "lepas",
+        "distractors": [
+            "bersih",
+            "kencang"
+        ],
+        "hint": "💡 Tips: Kondisi tali sepatu longgar."
+    },
+    {
+        "id": 312,
+        "category": "Benda & Alat",
+        "sentence": "Bayu mengenakan seragam sekolah yang sudah ...",
+        "answer": "disetrika",
+        "distractors": [
+            "dibuang",
+            "dirobek"
+        ],
+        "hint": "💡 Tips: Pakaian rapi tanpa kusut."
+    },
+    {
+        "id": 313,
+        "category": "Benda & Alat",
+        "sentence": "Dimas memakai jam tangan di pergelangan ...",
+        "answer": "tangan",
+        "distractors": [
+            "kaki",
+            "leher"
+        ],
+        "hint": "💡 Tips: Tempat memakai arloji penunjuk waktu."
+    },
+    {
+        "id": 314,
+        "category": "Benda & Alat",
+        "sentence": "Lampu belajar dinyalakan agar meja terasa ...",
+        "answer": "terang",
+        "distractors": [
+            "gelap",
+            "redup"
+        ],
+        "hint": "💡 Tips: Kondisi pencahayaan cukup untuk membaca."
+    },
+    {
+        "id": 315,
+        "category": "Benda & Alat",
+        "sentence": "Dewi mengeringkan badan basah sehabis mandi memakai ...",
+        "answer": "handuk",
+        "distractors": [
+            "selimut",
+            "kertas"
+        ],
+        "hint": "💡 Tips: Kain katun penyerap air."
+    },
+    {
+        "id": 316,
+        "category": "Benda & Alat",
+        "sentence": "Budi memakai sabun wangi untuk membersihkan ...",
+        "answer": "badan",
+        "distractors": [
+            "sepatu",
+            "tas"
+        ],
+        "hint": "💡 Tips: Menjaga kebersihan tubuh saat mandi."
+    },
+    {
+        "id": 317,
+        "category": "Benda & Alat",
+        "sentence": "Siti menyisir rambut di depan ...",
+        "answer": "cermin",
+        "distractors": [
+            "pintu",
+            "jendela"
+        ],
+        "hint": "💡 Tips: Kaca pantul bayangan wajah."
+    },
+    {
+        "id": 318,
+        "category": "Benda & Alat",
+        "sentence": "Rian membuka jendela kamar agar udara segar bisa ...",
+        "answer": "masuk",
+        "distractors": [
+            "hilang",
+            "habis"
+        ],
+        "hint": "💡 Tips: Sirkulasi udara ruangan."
+    },
+    {
+        "id": 319,
+        "category": "Benda & Alat",
+        "sentence": "Gita mengunci pintu rumah menggunakan ...",
+        "answer": "kunci",
+        "distractors": [
+            "pensil",
+            "sendok"
+        ],
+        "hint": "💡 Tips: Alat pengaman rumah."
+    },
+    {
+        "id": 320,
+        "category": "Profesi",
+        "sentence": "Guru mengajari Kiki membaca dan ...",
+        "answer": "menulis",
+        "distractors": [
+            "berkelahi",
+            "berteriak"
+        ],
+        "hint": "💡 Tips: Keterampilan dasar literasi anak."
+    },
+    {
+        "id": 321,
+        "category": "Profesi",
+        "sentence": "Dokter gigi memeriksa kesehatan gigi Lani yang ...",
+        "answer": "bersih",
+        "distractors": [
+            "patah",
+            "kotor"
+        ],
+        "hint": "💡 Tips: Kondisi gigi sehat terawat."
+    },
+    {
+        "id": 322,
+        "category": "Profesi",
+        "sentence": "Tukang pos mengantarkan surat penting ke ...",
+        "answer": "alamat",
+        "distractors": [
+            "hutan",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Tujuan lokasi pengiriman."
+    },
+    {
+        "id": 323,
+        "category": "Profesi",
+        "sentence": "Petugas kebersihan menyapu jalanan agar selalu ...",
+        "answer": "bersih",
+        "distractors": [
+            "kotor",
+            "kumal"
+        ],
+        "hint": "💡 Tips: Bebas dari tumpukan sampah."
+    },
+    {
+        "id": 324,
+        "category": "Profesi",
+        "sentence": "Polisi lalu lintas membantu Beni menyeberang di ...",
+        "answer": "zebra cross",
+        "distractors": [
+            "tengah jalan",
+            "selokan"
+        ],
+        "hint": "💡 Tips: Garis penyeberangan pejalan kaki."
+    },
+    {
+        "id": 325,
+        "category": "Sifat & Sikap",
+        "sentence": "Udin selalu menyapa tetangga dengan senyum yang ...",
+        "answer": "ramah",
+        "distractors": [
+            "cemberut",
+            "marah"
+        ],
+        "hint": "💡 Tips: Sikap hangat bersahabat."
+    },
+    {
+        "id": 326,
+        "category": "Sifat & Sikap",
+        "sentence": "Anak yang jujur tidak pernah berkata ...",
+        "answer": "dusta",
+        "distractors": [
+            "benar",
+            "baik"
+        ],
+        "hint": "💡 Tips: Lawan dari kata jujur."
+    },
+    {
+        "id": 327,
+        "category": "Sifat & Sikap",
+        "sentence": "Rani membantu adik membereskan mainan yang ...",
+        "answer": "berantakan",
+        "distractors": [
+            "rapi",
+            "bersih"
+        ],
+        "hint": "💡 Tips: Kondisi mainan tercecer di lantai."
+    },
+    {
+        "id": 328,
+        "category": "Sifat & Sikap",
+        "sentence": "Menjaga kesehatan tubuh membuat kita terhindar dari ...",
+        "answer": "penyakit",
+        "distractors": [
+            "kebahagiaan",
+            "kepandaian"
+        ],
+        "hint": "💡 Tips: Gangguan kesehatan fisik."
+    },
+    {
+        "id": 329,
+        "category": "Sifat & Sikap",
+        "sentence": "Dimas datang ke sekolah tepat waktu dan tidak pernah ...",
+        "answer": "terlambat",
+        "distractors": [
+            "rajin",
+            "awal"
+        ],
+        "hint": "💡 Tips: Disiplin mematuhi jam masuk."
+    },
+    {
+        "id": 330,
+        "category": "Sifat & Sikap",
+        "sentence": "Membaca buku setiap hari membuat wawasan menjadi ...",
+        "answer": "luas",
+        "distractors": [
+            "sempit",
+            "sedikit"
+        ],
+        "hint": "💡 Tips: Memiliki banyak pengetahuan."
+    },
+    {
+        "id": 331,
+        "category": "Sifat & Sikap",
+        "sentence": "Makanan yang tertutup tudung saji aman dari hinggapan ...",
+        "answer": "lalat",
+        "distractors": [
+            "kucing",
+            "burung"
+        ],
+        "hint": "💡 Tips: Serangga pembawa kuman pada makanan."
+    },
+    {
+        "id": 332,
+        "category": "Sifat & Sikap",
+        "sentence": "Budi membuang bungkus snack di tempat ...",
+        "answer": "sampah",
+        "distractors": [
+            "tidur",
+            "makan"
+        ],
+        "hint": "💡 Tips: Wadah penampung kotoran."
+    },
+    {
+        "id": 333,
+        "category": "Sifat & Sikap",
+        "sentence": "Air sungai yang jernih belum tercemar oleh ...",
+        "answer": "limbah",
+        "distractors": [
+            "ikan",
+            "batu"
+        ],
+        "hint": "💡 Tips: Zat pengotor pencemar alam."
+    },
+    {
+        "id": 334,
+        "category": "Sifat & Sikap",
+        "sentence": "Rian menghormati bapak dan ibu guru di ...",
+        "answer": "sekolah",
+        "distractors": [
+            "pasar",
+            "bengkel"
+        ],
+        "hint": "💡 Tips: Lembaga pendidikan formal."
+    },
+    {
+        "id": 335,
+        "category": "Tempat",
+        "sentence": "Gita membaca buku cerita bergambar di ...",
+        "answer": "perpustakaan",
+        "distractors": [
+            "lapangan",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Ruang baca buku yang tenang dan tertib."
+    },
+    {
+        "id": 336,
+        "category": "Tempat",
+        "sentence": "Ayah mengajak Kiki salat berjemaah di ...",
+        "answer": "masjid",
+        "distractors": [
+            "kantor",
+            "pasar"
+        ],
+        "hint": "💡 Tips: Tempat ibadah umat Islam."
+    },
+    {
+        "id": 337,
+        "category": "Tempat",
+        "sentence": "Lani berenang dengan pelampung di ...",
+        "answer": "kolam renang",
+        "distractors": [
+            "jalan raya",
+            "halaman"
+        ],
+        "hint": "💡 Tips: Tempat berenang dan bermain air."
+    },
+    {
+        "id": 338,
+        "category": "Tempat",
+        "sentence": "Paman Edo menyiram tanaman bunga di ...",
+        "answer": "taman",
+        "distractors": [
+            "garasi",
+            "kamar mandi"
+        ],
+        "hint": "💡 Tips: Halaman tempat tumbuhnya aneka bunga."
+    },
+    {
+        "id": 339,
+        "category": "Tempat",
+        "sentence": "Dayu mencuci piring kotor di ...",
+        "answer": "wastafel",
+        "distractors": [
+            "kasur",
+            "lemari"
+        ],
+        "hint": "💡 Tips: Tempat mencuci piring dengan air mengalir."
+    },
+    {
+        "id": 340,
+        "category": "Tempat",
+        "sentence": "Ibu Beni membeli roti tawar di ...",
+        "answer": "toko roti",
+        "distractors": [
+            "bengkel",
+            "apotek"
+        ],
+        "hint": "💡 Tips: Tempat menjual kue dan aneka roti."
+    },
+    {
+        "id": 341,
+        "category": "Tempat",
+        "sentence": "Udin menunggu bus antarkota di ...",
+        "answer": "terminal",
+        "distractors": [
+            "bandara",
+            "pelabuhan"
+        ],
+        "hint": "💡 Tips: Pangkalan tempat bus berkumpul."
+    },
+    {
+        "id": 342,
+        "category": "Tempat",
+        "sentence": "Ayah Sari mengisi bensin motor di ...",
+        "answer": "pom bensin",
+        "distractors": [
+            "halte",
+            "sekolah"
+        ],
+        "hint": "💡 Tips: Stasiun pengisian bahan bakar minyak."
+    },
+    {
+        "id": 343,
+        "category": "Tempat",
+        "sentence": "Rani melihat koleksi benda kuno bersejarah di ...",
+        "answer": "museum",
+        "distractors": [
+            "pasar",
+            "bioskop"
+        ],
+        "hint": "💡 Tips: Gedung tempat pameran benda sejarah."
+    },
+    {
+        "id": 344,
+        "category": "Tempat",
+        "sentence": "Bayu dan teman-teman berolahraga lari di ...",
+        "answer": "lapangan",
+        "distractors": [
+            "kamar",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Tanah lapang luas untuk olahraga."
+    },
+    {
+        "id": 345,
+        "category": "Rasa & Indra",
+        "sentence": "Dimas minum teh manis yang diberi ...",
+        "answer": "gula",
+        "distractors": [
+            "garam",
+            "cabai"
+        ],
+        "hint": "💡 Tips: Bumbu pemanis dari tebu."
+    },
+    {
+        "id": 346,
+        "category": "Rasa & Indra",
+        "sentence": "Ayu mencicipi buah mangga manis yang sudah ...",
+        "answer": "masak",
+        "distractors": [
+            "mentah",
+            "busuk"
+        ],
+        "hint": "💡 Tips: Kondisi buah yang matang sempurna."
+    },
+    {
+        "id": 347,
+        "category": "Rasa & Indra",
+        "sentence": "Keringat menetes saat Dewi merasa ...",
+        "answer": "gerah",
+        "distractors": [
+            "kedinginan",
+            "beku"
+        ],
+        "hint": "💡 Tips: Kondisi suhu tubuh terasa panas."
+    },
+    {
+        "id": 348,
+        "category": "Rasa & Indra",
+        "sentence": "Budi memakai selimut tebal saat malam terasa ...",
+        "answer": "dingin",
+        "distractors": [
+            "terik",
+            "panas"
+        ],
+        "hint": "💡 Tips: Suhu sejuk rendah di malam hari."
+    },
+    {
+        "id": 349,
+        "category": "Rasa & Indra",
+        "sentence": "Parfum yang disemprotkan Siti beraroma sangat ...",
+        "answer": "harum",
+        "distractors": [
+            "pahit",
+            "asam"
+        ],
+        "hint": "💡 Tips: Bau wangi semerbak menyenangkan."
+    },
+    {
+        "id": 350,
+        "category": "Rasa & Indra",
+        "sentence": "Obat penurun demam yang diminum Rian terasa ...",
+        "answer": "pahit",
+        "distractors": [
+            "manis",
+            "asin"
+        ],
+        "hint": "💡 Tips: Rasa khas obat agar cepat sembuh."
+    },
+    {
+        "id": 351,
+        "category": "Rasa & Indra",
+        "sentence": "Gita menyantap keripik kentang yang gurih dan ...",
+        "answer": "asin",
+        "distractors": [
+            "asam",
+            "pahit"
+        ],
+        "hint": "💡 Tips: Rasa bumbu gurih bergaram."
+    },
+    {
+        "id": 352,
+        "category": "Rasa & Indra",
+        "sentence": "Kiki memakai kacamata untuk membantu penglihatan ...",
+        "answer": "mata",
+        "distractors": [
+            "telinga",
+            "hidung"
+        ],
+        "hint": "💡 Tips: Organ penglihat."
+    },
+    {
+        "id": 353,
+        "category": "Rasa & Indra",
+        "sentence": "Lani mendengarkan nasehat ibu dengan kedua ...",
+        "answer": "telinga",
+        "distractors": [
+            "mata",
+            "tangan"
+        ],
+        "hint": "💡 Tips: Organ pendengar."
+    },
+    {
+        "id": 354,
+        "category": "Rasa & Indra",
+        "sentence": "Edo bernapas menghirup oksigen melalui ...",
+        "answer": "hidung",
+        "distractors": [
+            "telinga",
+            "dagu"
+        ],
+        "hint": "💡 Tips: Organ pernapasan utama."
+    },
+    {
+        "id": 355,
+        "category": "Makanan & Buah",
+        "sentence": "Ibu membelikan Dayu buah pisang berwarna ...",
+        "answer": "kuning",
+        "distractors": [
+            "biru",
+            "hitam"
+        ],
+        "hint": "💡 Tips: Warna pisang matang."
+    },
+    {
+        "id": 356,
+        "category": "Makanan & Buah",
+        "sentence": "Beni suka makan buah apel merah yang manis dan ...",
+        "answer": "segar",
+        "distractors": [
+            "layu",
+            "busuk"
+        ],
+        "hint": "💡 Tips: Kondisi buah baru dipetik."
+    },
+    {
+        "id": 357,
+        "category": "Makanan & Buah",
+        "sentence": "Sayur kangkung dan bayam memiliki daun berwarna ...",
+        "answer": "hijau",
+        "distractors": [
+            "ungu",
+            "merah"
+        ],
+        "hint": "💡 Tips: Warna dedaunan segar."
+    },
+    {
+        "id": 358,
+        "category": "Makanan & Buah",
+        "sentence": "Sari membantu ayah memetik buah mangga dari ...",
+        "answer": "pohon",
+        "distractors": [
+            "tanah",
+            "atap"
+        ],
+        "hint": "💡 Tips: Tumbuhan berkayu tempat mangga berbuah."
+    },
+    {
+        "id": 359,
+        "category": "Makanan & Buah",
+        "sentence": "Biji jagung yang dibakar terasa manis dan ...",
+        "answer": "gurih",
+        "distractors": [
+            "pahit",
+            "asam"
+        ],
+        "hint": "💡 Tips: Rasa lezat jagung bakar."
+    },
+    {
+        "id": 360,
+        "category": "Makanan & Buah",
+        "sentence": "Bayu minum jus jeruk yang banyak mengandung vitamin ...",
+        "answer": "C",
+        "distractors": [
+            "K",
+            "besi"
+        ],
+        "hint": "💡 Tips: Vitamin penting untuk kekebalan tubuh."
+    },
+    {
+        "id": 361,
+        "category": "Makanan & Buah",
+        "sentence": "Nasi putih dibuat dari bulir beras yang ...",
+        "answer": "dimasak",
+        "distractors": [
+            "dibuang",
+            "ditanam"
+        ],
+        "hint": "💡 Tips: Proses mengolah beras menjadi nasi."
+    },
+    {
+        "id": 362,
+        "category": "Makanan & Buah",
+        "sentence": "Ayu memotong buah semangka menggunakan ...",
+        "answer": "pisau",
+        "distractors": [
+            "sendok",
+            "garpu"
+        ],
+        "hint": "💡 Tips: Alat dapur tajam pemotong buah."
+    },
+    {
+        "id": 363,
+        "category": "Makanan & Buah",
+        "sentence": "Bunga mawar memiliki batang yang berduri ...",
+        "answer": "tajam",
+        "distractors": [
+            "tumpul",
+            "halus"
+        ],
+        "hint": "💡 Tips: Ciri fisik duri pelindung mawar."
+    },
+    {
+        "id": 364,
+        "category": "Makanan & Buah",
+        "sentence": "Budi menyiram tanaman setiap pagi agar tidak ...",
+        "answer": "layu",
+        "distractors": [
+            "tumbuh",
+            "mekar"
+        ],
+        "hint": "💡 Tips: Kondisi tanaman kekurangan air."
+    },
+    {
+        "id": 365,
+        "category": "Hewan",
+        "sentence": "Kucing peliharaan Siti memiliki bulu yang sangat ...",
+        "answer": "halus",
+        "distractors": [
+            "tajam",
+            "keras"
+        ],
+        "hint": "💡 Tips: Tekstur lembut bulu kucing sehat."
+    },
+    {
+        "id": 366,
+        "category": "Hewan",
+        "sentence": "Anjing peliharaan menjaga rumah dengan cara ...",
+        "answer": "menggonggong",
+        "distractors": [
+            "mengeong",
+            "berkokok"
+        ],
+        "hint": "💡 Tips: Suara khas anjing siaga."
+    },
+    {
+        "id": 367,
+        "category": "Hewan",
+        "sentence": "Burung merpati hinggap di atas dahan ...",
+        "answer": "pohon",
+        "distractors": [
+            "kolam",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Tempat bertengger unggas di alam."
+    },
+    {
+        "id": 368,
+        "category": "Hewan",
+        "sentence": "Ikan mas berenang kencang menggerakkan ...",
+        "answer": "sirip",
+        "distractors": [
+            "kaki",
+            "tangan"
+        ],
+        "hint": "💡 Tips: Alat kemudi renang pada tubuh ikan."
+    },
+    {
+        "id": 369,
+        "category": "Hewan",
+        "sentence": "Kambing memakan rumput hijau di ...",
+        "answer": "padang rumput",
+        "distractors": [
+            "atap rumah",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Hamparan tanah berumput luas."
+    },
+    {
+        "id": 370,
+        "category": "Hewan",
+        "sentence": "Kelinci bergerak lincah dengan cara ...",
+        "answer": "melompat",
+        "distractors": [
+            "merayap",
+            "terbang"
+        ],
+        "hint": "💡 Tips: Gerak khas kaki panjang kelinci."
+    },
+    {
+        "id": 371,
+        "category": "Hewan",
+        "sentence": "Ayam betina mengerami telurnya di dalam ...",
+        "answer": "sarang",
+        "distractors": [
+            "kolam",
+            "lemari"
+        ],
+        "hint": "💡 Tips: Tempat aman ayam bertelur."
+    },
+    {
+        "id": 372,
+        "category": "Hewan",
+        "sentence": "Bebek berjalan beriringan menuju ke ...",
+        "answer": "sungai",
+        "distractors": [
+            "puncak",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Tempat air bebek mencari makan."
+    },
+    {
+        "id": 373,
+        "category": "Hewan",
+        "sentence": "Kupu-kupu hinggap menghisap nektar manis pada ...",
+        "answer": "bunga",
+        "distractors": [
+            "batu",
+            "genteng"
+        ],
+        "hint": "💡 Tips: Bagian tanaman penghasil madu."
+    },
+    {
+        "id": 374,
+        "category": "Hewan",
+        "sentence": "Semut bekerja sama mengangkut remah makanan ke ...",
+        "answer": "sarang",
+        "distractors": [
+            "kolam",
+            "laut"
+        ],
+        "hint": "💡 Tips: Tempat tinggal koloni semut."
+    },
+    {
+        "id": 375,
+        "category": "Benda & Alat",
+        "sentence": "Rani meraut pensil yang tumpul menggunakan ...",
+        "answer": "rautan",
+        "distractors": [
+            "penghapus",
+            "penggaris"
+        ],
+        "hint": "💡 Tips: Alat penajam ujung pensil."
+    },
+    {
+        "id": 376,
+        "category": "Benda & Alat",
+        "sentence": "Bayu mengikat tali sepatu agar tidak ...",
+        "answer": "lepas",
+        "distractors": [
+            "bersih",
+            "kencang"
+        ],
+        "hint": "💡 Tips: Kondisi tali sepatu longgar."
+    },
+    {
+        "id": 377,
+        "category": "Benda & Alat",
+        "sentence": "Dimas mengenakan seragam sekolah yang sudah ...",
+        "answer": "disetrika",
+        "distractors": [
+            "dibuang",
+            "dirobek"
+        ],
+        "hint": "💡 Tips: Pakaian rapi tanpa kusut."
+    },
+    {
+        "id": 378,
+        "category": "Benda & Alat",
+        "sentence": "Ayu memakai jam tangan di pergelangan ...",
+        "answer": "tangan",
+        "distractors": [
+            "kaki",
+            "leher"
+        ],
+        "hint": "💡 Tips: Tempat memakai arloji penunjuk waktu."
+    },
+    {
+        "id": 379,
+        "category": "Benda & Alat",
+        "sentence": "Lampu belajar dinyalakan agar meja terasa ...",
+        "answer": "terang",
+        "distractors": [
+            "gelap",
+            "redup"
+        ],
+        "hint": "💡 Tips: Kondisi pencahayaan cukup untuk membaca."
+    },
+    {
+        "id": 380,
+        "category": "Benda & Alat",
+        "sentence": "Budi mengeringkan badan basah sehabis mandi memakai ...",
+        "answer": "handuk",
+        "distractors": [
+            "selimut",
+            "kertas"
+        ],
+        "hint": "💡 Tips: Kain katun penyerap air."
+    },
+    {
+        "id": 381,
+        "category": "Benda & Alat",
+        "sentence": "Siti memakai sabun wangi untuk membersihkan ...",
+        "answer": "badan",
+        "distractors": [
+            "sepatu",
+            "tas"
+        ],
+        "hint": "💡 Tips: Menjaga kebersihan tubuh saat mandi."
+    },
+    {
+        "id": 382,
+        "category": "Benda & Alat",
+        "sentence": "Rian menyisir rambut di depan ...",
+        "answer": "cermin",
+        "distractors": [
+            "pintu",
+            "jendela"
+        ],
+        "hint": "💡 Tips: Kaca pantul bayangan wajah."
+    },
+    {
+        "id": 383,
+        "category": "Benda & Alat",
+        "sentence": "Gita membuka jendela kamar agar udara segar bisa ...",
+        "answer": "masuk",
+        "distractors": [
+            "hilang",
+            "habis"
+        ],
+        "hint": "💡 Tips: Sirkulasi udara ruangan."
+    },
+    {
+        "id": 384,
+        "category": "Benda & Alat",
+        "sentence": "Kiki mengunci pintu rumah menggunakan ...",
+        "answer": "kunci",
+        "distractors": [
+            "pensil",
+            "sendok"
+        ],
+        "hint": "💡 Tips: Alat pengaman rumah."
+    },
+    {
+        "id": 385,
+        "category": "Profesi",
+        "sentence": "Guru mengajari Lani membaca dan ...",
+        "answer": "menulis",
+        "distractors": [
+            "berkelahi",
+            "berteriak"
+        ],
+        "hint": "💡 Tips: Keterampilan dasar literasi anak."
+    },
+    {
+        "id": 386,
+        "category": "Profesi",
+        "sentence": "Dokter gigi memeriksa kesehatan gigi Edo yang ...",
+        "answer": "bersih",
+        "distractors": [
+            "patah",
+            "kotor"
+        ],
+        "hint": "💡 Tips: Kondisi gigi sehat terawat."
+    },
+    {
+        "id": 387,
+        "category": "Profesi",
+        "sentence": "Tukang pos mengantarkan surat penting ke ...",
+        "answer": "alamat",
+        "distractors": [
+            "hutan",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Tujuan lokasi pengiriman."
+    },
+    {
+        "id": 388,
+        "category": "Profesi",
+        "sentence": "Petugas kebersihan menyapu jalanan agar selalu ...",
+        "answer": "bersih",
+        "distractors": [
+            "kotor",
+            "kumal"
+        ],
+        "hint": "💡 Tips: Bebas dari tumpukan sampah."
+    },
+    {
+        "id": 389,
+        "category": "Profesi",
+        "sentence": "Polisi lalu lintas membantu Udin menyeberang di ...",
+        "answer": "zebra cross",
+        "distractors": [
+            "tengah jalan",
+            "selokan"
+        ],
+        "hint": "💡 Tips: Garis penyeberangan pejalan kaki."
+    },
+    {
+        "id": 390,
+        "category": "Sifat & Sikap",
+        "sentence": "Sari selalu menyapa tetangga dengan senyum yang ...",
+        "answer": "ramah",
+        "distractors": [
+            "cemberut",
+            "marah"
+        ],
+        "hint": "💡 Tips: Sikap hangat bersahabat."
+    },
+    {
+        "id": 391,
+        "category": "Sifat & Sikap",
+        "sentence": "Anak yang jujur tidak pernah berkata ...",
+        "answer": "dusta",
+        "distractors": [
+            "benar",
+            "baik"
+        ],
+        "hint": "💡 Tips: Lawan dari kata jujur."
+    },
+    {
+        "id": 392,
+        "category": "Sifat & Sikap",
+        "sentence": "Bayu membantu adik membereskan mainan yang ...",
+        "answer": "berantakan",
+        "distractors": [
+            "rapi",
+            "bersih"
+        ],
+        "hint": "💡 Tips: Kondisi mainan tercecer di lantai."
+    },
+    {
+        "id": 393,
+        "category": "Sifat & Sikap",
+        "sentence": "Menjaga kesehatan tubuh membuat kita terhindar dari ...",
+        "answer": "penyakit",
+        "distractors": [
+            "kebahagiaan",
+            "kepandaian"
+        ],
+        "hint": "💡 Tips: Gangguan kesehatan fisik."
+    },
+    {
+        "id": 394,
+        "category": "Sifat & Sikap",
+        "sentence": "Ayu datang ke sekolah tepat waktu dan tidak pernah ...",
+        "answer": "terlambat",
+        "distractors": [
+            "rajin",
+            "awal"
+        ],
+        "hint": "💡 Tips: Disiplin mematuhi jam masuk."
+    },
+    {
+        "id": 395,
+        "category": "Sifat & Sikap",
+        "sentence": "Membaca buku setiap hari membuat wawasan menjadi ...",
+        "answer": "luas",
+        "distractors": [
+            "sempit",
+            "sedikit"
+        ],
+        "hint": "💡 Tips: Memiliki banyak pengetahuan."
+    },
+    {
+        "id": 396,
+        "category": "Sifat & Sikap",
+        "sentence": "Makanan yang tertutup tudung saji aman dari hinggapan ...",
+        "answer": "lalat",
+        "distractors": [
+            "kucing",
+            "burung"
+        ],
+        "hint": "💡 Tips: Serangga pembawa kuman pada makanan."
+    },
+    {
+        "id": 397,
+        "category": "Sifat & Sikap",
+        "sentence": "Siti membuang bungkus snack di tempat ...",
+        "answer": "sampah",
+        "distractors": [
+            "tidur",
+            "makan"
+        ],
+        "hint": "💡 Tips: Wadah penampung kotoran."
+    },
+    {
+        "id": 398,
+        "category": "Sifat & Sikap",
+        "sentence": "Air sungai yang jernih belum tercemar oleh ...",
+        "answer": "limbah",
+        "distractors": [
+            "ikan",
+            "batu"
+        ],
+        "hint": "💡 Tips: Zat pengotor pencemar alam."
+    },
+    {
+        "id": 399,
+        "category": "Sifat & Sikap",
+        "sentence": "Gita menghormati bapak dan ibu guru di ...",
+        "answer": "sekolah",
+        "distractors": [
+            "pasar",
+            "bengkel"
+        ],
+        "hint": "💡 Tips: Lembaga pendidikan formal."
+    },
+    {
+        "id": 400,
+        "category": "Tempat",
+        "sentence": "Kiki membaca buku cerita bergambar di ...",
+        "answer": "perpustakaan",
+        "distractors": [
+            "lapangan",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Ruang baca buku yang tenang dan tertib."
+    },
+    {
+        "id": 401,
+        "category": "Tempat",
+        "sentence": "Ayah mengajak Lani salat berjemaah di ...",
+        "answer": "masjid",
+        "distractors": [
+            "kantor",
+            "pasar"
+        ],
+        "hint": "💡 Tips: Tempat ibadah umat Islam."
+    },
+    {
+        "id": 402,
+        "category": "Tempat",
+        "sentence": "Edo berenang dengan pelampung di ...",
+        "answer": "kolam renang",
+        "distractors": [
+            "jalan raya",
+            "halaman"
+        ],
+        "hint": "💡 Tips: Tempat berenang dan bermain air."
+    },
+    {
+        "id": 403,
+        "category": "Tempat",
+        "sentence": "Paman Dayu menyiram tanaman bunga di ...",
+        "answer": "taman",
+        "distractors": [
+            "garasi",
+            "kamar mandi"
+        ],
+        "hint": "💡 Tips: Halaman tempat tumbuhnya aneka bunga."
+    },
+    {
+        "id": 404,
+        "category": "Tempat",
+        "sentence": "Beni mencuci piring kotor di ...",
+        "answer": "wastafel",
+        "distractors": [
+            "kasur",
+            "lemari"
+        ],
+        "hint": "💡 Tips: Tempat mencuci piring dengan air mengalir."
+    },
+    {
+        "id": 405,
+        "category": "Tempat",
+        "sentence": "Ibu Udin membeli roti tawar di ...",
+        "answer": "toko roti",
+        "distractors": [
+            "bengkel",
+            "apotek"
+        ],
+        "hint": "💡 Tips: Tempat menjual kue dan aneka roti."
+    },
+    {
+        "id": 406,
+        "category": "Tempat",
+        "sentence": "Sari menunggu bus antarkota di ...",
+        "answer": "terminal",
+        "distractors": [
+            "bandara",
+            "pelabuhan"
+        ],
+        "hint": "💡 Tips: Pangkalan tempat bus berkumpul."
+    },
+    {
+        "id": 407,
+        "category": "Tempat",
+        "sentence": "Ayah Rani mengisi bensin motor di ...",
+        "answer": "pom bensin",
+        "distractors": [
+            "halte",
+            "sekolah"
+        ],
+        "hint": "💡 Tips: Stasiun pengisian bahan bakar minyak."
+    },
+    {
+        "id": 408,
+        "category": "Tempat",
+        "sentence": "Bayu melihat koleksi benda kuno bersejarah di ...",
+        "answer": "museum",
+        "distractors": [
+            "pasar",
+            "bioskop"
+        ],
+        "hint": "💡 Tips: Gedung tempat pameran benda sejarah."
+    },
+    {
+        "id": 409,
+        "category": "Tempat",
+        "sentence": "Dimas dan teman-teman berolahraga lari di ...",
+        "answer": "lapangan",
+        "distractors": [
+            "kamar",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Tanah lapang luas untuk olahraga."
+    },
+    {
+        "id": 410,
+        "category": "Rasa & Indra",
+        "sentence": "Ayu minum teh manis yang diberi ...",
+        "answer": "gula",
+        "distractors": [
+            "garam",
+            "cabai"
+        ],
+        "hint": "💡 Tips: Bumbu pemanis dari tebu."
+    },
+    {
+        "id": 411,
+        "category": "Rasa & Indra",
+        "sentence": "Dewi mencicipi buah mangga manis yang sudah ...",
+        "answer": "masak",
+        "distractors": [
+            "mentah",
+            "busuk"
+        ],
+        "hint": "💡 Tips: Kondisi buah yang matang sempurna."
+    },
+    {
+        "id": 412,
+        "category": "Rasa & Indra",
+        "sentence": "Keringat menetes saat Budi merasa ...",
+        "answer": "gerah",
+        "distractors": [
+            "kedinginan",
+            "beku"
+        ],
+        "hint": "💡 Tips: Kondisi suhu tubuh terasa panas."
+    },
+    {
+        "id": 413,
+        "category": "Rasa & Indra",
+        "sentence": "Siti memakai selimut tebal saat malam terasa ...",
+        "answer": "dingin",
+        "distractors": [
+            "terik",
+            "panas"
+        ],
+        "hint": "💡 Tips: Suhu sejuk rendah di malam hari."
+    },
+    {
+        "id": 414,
+        "category": "Rasa & Indra",
+        "sentence": "Parfum yang disemprotkan Rian beraroma sangat ...",
+        "answer": "harum",
+        "distractors": [
+            "pahit",
+            "asam"
+        ],
+        "hint": "💡 Tips: Bau wangi semerbak menyenangkan."
+    },
+    {
+        "id": 415,
+        "category": "Rasa & Indra",
+        "sentence": "Obat penurun demam yang diminum Gita terasa ...",
+        "answer": "pahit",
+        "distractors": [
+            "manis",
+            "asin"
+        ],
+        "hint": "💡 Tips: Rasa khas obat agar cepat sembuh."
+    },
+    {
+        "id": 416,
+        "category": "Rasa & Indra",
+        "sentence": "Kiki menyantap keripik kentang yang gurih dan ...",
+        "answer": "asin",
+        "distractors": [
+            "asam",
+            "pahit"
+        ],
+        "hint": "💡 Tips: Rasa bumbu gurih bergaram."
+    },
+    {
+        "id": 417,
+        "category": "Rasa & Indra",
+        "sentence": "Lani memakai kacamata untuk membantu penglihatan ...",
+        "answer": "mata",
+        "distractors": [
+            "telinga",
+            "hidung"
+        ],
+        "hint": "💡 Tips: Organ penglihat."
+    },
+    {
+        "id": 418,
+        "category": "Rasa & Indra",
+        "sentence": "Edo mendengarkan nasehat ibu dengan kedua ...",
+        "answer": "telinga",
+        "distractors": [
+            "mata",
+            "tangan"
+        ],
+        "hint": "💡 Tips: Organ pendengar."
+    },
+    {
+        "id": 419,
+        "category": "Rasa & Indra",
+        "sentence": "Dayu bernapas menghirup oksigen melalui ...",
+        "answer": "hidung",
+        "distractors": [
+            "telinga",
+            "dagu"
+        ],
+        "hint": "💡 Tips: Organ pernapasan utama."
+    },
+    {
+        "id": 420,
+        "category": "Makanan & Buah",
+        "sentence": "Ibu membelikan Beni buah pisang berwarna ...",
+        "answer": "kuning",
+        "distractors": [
+            "biru",
+            "hitam"
+        ],
+        "hint": "💡 Tips: Warna pisang matang."
+    },
+    {
+        "id": 421,
+        "category": "Makanan & Buah",
+        "sentence": "Udin suka makan buah apel merah yang manis dan ...",
+        "answer": "segar",
+        "distractors": [
+            "layu",
+            "busuk"
+        ],
+        "hint": "💡 Tips: Kondisi buah baru dipetik."
+    },
+    {
+        "id": 422,
+        "category": "Makanan & Buah",
+        "sentence": "Sayur kangkung dan bayam memiliki daun berwarna ...",
+        "answer": "hijau",
+        "distractors": [
+            "ungu",
+            "merah"
+        ],
+        "hint": "💡 Tips: Warna dedaunan segar."
+    },
+    {
+        "id": 423,
+        "category": "Makanan & Buah",
+        "sentence": "Rani membantu ayah memetik buah mangga dari ...",
+        "answer": "pohon",
+        "distractors": [
+            "tanah",
+            "atap"
+        ],
+        "hint": "💡 Tips: Tumbuhan berkayu tempat mangga berbuah."
+    },
+    {
+        "id": 424,
+        "category": "Makanan & Buah",
+        "sentence": "Biji jagung yang dibakar terasa manis dan ...",
+        "answer": "gurih",
+        "distractors": [
+            "pahit",
+            "asam"
+        ],
+        "hint": "💡 Tips: Rasa lezat jagung bakar."
+    },
+    {
+        "id": 425,
+        "category": "Makanan & Buah",
+        "sentence": "Dimas minum jus jeruk yang banyak mengandung vitamin ...",
+        "answer": "C",
+        "distractors": [
+            "K",
+            "besi"
+        ],
+        "hint": "💡 Tips: Vitamin penting untuk kekebalan tubuh."
+    },
+    {
+        "id": 426,
+        "category": "Makanan & Buah",
+        "sentence": "Nasi putih dibuat dari bulir beras yang ...",
+        "answer": "dimasak",
+        "distractors": [
+            "dibuang",
+            "ditanam"
+        ],
+        "hint": "💡 Tips: Proses mengolah beras menjadi nasi."
+    },
+    {
+        "id": 427,
+        "category": "Makanan & Buah",
+        "sentence": "Dewi memotong buah semangka menggunakan ...",
+        "answer": "pisau",
+        "distractors": [
+            "sendok",
+            "garpu"
+        ],
+        "hint": "💡 Tips: Alat dapur tajam pemotong buah."
+    },
+    {
+        "id": 428,
+        "category": "Makanan & Buah",
+        "sentence": "Bunga mawar memiliki batang yang berduri ...",
+        "answer": "tajam",
+        "distractors": [
+            "tumpul",
+            "halus"
+        ],
+        "hint": "💡 Tips: Ciri fisik duri pelindung mawar."
+    },
+    {
+        "id": 429,
+        "category": "Makanan & Buah",
+        "sentence": "Siti menyiram tanaman setiap pagi agar tidak ...",
+        "answer": "layu",
+        "distractors": [
+            "tumbuh",
+            "mekar"
+        ],
+        "hint": "💡 Tips: Kondisi tanaman kekurangan air."
+    },
+    {
+        "id": 430,
+        "category": "Hewan",
+        "sentence": "Kucing peliharaan Rian memiliki bulu yang sangat ...",
+        "answer": "halus",
+        "distractors": [
+            "tajam",
+            "keras"
+        ],
+        "hint": "💡 Tips: Tekstur lembut bulu kucing sehat."
+    },
+    {
+        "id": 431,
+        "category": "Hewan",
+        "sentence": "Anjing peliharaan menjaga rumah dengan cara ...",
+        "answer": "menggonggong",
+        "distractors": [
+            "mengeong",
+            "berkokok"
+        ],
+        "hint": "💡 Tips: Suara khas anjing siaga."
+    },
+    {
+        "id": 432,
+        "category": "Hewan",
+        "sentence": "Burung merpati hinggap di atas dahan ...",
+        "answer": "pohon",
+        "distractors": [
+            "kolam",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Tempat bertengger unggas di alam."
+    },
+    {
+        "id": 433,
+        "category": "Hewan",
+        "sentence": "Ikan mas berenang kencang menggerakkan ...",
+        "answer": "sirip",
+        "distractors": [
+            "kaki",
+            "tangan"
+        ],
+        "hint": "💡 Tips: Alat kemudi renang pada tubuh ikan."
+    },
+    {
+        "id": 434,
+        "category": "Hewan",
+        "sentence": "Kambing memakan rumput hijau di ...",
+        "answer": "padang rumput",
+        "distractors": [
+            "atap rumah",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Hamparan tanah berumput luas."
+    },
+    {
+        "id": 435,
+        "category": "Hewan",
+        "sentence": "Kelinci bergerak lincah dengan cara ...",
+        "answer": "melompat",
+        "distractors": [
+            "merayap",
+            "terbang"
+        ],
+        "hint": "💡 Tips: Gerak khas kaki panjang kelinci."
+    },
+    {
+        "id": 436,
+        "category": "Hewan",
+        "sentence": "Ayam betina mengerami telurnya di dalam ...",
+        "answer": "sarang",
+        "distractors": [
+            "kolam",
+            "lemari"
+        ],
+        "hint": "💡 Tips: Tempat aman ayam bertelur."
+    },
+    {
+        "id": 437,
+        "category": "Hewan",
+        "sentence": "Bebek berjalan beriringan menuju ke ...",
+        "answer": "sungai",
+        "distractors": [
+            "puncak",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Tempat air bebek mencari makan."
+    },
+    {
+        "id": 438,
+        "category": "Hewan",
+        "sentence": "Kupu-kupu hinggap menghisap nektar manis pada ...",
+        "answer": "bunga",
+        "distractors": [
+            "batu",
+            "genteng"
+        ],
+        "hint": "💡 Tips: Bagian tanaman penghasil madu."
+    },
+    {
+        "id": 439,
+        "category": "Hewan",
+        "sentence": "Semut bekerja sama mengangkut remah makanan ke ...",
+        "answer": "sarang",
+        "distractors": [
+            "kolam",
+            "laut"
+        ],
+        "hint": "💡 Tips: Tempat tinggal koloni semut."
+    },
+    {
+        "id": 440,
+        "category": "Benda & Alat",
+        "sentence": "Bayu meraut pensil yang tumpul menggunakan ...",
+        "answer": "rautan",
+        "distractors": [
+            "penghapus",
+            "penggaris"
+        ],
+        "hint": "💡 Tips: Alat penajam ujung pensil."
+    },
+    {
+        "id": 441,
+        "category": "Benda & Alat",
+        "sentence": "Dimas mengikat tali sepatu agar tidak ...",
+        "answer": "lepas",
+        "distractors": [
+            "bersih",
+            "kencang"
+        ],
+        "hint": "💡 Tips: Kondisi tali sepatu longgar."
+    },
+    {
+        "id": 442,
+        "category": "Benda & Alat",
+        "sentence": "Ayu mengenakan seragam sekolah yang sudah ...",
+        "answer": "disetrika",
+        "distractors": [
+            "dibuang",
+            "dirobek"
+        ],
+        "hint": "💡 Tips: Pakaian rapi tanpa kusut."
+    },
+    {
+        "id": 443,
+        "category": "Benda & Alat",
+        "sentence": "Dewi memakai jam tangan di pergelangan ...",
+        "answer": "tangan",
+        "distractors": [
+            "kaki",
+            "leher"
+        ],
+        "hint": "💡 Tips: Tempat memakai arloji penunjuk waktu."
+    },
+    {
+        "id": 444,
+        "category": "Benda & Alat",
+        "sentence": "Lampu belajar dinyalakan agar meja terasa ...",
+        "answer": "terang",
+        "distractors": [
+            "gelap",
+            "redup"
+        ],
+        "hint": "💡 Tips: Kondisi pencahayaan cukup untuk membaca."
+    },
+    {
+        "id": 445,
+        "category": "Benda & Alat",
+        "sentence": "Siti mengeringkan badan basah sehabis mandi memakai ...",
+        "answer": "handuk",
+        "distractors": [
+            "selimut",
+            "kertas"
+        ],
+        "hint": "💡 Tips: Kain katun penyerap air."
+    },
+    {
+        "id": 446,
+        "category": "Benda & Alat",
+        "sentence": "Rian memakai sabun wangi untuk membersihkan ...",
+        "answer": "badan",
+        "distractors": [
+            "sepatu",
+            "tas"
+        ],
+        "hint": "💡 Tips: Menjaga kebersihan tubuh saat mandi."
+    },
+    {
+        "id": 447,
+        "category": "Benda & Alat",
+        "sentence": "Gita menyisir rambut di depan ...",
+        "answer": "cermin",
+        "distractors": [
+            "pintu",
+            "jendela"
+        ],
+        "hint": "💡 Tips: Kaca pantul bayangan wajah."
+    },
+    {
+        "id": 448,
+        "category": "Benda & Alat",
+        "sentence": "Kiki membuka jendela kamar agar udara segar bisa ...",
+        "answer": "masuk",
+        "distractors": [
+            "hilang",
+            "habis"
+        ],
+        "hint": "💡 Tips: Sirkulasi udara ruangan."
+    },
+    {
+        "id": 449,
+        "category": "Benda & Alat",
+        "sentence": "Lani mengunci pintu rumah menggunakan ...",
+        "answer": "kunci",
+        "distractors": [
+            "pensil",
+            "sendok"
+        ],
+        "hint": "💡 Tips: Alat pengaman rumah."
+    },
+    {
+        "id": 450,
+        "category": "Profesi",
+        "sentence": "Guru mengajari Edo membaca dan ...",
+        "answer": "menulis",
+        "distractors": [
+            "berkelahi",
+            "berteriak"
+        ],
+        "hint": "💡 Tips: Keterampilan dasar literasi anak."
+    },
+    {
+        "id": 451,
+        "category": "Profesi",
+        "sentence": "Dokter gigi memeriksa kesehatan gigi Dayu yang ...",
+        "answer": "bersih",
+        "distractors": [
+            "patah",
+            "kotor"
+        ],
+        "hint": "💡 Tips: Kondisi gigi sehat terawat."
+    },
+    {
+        "id": 452,
+        "category": "Profesi",
+        "sentence": "Tukang pos mengantarkan surat penting ke ...",
+        "answer": "alamat",
+        "distractors": [
+            "hutan",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Tujuan lokasi pengiriman."
+    },
+    {
+        "id": 453,
+        "category": "Profesi",
+        "sentence": "Petugas kebersihan menyapu jalanan agar selalu ...",
+        "answer": "bersih",
+        "distractors": [
+            "kotor",
+            "kumal"
+        ],
+        "hint": "💡 Tips: Bebas dari tumpukan sampah."
+    },
+    {
+        "id": 454,
+        "category": "Profesi",
+        "sentence": "Polisi lalu lintas membantu Sari menyeberang di ...",
+        "answer": "zebra cross",
+        "distractors": [
+            "tengah jalan",
+            "selokan"
+        ],
+        "hint": "💡 Tips: Garis penyeberangan pejalan kaki."
+    },
+    {
+        "id": 455,
+        "category": "Sifat & Sikap",
+        "sentence": "Rani selalu menyapa tetangga dengan senyum yang ...",
+        "answer": "ramah",
+        "distractors": [
+            "cemberut",
+            "marah"
+        ],
+        "hint": "💡 Tips: Sikap hangat bersahabat."
+    },
+    {
+        "id": 456,
+        "category": "Sifat & Sikap",
+        "sentence": "Anak yang jujur tidak pernah berkata ...",
+        "answer": "dusta",
+        "distractors": [
+            "benar",
+            "baik"
+        ],
+        "hint": "💡 Tips: Lawan dari kata jujur."
+    },
+    {
+        "id": 457,
+        "category": "Sifat & Sikap",
+        "sentence": "Dimas membantu adik membereskan mainan yang ...",
+        "answer": "berantakan",
+        "distractors": [
+            "rapi",
+            "bersih"
+        ],
+        "hint": "💡 Tips: Kondisi mainan tercecer di lantai."
+    },
+    {
+        "id": 458,
+        "category": "Sifat & Sikap",
+        "sentence": "Menjaga kesehatan tubuh membuat kita terhindar dari ...",
+        "answer": "penyakit",
+        "distractors": [
+            "kebahagiaan",
+            "kepandaian"
+        ],
+        "hint": "💡 Tips: Gangguan kesehatan fisik."
+    },
+    {
+        "id": 459,
+        "category": "Sifat & Sikap",
+        "sentence": "Dewi datang ke sekolah tepat waktu dan tidak pernah ...",
+        "answer": "terlambat",
+        "distractors": [
+            "rajin",
+            "awal"
+        ],
+        "hint": "💡 Tips: Disiplin mematuhi jam masuk."
+    },
+    {
+        "id": 460,
+        "category": "Sifat & Sikap",
+        "sentence": "Membaca buku setiap hari membuat wawasan menjadi ...",
+        "answer": "luas",
+        "distractors": [
+            "sempit",
+            "sedikit"
+        ],
+        "hint": "💡 Tips: Memiliki banyak pengetahuan."
+    },
+    {
+        "id": 461,
+        "category": "Sifat & Sikap",
+        "sentence": "Makanan yang tertutup tudung saji aman dari hinggapan ...",
+        "answer": "lalat",
+        "distractors": [
+            "kucing",
+            "burung"
+        ],
+        "hint": "💡 Tips: Serangga pembawa kuman pada makanan."
+    },
+    {
+        "id": 462,
+        "category": "Sifat & Sikap",
+        "sentence": "Rian membuang bungkus snack di tempat ...",
+        "answer": "sampah",
+        "distractors": [
+            "tidur",
+            "makan"
+        ],
+        "hint": "💡 Tips: Wadah penampung kotoran."
+    },
+    {
+        "id": 463,
+        "category": "Sifat & Sikap",
+        "sentence": "Air sungai yang jernih belum tercemar oleh ...",
+        "answer": "limbah",
+        "distractors": [
+            "ikan",
+            "batu"
+        ],
+        "hint": "💡 Tips: Zat pengotor pencemar alam."
+    },
+    {
+        "id": 464,
+        "category": "Sifat & Sikap",
+        "sentence": "Kiki menghormati bapak dan ibu guru di ...",
+        "answer": "sekolah",
+        "distractors": [
+            "pasar",
+            "bengkel"
+        ],
+        "hint": "💡 Tips: Lembaga pendidikan formal."
+    },
+    {
+        "id": 465,
+        "category": "Tempat",
+        "sentence": "Lani membaca buku cerita bergambar di ...",
+        "answer": "perpustakaan",
+        "distractors": [
+            "lapangan",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Ruang baca buku yang tenang dan tertib."
+    },
+    {
+        "id": 466,
+        "category": "Tempat",
+        "sentence": "Ayah mengajak Edo salat berjemaah di ...",
+        "answer": "masjid",
+        "distractors": [
+            "kantor",
+            "pasar"
+        ],
+        "hint": "💡 Tips: Tempat ibadah umat Islam."
+    },
+    {
+        "id": 467,
+        "category": "Tempat",
+        "sentence": "Dayu berenang dengan pelampung di ...",
+        "answer": "kolam renang",
+        "distractors": [
+            "jalan raya",
+            "halaman"
+        ],
+        "hint": "💡 Tips: Tempat berenang dan bermain air."
+    },
+    {
+        "id": 468,
+        "category": "Tempat",
+        "sentence": "Paman Beni menyiram tanaman bunga di ...",
+        "answer": "taman",
+        "distractors": [
+            "garasi",
+            "kamar mandi"
+        ],
+        "hint": "💡 Tips: Halaman tempat tumbuhnya aneka bunga."
+    },
+    {
+        "id": 469,
+        "category": "Tempat",
+        "sentence": "Udin mencuci piring kotor di ...",
+        "answer": "wastafel",
+        "distractors": [
+            "kasur",
+            "lemari"
+        ],
+        "hint": "💡 Tips: Tempat mencuci piring dengan air mengalir."
+    },
+    {
+        "id": 470,
+        "category": "Tempat",
+        "sentence": "Ibu Sari membeli roti tawar di ...",
+        "answer": "toko roti",
+        "distractors": [
+            "bengkel",
+            "apotek"
+        ],
+        "hint": "💡 Tips: Tempat menjual kue dan aneka roti."
+    },
+    {
+        "id": 471,
+        "category": "Tempat",
+        "sentence": "Rani menunggu bus antarkota di ...",
+        "answer": "terminal",
+        "distractors": [
+            "bandara",
+            "pelabuhan"
+        ],
+        "hint": "💡 Tips: Pangkalan tempat bus berkumpul."
+    },
+    {
+        "id": 472,
+        "category": "Tempat",
+        "sentence": "Ayah Bayu mengisi bensin motor di ...",
+        "answer": "pom bensin",
+        "distractors": [
+            "halte",
+            "sekolah"
+        ],
+        "hint": "💡 Tips: Stasiun pengisian bahan bakar minyak."
+    },
+    {
+        "id": 473,
+        "category": "Tempat",
+        "sentence": "Dimas melihat koleksi benda kuno bersejarah di ...",
+        "answer": "museum",
+        "distractors": [
+            "pasar",
+            "bioskop"
+        ],
+        "hint": "💡 Tips: Gedung tempat pameran benda sejarah."
+    },
+    {
+        "id": 474,
+        "category": "Tempat",
+        "sentence": "Ayu dan teman-teman berolahraga lari di ...",
+        "answer": "lapangan",
+        "distractors": [
+            "kamar",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Tanah lapang luas untuk olahraga."
+    },
+    {
+        "id": 475,
+        "category": "Rasa & Indra",
+        "sentence": "Dewi minum teh manis yang diberi ...",
+        "answer": "gula",
+        "distractors": [
+            "garam",
+            "cabai"
+        ],
+        "hint": "💡 Tips: Bumbu pemanis dari tebu."
+    },
+    {
+        "id": 476,
+        "category": "Rasa & Indra",
+        "sentence": "Budi mencicipi buah mangga manis yang sudah ...",
+        "answer": "masak",
+        "distractors": [
+            "mentah",
+            "busuk"
+        ],
+        "hint": "💡 Tips: Kondisi buah yang matang sempurna."
+    },
+    {
+        "id": 477,
+        "category": "Rasa & Indra",
+        "sentence": "Keringat menetes saat Siti merasa ...",
+        "answer": "gerah",
+        "distractors": [
+            "kedinginan",
+            "beku"
+        ],
+        "hint": "💡 Tips: Kondisi suhu tubuh terasa panas."
+    },
+    {
+        "id": 478,
+        "category": "Rasa & Indra",
+        "sentence": "Rian memakai selimut tebal saat malam terasa ...",
+        "answer": "dingin",
+        "distractors": [
+            "terik",
+            "panas"
+        ],
+        "hint": "💡 Tips: Suhu sejuk rendah di malam hari."
+    },
+    {
+        "id": 479,
+        "category": "Rasa & Indra",
+        "sentence": "Parfum yang disemprotkan Gita beraroma sangat ...",
+        "answer": "harum",
+        "distractors": [
+            "pahit",
+            "asam"
+        ],
+        "hint": "💡 Tips: Bau wangi semerbak menyenangkan."
+    },
+    {
+        "id": 480,
+        "category": "Rasa & Indra",
+        "sentence": "Obat penurun demam yang diminum Kiki terasa ...",
+        "answer": "pahit",
+        "distractors": [
+            "manis",
+            "asin"
+        ],
+        "hint": "💡 Tips: Rasa khas obat agar cepat sembuh."
+    },
+    {
+        "id": 481,
+        "category": "Rasa & Indra",
+        "sentence": "Lani menyantap keripik kentang yang gurih dan ...",
+        "answer": "asin",
+        "distractors": [
+            "asam",
+            "pahit"
+        ],
+        "hint": "💡 Tips: Rasa bumbu gurih bergaram."
+    },
+    {
+        "id": 482,
+        "category": "Rasa & Indra",
+        "sentence": "Edo memakai kacamata untuk membantu penglihatan ...",
+        "answer": "mata",
+        "distractors": [
+            "telinga",
+            "hidung"
+        ],
+        "hint": "💡 Tips: Organ penglihat."
+    },
+    {
+        "id": 483,
+        "category": "Rasa & Indra",
+        "sentence": "Dayu mendengarkan nasehat ibu dengan kedua ...",
+        "answer": "telinga",
+        "distractors": [
+            "mata",
+            "tangan"
+        ],
+        "hint": "💡 Tips: Organ pendengar."
+    },
+    {
+        "id": 484,
+        "category": "Rasa & Indra",
+        "sentence": "Beni bernapas menghirup oksigen melalui ...",
+        "answer": "hidung",
+        "distractors": [
+            "telinga",
+            "dagu"
+        ],
+        "hint": "💡 Tips: Organ pernapasan utama."
+    },
+    {
+        "id": 485,
+        "category": "Makanan & Buah",
+        "sentence": "Ibu membelikan Udin buah pisang berwarna ...",
+        "answer": "kuning",
+        "distractors": [
+            "biru",
+            "hitam"
+        ],
+        "hint": "💡 Tips: Warna pisang matang."
+    },
+    {
+        "id": 486,
+        "category": "Makanan & Buah",
+        "sentence": "Sari suka makan buah apel merah yang manis dan ...",
+        "answer": "segar",
+        "distractors": [
+            "layu",
+            "busuk"
+        ],
+        "hint": "💡 Tips: Kondisi buah baru dipetik."
+    },
+    {
+        "id": 487,
+        "category": "Makanan & Buah",
+        "sentence": "Sayur kangkung dan bayam memiliki daun berwarna ...",
+        "answer": "hijau",
+        "distractors": [
+            "ungu",
+            "merah"
+        ],
+        "hint": "💡 Tips: Warna dedaunan segar."
+    },
+    {
+        "id": 488,
+        "category": "Makanan & Buah",
+        "sentence": "Bayu membantu ayah memetik buah mangga dari ...",
+        "answer": "pohon",
+        "distractors": [
+            "tanah",
+            "atap"
+        ],
+        "hint": "💡 Tips: Tumbuhan berkayu tempat mangga berbuah."
+    },
+    {
+        "id": 489,
+        "category": "Makanan & Buah",
+        "sentence": "Biji jagung yang dibakar terasa manis dan ...",
+        "answer": "gurih",
+        "distractors": [
+            "pahit",
+            "asam"
+        ],
+        "hint": "💡 Tips: Rasa lezat jagung bakar."
+    },
+    {
+        "id": 490,
+        "category": "Makanan & Buah",
+        "sentence": "Ayu minum jus jeruk yang banyak mengandung vitamin ...",
+        "answer": "C",
+        "distractors": [
+            "K",
+            "besi"
+        ],
+        "hint": "💡 Tips: Vitamin penting untuk kekebalan tubuh."
+    },
+    {
+        "id": 491,
+        "category": "Makanan & Buah",
+        "sentence": "Nasi putih dibuat dari bulir beras yang ...",
+        "answer": "dimasak",
+        "distractors": [
+            "dibuang",
+            "ditanam"
+        ],
+        "hint": "💡 Tips: Proses mengolah beras menjadi nasi."
+    },
+    {
+        "id": 492,
+        "category": "Makanan & Buah",
+        "sentence": "Budi memotong buah semangka menggunakan ...",
+        "answer": "pisau",
+        "distractors": [
+            "sendok",
+            "garpu"
+        ],
+        "hint": "💡 Tips: Alat dapur tajam pemotong buah."
+    },
+    {
+        "id": 493,
+        "category": "Makanan & Buah",
+        "sentence": "Bunga mawar memiliki batang yang berduri ...",
+        "answer": "tajam",
+        "distractors": [
+            "tumpul",
+            "halus"
+        ],
+        "hint": "💡 Tips: Ciri fisik duri pelindung mawar."
+    },
+    {
+        "id": 494,
+        "category": "Makanan & Buah",
+        "sentence": "Rian menyiram tanaman setiap pagi agar tidak ...",
+        "answer": "layu",
+        "distractors": [
+            "tumbuh",
+            "mekar"
+        ],
+        "hint": "💡 Tips: Kondisi tanaman kekurangan air."
+    },
+    {
+        "id": 495,
+        "category": "Hewan",
+        "sentence": "Kucing peliharaan Gita memiliki bulu yang sangat ...",
+        "answer": "halus",
+        "distractors": [
+            "tajam",
+            "keras"
+        ],
+        "hint": "💡 Tips: Tekstur lembut bulu kucing sehat."
+    },
+    {
+        "id": 496,
+        "category": "Hewan",
+        "sentence": "Anjing peliharaan menjaga rumah dengan cara ...",
+        "answer": "menggonggong",
+        "distractors": [
+            "mengeong",
+            "berkokok"
+        ],
+        "hint": "💡 Tips: Suara khas anjing siaga."
+    },
+    {
+        "id": 497,
+        "category": "Hewan",
+        "sentence": "Burung merpati hinggap di atas dahan ...",
+        "answer": "pohon",
+        "distractors": [
+            "kolam",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Tempat bertengger unggas di alam."
+    },
+    {
+        "id": 498,
+        "category": "Hewan",
+        "sentence": "Ikan mas berenang kencang menggerakkan ...",
+        "answer": "sirip",
+        "distractors": [
+            "kaki",
+            "tangan"
+        ],
+        "hint": "💡 Tips: Alat kemudi renang pada tubuh ikan."
+    },
+    {
+        "id": 499,
+        "category": "Hewan",
+        "sentence": "Kambing memakan rumput hijau di ...",
+        "answer": "padang rumput",
+        "distractors": [
+            "atap rumah",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Hamparan tanah berumput luas."
+    },
+    {
+        "id": 500,
+        "category": "Hewan",
+        "sentence": "Kelinci bergerak lincah dengan cara ...",
+        "answer": "melompat",
+        "distractors": [
+            "merayap",
+            "terbang"
+        ],
+        "hint": "💡 Tips: Gerak khas kaki panjang kelinci."
+    },
+    {
+        "id": 501,
+        "category": "Hewan",
+        "sentence": "Ayam betina mengerami telurnya di dalam ...",
+        "answer": "sarang",
+        "distractors": [
+            "kolam",
+            "lemari"
+        ],
+        "hint": "💡 Tips: Tempat aman ayam bertelur."
+    },
+    {
+        "id": 502,
+        "category": "Hewan",
+        "sentence": "Bebek berjalan beriringan menuju ke ...",
+        "answer": "sungai",
+        "distractors": [
+            "puncak",
+            "dapur"
+        ],
+        "hint": "💡 Tips: Tempat air bebek mencari makan."
+    },
+    {
+        "id": 503,
+        "category": "Hewan",
+        "sentence": "Kupu-kupu hinggap menghisap nektar manis pada ...",
+        "answer": "bunga",
+        "distractors": [
+            "batu",
+            "genteng"
+        ],
+        "hint": "💡 Tips: Bagian tanaman penghasil madu."
+    },
+    {
+        "id": 504,
+        "category": "Hewan",
+        "sentence": "Semut bekerja sama mengangkut remah makanan ke ...",
+        "answer": "sarang",
+        "distractors": [
+            "kolam",
+            "laut"
+        ],
+        "hint": "💡 Tips: Tempat tinggal koloni semut."
+    },
+    {
+        "id": 505,
+        "category": "Benda & Alat",
+        "sentence": "Dimas meraut pensil yang tumpul menggunakan ...",
+        "answer": "rautan",
+        "distractors": [
+            "penghapus",
+            "penggaris"
+        ],
+        "hint": "💡 Tips: Alat penajam ujung pensil."
+    },
+    {
+        "id": 506,
+        "category": "Benda & Alat",
+        "sentence": "Ayu mengikat tali sepatu agar tidak ...",
+        "answer": "lepas",
+        "distractors": [
+            "bersih",
+            "kencang"
+        ],
+        "hint": "💡 Tips: Kondisi tali sepatu longgar."
+    },
+    {
+        "id": 507,
+        "category": "Benda & Alat",
+        "sentence": "Dewi mengenakan seragam sekolah yang sudah ...",
+        "answer": "disetrika",
+        "distractors": [
+            "dibuang",
+            "dirobek"
+        ],
+        "hint": "💡 Tips: Pakaian rapi tanpa kusut."
+    },
+    {
+        "id": 508,
+        "category": "Benda & Alat",
+        "sentence": "Budi memakai jam tangan di pergelangan ...",
+        "answer": "tangan",
+        "distractors": [
+            "kaki",
+            "leher"
+        ],
+        "hint": "💡 Tips: Tempat memakai arloji penunjuk waktu."
+    },
+    {
+        "id": 509,
+        "category": "Benda & Alat",
+        "sentence": "Lampu belajar dinyalakan agar meja terasa ...",
+        "answer": "terang",
+        "distractors": [
+            "gelap",
+            "redup"
+        ],
+        "hint": "💡 Tips: Kondisi pencahayaan cukup untuk membaca."
+    },
+    {
+        "id": 510,
+        "category": "Benda & Alat",
+        "sentence": "Rian mengeringkan badan basah sehabis mandi memakai ...",
+        "answer": "handuk",
+        "distractors": [
+            "selimut",
+            "kertas"
+        ],
+        "hint": "💡 Tips: Kain katun penyerap air."
+    },
+    {
+        "id": 511,
+        "category": "Benda & Alat",
+        "sentence": "Gita memakai sabun wangi untuk membersihkan ...",
+        "answer": "badan",
+        "distractors": [
+            "sepatu",
+            "tas"
+        ],
+        "hint": "💡 Tips: Menjaga kebersihan tubuh saat mandi."
+    },
+    {
+        "id": 512,
+        "category": "Benda & Alat",
+        "sentence": "Kiki menyisir rambut di depan ...",
+        "answer": "cermin",
+        "distractors": [
+            "pintu",
+            "jendela"
+        ],
+        "hint": "💡 Tips: Kaca pantul bayangan wajah."
+    },
+    {
+        "id": 513,
+        "category": "Benda & Alat",
+        "sentence": "Lani membuka jendela kamar agar udara segar bisa ...",
+        "answer": "masuk",
+        "distractors": [
+            "hilang",
+            "habis"
+        ],
+        "hint": "💡 Tips: Sirkulasi udara ruangan."
+    },
+    {
+        "id": 514,
+        "category": "Benda & Alat",
+        "sentence": "Edo mengunci pintu rumah menggunakan ...",
+        "answer": "kunci",
+        "distractors": [
+            "pensil",
+            "sendok"
+        ],
+        "hint": "💡 Tips: Alat pengaman rumah."
+    },
+    {
+        "id": 515,
+        "category": "Profesi",
+        "sentence": "Guru mengajari Dayu membaca dan ...",
+        "answer": "menulis",
+        "distractors": [
+            "berkelahi",
+            "berteriak"
+        ],
+        "hint": "💡 Tips: Keterampilan dasar literasi anak."
+    },
+    {
+        "id": 516,
+        "category": "Profesi",
+        "sentence": "Dokter gigi memeriksa kesehatan gigi Beni yang ...",
+        "answer": "bersih",
+        "distractors": [
+            "patah",
+            "kotor"
+        ],
+        "hint": "💡 Tips: Kondisi gigi sehat terawat."
+    },
+    {
+        "id": 517,
+        "category": "Profesi",
+        "sentence": "Tukang pos mengantarkan surat penting ke ...",
+        "answer": "alamat",
+        "distractors": [
+            "hutan",
+            "sungai"
+        ],
+        "hint": "💡 Tips: Tujuan lokasi pengiriman."
+    },
+    {
+        "id": 518,
+        "category": "Profesi",
+        "sentence": "Petugas kebersihan menyapu jalanan agar selalu ...",
+        "answer": "bersih",
+        "distractors": [
+            "kotor",
+            "kumal"
+        ],
+        "hint": "💡 Tips: Bebas dari tumpukan sampah."
+    },
+    {
+        "id": 519,
+        "category": "Profesi",
+        "sentence": "Polisi lalu lintas membantu Rani menyeberang di ...",
+        "answer": "zebra cross",
+        "distractors": [
+            "tengah jalan",
+            "selokan"
+        ],
+        "hint": "💡 Tips: Garis penyeberangan pejalan kaki."
+    },
+    {
+        "id": 520,
+        "category": "Sifat & Sikap",
+        "sentence": "Bayu selalu menyapa tetangga dengan senyum yang ...",
+        "answer": "ramah",
+        "distractors": [
+            "cemberut",
+            "marah"
+        ],
+        "hint": "💡 Tips: Sikap hangat bersahabat."
     }
 ];

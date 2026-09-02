@@ -46,11 +46,10 @@
         <header class="app-header">
             <div class="header-top-bar">
                 <div class="header-left-bar">
-                    <select id="game-mode-select" class="mode-select" aria-label="Pilih Mode Permainan">
-                        <option value="susun">📐 Hitung Susun</option>
-                        <option value="cerita">📖 Soal Cerita</option>
-                        <option value="gambar">🎨 Hitung Bergambar</option>
-                    </select>
+                    <button type="button" id="btn-change-mode" class="btn-change-mode" title="Pilih Mode atau Jumlah Soal">
+                        <span class="mode-btn-icon">🎯</span>
+                        <span class="mode-btn-text">Ganti Mode</span>
+                    </button>
                 </div>
                 <div class="header-right-bar">
                     <div id="timer-badge" class="timer-badge">⏱️ 00:00</div>
@@ -63,7 +62,7 @@
                 <span class="logo-icon">✏️</span>
                 <h1 class="app-title">Super Kid Math <span>Adventure</span></h1>
             </div>
-            <p class="app-subtitle">Petualangan Matematika Seru Tambah & Kurang!</p>
+            <p class="app-subtitle">Petualangan Matematika Seru Tambah, Kurang, Kali & Bagi!</p>
         </header>
 
         <!-- Top Progress Tracker Bar (Visible when scrolled to top) -->
@@ -120,38 +119,74 @@
 
     <!-- Start Game Modal Overlay -->
     <div id="start-modal" class="end-screen-overlay hidden">
-        <div class="celebration-card">
+        <div class="celebration-card start-modal-card">
             <div class="celebration-badge">🚀</div>
             <h2 class="celebration-title">Siap Bertualang? 🎉</h2>
-            <p class="celebration-subtitle">Pilih jenis petualangan matematika yang kamu suka!</p>
+            <p class="celebration-subtitle">Pilih jenis petualangan matematika dan jumlah soal yang kamu suka!</p>
 
             <div class="mode-selection-cards">
+                <!-- Baris 1: Susun & Cerita -->
                 <button type="button" class="mode-choice-btn active" data-mode="susun">
                     <span class="mode-icon">📐</span>
                     <div class="mode-info">
                         <span class="mode-title">Hitung Susun</span>
-                        <span class="mode-desc">Hitung tambah & kurang susun ke bawah</span>
+                        <span class="mode-desc">Tambah & kurang susun ke bawah</span>
                     </div>
                 </button>
                 <button type="button" class="mode-choice-btn" data-mode="cerita">
                     <span class="mode-icon">📖</span>
                     <div class="mode-info">
                         <span class="mode-title">Soal Cerita</span>
-                        <span class="mode-desc">Soal cerita seru pilihan ganda A, B, C</span>
+                        <span class="mode-desc">Pilihan ganda A, B, C seru</span>
                     </div>
                 </button>
+
+                <!-- Baris 2: Pembagian & Perkalian -->
+                <button type="button" class="mode-choice-btn" data-mode="pembagian">
+                    <span class="mode-icon">➗</span>
+                    <div class="mode-info">
+                        <span class="mode-title">Pembagian</span>
+                        <span class="mode-desc">Pembagian bulat tanpa sisa</span>
+                    </div>
+                </button>
+                <button type="button" class="mode-choice-btn" data-mode="perkalian">
+                    <span class="mode-icon">✖️</span>
+                    <div class="mode-info">
+                        <span class="mode-title">Perkalian</span>
+                        <span class="mode-desc">Perkalian dasar & susun ke bawah</span>
+                    </div>
+                </button>
+
+                <!-- Baris 3: Hitung Bergambar & Kosakata -->
                 <button type="button" class="mode-choice-btn" data-mode="gambar">
                     <span class="mode-icon">🎨</span>
                     <div class="mode-info">
                         <span class="mode-title">Hitung Bergambar</span>
-                        <span class="mode-desc">Hitung objek hewan, buah & mainan</span>
+                        <span class="mode-desc">Hitung sentuh objek hewan & buah</span>
+                    </div>
+                </button>
+                <button type="button" class="mode-choice-btn" data-mode="kosakata">
+                    <span class="mode-icon">📚</span>
+                    <div class="mode-info">
+                        <span class="mode-title">Kosakata</span>
+                        <span class="mode-desc">Lengkapi kata & membaca kalimat</span>
                     </div>
                 </button>
             </div>
 
+            <!-- Flexible Question Count Selector -->
+            <div class="question-count-selector">
+                <label class="section-label">🔢 Jumlah Soal:</label>
+                <div class="count-chips">
+                    <button type="button" class="count-chip active" data-count="10">10 Soal</button>
+                    <button type="button" class="count-chip" data-count="15">15 Soal</button>
+                    <button type="button" class="count-chip" data-count="20">20 Soal</button>
+                </div>
+            </div>
+
             <div class="celebration-actions">
                 <button id="btn-start-game" class="btn-restart style-full-width">
-                    <span>🚀 Mulai!</span>
+                    <span>🚀 Mulai Petualangan!</span>
                 </button>
             </div>
         </div>
@@ -178,14 +213,14 @@
     <div id="switch-mode-modal" class="end-screen-overlay hidden">
         <div class="celebration-card">
             <div class="celebration-badge">⚠️</div>
-            <h2 class="celebration-title">Pindah Mode Permainan?</h2>
-            <p class="celebration-subtitle">Progres permainan di mode saat ini akan diulang dari awal. Apakah kamu yakin mau pindah mode?</p>
+            <h2 class="celebration-title">Ganti Mode Permainan?</h2>
+            <p class="celebration-subtitle">Progres petualanganmu saat ini akan diulang dari awal. Apakah kamu mau kembali ke menu utama untuk memilih mode dan jumlah soal?</p>
             <div class="celebration-actions">
                 <button id="btn-confirm-switch" class="btn-restart">
-                    <span>✅ Ya, Pindah!</span>
+                    <span>✅ Ya, Kembali ke Menu</span>
                 </button>
                 <button id="btn-cancel-switch" class="btn-review">
-                    <span>❌ Batal</span>
+                    <span>❌ Lanjut Main</span>
                 </button>
             </div>
         </div>
