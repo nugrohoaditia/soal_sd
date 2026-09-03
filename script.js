@@ -1,8 +1,9 @@
 /* ==========================================================================
    Super Kid Math Adventure - Modular Architecture & High Performance Engine
    Target Audience: Grade 1-3 Elementary School Kids (SD)
-   Features: 6 Distinct Modes (Susun, Cerita, Pembagian, Perkalian, Gambar, Kosakata),
-             Flexible Question Counts (10, 15, 20), Virtual Keypad & Carry Circles
+   Features: 6 Distinct Modes (Susun, Cerita, Perkalian, Pembagian, Gambar, Kosakata),
+             Flexible Question Counts (10, 15, 20), Virtual Keypad & Carry Circles,
+             Turtle to Rabbit Progress Racer Animation & Star Records Badges
    ========================================================================== */
 
 (function () {
@@ -14,6 +15,7 @@
     const CONFIG = {
         DEFAULT_TOTAL_QUESTIONS: 10,
         STORAGE_KEY: 'super_kid_math_session_v11',
+        RECORDS_STORAGE_KEY: 'super_kid_math_records_v1',
         SESSION_TTL_MS: 24 * 60 * 60 * 1000, // 24 Hours
         AUDIO_STORAGE_KEY: 'kid_math_muted'
     };
@@ -159,7 +161,7 @@
     })();
 
     // =========================================================================
-    // 3. STORAGE SYSTEM (Session Persistence & Integrity Validation)
+    // 3. STORAGE SYSTEM (Session Persistence & Records Tracking)
     // =========================================================================
     const StorageSystem = (function () {
         function loadRawStorage() {
@@ -245,16 +247,40 @@
             return (raw && raw.activeMode) ? raw.activeMode : 'susun';
         }
 
+        function loadModeRecords() {
+            try {
+                const raw = localStorage.getItem(CONFIG.RECORDS_STORAGE_KEY);
+                return raw ? JSON.parse(raw) : {};
+            } catch (e) {
+                return {};
+            }
+        }
+
+        function saveModeRecord(mode, stars, scorePercent) {
+            try {
+                const records = loadModeRecords();
+                const existing = records[mode] || { stars: 0, bestScore: 0 };
+                const newStars = Math.max(existing.stars || 0, stars);
+                const newScore = Math.max(existing.bestScore || 0, scorePercent);
+                records[mode] = { stars: newStars, bestScore: newScore };
+                localStorage.setItem(CONFIG.RECORDS_STORAGE_KEY, JSON.stringify(records));
+            } catch (e) {
+                console.warn('Could not save mode record:', e);
+            }
+        }
+
         return {
             saveSession,
             loadSessionForMode,
             clearSessionForMode,
-            getActiveMode
+            getActiveMode,
+            loadModeRecords,
+            saveModeRecord
         };
     })();
 
     // =========================================================================
-    // 4. QUESTION GENERATOR (6 Modes: Susun, Cerita, Pembagian, Perkalian, Gambar, Kosakata)
+    // 4. QUESTION GENERATOR (6 Modes: Susun, Cerita, Perkalian, Pembagian, Gambar, Kosakata)
     // =========================================================================
     const QuestionGenerator = (function () {
         function shuffleArray(arr) {
@@ -465,7 +491,7 @@
                 return {
                     id: idx + 1,
                     difficulty: item.difficulty || 'satuan',
-                    difficultyLabel: item.difficultyLabel || '🎨 Bergambar',
+                    difficultyLabel: item.difficultyLabel || '🎨 Gambar',
                     story: item.story,
                     answer: item.answer,
                     groups: item.groups,
@@ -558,8 +584,31 @@
             }
         }
 
+        function updateModeBadges() {
+            const records = StorageSystem.loadModeRecords();
+            document.querySelectorAll('[data-mode-stars]').forEach(containerEl => {
+                const mode = containerEl.getAttribute('data-mode-stars');
+                const record = records[mode];
+                const earnedStars = (record && record.stars) ? record.stars : 0;
+
+                containerEl.innerHTML = '';
+                for (let i = 1; i <= 3; i++) {
+                    const starSpan = document.createElement('span');
+                    starSpan.className = `star-item-small ${i <= earnedStars ? 'star-gold' : 'star-gray'}`;
+                    starSpan.textContent = '⭐';
+                    containerEl.appendChild(starSpan);
+                }
+
+                if (earnedStars > 0) {
+                    containerEl.title = `Rekor: ${earnedStars} Bintang (${record.bestScore}%)`;
+                } else {
+                    containerEl.title = 'Belum ada rekor bintang';
+                }
+            });
+        }
+
         /**
-         * Render Full Worksheet (6 Modes: susun, cerita, pembagian, perkalian, gambar, kosakata)
+         * Render Full Worksheet (6 Modes: susun, cerita, perkalian, pembagian, gambar, kosakata)
          */
         function renderWorksheet(questions, activeIndex, gameMode, currentFilter, activeCarryCol = null) {
             if (!worksheetGrid) return;
@@ -709,7 +758,7 @@
                     const isFocus = (idx === activeIndex && !q.isSolved);
 
                     card.innerHTML = `
-                        <div class="card-header-badge">${q.isSolved ? '✅ Selesai' : `No. ${q.id} (${q.difficultyLabel || '➗ Bagi'})`}</div>
+                        <div class="card-header-badge">${q.isSolved ? '✅ Selesai' : `No. ${q.id}`}</div>
                         <button type="button" class="btn-speech" data-idx="${idx}" title="Dengarkan Soal">🔊</button>
 
                         <div class="division-container">
@@ -946,11 +995,11 @@
             const activeCard = document.getElementById(`card-${activeIndex}`);
             if (!activeCard) return;
 
-            let topOffset = 80;
+            let topOffset = 90;
             if (floatingProgress && !floatingProgress.classList.contains('hidden')) {
-                topOffset = floatingProgress.offsetHeight + 18;
+                topOffset = floatingProgress.offsetHeight + 45;
             } else {
-                topOffset = 85;
+                topOffset = 95;
             }
 
             const rect = activeCard.getBoundingClientRect();
@@ -991,14 +1040,21 @@
             const solvedCount = questions.filter(q => q.isSolved).length;
             const unsolvedCount = total - solvedCount;
             const percent = total > 0 ? Math.round((solvedCount / total) * 100) : 0;
+            const runnerIcon = percent > 50 ? '🐇' : '🐢';
 
             const fillEls = document.querySelectorAll('.progress-bar-fill');
             const textEls = document.querySelectorAll('.progress-text');
             const percentEls = document.querySelectorAll('.progress-percent');
+            const runnerEls = document.querySelectorAll('.progress-runner');
 
             fillEls.forEach(el => el.style.width = `${percent}%`);
             textEls.forEach(el => el.textContent = `Soal ${Math.min(solvedCount + 1, total)} dari ${total}`);
             percentEls.forEach(el => el.textContent = `${percent}%`);
+
+            runnerEls.forEach(el => {
+                el.textContent = runnerIcon;
+                el.title = percent > 50 ? 'Kelinci ngebut mengejar piala! 🐇' : 'Kura-kura semangat melangkah! 🐢';
+            });
 
             const chipAll = document.querySelector('.filter-chip[data-filter="all"]');
             const chipUnsolved = document.querySelector('.filter-chip[data-filter="unsolved"]');
@@ -1085,6 +1141,7 @@
         return {
             showModal,
             hideModal,
+            updateModeBadges,
             renderWorksheet,
             updateDigitBoxes,
             updateCarryCells,
@@ -1108,7 +1165,7 @@
     // 6. GAME ENGINE (Core Controller & State Machine)
     // =========================================================================
     const GameEngine = (function () {
-        let gameMode = 'susun'; // 'susun' | 'cerita' | 'pembagian' | 'perkalian' | 'gambar' | 'kosakata'
+        let gameMode = 'susun'; // 'susun' | 'cerita' | 'perkalian' | 'pembagian' | 'gambar' | 'kosakata'
         let totalQuestions = 10; // 10 | 15 | 20
         let questions = [];
         let activeIndex = 0;
@@ -1162,6 +1219,15 @@
             activeCarryCol = null;
             UIController.setSubmitDisabled(false);
 
+            // Ensure virtual keyboard is open/un-collapsed when starting
+            const virtualKeyboard = document.getElementById('virtual-keyboard');
+            if (virtualKeyboard) {
+                virtualKeyboard.classList.remove('keyboard-collapsed');
+            }
+            document.body.classList.remove('keyboard-is-collapsed');
+            const toggleBtnText = document.querySelector('#btn-toggle-keyboard .toggle-kb-text');
+            if (toggleBtnText) toggleBtnText.textContent = 'Sembunyikan Keyboard';
+
             document.body.classList.remove('mode-cerita', 'mode-gambar', 'mode-perkalian', 'mode-pembagian', 'mode-kosakata');
             if (gameMode === 'cerita') {
                 document.body.classList.add('mode-cerita');
@@ -1188,14 +1254,14 @@
             if (gameMode === 'cerita') {
                 modeLabel = 'Soal Cerita';
                 modeIcon = '📖';
-            } else if (gameMode === 'pembagian') {
-                modeLabel = 'Pembagian';
-                modeIcon = '➗';
             } else if (gameMode === 'perkalian') {
                 modeLabel = 'Perkalian';
                 modeIcon = '✖️';
+            } else if (gameMode === 'pembagian') {
+                modeLabel = 'Pembagian';
+                modeIcon = '➗';
             } else if (gameMode === 'gambar') {
-                modeLabel = 'Hitung Bergambar';
+                modeLabel = 'Hitung Gambar';
                 modeIcon = '🎨';
             } else if (gameMode === 'kosakata') {
                 modeLabel = 'Kosakata';
@@ -1384,7 +1450,7 @@
                     if (cardEl) cardEl.classList.remove('error');
                     if (feedbackEl) feedbackEl.classList.remove('show');
                     q.userAnswer = '';
-                    
+
                     // Clear carry notes on incorrect answer for susun and perkalian
                     if (q.carryNotes) {
                         q.carryNotes = q.carryNotes.map(() => '');
@@ -1425,7 +1491,7 @@
             const achievementsBox = document.getElementById('achievements-box');
             if (achievementsBox) {
                 achievementsBox.innerHTML = '';
-                
+
                 const specialSolvedFirstTry = questions.filter(q => (q.difficulty === 'ribuan' || q.difficulty === 'puluhan' || q.category) && q.attempts === 1).length;
                 if (specialSolvedFirstTry >= 2) {
                     achievementsBox.innerHTML += `<div class="achievement-sticker">🎯 Master Kata & Angka</div>`;
@@ -1466,15 +1532,24 @@
             if (UIController.finalAttemptsVal) UIController.finalAttemptsVal.textContent = `${totalAttemptsCount} Kali`;
 
             const starsContainer = document.querySelector('.stars-display');
+            let earnedStars = 1;
+            const ratio = firstTryCount / count;
+            if (ratio >= 0.85) {
+                earnedStars = 3;
+            } else if (ratio >= 0.65) {
+                earnedStars = 2;
+            } else {
+                earnedStars = 1;
+            }
+
             if (starsContainer) {
-                const ratio = firstTryCount / count;
-                if (ratio >= 0.85) {
+                if (earnedStars === 3) {
                     starsContainer.innerHTML = `
                         <span class="star-item star-gold">⭐</span>
                         <span class="star-item star-gold">⭐</span>
                         <span class="star-item star-gold">⭐</span>
                     `;
-                } else if (ratio >= 0.65) {
+                } else if (earnedStars === 2) {
                     starsContainer.innerHTML = `
                         <span class="star-item star-gold">⭐</span>
                         <span class="star-item star-gold">⭐</span>
@@ -1488,6 +1563,10 @@
                     `;
                 }
             }
+
+            // Save mode highest stars record and update badges
+            StorageSystem.saveModeRecord(gameMode, earnedStars, 100);
+            UIController.updateModeBadges();
 
             UIController.createConfetti();
             UIController.showModal(UIController.endScreenOverlay);
@@ -1509,6 +1588,7 @@
                 btnConfirmSwitch.addEventListener('click', () => {
                     AudioSystem.playSound('click');
                     UIController.hideModal(document.getElementById('switch-mode-modal'));
+                    UIController.updateModeBadges();
                     UIController.showModal(document.getElementById('start-modal'));
                 });
             }
@@ -1527,6 +1607,22 @@
             if (btnAudio) {
                 btnAudio.addEventListener('click', () => {
                     AudioSystem.toggleMute();
+                });
+            }
+
+            // Virtual Keyboard Show / Hide Toggle Button
+            const btnToggleKeyboard = document.getElementById('btn-toggle-keyboard');
+            const virtualKeyboard = document.getElementById('virtual-keyboard');
+            if (btnToggleKeyboard && virtualKeyboard) {
+                btnToggleKeyboard.addEventListener('click', () => {
+                    AudioSystem.playSound('click');
+                    const isCollapsed = virtualKeyboard.classList.toggle('keyboard-collapsed');
+                    document.body.classList.toggle('keyboard-is-collapsed', isCollapsed);
+
+                    const textEl = btnToggleKeyboard.querySelector('.toggle-kb-text');
+                    if (textEl) {
+                        textEl.textContent = isCollapsed ? 'Buka Keyboard' : 'Sembunyikan Keyboard';
+                    }
                 });
             }
 
@@ -1624,6 +1720,21 @@
                 });
             }
 
+        function expandVirtualKeyboardIfCollapsed() {
+            if (gameMode === 'susun' || gameMode === 'perkalian' || gameMode === 'pembagian') {
+                const virtualKeyboard = document.getElementById('virtual-keyboard');
+                const btnToggleKeyboard = document.getElementById('btn-toggle-keyboard');
+                if (virtualKeyboard && virtualKeyboard.classList.contains('keyboard-collapsed')) {
+                    virtualKeyboard.classList.remove('keyboard-collapsed');
+                    document.body.classList.remove('keyboard-is-collapsed');
+                    const textEl = btnToggleKeyboard ? btnToggleKeyboard.querySelector('.toggle-kb-text') : null;
+                    if (textEl) {
+                        textEl.textContent = 'Sembunyikan Keyboard';
+                    }
+                }
+            }
+        }
+
             // Worksheet Card Delegate Click Handler
             const worksheetGrid = document.getElementById('worksheet-grid');
             if (worksheetGrid) {
@@ -1634,6 +1745,7 @@
                         const cardIdx = parseInt(carryCell.getAttribute('data-card-idx'), 10);
                         const colIdx = parseInt(carryCell.getAttribute('data-col-idx'), 10);
                         if (!isNaN(cardIdx) && !isNaN(colIdx) && questions[cardIdx] && !questions[cardIdx].isSolved) {
+                            expandVirtualKeyboardIfCollapsed();
                             if (activeIndex !== cardIdx) {
                                 const oldIdx = activeIndex;
                                 activeIndex = cardIdx;
@@ -1723,10 +1835,11 @@
                     if (card && !e.target.closest('.carry-circle-cell') && !e.target.closest('.choice-btn') && !e.target.closest('.btn-speech') && !e.target.closest('.btn-hint-trigger')) {
                         const cardIdx = parseInt(card.getAttribute('data-index'), 10);
                         if (!isNaN(cardIdx) && !questions[cardIdx].isSolved) {
+                            expandVirtualKeyboardIfCollapsed();
                             const changedCard = (activeIndex !== cardIdx);
                             const oldIdx = activeIndex;
                             activeIndex = cardIdx;
-                            
+
                             if (changedCard) {
                                 UIController.setActiveCard(activeIndex, totalQuestions);
                                 UIController.updateDigitBoxes(oldIdx, questions[oldIdx], false, gameMode);
@@ -1807,6 +1920,7 @@
             setupEventListeners();
             UIController.setupScrollObserver();
             AudioSystem.updateAudioBtnUI();
+            UIController.updateModeBadges();
 
             gameMode = StorageSystem.getActiveMode();
             document.body.classList.remove('mode-cerita', 'mode-gambar', 'mode-perkalian', 'mode-pembagian', 'mode-kosakata');

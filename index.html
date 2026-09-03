@@ -36,8 +36,10 @@
             <span class="progress-percent">0%</span>
         </div>
         <div class="progress-bar-track">
-            <div class="progress-bar-fill" style="width: 0%;"></div>
-            <div class="progress-trophy">🏆</div>
+            <div class="progress-bar-fill" style="width: 0%;">
+                <div class="progress-runner" title="Semangat!">🐢</div>
+            </div>
+            <div class="progress-trophy" title="Piala Kemenangan!">🏆</div>
         </div>
     </section>
 
@@ -73,8 +75,10 @@
                 <span class="progress-percent">0%</span>
             </div>
             <div class="progress-bar-track">
-                <div class="progress-bar-fill" style="width: 0%;"></div>
-                <div class="progress-trophy">🏆</div>
+                <div class="progress-bar-fill" style="width: 0%;">
+                    <div class="progress-runner" title="Semangat!">🐢</div>
+                </div>
+                <div class="progress-trophy" title="Piala Kemenangan!">🏆</div>
             </div>
         </section>
 
@@ -95,6 +99,11 @@
 
     <!-- Custom On-Screen Jelly Virtual Keyboard -->
     <div id="virtual-keyboard" class="virtual-keyboard-container">
+        <button type="button" id="btn-toggle-keyboard" class="btn-toggle-keyboard" title="Sembunyikan atau Tampilkan Keyboard">
+            <span class="toggle-kb-icon">⌨️</span>
+            <span class="toggle-kb-text">Sembunyikan Keyboard</span>
+            <span class="toggle-kb-arrow">▼</span>
+        </button>
         <div class="keyboard-inner">
             <div class="keyboard-keys">
                 <button type="button" class="jelly-btn key-num" data-key="1">1</button>
@@ -131,6 +140,11 @@
                     <div class="mode-info">
                         <span class="mode-title">Hitung Susun</span>
                         <span class="mode-desc">Tambah & kurang susun ke bawah</span>
+                        <div class="mode-stars-record" data-mode-stars="susun" title="Rekor Bintang">
+                            <span class="star-item-small star-gray">⭐</span>
+                            <span class="star-item-small star-gray">⭐</span>
+                            <span class="star-item-small star-gray">⭐</span>
+                        </div>
                     </div>
                 </button>
                 <button type="button" class="mode-choice-btn" data-mode="cerita">
@@ -138,31 +152,51 @@
                     <div class="mode-info">
                         <span class="mode-title">Soal Cerita</span>
                         <span class="mode-desc">Pilihan ganda A, B, C seru</span>
+                        <div class="mode-stars-record" data-mode-stars="cerita" title="Rekor Bintang">
+                            <span class="star-item-small star-gray">⭐</span>
+                            <span class="star-item-small star-gray">⭐</span>
+                            <span class="star-item-small star-gray">⭐</span>
+                        </div>
                     </div>
                 </button>
 
-                <!-- Baris 2: Pembagian & Perkalian -->
-                <button type="button" class="mode-choice-btn" data-mode="pembagian">
-                    <span class="mode-icon">➗</span>
-                    <div class="mode-info">
-                        <span class="mode-title">Pembagian</span>
-                        <span class="mode-desc">Pembagian bulat tanpa sisa</span>
-                    </div>
-                </button>
+                <!-- Baris 2: Perkalian & Pembagian (Swapped per user instruction) -->
                 <button type="button" class="mode-choice-btn" data-mode="perkalian">
                     <span class="mode-icon">✖️</span>
                     <div class="mode-info">
                         <span class="mode-title">Perkalian</span>
                         <span class="mode-desc">Perkalian dasar & susun ke bawah</span>
+                        <div class="mode-stars-record" data-mode-stars="perkalian" title="Rekor Bintang">
+                            <span class="star-item-small star-gray">⭐</span>
+                            <span class="star-item-small star-gray">⭐</span>
+                            <span class="star-item-small star-gray">⭐</span>
+                        </div>
+                    </div>
+                </button>
+                <button type="button" class="mode-choice-btn" data-mode="pembagian">
+                    <span class="mode-icon">➗</span>
+                    <div class="mode-info">
+                        <span class="mode-title">Pembagian</span>
+                        <span class="mode-desc">Pembagian bulat tanpa sisa</span>
+                        <div class="mode-stars-record" data-mode-stars="pembagian" title="Rekor Bintang">
+                            <span class="star-item-small star-gray">⭐</span>
+                            <span class="star-item-small star-gray">⭐</span>
+                            <span class="star-item-small star-gray">⭐</span>
+                        </div>
                     </div>
                 </button>
 
-                <!-- Baris 3: Hitung Bergambar & Kosakata -->
+                <!-- Baris 3: Hitung Gambar & Kosakata -->
                 <button type="button" class="mode-choice-btn" data-mode="gambar">
                     <span class="mode-icon">🎨</span>
                     <div class="mode-info">
-                        <span class="mode-title">Hitung Bergambar</span>
+                        <span class="mode-title">Hitung Gambar</span>
                         <span class="mode-desc">Hitung sentuh objek hewan & buah</span>
+                        <div class="mode-stars-record" data-mode-stars="gambar" title="Rekor Bintang">
+                            <span class="star-item-small star-gray">⭐</span>
+                            <span class="star-item-small star-gray">⭐</span>
+                            <span class="star-item-small star-gray">⭐</span>
+                        </div>
                     </div>
                 </button>
                 <button type="button" class="mode-choice-btn" data-mode="kosakata">
@@ -170,6 +204,11 @@
                     <div class="mode-info">
                         <span class="mode-title">Kosakata</span>
                         <span class="mode-desc">Lengkapi kata & membaca kalimat</span>
+                        <div class="mode-stars-record" data-mode-stars="kosakata" title="Rekor Bintang">
+                            <span class="star-item-small star-gray">⭐</span>
+                            <span class="star-item-small star-gray">⭐</span>
+                            <span class="star-item-small star-gray">⭐</span>
+                        </div>
                     </div>
                 </button>
             </div>
@@ -279,7 +318,9 @@
         </div>
     </div>
 
-    <script src="bank_soal.js"></script>
+    <script src="cerita_bank_soal.js"></script>
+    <script src="gambar_bank_soal.js"></script>
+    <script src="kosakata_bank_soal.js"></script>
     <script src="script.js"></script>
 </body>
 
