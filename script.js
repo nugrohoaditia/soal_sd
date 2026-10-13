@@ -1642,13 +1642,22 @@
                             selectedStartMode = mode;
                             startModalEl.querySelectorAll('.mode-choice-btn').forEach(btn => btn.classList.remove('active'));
                             modeBtn.classList.add('active');
+                            const countSelector = startModalEl.querySelector('.question-count-selector');
+                            if (countSelector) {
+                                countSelector.classList.toggle('quiz-disabled', mode === 'quiz');
+                                countSelector.querySelectorAll('.count-chip').forEach(chip => {
+                                    chip.disabled = mode === 'quiz';
+                                });
+                            }
+                            const startLabel = startModalEl.querySelector('#btn-start-game span');
+                            if (startLabel) startLabel.textContent = mode === 'quiz' ? '🎲 Siapkan Quiz' : '🚀 Mulai Petualangan!';
                         }
                         return;
                     }
 
                     // Count Chip Click
                     const countChip = e.target.closest('.count-chip');
-                    if (countChip) {
+                    if (countChip && !countChip.disabled && selectedStartMode !== 'quiz') {
                         AudioSystem.playSound('click');
                         const count = parseInt(countChip.getAttribute('data-count'), 10);
                         if (!isNaN(count)) {
@@ -1667,6 +1676,11 @@
                 btnStartGame.addEventListener('click', () => {
                     AudioSystem.playSound('click');
                     UIController.hideModal(document.getElementById('start-modal'));
+                    if (selectedStartMode === 'quiz') {
+                        stopTimer();
+                        window.QuizGame.openSetup();
+                        return;
+                    }
                     setGameMode(selectedStartMode, selectedStartCount, true);
                 });
             }
@@ -1958,6 +1972,7 @@
             }
 
             printWatermark();
+            window.QuizGame.init();
         }
 
         function printWatermark() {

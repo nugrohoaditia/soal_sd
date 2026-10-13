@@ -23,6 +23,7 @@ Interactive, accessible, and gamified single-page web application game designed 
   - **Incorrect Answer**: Soft red glow, confused **Bunny** mascot 🐰, *"Coba lagi ya!"* speech bubble, card shake animation, and auto-cleared input for retries.
 - 🏆 **Celebratory End Screen**: Falling confetti particles, score percentage, star rewards, and a *"Mulai Lagi"* restart button to generate 20 new problems.
 - 📱 **Responsive Flex Layout**: Max 2 columns on mobile devices, scaling seamlessly to 3-5 columns on tablets and desktop monitors.
+- 🎲 **Quiz Kelompok**: 2–20 pemain, 10 giliran per orang, soal acak dari bank Cerita/Gambar/Kosakata, penilaian oleh instruktur, 100 efek kejutan (50 positif dan 50 negatif), papan skor, peringkat akhir, dan pemulihan sesi lokal.
 
 ---
 
@@ -50,6 +51,8 @@ soal_sd/
 ├── index.html     # Game HTML structure, top header, progress bar, grid container & modals
 ├── style.css      # CSS variables, animations, jelly buttons & responsive flex rules
 ├── script.js     # State management, math problem generator, keypad logic & Web Audio synth
+├── quiz.js       # Group quiz, surprise cards, scoring & local session
+├── efek_bank_soal.js # 100 positive and negative Quiz effect definitions
 └── README.md      # Project documentation
 ```
 
