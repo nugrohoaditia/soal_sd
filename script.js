@@ -39,6 +39,21 @@
             }
         }
 
+        function playSequenceNote(freq, delay, dur, type, peakGain) {
+            const now = audioCtx.currentTime + delay;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = type;
+            osc.frequency.setValueAtTime(freq, now);
+            gain.gain.setValueAtTime(0, now);
+            gain.gain.linearRampToValueAtTime(peakGain, now + 0.02);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + dur);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start(now);
+            osc.stop(now + dur);
+        }
+
         function playSound(type) {
             if (isMuted) return;
             initAudio();
@@ -61,21 +76,8 @@
                     osc.start(now);
                     osc.stop(now + 0.05);
                 } else if (type === 'success') {
-                    const notes = [523.25, 659.25, 783.99, 1046.50];
-                    notes.forEach((freq, idx) => {
-                        const noteOsc = audioCtx.createOscillator();
-                        const noteGain = audioCtx.createGain();
-                        noteOsc.type = 'triangle';
-                        noteOsc.frequency.setValueAtTime(freq, now + idx * 0.08);
-
-                        noteGain.gain.setValueAtTime(0, now + idx * 0.08);
-                        noteGain.gain.linearRampToValueAtTime(0.2, now + idx * 0.08 + 0.02);
-                        noteGain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.25);
-
-                        noteOsc.connect(noteGain);
-                        noteGain.connect(audioCtx.destination);
-                        noteOsc.start(now + idx * 0.08);
-                        noteOsc.stop(now + idx * 0.08 + 0.25);
+                    [523.25, 659.25, 783.99, 1046.50].forEach((freq, idx) => {
+                        playSequenceNote(freq, idx * 0.08, 0.25, 'triangle', 0.2);
                     });
                 } else if (type === 'error') {
                     osc.type = 'sawtooth';
@@ -86,20 +88,8 @@
                     osc.start(now);
                     osc.stop(now + 0.25);
                 } else if (type === 'win') {
-                    const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51];
-                    notes.forEach((freq, idx) => {
-                        const noteOsc = audioCtx.createOscillator();
-                        const noteGain = audioCtx.createGain();
-                        noteOsc.type = 'sine';
-                        noteOsc.frequency.setValueAtTime(freq, now + idx * 0.12);
-
-                        noteGain.gain.setValueAtTime(0.25, now + idx * 0.12);
-                        noteGain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.12 + 0.4);
-
-                        noteOsc.connect(noteGain);
-                        noteGain.connect(audioCtx.destination);
-                        noteOsc.start(now + idx * 0.12);
-                        noteOsc.stop(now + idx * 0.12 + 0.4);
+                    [523.25, 659.25, 783.99, 1046.50, 1318.51].forEach((freq, idx) => {
+                        playSequenceNote(freq, idx * 0.12, 0.4, 'sine', 0.25);
                     });
                 }
             } catch (e) {
@@ -296,6 +286,14 @@
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }
 
+        function createOptions(answer, distractors, formatFn = val => `${val}`) {
+            return shuffleArray([answer, ...distractors]).map((val, i) => ({
+                label: ['A', 'B', 'C'][i] || '',
+                value: val,
+                text: formatFn(val)
+            }));
+        }
+
         function generateSusunQuestions(totalCount = 10) {
             const baseConfigs = [
                 { op: '+', min: 4, max: 15, difficulty: 'satuan', label: '🌱 Satuan' },
@@ -322,11 +320,7 @@
                 let answer = 0;
 
                 if (cfg.op === '-') {
-                    if (num1 < num2) {
-                        const tmp = num1;
-                        num1 = num2;
-                        num2 = tmp;
-                    }
+                    if (num1 < num2) [num1, num2] = [num2, num1];
                     if (num1 === num2) num1 += getRandomInt(2, 6);
                     answer = num1 - num2;
                 } else {
@@ -448,13 +442,7 @@
 
             return combined.map((item, idx) => {
                 const distractors = Array.isArray(item.distractors) ? item.distractors : [item.answer + 2, item.answer - 1];
-                const allValues = shuffleArray([item.answer, ...distractors]);
-                const labels = ["A", "B", "C"];
-                const options = allValues.map((val, i) => ({
-                    label: labels[i],
-                    value: val,
-                    text: val >= 1000 ? `${val.toLocaleString('id-ID')}` : `${val}`
-                }));
+                const options = createOptions(item.answer, distractors, val => val >= 1000 ? val.toLocaleString('id-ID') : `${val}`);
 
                 return {
                     id: idx + 1,
@@ -480,13 +468,7 @@
 
             return picked.map((item, idx) => {
                 const distractors = item.distractors || [item.answer + 1, item.answer - 1];
-                const allValues = shuffleArray([item.answer, ...distractors]);
-                const labels = ["A", "B", "C"];
-                const options = allValues.map((val, i) => ({
-                    label: labels[i],
-                    value: val,
-                    text: `${val}`
-                }));
+                const options = createOptions(item.answer, distractors);
 
                 return {
                     id: idx + 1,
@@ -514,13 +496,7 @@
             const picked = shuffleArray(bank).slice(0, totalCount);
 
             return picked.map((item, idx) => {
-                const allValues = shuffleArray([item.answer, ...item.distractors]);
-                const labels = ["A", "B", "C"];
-                const options = allValues.map((val, i) => ({
-                    label: labels[i],
-                    value: val,
-                    text: val
-                }));
+                const options = createOptions(item.answer, item.distractors || [], val => val);
 
                 return {
                     id: idx + 1,
@@ -568,18 +544,7 @@
         function hideModal(modalEl) {
             if (!modalEl) return;
             modalEl.classList.add('hidden');
-
-            const startModal = document.getElementById('start-modal');
-            const resumeModal = document.getElementById('resume-modal');
-            const switchModal = document.getElementById('switch-mode-modal');
-            const endScreen = document.getElementById('end-screen');
-
-            const isStartOpen = startModal && !startModal.classList.contains('hidden');
-            const isResumeOpen = resumeModal && !resumeModal.classList.contains('hidden');
-            const isSwitchOpen = switchModal && !switchModal.classList.contains('hidden');
-            const isEndOpen = endScreen && !endScreen.classList.contains('hidden');
-
-            if (!isStartOpen && !isResumeOpen && !isSwitchOpen && !isEndOpen) {
+            if (!document.querySelector('.end-screen-overlay:not(.hidden)')) {
                 document.body.classList.remove('modal-open');
             }
         }
@@ -591,19 +556,10 @@
                 const record = records[mode];
                 const earnedStars = (record && record.stars) ? record.stars : 0;
 
-                containerEl.innerHTML = '';
-                for (let i = 1; i <= 3; i++) {
-                    const starSpan = document.createElement('span');
-                    starSpan.className = `star-item-small ${i <= earnedStars ? 'star-gold' : 'star-gray'}`;
-                    starSpan.textContent = '⭐';
-                    containerEl.appendChild(starSpan);
-                }
-
-                if (earnedStars > 0) {
-                    containerEl.title = `Rekor: ${earnedStars} Bintang (${record.bestScore}%)`;
-                } else {
-                    containerEl.title = 'Belum ada rekor bintang';
-                }
+                containerEl.innerHTML = [1, 2, 3]
+                    .map(i => `<span class="star-item-small ${i <= earnedStars ? 'star-gold' : 'star-gray'}">⭐</span>`)
+                    .join('');
+                containerEl.title = earnedStars > 0 ? `Rekor: ${earnedStars} Bintang (${record.bestScore}%)` : 'Belum ada rekor bintang';
             });
         }
 
@@ -1203,6 +1159,23 @@
             });
         }
 
+        const MODE_INFO = {
+            susun: { label: 'Hitung Susun', icon: '📐' },
+            cerita: { label: 'Soal Cerita', icon: '📖' },
+            perkalian: { label: 'Perkalian', icon: '✖️' },
+            pembagian: { label: 'Pembagian', icon: '➗' },
+            gambar: { label: 'Hitung Gambar', icon: '🎨' },
+            kosakata: { label: 'Kosakata', icon: '📚' }
+        };
+
+        function syncModeBodyClass(mode) {
+            const extraModes = ['cerita', 'gambar', 'perkalian', 'pembagian', 'kosakata'];
+            document.body.classList.remove(...extraModes.map(m => `mode-${m}`));
+            if (extraModes.includes(mode)) {
+                document.body.classList.add(`mode-${mode}`);
+            }
+        }
+
         function setCarryFocus(colIdx) {
             activeCarryCol = colIdx;
             const q = questions[activeIndex];
@@ -1228,19 +1201,7 @@
             const toggleBtnText = document.querySelector('#btn-toggle-keyboard .toggle-kb-text');
             if (toggleBtnText) toggleBtnText.textContent = 'Sembunyikan Keyboard';
 
-            document.body.classList.remove('mode-cerita', 'mode-gambar', 'mode-perkalian', 'mode-pembagian', 'mode-kosakata');
-            if (gameMode === 'cerita') {
-                document.body.classList.add('mode-cerita');
-            } else if (gameMode === 'gambar') {
-                document.body.classList.add('mode-gambar');
-            } else if (gameMode === 'perkalian') {
-                document.body.classList.add('mode-perkalian');
-            } else if (gameMode === 'pembagian') {
-                document.body.classList.add('mode-pembagian');
-            } else if (gameMode === 'kosakata') {
-                document.body.classList.add('mode-kosakata');
-            }
-
+            syncModeBodyClass(gameMode);
             stopTimer();
             StorageSystem.clearSessionForMode(gameMode);
 
@@ -1249,26 +1210,8 @@
                 return;
             }
 
-            let modeLabel = 'Hitung Susun';
-            let modeIcon = '📐';
-            if (gameMode === 'cerita') {
-                modeLabel = 'Soal Cerita';
-                modeIcon = '📖';
-            } else if (gameMode === 'perkalian') {
-                modeLabel = 'Perkalian';
-                modeIcon = '✖️';
-            } else if (gameMode === 'pembagian') {
-                modeLabel = 'Pembagian';
-                modeIcon = '➗';
-            } else if (gameMode === 'gambar') {
-                modeLabel = 'Hitung Gambar';
-                modeIcon = '🎨';
-            } else if (gameMode === 'kosakata') {
-                modeLabel = 'Kosakata';
-                modeIcon = '📚';
-            }
-
-            UIController.showLoadingMode(modeLabel, modeIcon, totalQuestions);
+            const info = MODE_INFO[gameMode] || MODE_INFO.susun;
+            UIController.showLoadingMode(info.label, info.icon, totalQuestions);
 
             setTimeout(() => {
                 generateAndRender(true);
@@ -1279,19 +1222,15 @@
             activeCarryCol = null;
             UIController.setSubmitDisabled(false);
 
-            if (gameMode === 'cerita') {
-                questions = QuestionGenerator.generateCeritaQuestions(totalQuestions);
-            } else if (gameMode === 'gambar') {
-                questions = QuestionGenerator.generateGambarQuestions(totalQuestions);
-            } else if (gameMode === 'perkalian') {
-                questions = QuestionGenerator.generatePerkalianQuestions(totalQuestions);
-            } else if (gameMode === 'pembagian') {
-                questions = QuestionGenerator.generatePembagianQuestions(totalQuestions);
-            } else if (gameMode === 'kosakata') {
-                questions = QuestionGenerator.generateKosakataQuestions(totalQuestions);
-            } else {
-                questions = QuestionGenerator.generateSusunQuestions(totalQuestions);
-            }
+            const generators = {
+                cerita: QuestionGenerator.generateCeritaQuestions,
+                gambar: QuestionGenerator.generateGambarQuestions,
+                perkalian: QuestionGenerator.generatePerkalianQuestions,
+                pembagian: QuestionGenerator.generatePembagianQuestions,
+                kosakata: QuestionGenerator.generateKosakataQuestions
+            };
+            const generator = generators[gameMode] || QuestionGenerator.generateSusunQuestions;
+            questions = generator(totalQuestions);
             activeIndex = 0;
             totalAttempts = 0;
 
@@ -1937,39 +1876,28 @@
             UIController.updateModeBadges();
 
             gameMode = StorageSystem.getActiveMode();
-            document.body.classList.remove('mode-cerita', 'mode-gambar', 'mode-perkalian', 'mode-pembagian', 'mode-kosakata');
-            if (gameMode === 'cerita') {
-                document.body.classList.add('mode-cerita');
-            } else if (gameMode === 'gambar') {
-                document.body.classList.add('mode-gambar');
-            } else if (gameMode === 'perkalian') {
-                document.body.classList.add('mode-perkalian');
-            } else if (gameMode === 'pembagian') {
-                document.body.classList.add('mode-pembagian');
-            } else if (gameMode === 'kosakata') {
-                document.body.classList.add('mode-kosakata');
-            }
+            syncModeBodyClass(gameMode);
 
             const savedSession = StorageSystem.loadSessionForMode(gameMode);
+            let modalId = 'start-modal';
+
             if (savedSession) {
                 questions = savedSession.questions;
                 activeIndex = savedSession.activeIndex || 0;
                 totalAttempts = savedSession.totalAttempts || 0;
                 totalQuestions = savedSession.totalQuestions || questions.length;
                 timerSeconds = savedSession.timerSeconds || 0;
-                activeCarryCol = null;
-                UIController.setSubmitDisabled(false);
-                UIController.renderWorksheet(questions, activeIndex, gameMode, currentFilter, activeCarryCol);
                 UIController.updateTimerDisplay(timerSeconds);
-                UIController.showModal(document.getElementById('resume-modal'));
+                modalId = 'resume-modal';
             } else {
                 totalQuestions = 10;
                 questions = QuestionGenerator.generateSusunQuestions(totalQuestions);
-                activeCarryCol = null;
-                UIController.setSubmitDisabled(false);
-                UIController.renderWorksheet(questions, activeIndex, gameMode, currentFilter, activeCarryCol);
-                UIController.showModal(document.getElementById('start-modal'));
             }
+
+            activeCarryCol = null;
+            UIController.setSubmitDisabled(false);
+            UIController.renderWorksheet(questions, activeIndex, gameMode, currentFilter, activeCarryCol);
+            UIController.showModal(document.getElementById(modalId));
 
             printWatermark();
             window.QuizGame.init();
